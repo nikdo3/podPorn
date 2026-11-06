@@ -25,7 +25,7 @@
       --accent-primary: #2563eb;
       --accent-primary-soft: rgba(37, 99, 235, 0.10);
       --accent-warm: #d97706;
-      --accent-warm-soft: rgba(217, 119, 6, 0.10);
+      --accent-warm-soft: rgba(217, 119, 6, 0.12);
       --accent-green: #059669;
       --accent-green-soft: rgba(5, 150, 105, 0.12);
       --accent-rose: #e11d48;
@@ -34,6 +34,13 @@
       --shadow-player: 0 16px 48px -8px rgba(24, 24, 27, 0.16), 0 2px 8px rgba(24, 24, 27, 0.08);
       --player-bg: rgba(255, 255, 255, 0.92);
       --diagram-bg: #faf9f5;
+      --uncertainty-stripe: repeating-linear-gradient(
+        45deg,
+        rgba(217, 119, 6, 0.28),
+        rgba(217, 119, 6, 0.28) 6px,
+        rgba(217, 119, 6, 0.12) 6px,
+        rgba(217, 119, 6, 0.12) 12px
+      );
     }
 
     :root[data-theme="dark"] {
@@ -50,7 +57,7 @@
       --accent-primary: #60a5fa;
       --accent-primary-soft: rgba(96, 165, 250, 0.14);
       --accent-warm: #fbbf24;
-      --accent-warm-soft: rgba(251, 191, 36, 0.13);
+      --accent-warm-soft: rgba(251, 191, 36, 0.14);
       --accent-green: #34d399;
       --accent-green-soft: rgba(52, 211, 153, 0.14);
       --accent-rose: #fb7185;
@@ -59,6 +66,13 @@
       --shadow-player: 0 20px 50px -10px rgba(0, 0, 0, 0.65);
       --player-bg: rgba(27, 29, 35, 0.92);
       --diagram-bg: #15171c;
+      --uncertainty-stripe: repeating-linear-gradient(
+        45deg,
+        rgba(251, 191, 36, 0.32),
+        rgba(251, 191, 36, 0.32) 6px,
+        rgba(251, 191, 36, 0.12) 6px,
+        rgba(251, 191, 36, 0.12) 12px
+      );
     }
 
     * {
@@ -139,7 +153,7 @@
       font-weight: 500;
     }
 
-    /* MAIN VIEW TABS (PODCAST vs ABCD QUIZ) */
+    /* MAIN VIEW TABS (PODCAST vs ABCD QUIZ vs EXAM CHANCE MATRIX) */
     .main-mode-tabs {
       display: inline-flex;
       background: var(--bg-subtle);
@@ -147,6 +161,7 @@
       border-radius: 14px;
       border: 1px solid var(--border-strong);
       gap: 4px;
+      flex-wrap: wrap;
     }
 
     .mode-tab-btn {
@@ -154,9 +169,9 @@
       background: transparent;
       color: var(--text-secondary);
       font-family: inherit;
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 700;
-      padding: 8px 16px;
+      padding: 8px 14px;
       border-radius: 10px;
       cursor: pointer;
       display: inline-flex;
@@ -174,7 +189,7 @@
     }
     .mode-tab-badge {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 11.5px;
+      font-size: 11px;
       padding: 2px 7px;
       border-radius: 99px;
       background: rgba(255, 255, 255, 0.18);
@@ -199,6 +214,7 @@
       border-radius: 11px;
       border: 1px solid var(--border-color);
       gap: 3px;
+      flex-wrap: wrap;
     }
 
     .seg-btn {
@@ -251,6 +267,11 @@
       color: var(--accent-rose);
       border-color: rgba(251, 113, 133, 0.3);
     }
+    .action-btn.warm-soft {
+      background: var(--accent-warm-soft);
+      color: var(--accent-warm);
+      border-color: rgba(251, 191, 36, 0.35);
+    }
 
     /* HORIZONTAL TOPIC NAVIGATION PILLS */
     .topic-bar {
@@ -294,7 +315,7 @@
     .topic-pill .pill-time {
       font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
-      opacity: 0.82;
+      opacity: 0.85;
     }
 
     /* ==========================================================================
@@ -315,7 +336,7 @@
         grid-template-columns: 1fr;
         padding: 0 16px;
       }
-      .header-top, .topic-bar, .quiz-workspace {
+      .header-top, .topic-bar, .quiz-workspace, .matrix-workspace {
         padding-left: 16px !important;
         padding-right: 16px !important;
       }
@@ -556,7 +577,7 @@
        ABCD QUIZ WORKSPACE & PROGRESS DASHBOARD
        ========================================================================== */
     .quiz-workspace {
-      max-width: 1120px;
+      max-width: 1180px;
       margin: 24px auto 0;
       padding: 0 28px;
       display: none;
@@ -586,12 +607,13 @@
     .pct-hero {
       display: flex;
       align-items: center;
-      gap: 18px;
+      gap: 16px;
+      flex-wrap: wrap;
     }
 
     .pct-big-circle {
-      min-width: 88px;
-      height: 68px;
+      min-width: 104px;
+      height: 74px;
       padding: 0 16px;
       border-radius: 18px;
       background: var(--accent-primary-soft);
@@ -604,24 +626,25 @@
 
     .pct-big-value {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 26px;
+      font-size: 25px;
       font-weight: 800;
       color: var(--accent-primary);
       line-height: 1.1;
     }
 
     .pct-big-label {
-      font-size: 10.5px;
+      font-size: 10px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.04em;
       color: var(--text-muted);
+      margin-top: 2px;
     }
 
     .stats-pills {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 9px;
       flex-wrap: wrap;
     }
 
@@ -629,19 +652,19 @@
       background: var(--bg-subtle);
       border: 1px solid var(--border-color);
       border-radius: 14px;
-      padding: 9px 15px;
+      padding: 9px 14px;
       display: flex;
       flex-direction: column;
-      min-width: 105px;
+      min-width: 102px;
     }
     .stat-box-val {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 17px;
+      font-size: 16.5px;
       font-weight: 800;
       color: var(--text-main);
     }
     .stat-box-lbl {
-      font-size: 11.5px;
+      font-size: 11px;
       color: var(--text-muted);
       font-weight: 600;
     }
@@ -649,7 +672,7 @@
     .stat-box.rose .stat-box-val { color: var(--accent-rose); }
     .stat-box.warm .stat-box-val { color: var(--accent-warm); }
 
-    /* DUAL PROGRESS BAR (ACCURACY + COMPLETION) */
+    /* TRI-STATE PROGRESS BAR (CONFIRMED CORRECT + UNCERTAINTY + WRONG) */
     .progress-bars-wrap {
       display: flex;
       flex-direction: column;
@@ -659,6 +682,8 @@
     .bar-label-row {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
       font-size: 12px;
       font-weight: 600;
       color: var(--text-secondary);
@@ -666,7 +691,7 @@
 
     .bar-track {
       width: 100%;
-      height: 10px;
+      height: 12px;
       background: var(--bg-subtle);
       border-radius: 999px;
       overflow: hidden;
@@ -679,10 +704,178 @@
       background: var(--accent-green);
       transition: width 0.3s ease;
     }
+    .bar-fill-uncertainty {
+      height: 100%;
+      background: var(--uncertainty-stripe);
+      transition: width 0.3s ease;
+    }
     .bar-fill-wrong {
       height: 100%;
       background: var(--accent-rose);
       transition: width 0.3s ease;
+    }
+
+    .legend-inline {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 11.5px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+    .legend-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 3px;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+    .legend-dot.green { background: var(--accent-green); }
+    .legend-dot.uncertainty { background: var(--uncertainty-stripe); border: 1px solid var(--accent-warm); }
+    .legend-dot.rose { background: var(--accent-rose); }
+
+    /* ==========================================================================
+       PER-QUESTION PROBABILITY & UNCERTAINTY UI CARDS (MATRIX VIEW)
+       ========================================================================== */
+    .exam-prob-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 18px;
+    }
+
+    .exam-q-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 20px 22px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: transform 0.16s ease, border-color 0.16s ease;
+    }
+    .exam-q-card:hover {
+      border-color: var(--border-strong);
+    }
+
+    .exam-q-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .exam-q-title {
+      font-size: 15.5px;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.35;
+    }
+
+    .exam-q-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+      font-weight: 500;
+    }
+
+    .chance-badge-col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      flex-shrink: 0;
+    }
+
+    .chance-pill-main {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 18px;
+      font-weight: 800;
+      padding: 4px 11px;
+      border-radius: 11px;
+      line-height: 1.2;
+    }
+
+    .chance-pill-sub {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    .metrics-3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: 13px;
+      padding: 9px 11px;
+      text-align: center;
+    }
+
+    .m3-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      font-weight: 800;
+    }
+    .m3-lbl {
+      font-size: 10.5px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* INDIVIDUAL SUB-QUESTION PILLS INSIDE EACH EXAM QUESTION CARD */
+    .subq-chips-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .subq-chip {
+      border: 1px solid var(--border-color);
+      background: var(--bg-subtle);
+      color: var(--text-secondary);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 4px 9px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.14s ease;
+    }
+    .subq-chip:hover {
+      transform: translateY(-1px);
+      border-color: var(--accent-primary);
+    }
+    .subq-chip.st-correct {
+      background: var(--accent-green-soft);
+      color: var(--accent-green);
+      border-color: rgba(52, 211, 153, 0.4);
+    }
+    .subq-chip.st-wrong {
+      background: var(--accent-rose-soft);
+      color: var(--accent-rose);
+      border-color: rgba(251, 113, 133, 0.4);
+    }
+    .subq-chip.st-unanswered {
+      background: var(--accent-warm-soft);
+      color: var(--accent-warm);
+      border-color: rgba(251, 191, 36, 0.35);
+    }
+
+    .exam-q-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: auto;
+      padding-top: 6px;
+      border-top: 1px solid var(--border-color);
     }
 
     /* QUESTION CARD */
@@ -727,6 +920,32 @@
       font-size: 12.5px;
       font-weight: 700;
       color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .q-prob-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 99px;
+    }
+    .q-prob-pill.uncertain {
+      background: var(--accent-warm-soft);
+      color: var(--accent-warm);
+      border: 1px solid rgba(251, 191, 36, 0.35);
+    }
+    .q-prob-pill.certain-ok {
+      background: var(--accent-green-soft);
+      color: var(--accent-green);
+      border: 1px solid rgba(52, 211, 153, 0.35);
+    }
+    .q-prob-pill.certain-bad {
+      background: var(--accent-rose-soft);
+      color: var(--accent-rose);
+      border: 1px solid rgba(251, 113, 133, 0.35);
     }
 
     .quiz-question-text {
@@ -1010,18 +1229,22 @@
         <div class="logo-badge">🎓</div>
         <div>
           <h1 class="app-title">Optika &amp; Strukturovaná kabeláž</h1>
-          <div class="app-subtitle">Audio podcast, vizuální tahák z hodin &amp; tréninkový ABCD test (140 otázek)</div>
+          <div class="app-subtitle">Audio podcast, vizuální tahák, ABCD test (140 otázek) &amp; šance u zkoušky</div>
         </div>
       </div>
 
-      <!-- TOP-LEVEL MODE SWITCHER: PODCAST vs ABCD QUIZ -->
+      <!-- TOP-LEVEL MODE SWITCHER -->
       <div class="main-mode-tabs">
         <button id="tab-btn-podcast" class="mode-tab-btn active" onclick="setAppMode('podcast')">
           🎧 Podcast &amp; Tahák
         </button>
         <button id="tab-btn-quiz" class="mode-tab-btn" onclick="setAppMode('quiz')">
           📝 Test ABCD
-          <span id="header-quiz-badge" class="mode-tab-badge">140 otázek</span>
+          <span id="header-quiz-badge" class="mode-tab-badge">Jistota 0 %</span>
+        </button>
+        <button id="tab-btn-matrix" class="mode-tab-btn" onclick="setAppMode('matrix')">
+          📊 Šance po otázkách
+          <span id="header-uncertainty-badge" class="mode-tab-badge">Nejistota 100 %</span>
         </button>
       </div>
 
@@ -1048,7 +1271,7 @@
     <!-- HORIZONTAL PILL BAR FOR PODCAST CHAPTERS -->
     <nav id="chapter-list" class="topic-bar"></nav>
 
-    <!-- HORIZONTAL PILL BAR FOR QUIZ TOPICS (SHOWN IN QUIZ MODE) -->
+    <!-- HORIZONTAL PILL BAR FOR QUIZ TOPICS (SHOWN IN QUIZ & MATRIX MODES) -->
     <nav id="quiz-topic-bar" class="topic-bar" style="display:none;"></nav>
   </header>
 
@@ -1090,24 +1313,28 @@
   </main>
 
   <!-- ========================================================================
-       VIEW 2: EXTENSIVE ABCD QUIZ WORKSPACE (140 QUESTIONS, EVERY FACT ≥3x)
+       VIEW 2 & 3: EXTENSIVE ABCD QUIZ + PER-QUESTION PROBABILITY & UNCERTAINTY UI
        ======================================================================== -->
   <section id="quiz-workspace" class="quiz-workspace">
 
-    <!-- LIVE PERCENTAGE SCORE DASHBOARD -->
+    <!-- LIVE PROBABILITY & UNCERTAINTY DASHBOARD -->
     <div class="score-dashboard">
       <div class="score-top-row">
         <div class="pct-hero">
-          <div id="pct-circle" class="pct-big-circle">
+          <div id="pct-circle" class="pct-big-circle" title="Potvrzená šance (správně zodpovězené / všechny otázky v okruhu)">
             <span id="quiz-pct-val" class="pct-big-value">0 %</span>
-            <span class="pct-big-label">Úspěšnost</span>
+            <span class="pct-big-label">Potvrzená šance</span>
+          </div>
+          <div id="uncertainty-circle" class="pct-big-circle" style="background:var(--accent-warm-soft); border-color:rgba(251,191,36,0.35);" title="Nejistota = podíl dosud nezodpovězených otázek">
+            <span id="quiz-unc-val" class="pct-big-value" style="color:var(--accent-warm);">100 %</span>
+            <span class="pct-big-label">Nejistota (nezodp.)</span>
           </div>
           <div>
-            <div style="font-size:17px; font-weight:800; color:var(--text-main);">
-              Průběžná úspěšnost v testu ABCD
+            <div id="dashboard-scope-title" style="font-size:16.5px; font-weight:800; color:var(--text-main);">
+              Šance, že uděláš zkoušku (všech 140 otázek)
             </div>
-            <div id="quiz-status-subtitle" style="font-size:13px; color:var(--text-muted); font-weight:500;">
-              Každá věc z testu i výpisu z hodin je zde procvičena alespoň 3× z různých úhlů pohledu.
+            <div id="quiz-status-subtitle" style="font-size:12.5px; color:var(--text-secondary); font-weight:600; margin-top:2px;">
+              Odhad se započtením nejistoty (tipování 25 % u nezodpovězených): <strong id="expected-chance-lbl" style="color:var(--accent-primary);">25 %</strong> • Interval šance: <strong id="interval-chance-lbl">0 % – 100 %</strong>
             </div>
           </div>
         </div>
@@ -1115,31 +1342,36 @@
         <div class="stats-pills">
           <div class="stat-box green">
             <span id="stat-correct" class="stat-box-val">0</span>
-            <span class="stat-box-lbl">✓ Správně</span>
+            <span class="stat-box-lbl">✓ Jistota (Správně)</span>
+          </div>
+          <div class="stat-box warm">
+            <span id="stat-unanswered" class="stat-box-val">140</span>
+            <span class="stat-box-lbl">? Nejistota (Nezodp.)</span>
           </div>
           <div class="stat-box rose">
             <span id="stat-wrong" class="stat-box-val">0</span>
-            <span class="stat-box-lbl">✗ Špatně</span>
+            <span class="stat-box-lbl">✗ Chyba (Špatně)</span>
           </div>
           <div class="stat-box">
-            <span id="stat-answered" class="stat-box-val">0 / 140</span>
-            <span class="stat-box-lbl">Zodpovězeno</span>
-          </div>
-          <div class="stat-box warm">
             <span id="stat-streak" class="stat-box-val">0 🔥</span>
             <span class="stat-box-lbl">Série bez chyby</span>
           </div>
         </div>
       </div>
 
-      <!-- PROGRESS BARS -->
+      <!-- TRI-STATE PROGRESS BAR: CONFIRMED (GREEN) + UNCERTAINTY (STRIPED AMBER) + WRONG (RED) -->
       <div class="progress-bars-wrap">
         <div class="bar-label-row">
-          <span id="bar-left-label">Poměr správných (zelená) a chybných (červená) odpovědí</span>
-          <span id="bar-right-label">Dokončeno 0 % ze zvoleného okruhu</span>
+          <span id="bar-left-label">Rozložení šance a nejistoty ve zvoleném okruhu</span>
+          <div class="legend-inline">
+            <span><i class="legend-dot green"></i>Potvrzená jistota (<span id="leg-ok-pct">0%</span>)</span>
+            <span><i class="legend-dot uncertainty"></i>Nejistota – nezodpovězeno (<span id="leg-unc-pct">100%</span>)</span>
+            <span><i class="legend-dot rose"></i>Chybné (<span id="leg-bad-pct">0%</span>)</span>
+          </div>
         </div>
         <div class="bar-track">
           <div id="bar-correct" class="bar-fill-correct" style="width: 0%;"></div>
+          <div id="bar-uncertainty" class="bar-fill-uncertainty" style="width: 100%;"></div>
           <div id="bar-wrong" class="bar-fill-wrong" style="width: 0%;"></div>
         </div>
       </div>
@@ -1148,28 +1380,34 @@
       <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; padding-top:4px;">
         <div class="segmented-control">
           <button id="qview-single" class="seg-btn active" onclick="setQuizViewMode('single')">
-            🎯 Po jedné otázce (s klávesnicí A/B/C/D)
+            🎯 Po jedné otázce (A/B/C/D)
           </button>
           <button id="qview-list" class="seg-btn" onclick="setQuizViewMode('list')">
             📋 Všechny otázky pod sebou
           </button>
+          <button id="qview-matrix" class="seg-btn" onclick="setQuizViewMode('matrix')">
+            📊 Karta každé otázky &amp; šance
+          </button>
         </div>
 
         <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+          <button id="btn-filter-unanswered" class="action-btn warm-soft" onclick="filterOnlyUnanswered()">
+            ❓ Procvičit jen nejistotu (<span id="unanswered-count-btn">140</span>)
+          </button>
           <button id="btn-filter-mistakes" class="action-btn rose-soft" onclick="filterOnlyMistakes()" style="display:none;">
             🔁 Procvičit jen chyby (<span id="mistake-count-btn">0</span>)
           </button>
           <button class="action-btn primary-soft" onclick="shuffleActiveQuiz()">
-            🔀 Zamíchat otázky a možnosti
+            🔀 Zamíchat
           </button>
           <button class="action-btn" onclick="resetQuizStats()">
-            ♻️ Vynulovat skóre
+            ♻️ Vynulovat
           </button>
         </div>
       </div>
     </div>
 
-    <!-- DYNAMIC QUIZ CONTENT CONTAINER -->
+    <!-- DYNAMIC QUIZ / PER-QUESTION MATRIX CONTAINER -->
     <div id="quiz-cards-container" style="display:flex; flex-direction:column; gap:18px;"></div>
 
   </section>
@@ -1217,7 +1455,7 @@
 
     let activeEngine = RAW_DATA.default_engine || "copilot_v2";
     let currentTrack = RAW_DATA.tracks ? RAW_DATA.tracks[activeEngine] : RAW_DATA;
-    let appMode = "podcast"; // 'podcast' | 'quiz'
+    let appMode = "podcast"; // 'podcast' | 'quiz' | 'matrix'
 
     const CHAPTERS = [
       { id: "intro", badge: "Úvod", title: "Úvod" },
@@ -1235,25 +1473,25 @@
     ];
 
     const QUIZ_TOPICS = [
-      { id: "all",   title: "Všechny otázky" },
-      { id: "opt-1", title: "Optika 1: Vlákna & λ" },
-      { id: "opt-2", title: "Optika 2: Odraz, NA & Útlum" },
-      { id: "sk-8",  title: "Ot. 8: Normy v ČR" },
-      { id: "sk-9",  title: "Ot. 9: UTP, FTP, STP & Kříž" },
-      { id: "sk-10", title: "Ot. 10: Kroucené páry" },
-      { id: "sk-11", title: "Ot. 11: Třídy A–Fa & Frekvence" },
-      { id: "sk-12", title: "Ot. 12: Přeslech FEXT" },
-      { id: "sk-13", title: "Ot. 13: Subsystémy & Šňůry A,B,E" },
-      { id: "sk-14", title: "Ot. 14: Pracovní plocha (10 m²)" },
-      { id: "sk-15", title: "Ot. 15: Patří do SK?" },
-      { id: "sk-16", title: "Ot. 16: Konektor RJ-45 Typ B" }
+      { id: "all",   title: "Všechny otázky", desc: "Kompletní soubor všech 140 otázek ke zkoušce" },
+      { id: "opt-1", title: "Optika 1: Vlákna & λ", desc: "4 vrstvy vlákna (9/50/62,5/125/250/900 µm), MM vs. SM, okna 850/1300/1550 nm" },
+      { id: "opt-2", title: "Optika 2: Odraz, NA & Útlum", desc: "Totální vnitřní odraz (n₁ > n₂), n = c/v, NA = √(n₁²−n₂²), θ_max, vložný útlum" },
+      { id: "sk-8",  title: "Ot. 8: Normy v ČR", desc: "ČSN EN 50173, ČSN EN 50174, ISO/IEC 11801 a americká TIA/EIA-568" },
+      { id: "sk-9",  title: "Ot. 9: UTP, FTP, STP & Kříž", desc: "4 páry (8 žil), UTP (Cat 6 / E), FTP (fólie), STP (každý pár, Cat 6a / Ea+), rybí kost" },
+      { id: "sk-10", title: "Ot. 10: Kroucené páry", desc: "Omezení EMI a přeslechů, různá hustota zákrutů 4 párů, +U/−U a rozdíl napětí" },
+      { id: "sk-11", title: "Ot. 11: Třídy A–Fa & Frekvence", desc: "ČSN EN 50173 & ISO/IEC 11801, třídy A (100 kHz) až Fa (1000 MHz) a I & II (2000 MHz)" },
+      { id: "sk-12", title: "Ot. 12: Přeslech FEXT", desc: "Far-End Crosstalk na vzdáleném konci a požadavek na co nejvyšší útlum FEXT v dB" },
+      { id: "sk-13", title: "Ot. 13: Subsystémy & Šňůry A,B,E", desc: "Páteř areálu 1500 m, budovy 500 m, horizontální 90 m + šňůry A, B, E ≤ 10 m (100 m)" },
+      { id: "sk-14", title: "Ot. 14: Pracovní plocha (10 m²)", desc: "Začíná zásuvkou TO, šňůra max. 5 m, 10 m² = min. 2 zásuvky (1 dvojzásuvka)" },
+      { id: "sk-15", title: "Ot. 15: Patří do SK?", desc: "Kabely pracovní plochy NEPATŘÍ do generické SK; generická SK končí na zásuvce TO" },
+      { id: "sk-16", title: "Ot. 16: Konektor RJ-45 Typ B", desc: "Evropský T568B: piny 1–8, zelený pár rozházený na 3 a 6, modrý pár 4 (Modrá) a 5 (Bílo-modrá)" }
     ];
 
     const DIAGRAMS = {
       "intro": `
         <div class="q-heading">Přehled testových okruhů (Optika &amp; Strukturovaná kabeláž)</div>
         <div class="note-block">
-          V horní liště si můžeš kliknout na libovolnou otázku, nebo se přepnout do záložky <strong>📝 Test ABCD (140 otázek)</strong>, kde je každá věc procvičena minimálně 3× z různých úhlů pohledu.
+          V horní liště si můžeš přepnout mezi <strong>🎧 Podcast &amp; Tahák</strong>, <strong>📝 Test ABCD (140 otázek)</strong> a novým přehledem <strong>📊 Šance po otázkách</strong>, který u každé zkouškové otázky počítá procentuální šanci, že ji uděláš, a nezodpovězené otázky započítává jako <strong>nejistotu</strong>.
         </div>
         <div class="callout-tip">
           <strong>Ovládání klávesnicí:</strong> V podcastu mezerník (Space) zastaví/spustí přehrávání. V testu ABCD můžeš odpovídat klávesami <strong>A, B, C, D</strong> (nebo <strong>1, 2, 3, 4</strong>) a přecházet na další otázku klávesou <strong>Enter</strong> nebo <strong>šipkou doprava</strong>.
@@ -1494,21 +1732,32 @@
     let currentQuestionId = "";
 
     /* =========================================================================
-       MODE SWITCHING (PODCAST & TAHÁK vs TEST ABCD)
+       MODE SWITCHING (PODCAST & TAHÁK vs TEST ABCD vs ŠANCE PO OTÁZKÁCH)
        ========================================================================= */
     function setAppMode(mode) {
       appMode = mode;
-      const isQuiz = mode === "quiz";
-      document.getElementById("tab-btn-podcast").classList.toggle("active", !isQuiz);
-      document.getElementById("tab-btn-quiz").classList.toggle("active", isQuiz);
+      const isPodcast = mode === "podcast";
+      document.getElementById("tab-btn-podcast").classList.toggle("active", mode === "podcast");
+      document.getElementById("tab-btn-quiz").classList.toggle("active", mode === "quiz");
+      document.getElementById("tab-btn-matrix").classList.toggle("active", mode === "matrix");
 
-      document.getElementById("podcast-workspace").style.display = isQuiz ? "none" : "grid";
-      document.getElementById("chapter-list").style.display = isQuiz ? "none" : "flex";
+      document.getElementById("podcast-workspace").style.display = isPodcast ? "grid" : "none";
+      document.getElementById("chapter-list").style.display = isPodcast ? "flex" : "none";
 
-      document.getElementById("quiz-workspace").style.display = isQuiz ? "flex" : "none";
-      document.getElementById("quiz-topic-bar").style.display = isQuiz ? "flex" : "none";
+      document.getElementById("quiz-workspace").style.display = isPodcast ? "none" : "flex";
+      document.getElementById("quiz-topic-bar").style.display = isPodcast ? "none" : "flex";
 
-      if (isQuiz) {
+      if (mode === "matrix") {
+        quizViewMode = "matrix";
+      } else if (mode === "quiz" && quizViewMode === "matrix") {
+        quizViewMode = "single";
+      }
+
+      document.getElementById("qview-single").classList.toggle("active", quizViewMode === "single");
+      document.getElementById("qview-list").classList.toggle("active", quizViewMode === "list");
+      document.getElementById("qview-matrix").classList.toggle("active", quizViewMode === "matrix");
+
+      if (!isPodcast) {
         renderQuizTopicBar();
         renderQuizDashboardAndCards();
       }
@@ -1520,9 +1769,17 @@
         : "all";
       quizFilterTopic = targetTopic;
       onlyMistakesMode = false;
+      onlyUnansweredMode = false;
       currentSingleIndex = 0;
+      quizViewMode = "single";
       rebuildActiveQuestionList();
       setAppMode("quiz");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function openPodcastStudyForTopic(topicId) {
+      setAppMode("podcast");
+      updateDiagram(topicId);
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
@@ -1646,15 +1903,15 @@
     }
 
     /* =========================================================================
-       ABCD QUIZ ENGINE (140 QUESTIONS, OPTION SHUFFLING, LIVE PERCENTAGE)
+       ABCD QUIZ ENGINE + PROBABILITY & UNCERTAINTY CALCULATOR
        ========================================================================= */
     let quizFilterTopic = "all";
-    let quizViewMode = "single"; // 'single' | 'list'
+    let quizViewMode = "single"; // 'single' | 'list' | 'matrix'
     let onlyMistakesMode = false;
+    let onlyUnansweredMode = false;
     let currentSingleIndex = 0;
     let currentStreak = 0;
 
-    // Map questionId -> { chosenIndex, isCorrect, shuffledOptions: [{text, isCorrect}] }
     let quizState = {};
     let activeQuestionList = [];
 
@@ -1663,7 +1920,6 @@
         text: text,
         isCorrect: idx === qObj.ans
       }));
-      // Fisher-Yates shuffle so correct option is evenly distributed across A, B, C, D
       for (let i = items.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         const tmp = items[i];
@@ -1683,7 +1939,6 @@
         };
       });
 
-      // Restore saved answers from localStorage if available
       try {
         const saved = localStorage.getItem("podporn_quiz_v1");
         if (saved) {
@@ -1728,6 +1983,8 @@
       }
       if (onlyMistakesMode) {
         pool = pool.filter(q => quizState[q.id] && quizState[q.id].answered && !quizState[q.id].isCorrect);
+      } else if (onlyUnansweredMode) {
+        pool = pool.filter(q => quizState[q.id] && !quizState[q.id].answered);
       }
       activeQuestionList = pool;
       if (currentSingleIndex >= activeQuestionList.length) {
@@ -1738,24 +1995,67 @@
     function selectQuizTopic(topicId) {
       quizFilterTopic = topicId;
       onlyMistakesMode = false;
+      onlyUnansweredMode = false;
       currentSingleIndex = 0;
       rebuildActiveQuestionList();
-      // Jump to first unanswered question in that topic if available
       const firstUnanswered = activeQuestionList.findIndex(q => !quizState[q.id].answered);
       if (firstUnanswered !== -1) currentSingleIndex = firstUnanswered;
       renderQuizTopicBar();
       renderQuizDashboardAndCards();
     }
 
+    function jumpToSpecificSubQuestion(topicId, qId) {
+      quizFilterTopic = topicId;
+      onlyMistakesMode = false;
+      onlyUnansweredMode = false;
+      quizViewMode = "single";
+      appMode = "quiz";
+      document.getElementById("tab-btn-podcast").classList.remove("active");
+      document.getElementById("tab-btn-quiz").classList.add("active");
+      document.getElementById("tab-btn-matrix").classList.remove("active");
+      document.getElementById("qview-single").classList.add("active");
+      document.getElementById("qview-list").classList.remove("active");
+      document.getElementById("qview-matrix").classList.remove("active");
+
+      rebuildActiveQuestionList();
+      const idx = activeQuestionList.findIndex(q => q.id === qId);
+      currentSingleIndex = idx !== -1 ? idx : 0;
+      renderQuizTopicBar();
+      renderQuizDashboardAndCards();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
     function setQuizViewMode(mode) {
       quizViewMode = mode;
+      appMode = mode === "matrix" ? "matrix" : "quiz";
+      document.getElementById("tab-btn-podcast").classList.remove("active");
+      document.getElementById("tab-btn-quiz").classList.toggle("active", mode !== "matrix");
+      document.getElementById("tab-btn-matrix").classList.toggle("active", mode === "matrix");
+
       document.getElementById("qview-single").classList.toggle("active", mode === "single");
       document.getElementById("qview-list").classList.toggle("active", mode === "list");
+      document.getElementById("qview-matrix").classList.toggle("active", mode === "matrix");
       renderQuizDashboardAndCards();
     }
 
     function filterOnlyMistakes() {
       onlyMistakesMode = !onlyMistakesMode;
+      if (onlyMistakesMode) {
+        onlyUnansweredMode = false;
+        if (quizViewMode === "matrix") setQuizViewMode("single");
+      }
+      currentSingleIndex = 0;
+      rebuildActiveQuestionList();
+      renderQuizTopicBar();
+      renderQuizDashboardAndCards();
+    }
+
+    function filterOnlyUnanswered() {
+      onlyUnansweredMode = !onlyUnansweredMode;
+      if (onlyUnansweredMode) {
+        onlyMistakesMode = false;
+        if (quizViewMode === "matrix") setQuizViewMode("single");
+      }
       currentSingleIndex = 0;
       rebuildActiveQuestionList();
       renderQuizTopicBar();
@@ -1763,7 +2063,6 @@
     }
 
     function shuffleActiveQuiz() {
-      // Re-shuffle unanswered question options and shuffle activeQuestionList order
       RAW_QUIZ.forEach(q => {
         if (!quizState[q.id].answered) {
           quizState[q.id].shuffledOptions = createShuffledOptions(q);
@@ -1782,6 +2081,7 @@
     function resetQuizStats() {
       currentStreak = 0;
       onlyMistakesMode = false;
+      onlyUnansweredMode = false;
       RAW_QUIZ.forEach(q => {
         quizState[q.id] = {
           answered: false,
@@ -1798,8 +2098,17 @@
       renderQuizDashboardAndCards();
     }
 
+    /**
+     * Probability & Uncertainty calculation for any topic (or 'all'):
+     * - confirmedChancePct: (correct / total) * 100  --> Unanswered counted as 0% confirmed certainty
+     * - uncertaintyPct: (unanswered / total) * 100   --> Share of questions still in uncertainty
+     * - wrongPct: (wrong / total) * 100              --> Confirmed knowledge gaps
+     * - expectedChancePct: ((correct + 0.25 * unanswered) / total) * 100 --> Expected exam score with 25% ABCD guessing on unanswered
+     * - maxPotentialPct: ((correct + unanswered) / total) * 100 --> Upper bound of the uncertainty interval
+     */
     function getTopicStats(topicId) {
       const subset = topicId === "all" ? RAW_QUIZ : RAW_QUIZ.filter(q => q.topic === topicId);
+      const total = subset.length;
       let answered = 0;
       let correct = 0;
       let wrong = 0;
@@ -1811,18 +2120,36 @@
           else wrong++;
         }
       });
-      const pct = answered > 0 ? Math.round((correct / answered) * 100) : null;
-      return { total: subset.length, answered, correct, wrong, pct };
+      const unanswered = total - answered;
+      const confirmedChancePct = total > 0 ? Math.round((correct / total) * 100) : 0;
+      const uncertaintyPct = total > 0 ? Math.round((unanswered / total) * 100) : 0;
+      const wrongPct = total > 0 ? Math.round((wrong / total) * 100) : 0;
+      const expectedChancePct = total > 0 ? Math.round(((correct + 0.25 * unanswered) / total) * 100) : 0;
+      const maxPotentialPct = total > 0 ? Math.round(((correct + unanswered) / total) * 100) : 0;
+      const answeredAccuracyPct = answered > 0 ? Math.round((correct / answered) * 100) : null;
+
+      return {
+        total,
+        answered,
+        unanswered,
+        correct,
+        wrong,
+        confirmedChancePct,
+        uncertaintyPct,
+        wrongPct,
+        expectedChancePct,
+        maxPotentialPct,
+        answeredAccuracyPct,
+        subset
+      };
     }
 
     function updateHeaderQuizBadge() {
       const allSt = getTopicStats("all");
       const badgeEl = document.getElementById("header-quiz-badge");
-      if (allSt.answered === 0) {
-        badgeEl.textContent = `${allSt.total} otázek`;
-      } else {
-        badgeEl.textContent = `${allSt.pct} % (${allSt.answered}/${allSt.total})`;
-      }
+      const uncBadgeEl = document.getElementById("header-uncertainty-badge");
+      badgeEl.textContent = `Šance ${allSt.confirmedChancePct} %`;
+      uncBadgeEl.textContent = `Nejistota ${allSt.uncertaintyPct} %`;
     }
 
     function renderQuizTopicBar() {
@@ -1832,14 +2159,15 @@
       QUIZ_TOPICS.forEach(tp => {
         const st = getTopicStats(tp.id);
         const btn = document.createElement("button");
-        const isActive = (quizFilterTopic === tp.id && !onlyMistakesMode);
+        const isActive = (quizFilterTopic === tp.id && !onlyMistakesMode && !onlyUnansweredMode);
         btn.className = "topic-pill" + (isActive ? " active" : "");
         btn.onclick = () => selectQuizTopic(tp.id);
 
-        const pctText = st.pct !== null ? `${st.pct}%` : `${st.total}`;
         btn.innerHTML = `
           <span>${tp.title}</span>
-          <span class="pill-time">${pctText}</span>
+          <span class="pill-time" title="Potvrzená šance: ${st.confirmedChancePct} % | Nejistota: ${st.uncertaintyPct} %">
+            ${st.confirmedChancePct}% <span style="opacity:0.7;">(±${st.uncertaintyPct}%)</span>
+          </span>
         `;
         bar.appendChild(btn);
       });
@@ -1881,12 +2209,149 @@
       renderQuizDashboardAndCards();
     }
 
+    /* =========================================================================
+       BUILD PER-EXAM-QUESTION PROBABILITY & UNCERTAINTY CARDS (MATRIX VIEW)
+       ========================================================================= */
+    function buildExamQuestionProbabilityGridHTML() {
+      const topicsToShow = quizFilterTopic === "all"
+        ? QUIZ_TOPICS.filter(t => t.id !== "all")
+        : QUIZ_TOPICS.filter(t => t.id === quizFilterTopic);
+
+      const cardsHTML = topicsToShow.map(tp => {
+        const st = getTopicStats(tp.id);
+        const cWidth = st.total > 0 ? (st.correct / st.total) * 100 : 0;
+        const uWidth = st.total > 0 ? (st.unanswered / st.total) * 100 : 0;
+        const wWidth = st.total > 0 ? (st.wrong / st.total) * 100 : 0;
+
+        let badgeColor = "var(--accent-primary)";
+        let badgeBg = "var(--accent-primary-soft)";
+        if (st.confirmedChancePct >= 75) {
+          badgeColor = "var(--accent-green)";
+          badgeBg = "var(--accent-green-soft)";
+        } else if (st.confirmedChancePct >= 40) {
+          badgeColor = "var(--accent-warm)";
+          badgeBg = "var(--accent-warm-soft)";
+        } else if (st.answered > 0) {
+          badgeColor = "var(--accent-rose)";
+          badgeBg = "var(--accent-rose-soft)";
+        }
+
+        // Individual sub-question chips (#1 .. #N) showing exact certainty state
+        const subChipsHTML = st.subset.map((qObj, idx) => {
+          const qSt = quizState[qObj.id];
+          let chipCls = "subq-chip st-unanswered";
+          let icon = "?";
+          let statusTxt = "Nezodpovězeno (nejistota – odhad 25 %)";
+          if (qSt && qSt.answered) {
+            if (qSt.isCorrect) {
+              chipCls = "subq-chip st-correct";
+              icon = "✓";
+              statusTxt = "Správně zodpovězeno (100% jistota)";
+            } else {
+              chipCls = "subq-chip st-wrong";
+              icon = "✗";
+              statusTxt = "Chybně zodpovězeno (0% jistota – nutno opravit)";
+            }
+          }
+          const safeQ = qObj.q.replace(/"/g, "&quot;");
+          return `
+            <button
+              class="${chipCls}"
+              title="Otázka #${qObj.id} (${statusTxt}): ${safeQ}"
+              onclick="jumpToSpecificSubQuestion('${tp.id}', ${qObj.id})"
+            >
+              <span>#${idx + 1}</span>
+              <span>${icon}</span>
+            </button>
+          `;
+        }).join("");
+
+        return `
+          <div class="exam-q-card">
+            <div class="exam-q-head">
+              <div>
+                <div class="exam-q-title">${tp.title}</div>
+                <div class="exam-q-sub">${tp.desc}</div>
+              </div>
+              <div class="chance-badge-col">
+                <div class="chance-pill-main" style="color:${badgeColor}; background:${badgeBg};">
+                  ${st.confirmedChancePct} %
+                </div>
+                <div class="chance-pill-sub">
+                  Nejistota: ${st.uncertaintyPct} %
+                </div>
+              </div>
+            </div>
+
+            <!-- 3-SEGMENT PROBABILITY BAR -->
+            <div>
+              <div style="display:flex; justify-content:space-between; font-size:11.5px; font-weight:700; color:var(--text-secondary); margin-bottom:5px;">
+                <span>Odhad se započtením nejistoty: <strong style="color:var(--accent-primary);">${st.expectedChancePct} %</strong></span>
+                <span>Interval: ${st.confirmedChancePct} % – ${st.maxPotentialPct} %</span>
+              </div>
+              <div class="bar-track" style="height:10px;">
+                <div class="bar-fill-correct" style="width:${cWidth}%;"></div>
+                <div class="bar-fill-uncertainty" style="width:${uWidth}%;"></div>
+                <div class="bar-fill-wrong" style="width:${wWidth}%;"></div>
+              </div>
+            </div>
+
+            <!-- 3 METRICS BOXES -->
+            <div class="metrics-3col">
+              <div>
+                <div class="m3-val" style="color:var(--accent-green);">${st.correct} / ${st.total}</div>
+                <div class="m3-lbl">✓ Potvrzeno (${st.confirmedChancePct}%)</div>
+              </div>
+              <div>
+                <div class="m3-val" style="color:var(--accent-warm);">${st.unanswered} / ${st.total}</div>
+                <div class="m3-lbl">? Nejistota (${st.uncertaintyPct}%)</div>
+              </div>
+              <div>
+                <div class="m3-val" style="color:var(--accent-rose);">${st.wrong} / ${st.total}</div>
+                <div class="m3-lbl">✗ Chyby (${st.wrongPct}%)</div>
+              </div>
+            </div>
+
+            <!-- CLICKABLE INDIVIDUAL SUB-QUESTIONS -->
+            <div>
+              <div style="font-size:11.5px; font-weight:700; color:var(--text-muted); margin-bottom:6px;">
+                Jednotlivé podotázky v tomto okruhu (klikni na podotázku pro okamžité zodpovězení):
+              </div>
+              <div class="subq-chips-wrap">
+                ${subChipsHTML}
+              </div>
+            </div>
+
+            <div class="exam-q-actions">
+              <button class="action-btn" onclick="openPodcastStudyForTopic('${tp.id}')">
+                📖 Tahák &amp; Audio
+              </button>
+              <button class="action-btn primary-soft" onclick="selectQuizTopic('${tp.id}'); setQuizViewMode('single');">
+                🎯 Procvičit otázku (${st.unanswered > 0 ? `zbývá ${st.unanswered} nejistých` : 'zopakovat'}) →
+              </button>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      return `<div class="exam-prob-grid">${cardsHTML}</div>`;
+    }
+
     function buildQuestionCardHTML(qObj, idxInList, totalInList) {
       const st = quizState[qObj.id];
+      const topicStats = getTopicStats(qObj.topic);
       const letters = ["A", "B", "C", "D"];
       let cardStateClass = "";
-      if (st.answered) {
-        cardStateClass = st.isCorrect ? "answered-correct" : "answered-wrong";
+      let qProbBadgeHTML = "";
+
+      if (!st.answered) {
+        qProbBadgeHTML = `<span class="q-prob-pill uncertain" title="Nezodpovězená otázka se počítá jako nejistota (při náhodném tipu A/B/C/D je šance 25 %)">? Nejistota (šance tipu 25 %)</span>`;
+      } else if (st.isCorrect) {
+        cardStateClass = "answered-correct";
+        qProbBadgeHTML = `<span class="q-prob-pill certain-ok">✓ Potvrzeno (100% jistota)</span>`;
+      } else {
+        cardStateClass = "answered-wrong";
+        qProbBadgeHTML = `<span class="q-prob-pill certain-bad">✗ Chyba (0% jistota)</span>`;
       }
 
       const optionsHTML = st.shuffledOptions.map((opt, oIdx) => {
@@ -1912,8 +2377,8 @@
       let explanationHTML = "";
       if (st.answered) {
         const statusTitle = st.isCorrect
-          ? "✅ Správná odpověď!"
-          : "❌ Pozor, tady byla chyba!";
+          ? `✅ Správně! Tvoje potvrzená šance u tématu „${qObj.topic_label}“ vzrostla na ${topicStats.confirmedChancePct} % (nejistota klesla na ${topicStats.uncertaintyPct} %).`
+          : `❌ Pozor, tady byla chyba! Potvrzená šance u tématu „${qObj.topic_label}“ je nyní ${topicStats.confirmedChancePct} % (nejistota ${topicStats.uncertaintyPct} %).`;
         const expClass = st.isCorrect ? "explanation-box is-correct" : "explanation-box is-wrong";
         explanationHTML = `
           <div class="${expClass}">
@@ -1925,6 +2390,23 @@
         `;
       }
 
+      // Mini clickable strip of all sibling sub-questions in the same exam topic
+      const siblingChipsHTML = topicStats.subset.map((sibQ, sIdx) => {
+        const sibSt = quizState[sibQ.id];
+        let cls = "subq-chip st-unanswered";
+        let sym = "?";
+        if (sibSt && sibSt.answered) {
+          cls = sibSt.isCorrect ? "subq-chip st-correct" : "subq-chip st-wrong";
+          sym = sibSt.isCorrect ? "✓" : "✗";
+        }
+        const activeBorder = sibQ.id === qObj.id ? "outline: 2px solid var(--accent-primary); outline-offset: 1px;" : "";
+        return `
+          <button class="${cls}" style="${activeBorder}" title="Podotázka #${sIdx + 1} v tomto tématu" onclick="jumpToSpecificSubQuestion('${qObj.topic}', ${sibQ.id})">
+            #${sIdx + 1} ${sym}
+          </button>
+        `;
+      }).join("");
+
       let navFooterHTML = "";
       if (quizViewMode === "single") {
         const prevDisabled = idxInList <= 0 ? "disabled style='opacity:0.45; cursor:default;'" : "";
@@ -1933,7 +2415,8 @@
           <div class="quiz-nav-footer">
             <div style="display:flex; gap:8px; flex-wrap:wrap;">
               <button class="action-btn" ${prevDisabled} onclick="stepSingleQuestion(-1)">← Předchozí</button>
-              ${st.answered ? `<button class="action-btn" onclick="retrySingleQuestion(${qObj.id})">🔄 Zkusit tuto otázku znovu (zamíchat A–D)</button>` : ""}
+              ${st.answered ? `<button class="action-btn" onclick="retrySingleQuestion(${qObj.id})">🔄 Zkusit znovu (vrátit do nejistoty &amp; zamíchat)</button>` : ""}
+              <button class="action-btn" onclick="setQuizViewMode('matrix')">📊 Přehled šancí všech otázek</button>
             </div>
             <button class="next-q-cta" onclick="stepSingleQuestion(1)">
               ${nextLabel}
@@ -1951,14 +2434,37 @@
       return `
         <article class="quiz-card ${cardStateClass}" id="qcard-${qObj.id}">
           <div class="quiz-card-top">
-            <span class="quiz-topic-tag">${qObj.topic_label}</span>
-            <span class="quiz-num-tag">Otázka ${idxInList + 1} z ${totalInList} (#${qObj.id})</span>
+            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+              <span class="quiz-topic-tag">${qObj.topic_label}</span>
+              <span style="font-size:12px; font-weight:700; color:var(--text-secondary);">
+                Šance tématu: <strong style="color:var(--accent-green);">${topicStats.confirmedChancePct} %</strong>
+                <span style="color:var(--accent-warm);">(nejistota ${topicStats.uncertaintyPct} %)</span>
+              </span>
+            </div>
+            <div class="quiz-num-tag">
+              ${qProbBadgeHTML}
+              <span>Otázka ${idxInList + 1} / ${totalInList} (#${qObj.id})</span>
+            </div>
           </div>
+
           <div class="quiz-question-text">${qObj.q}</div>
+
           <div class="options-grid">
             ${optionsHTML}
           </div>
+
           ${explanationHTML}
+
+          <!-- MINI SUB-QUESTION TRACKER FOR THIS EXAM TOPIC -->
+          <div style="padding-top:6px; border-top:1px dashed var(--border-color); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+            <span style="font-size:11.5px; font-weight:700; color:var(--text-muted);">
+              Všechny podotázky k tématu „${qObj.topic_label}“ (${topicStats.correct}✓ / ${topicStats.unanswered}? / ${topicStats.wrong}✗):
+            </span>
+            <div class="subq-chips-wrap">
+              ${siblingChipsHTML}
+            </div>
+          </div>
+
           ${navFooterHTML}
         </article>
       `;
@@ -1973,53 +2479,69 @@
     function renderQuizDashboardAndCards() {
       const scopeStats = getTopicStats(quizFilterTopic);
       const allStats = getTopicStats("all");
+      const topicObj = QUIZ_TOPICS.find(t => t.id === quizFilterTopic) || QUIZ_TOPICS[0];
+
+      document.getElementById("dashboard-scope-title").textContent =
+        quizFilterTopic === "all"
+          ? `Šance, že uděláš zkoušku – Všechny otázky (${scopeStats.total} otázek)`
+          : `Šance na otázku: ${topicObj.title} (${scopeStats.total} podotázek)`;
 
       const pctValEl = document.getElementById("quiz-pct-val");
       const pctCircleEl = document.getElementById("pct-circle");
+      const uncValEl = document.getElementById("quiz-unc-val");
 
-      if (scopeStats.answered === 0) {
-        pctValEl.textContent = "— %";
+      pctValEl.textContent = `${scopeStats.confirmedChancePct} %`;
+      uncValEl.textContent = `${scopeStats.uncertaintyPct} %`;
+
+      if (scopeStats.confirmedChancePct >= 75) {
+        pctValEl.style.color = "var(--accent-green)";
+        pctCircleEl.style.background = "var(--accent-green-soft)";
+      } else if (scopeStats.confirmedChancePct >= 40) {
+        pctValEl.style.color = "var(--accent-warm)";
+        pctCircleEl.style.background = "var(--accent-warm-soft)";
+      } else {
         pctValEl.style.color = "var(--accent-primary)";
         pctCircleEl.style.background = "var(--accent-primary-soft)";
-      } else {
-        pctValEl.textContent = `${scopeStats.pct} %`;
-        if (scopeStats.pct >= 80) {
-          pctValEl.style.color = "var(--accent-green)";
-          pctCircleEl.style.background = "var(--accent-green-soft)";
-        } else if (scopeStats.pct >= 50) {
-          pctValEl.style.color = "var(--accent-warm)";
-          pctCircleEl.style.background = "var(--accent-warm-soft)";
-        } else {
-          pctValEl.style.color = "var(--accent-rose)";
-          pctCircleEl.style.background = "var(--accent-rose-soft)";
-        }
       }
 
+      document.getElementById("expected-chance-lbl").textContent = `${scopeStats.expectedChancePct} %`;
+      document.getElementById("interval-chance-lbl").textContent = `${scopeStats.confirmedChancePct} % – ${scopeStats.maxPotentialPct} %`;
+
       document.getElementById("stat-correct").textContent = scopeStats.correct;
+      document.getElementById("stat-unanswered").textContent = scopeStats.unanswered;
       document.getElementById("stat-wrong").textContent = scopeStats.wrong;
-      document.getElementById("stat-answered").textContent = `${scopeStats.answered} / ${scopeStats.total}`;
       document.getElementById("stat-streak").textContent = `${currentStreak} 🔥`;
 
-      // Progress bars
+      // 3-segment bar: Confirmed Correct + Uncertainty (Unanswered) + Wrong
       const correctWidth = scopeStats.total > 0 ? (scopeStats.correct / scopeStats.total) * 100 : 0;
+      const uncertaintyWidth = scopeStats.total > 0 ? (scopeStats.unanswered / scopeStats.total) * 100 : 0;
       const wrongWidth = scopeStats.total > 0 ? (scopeStats.wrong / scopeStats.total) * 100 : 0;
+
       document.getElementById("bar-correct").style.width = `${correctWidth}%`;
+      document.getElementById("bar-uncertainty").style.width = `${uncertaintyWidth}%`;
       document.getElementById("bar-wrong").style.width = `${wrongWidth}%`;
 
-      const completionPct = scopeStats.total > 0 ? Math.round((scopeStats.answered / scopeStats.total) * 100) : 0;
-      document.getElementById("bar-left-label").textContent =
-        scopeStats.answered > 0
-          ? `Úspěšnost zodpovězených: ${scopeStats.pct} % (${scopeStats.correct} správně, ${scopeStats.wrong} špatně)`
-          : "Zatím nebyla zodpovězena žádná otázka v tomto okruhu";
-      document.getElementById("bar-right-label").textContent =
-        `Projito ${completionPct} % okruhu (${scopeStats.answered} z ${scopeStats.total} otázek)`;
+      document.getElementById("leg-ok-pct").textContent = `${scopeStats.confirmedChancePct}%`;
+      document.getElementById("leg-unc-pct").textContent = `${scopeStats.uncertaintyPct}%`;
+      document.getElementById("leg-bad-pct").textContent = `${scopeStats.wrongPct}%`;
 
-      // Mistake filter button
+      document.getElementById("bar-left-label").textContent =
+        `Potvrzeno: ${scopeStats.confirmedChancePct} % • Nejistota (nezodpovězeno): ${scopeStats.uncertaintyPct} % • Chyby: ${scopeStats.wrongPct} %`;
+
+      // Unanswered & Mistake filter buttons
+      const unansBtn = document.getElementById("btn-filter-unanswered");
+      if (scopeStats.unanswered > 0 || onlyUnansweredMode) {
+        unansBtn.style.display = "inline-flex";
+        unansBtn.innerHTML = onlyUnansweredMode
+          ? `✕ Zrušit filtr nejistoty (zobrazit vše)`
+          : `❓ Procvičit jen nejistotu (${scopeStats.unanswered})`;
+      } else {
+        unansBtn.style.display = "none";
+      }
+
       const mistakeBtn = document.getElementById("btn-filter-mistakes");
-      const mistakeCntEl = document.getElementById("mistake-count-btn");
       if (allStats.wrong > 0 || onlyMistakesMode) {
         mistakeBtn.style.display = "inline-flex";
-        mistakeCntEl.textContent = allStats.wrong;
         mistakeBtn.innerHTML = onlyMistakesMode
           ? `✕ Zrušit filtr chyb (zobrazit vše)`
           : `🔁 Procvičit jen chyby (${allStats.wrong})`;
@@ -2027,15 +2549,21 @@
         mistakeBtn.style.display = "none";
       }
 
-      // Render cards
+      // Render container based on quizViewMode ('matrix' | 'single' | 'list')
       const container = document.getElementById("quiz-cards-container");
+      if (quizViewMode === "matrix") {
+        container.innerHTML = buildExamQuestionProbabilityGridHTML();
+        return;
+      }
+
       if (activeQuestionList.length === 0) {
         container.innerHTML = `
           <div class="quiz-card" style="text-align:center; padding:40px 24px;">
-            <div style="font-size:22px; font-weight:800; color:var(--accent-green);">🎉 Žádné chybné otázky k opakování!</div>
-            <div style="color:var(--text-secondary); margin-top:6px;">Všechny zodpovězené otázky v tomto výběru máš správně.</div>
-            <div style="margin-top:14px;">
-              <button class="next-q-cta" onclick="selectQuizTopic('all')">Zobrazit všechny otázky (140)</button>
+            <div style="font-size:22px; font-weight:800; color:var(--accent-green);">🎉 V tomto filtru už nezůstala žádná otázka!</div>
+            <div style="color:var(--text-secondary); margin-top:6px;">Můžeš se podívat na celkový přehled šancí po jednotlivých zkouškových otázkách nebo zobrazit všech 140 otázek.</div>
+            <div style="margin-top:14px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+              <button class="next-q-cta" onclick="setQuizViewMode('matrix')">📊 Zobrazit šance po otázkách</button>
+              <button class="action-btn" onclick="selectQuizTopic('all'); setQuizViewMode('single');">Zobrazit všech 140 otázek</button>
             </div>
           </div>
         `;
@@ -2133,7 +2661,6 @@
     window.addEventListener("keydown", (e) => {
       if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
 
-      // Quiz mode keyboard shortcuts (A/B/C/D or 1/2/3/4 + Enter/Arrows)
       if (appMode === "quiz" && quizViewMode === "single" && activeQuestionList.length > 0) {
         const curQ = activeQuestionList[currentSingleIndex];
         const keyUpper = e.key.toUpperCase();
