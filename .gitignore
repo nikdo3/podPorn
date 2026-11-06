@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+test_andrew.mp3
+.tmp_segments/
+segments/
+segments_v2/

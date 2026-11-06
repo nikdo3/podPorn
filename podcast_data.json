@@ -1,0 +1,1156 @@
+{
+  "default_engine": "copilot_v2",
+  "tracks": {
+    "copilot_v2": {
+      "engine": "copilot_v2",
+      "filename": "podcast_copilot_v2.mp3",
+      "total_duration": 924.67,
+      "segments": [
+        {
+          "index": 0,
+          "speaker": "Klára",
+          "question_id": "intro",
+          "display": "Ahoj Tome! Hele, zítra mě čeká ten velký test na optiku a strukturovanou kabeláž. Mám tu fotky loňského testu i přesný výpis z našich hodin – projdeme to spolu tak, abych tam zítra nechala plný počet bodů?",
+          "start": 0.0,
+          "end": 12.7,
+          "duration": 12.7
+        },
+        {
+          "index": 1,
+          "speaker": "Tomáš",
+          "question_id": "intro",
+          "display": "Jasně Kláro, jdeme na to! Vezmeme to úplně bez omáčky, přesně podle otázek z testu a tvých zápisků z hodin. Ukážeme si i všechny chytáky, na kterých lidi zbytečně ztrácejí body. Začneme optikou, jo?",
+          "start": 12.89,
+          "end": 28.42,
+          "duration": 15.53
+        },
+        {
+          "index": 2,
+          "speaker": "Klára",
+          "question_id": "opt-1",
+          "display": "Super! Takže první otázka z optiky: **„Základní typy optických vláken, vlnové délky. Nakreslete typickou strukturu optického vlákna.“** Jak mám nakreslit a popsat ten průřez vláknem?",
+          "start": 28.61,
+          "end": 41.81,
+          "duration": 13.2
+        },
+        {
+          "index": 3,
+          "speaker": "Tomáš",
+          "question_id": "opt-1",
+          "display": "Představ si, že ten optický kabel rozřízneš a koukáš na něj zepředu. Nakreslíš **čtyři soustředné kružnice** od středu ven. Úplně uprostřed je **jádro (Core)** z křemičitého skla s příměsemi, které zvyšují jeho index lomu $n_1$. A teď bacha na průměr jádra: u jednovidového vlákna je to **9 µm** (obecně 8 až 10 µm), a u mnohovidového **50 µm** nebo **62,5 µm**.",
+          "start": 42.0,
+          "end": 73.1,
+          "duration": 31.1
+        },
+        {
+          "index": 4,
+          "speaker": "Klára",
+          "question_id": "opt-1",
+          "display": "Dobře, to je jádro. Hned kolem něj je druhá vrstva – **plášť (Cladding)** s nižším indexem lomu $n_2$. Ten má prý průměr vždycky stejný?",
+          "start": 73.3,
+          "end": 83.74,
+          "duration": 10.44
+        },
+        {
+          "index": 5,
+          "speaker": "Tomáš",
+          "question_id": "opt-1",
+          "display": "Přesně tak! Plášť má vždycky průměr **125 µm**, ať je to singlemode nebo multimode – proto se vlákna značí třeba **9/125** nebo **50/125 µm**. Kolem pláště je pak třetí vrstva: **primární ochrana** z akrylátového laku o průměru **250 µm**, která chrání sklo před vlhkostí a mikroohyby. A čtvrtá vrstva je **sekundární ochrana**, plastová trubička o průměru **900 µm**.",
+          "start": 83.93,
+          "end": 116.04,
+          "duration": 32.11
+        },
+        {
+          "index": 6,
+          "speaker": "Klára",
+          "question_id": "opt-1",
+          "display": "Takže čtyři čísla od středu ven: **9 nebo 50/62,5 µm** jádro, **125 µm** plášť, **250 µm** primární ochrana a **900 µm** sekundární ochrana. A jak v testu popsat ty **základní typy vláken**?",
+          "start": 116.23,
+          "end": 132.7,
+          "duration": 16.46
+        },
+        {
+          "index": 7,
+          "speaker": "Tomáš",
+          "question_id": "opt-1",
+          "display": "Rozdělíš je na **mnohovidová (Multimode – MM)** a **jednovidová (Singlemode – SM)**. U mnohovidových je jádro široké (50 nebo 62,5 µm), takže jím letí spousta paprsků – vidů – pod různými úhly najednou. Jenže paprsek, co letí rovně středem, dorazí do cíle dřív než ten, co se pořád odráží od stěn. Tím se světelný pulz po cestě rozplizne a vzniká **vidová (modální) disperze**.",
+          "start": 132.89,
+          "end": 166.18,
+          "duration": 33.29
+        },
+        {
+          "index": 8,
+          "speaker": "Klára",
+          "question_id": "opt-1",
+          "display": "A proto se mnohovidová vlákna dělí ještě na dva podtypy: se **skokovou změnou indexu lomu (Step-Index)** a s **gradientní změnou (Graded-Index)**, že jo?",
+          "start": 166.37,
+          "end": 176.64,
+          "duration": 10.27
+        },
+        {
+          "index": 9,
+          "speaker": "Tomáš",
+          "question_id": "opt-1",
+          "display": "Přesně! U **skokového** je index lomu v celém jádře stejný a na kraji skokově klesne, takže paprsky létají ostře cik-cak a disperze je velká. Kdežto u **gradientního** index lomu od středu jádra k plášti plynule parabolicky klesá. Paprsek, který letí dál od osy, má sice delší dráhu, ale v místech s nižším indexem lomu letí světlo rychleji! Takže oba paprsky dorazí do cíle skoro nastejno.",
+          "start": 176.83,
+          "end": 206.28,
+          "duration": 29.45
+        },
+        {
+          "index": 10,
+          "speaker": "Klára",
+          "question_id": "opt-1",
+          "display": "A u **jednovidového (Singlemode)** vlákna s jádrem **9 µm** se vejde jen jeden jediný přímý vid, takže vidová disperze úplně odpadá a můžeme posílat data na desítky kilometrů. A co ty **vlnové délky**?",
+          "start": 206.47,
+          "end": 219.07,
+          "duration": 12.6
+        },
+        {
+          "index": 11,
+          "speaker": "Tomáš",
+          "question_id": "opt-1",
+          "display": "Zapamatuj si tři přenosová okna, kde má křemičité sklo nejmenší útlum: **1. okno je 850 nm** (pro multimode, útlum kolem $2{,}5\text{ až }3\text{ dB/km}$). **2. okno je 1300 nm** u multimode a **1310 nm** u singlemode (nulová chromatická disperze, útlum kolem $0{,}35\text{ až }0{,}5\text{ dB/km}$). A **3. okno je 1550 nm** u singlemode – tam je absolutně nejmenší útlum skla, jen asi **$0{,}2\text{ dB/km}$**! Jo a jak máte v zápiscích: frekvence světla v optice se udává v **terahertzích (THz)**.",
+          "start": 219.26,
+          "end": 264.07,
+          "duration": 44.81
+        },
+        {
+          "index": 12,
+          "speaker": "Klára",
+          "question_id": "opt-2",
+          "display": "Jedničku máme! Teď druhá otázka z optiky: **„Co je základní podmínkou pro přenos světla v optickém vlákně? Co je index lomu (i vzorec)? Co je numerická apertura (i vzorec), jakou ji požadujeme, souvisí s průměrem vlákna? Co je maximální úhel navázání? Co je vložný útlum, jak vzniká?“**",
+          "start": 264.26,
+          "end": 265.46,
+          "duration": 1.2
+        },
+        {
+          "index": 13,
+          "speaker": "Tomáš",
+          "question_id": "opt-2",
+          "display": "Takže popořadě: **Základní podmínkou přenosu světla** ve vlákně je **totální (úplný) vnitřní odraz** na rozhraní jádra a pláště. Aby nastal, musí platit dvě věci: zaprvé, **index lomu jádra musí být větší než index lomu pláště ($n_1 > n_2$)**, a zadruhé, **úhel dopadu paprsku $\\alpha$ musí být větší než mezní úhel $\\alpha_m$** (kde $\\sin \\alpha_m = n_2 / n_1$).",
+          "start": 265.66,
+          "end": 295.54,
+          "duration": 29.88
+        },
+        {
+          "index": 14,
+          "speaker": "Klára",
+          "question_id": "opt-2",
+          "display": "Jasně. A samotný **index lomu $n$**? To je poměr rychlosti světla ve vakuu ku rychlosti v daném prostředí, tedy **$n = c / v$**, že?",
+          "start": 295.73,
+          "end": 297.53,
+          "duration": 1.8
+        },
+        {
+          "index": 15,
+          "speaker": "Tomáš",
+          "question_id": "opt-2",
+          "display": "Přesně tak! Bezrozměrné číslo $n = c / v$, které udává, kolikrát pomaleji letí světlo v daném materiálu než ve vakuu ($c \\approx 3 \\cdot 10^8\\text{ m/s}$). Ve skle je $n \\approx 1{,}46$, takže tam světlo letí zhruba $200\\,000\\text{ km/s}$. A teď **maximální úhel navázání $\\theta_{\\max}$**: to je největší úhel vůči ose vlákna, pod kterým může paprsek ze vzduchu vstoupit do čela jádra, aby se uvnitř na plášti ještě totálně odrazil a neutekl ven.",
+          "start": 297.72,
+          "end": 331.22,
+          "duration": 33.5
+        },
+        {
+          "index": 16,
+          "speaker": "Klára",
+          "question_id": "opt-2",
+          "display": "A z něj rovnou plyne **numerická apertura $NA$**! Vzorec je **$NA = \\sin \\theta_{\\max} = \\sqrt{n_1^2 - n_2^2}$**. A teď ten slavný chyták: souvisí numerická apertura s průměrem vlákna?",
+          "start": 331.42,
+          "end": 331.9,
+          "duration": 0.48
+        },
+        {
+          "index": 17,
+          "speaker": "Tomáš",
+          "question_id": "opt-2",
+          "display": "**Vůbec nesouvisí!** Podívej se na ten vzorec $\\sqrt{n_1^2 - n_2^2}$ – žádný průměr v něm není! Numerická apertura závisí **výhradně na indexech lomu jádra a pláště**. A když se ptají, **jakou $NA$ požadujeme**, napiš, že je to **kompromis**: pro snadné navázání světla ze zdroje bychom chtěli $NA$ co největší, ale pro velkou šířku pásma a malou vidovou disperzi potřebujeme $NA$ co nejmenší (aby paprsky nelétaly pod velkými úhly).",
+          "start": 332.09,
+          "end": 366.29,
+          "duration": 34.2
+        },
+        {
+          "index": 18,
+          "speaker": "Klára",
+          "question_id": "opt-2",
+          "display": "A poslední podotázka u optiky: **co je vložný útlum a jak vzniká?**",
+          "start": 366.48,
+          "end": 371.09,
+          "duration": 4.61
+        },
+        {
+          "index": 19,
+          "speaker": "Tomáš",
+          "question_id": "opt-2",
+          "display": "**Vložný útlum** je ztráta optického výkonu v decibelech, která vznikne vložením konektoru, sváru nebo jiného prvku do optické trasy. A vzniká hlavně třemi způsoby: **1. Fresnelovým odrazem** na vzduchové mezeře mezi čely vláken, **2. geometrickou nepřesností spoje** (osovým přesazením jader, zešikmením os nebo mezerou) a **3. nečistotami na čele konektoru** nebo spojením vláken s různým průměrem jádra či různou $NA$.",
+          "start": 371.28,
+          "end": 404.26,
+          "duration": 32.98
+        },
+        {
+          "index": 20,
+          "speaker": "Klára",
+          "question_id": "sk-8",
+          "display": "Paráda, optiku máme kompletní! Jdeme na **Strukturovanou kabeláž** přesně podle našeho výpisu z hodin. Otázka 8: **„Podle jakých norem můžeme v ČR vytvořit strukturovanou kabeláž?“**",
+          "start": 404.45,
+          "end": 417.05,
+          "duration": 12.6
+        },
+        {
+          "index": 21,
+          "speaker": "Tomáš",
+          "question_id": "sk-8",
+          "display": "Přesně podle tvých zápisků: v ČR ji vytváříme podle norem **ČSN EN 50173 a ČSN EN 50174** – jde o české převzetí evropských norem EN (kde 50173 řeší samotný návrh univerzální kabeláže a 50174 její instalaci). A můžeš připsat i mezinárodní normu **ISO/IEC 11801**, ze které evropská norma vychází.",
+          "start": 417.24,
+          "end": 446.33,
+          "duration": 29.09
+        },
+        {
+          "index": 22,
+          "speaker": "Klára",
+          "question_id": "sk-9",
+          "display": "Jasně: **ČSN EN 50173 a 50174**! Devátá otázka: **„Popište kabel STP a UTP. Do které kategorie se mohou používat nestíněné kabely a komponenty?“** V hodinách jsme brali UTP, FTP, STP a taky ten plastový kříž!",
+          "start": 446.52,
+          "end": 466.34,
+          "duration": 19.82
+        },
+        {
+          "index": 23,
+          "speaker": "Tomáš",
+          "question_id": "sk-9",
+          "display": "Tak to řekneme přesně tak, jak to chce váš vyučující:\n- **UTP (Unshielded Twisted Pair)** je **nestíněná kroucená dvojlinka** – nemá žádné kovové stínění. Skládá se ze **4 párů (8 žil/vodičů)**, které jsou vzájemně zkrouceny, čímž se omezuje elektromagnetické rušení a přeslechy. Barvy vodičů vidíme rovnou vlastním okem, je levnější a jednodušší na instalaci. A podle vašich hodin: **nestíněné UTP se využívá do kategorie 6 (třída E)**!",
+          "start": 466.54,
+          "end": 503.23,
+          "duration": 36.7
+        },
+        {
+          "index": 24,
+          "speaker": "Klára",
+          "question_id": "sk-9",
+          "display": "Pak máme kompromis **FTP (Foiled Twisted Pair)** – ten má celkové stínění z hliníkové fólie kolem všech 4 párů dohromady, ale jednotlivé páry stíněné nejsou. A teď **STP**!",
+          "start": 503.42,
+          "end": 514.32,
+          "duration": 10.9
+        },
+        {
+          "index": 25,
+          "speaker": "Tomáš",
+          "question_id": "sk-9",
+          "display": "**STP (Shielded Twisted Pair)** je **stíněná kroucená dvojlinka** – má stejnou strukturu jako UTP, ale **každý pár je samostatně stíněný** kovovou fólií! Využívá se **v kategorii 6a a výš (třída Ea a výš)**. A nezapomeň na ten bonus z hodiny: u **kategorie 6** je uvnitř kabelu **plastový kříž (tzv. rybí kost)**, aby se jednotlivé páry k sobě moc nepřibližovaly.",
+          "start": 514.51,
+          "end": 525.07,
+          "duration": 10.56
+        },
+        {
+          "index": 26,
+          "speaker": "Klára",
+          "question_id": "sk-10",
+          "display": "Super! Desátá otázka: **„Proč používáme technologii kroucených párů?“**",
+          "start": 525.26,
+          "end": 530.62,
+          "duration": 5.35
+        },
+        {
+          "index": 27,
+          "speaker": "Tomáš",
+          "question_id": "sk-10",
+          "display": "Napiš tam přesně tyhle tři věci z vašeho sešitu:\n1. Abychom **omezili elektromagnetické rušení a přeslechy** mezi jednotlivými vodiči a páry a zajistili spolehlivější přenos dat.\n2. **Každý ze 4 párů má jinou hustotu zákrutů**, aby se sousední páry navzájem nerušily.\n3. V každém páru se přenáší signál pomocí dvou vodičů: **jeden vodič přenáší kladnou polaritu signálu ($+U$), druhý vodič opačnou polaritu ($-U$)** a **přijímač vyhodnocuje rozdíl napětí mezi vodiči**.",
+          "start": 530.81,
+          "end": 565.66,
+          "duration": 34.85
+        },
+        {
+          "index": 28,
+          "speaker": "Klára",
+          "question_id": "sk-11",
+          "display": "Jedenáctá otázka: **„Které normy definují třídy linek? Vyjmenujte třídy linek a uveďte frekvenční rozsahy.“**",
+          "start": 565.85,
+          "end": 573.19,
+          "duration": 7.34
+        },
+        {
+          "index": 29,
+          "speaker": "Tomáš",
+          "question_id": "sk-11",
+          "display": "Třídy linek definují normy **ČSN EN 50173** (evropská norma) a **ISO/IEC 11801** (mezinárodní norma, kde **ISO** je Mezinárodní organizace pro normalizaci a **IEC** je Mezinárodní elektrotechnická komise). A teď si projdeme frekvenční rozsahy jednotlivých tříd přesně podle vaší tabulky z hodiny!",
+          "start": 573.38,
+          "end": 597.31,
+          "duration": 23.93
+        },
+        {
+          "index": 30,
+          "speaker": "Klára",
+          "question_id": "sk-11",
+          "display": "Dobře, vezmu prvních pět:\n- **Třída A** (Cat 1): do **100 kHz** (analogový telefon),\n- **Třída B** (Cat 2): do **1 MHz** (ISDN, 10Base-T, Token Ring 4 MB),\n- **Třída C** (Cat 3): do **16 MHz** (10 Mbps, Token Ring 16 MB),\n- **Třída D** (Cat 5): do **100 MHz** (100 Mbps Fast Ethernet),\n- **Třída D 2002** (Cat 5e): **100 MHz (v závorce 350 MHz)** pro 1 Gbps Gigabit Ethernet!",
+          "start": 597.5,
+          "end": 630.67,
+          "duration": 33.17
+        },
+        {
+          "index": 31,
+          "speaker": "Tomáš",
+          "question_id": "sk-11",
+          "display": "Skvěle! A druhá polovina tabulky:\n- **Třída E** (Cat 6): do **250 MHz** (1 Gbps Gigabit Ethernet),\n- **Třída Ea** (Cat 6a): do **500 MHz** (10 Gbps – 10GBase-T),\n- **Třída F** (Cat 7): do **600 MHz** (10 Gbps),\n- **Třída Fa** (Cat 7a): do **1000 MHz** (10 Gbps),\n- **Třída I & II** (Cat 8): **1600 / 2000 MHz** (40 Gbps do 30 m),\n- a **optické třídy**: nad 10 MHz (přičemž frekvence světla u optiky se udává v **THz**).",
+          "start": 630.86,
+          "end": 676.51,
+          "duration": 45.65
+        },
+        {
+          "index": 32,
+          "speaker": "Klára",
+          "question_id": "sk-12",
+          "display": "Dvanáctá otázka: **„Co je to FEXT? Jaký útlum FEXT požadujeme?“**",
+          "start": 676.7,
+          "end": 681.91,
+          "duration": 5.21
+        },
+        {
+          "index": 33,
+          "speaker": "Tomáš",
+          "question_id": "sk-12",
+          "display": "**FEXT (Far-End Crosstalk)** je **přeslech na vzdáleném konci kabelu**. Jde o nežádoucí rušení, kdy signál z jednoho páru ovlivňuje jiný pár a rušení se měří na **opačném konci kabelu**, než kde signál vzniká. A teď pozor na to zvýrazněné pravidlo z vašeho sešitu: **U FEXT požadujeme co nejvyšší hodnotu útlumu v decibelech (dB)**, aby bylo vzájemné rušení mezi páry co nejmenší!",
+          "start": 682.1,
+          "end": 710.26,
+          "duration": 28.15
+        },
+        {
+          "index": 34,
+          "speaker": "Klára",
+          "question_id": "sk-13",
+          "display": "Třináctá otázka: **„Vyjmenujte tři základní subsystémy generické kabeláže. Jaké jsou maximální délky kabelů metalických a optických?“** Tady máme v sešitě přesná čísla 1500 m, 500 m, 90 m a přídavné šňůry A, B, E!",
+          "start": 710.45,
+          "end": 728.59,
+          "duration": 18.14
+        },
+        {
+          "index": 35,
+          "speaker": "Tomáš",
+          "question_id": "sk-13",
+          "display": "Přesně tahle čísla z hodin tam napiš:\n1. **Subsystém páteřní kabeláže areálu**: **optika, maximální délka 1500 m**, spojuje rozvaděč areálu **CD** (*Campus Distributor*) $\\rightarrow$ rozvaděč budovy **BD** (*Building Distributor*).\n2. **Subsystém páteřní kabeláže budovy**: **optika, maximální délka 500 m**, spojuje rozvaděč budovy **BD** $\\rightarrow$ patrový rozvaděč **FD** (*Floor Distributor*).\n3. **Subsystém horizontální kabeláže**: **metalické kabely, maximální délka 90 m**, spojuje patrový rozvaděč **FD** $\\rightarrow$ telekomunikační zásuvku **TO** (případně přes konsolidační bod **CP**).",
+          "start": 728.78,
+          "end": 768.86,
+          "duration": 40.08
+        },
+        {
+          "index": 36,
+          "speaker": "Klára",
+          "question_id": "sk-13",
+          "display": "A navíc k těm 90 metrům horizontální kabeláže existují **přídavné šňůry A, B a E**:\n- **Šňůra A** (na pracovní ploše, zásuvka TO $\\rightarrow$ PC): **max. 5 m**,\n- **Šňůra B** (v rozvaděči FD, panel $\\leftrightarrow$ panel): **max. 10 m** (jen když A a E jsou nulové),\n- **Šňůra E** (v rozvaděči FD, panel $\\rightarrow$ switch): **max. 5 m**.\nA součet přídavných šňůr **$A + B + E \\le 10\\text{ m}$**, takže celý kanál má **$90 + 10 = 100\\text{ m}$**!",
+          "start": 769.06,
+          "end": 801.43,
+          "duration": 32.38
+        },
+        {
+          "index": 37,
+          "speaker": "Tomáš",
+          "question_id": "sk-14",
+          "display": "Přesně tak! Teď čtrnáctka a patnáctka: **„14. Co je to pracovní plocha? Kolik portů se přiděluje na jednu pracovní plochu? Jejich vlastnosti.“** a **„15. Patří kabely pracovní plochy do generické strukturované kabeláže?“**",
+          "start": 801.62,
+          "end": 819.17,
+          "duration": 17.54
+        },
+        {
+          "index": 38,
+          "speaker": "Klára",
+          "question_id": "sk-14",
+          "display": "**Pracovní plocha** je prostor, kde uživatelé pracují s koncovými zařízeními (PC, tiskárna, IP kamera). **Začíná telekomunikační zásuvkou (TO)**, zahrnuje propojovací kabel k zařízení (**max. 5 m**) a samotné koncové zařízení. Na **1 pracovní plochu (10 $\\text{m}^2$)** se přidělují **2 zásuvky / porty (nebo 1 dvojzásuvka)** a ty musí odpovídat kategorii kabeláže (Cat 6, 6a atd.).",
+          "start": 819.36,
+          "end": 848.54,
+          "duration": 29.18
+        },
+        {
+          "index": 39,
+          "speaker": "Tomáš",
+          "question_id": "sk-15",
+          "display": "A u patnáctky napiš přesně: **Ne, kabeláž pracovní plochy (přídavné šňůry od zásuvky ke koncovému zařízení) není součástí generické strukturované kabeláže!** Generická SK končí na zásuvce TO, která do SK ještě patří.",
+          "start": 848.74,
+          "end": 867.62,
+          "duration": 18.89
+        },
+        {
+          "index": 40,
+          "speaker": "Klára",
+          "question_id": "sk-16",
+          "display": "A poslední, šestnáctá otázka: **„Popište zapojení konektorů pro zásuvku typu B.“** V Evropě používáme typ B (T568B), 1 pin = 1 vodič = 1 barva = 1 drátek, a máme skvělou pomůcku: **zelené piny jsou „rozházené“ na pozicích 3 a 6**!",
+          "start": 867.82,
+          "end": 885.12,
+          "duration": 17.3
+        },
+        {
+          "index": 41,
+          "speaker": "Tomáš",
+          "question_id": "sk-16",
+          "display": "Přesně! Ostatní barvy jsou pěkně vedle sebe: oranžová na 1 a 2, modrá na 4 a 5 (pozor, na čtyřce je plná modrá a na pětce bílo-modrá!) a hnědá na 7 a 8. Takže všech 8 pinů **T568B** popořadě:\n- **1 – Bílo-oranžová**\n- **2 – Oranžová**\n- **3 – Bílo-zelená**\n- **4 – Modrá**\n- **5 – Bílo-modrá**\n- **6 – Zelená**\n- **7 – Bílo-hnědá**\n- **8 – Hnědá**.\nA tím máš kompletně hotové všechny otázky na zítřejší test, Kláro! Držím palce!",
+          "start": 885.31,
+          "end": 924.48,
+          "duration": 39.17
+        }
+      ]
+    },
+    "cz_studio": {
+      "engine": "cz_studio",
+      "filename": "podcast_optika_kabelaz.mp3",
+      "total_duration": 909.22,
+      "segments": [
+        {
+          "index": 0,
+          "speaker": "Klára",
+          "question_id": "intro",
+          "display": "Ahoj Tome! Hele, zítra mě čeká ten velký test na optiku a strukturovanou kabeláž. Mám tu fotky loňského testu i přesný výpis z našich hodin – projdeme to spolu tak, abych tam zítra nechala plný počet bodů?",
+          "start": 0.0,
+          "end": 15.96,
+          "duration": 15.96
+        },
+        {
+          "index": 1,
+          "speaker": "Tomáš",
+          "question_id": "intro",
+          "display": "Jasně Kláro, jdeme na to! Vezmeme to úplně bez omáčky, přesně podle otázek z testu a tvých zápisků z hodin. Ukážeme si i všechny chytáky, na kterých lidi zbytečně ztrácejí body. Začneme optikou, jo?",
+          "start": 16.15,
+          "end": 30.98,
+          "duration": 14.83
+        },
+        {
+          "index": 2,
+          "speaker": "Klára",
+          "question_id": "opt-1",
+          "display": "Super! Takže první otázka z optiky: **„Základní typy optických vláken, vlnové délky. Nakreslete typickou strukturu optického vlákna.“** Jak mám nakreslit a popsat ten průřez vláknem?",
+          "start": 31.18,
+          "end": 46.39,
+          "duration": 15.22
+        },
+        {
+          "index": 3,
+          "speaker": "Tomáš",
+          "question_id": "opt-1",
+          "display": "Představ si, že ten optický kabel rozřízneš a koukáš na něj zepředu. Nakreslíš **čtyři soustředné kružnice** od středu ven. Úplně uprostřed je **jádro (Core)** z křemičitého skla s příměsemi, které zvyšují jeho index lomu $n_1$. A teď bacha na průměr jádra: u jednovidového vlákna je to **9 µm** (obecně 8 až 10 µm), a u mnohovidového **50 µm** nebo **62,5 µm**.",
+          "start": 46.58,
+          "end": 71.98,
+          "duration": 25.39
+        },
+        {
+          "index": 4,
+          "speaker": "Klára",
+          "question_id": "opt-1",
+          "display": "Dobře, to je jádro. Hned kolem něj je druhá vrstva – **plášť (Cladding)** s nižším indexem lomu $n_2$. Ten má prý průměr vždycky stejný?",
+          "start": 72.17,
+          "end": 84.6,
+          "duration": 12.43
+        },
+        {
+          "index": 5,
+          "speaker": "Tomáš",
+          "question_id": "opt-1",
+          "display": "Přesně tak! Plášť má vždycky průměr **125 µm**, ať je to singlemode nebo multimode – proto se vlákna značí třeba **9/125** nebo **50/125 µm**. Kolem pláště je pak třetí vrstva: **primární ochrana** z akrylátového laku o průměru **250 µm**, která chrání sklo před vlhkostí a mikroohyby. A čtvrtá vrstva je **sekundární ochrana**, plastová trubička o průměru **900 µm**.",
+          "start": 84.79,
+          "end": 111.41,
+          "duration": 26.62
+        },
+        {
+          "index": 6,
+          "speaker": "Klára",
+          "question_id": "opt-1",
+          "display": "Takže čtyři čísla od středu ven: **9 nebo 50/62,5 µm** jádro, **125 µm** plášť, **250 µm** primární ochrana a **900 µm** sekundární ochrana. A jak v testu popsat ty **základní typy vláken**?",
+          "start": 111.6,
+          "end": 130.8,
+          "duration": 19.2
+        },
+        {
+          "index": 7,
+          "speaker": "Tomáš",
+          "question_id": "opt-1",
+          "display": "Rozdělíš je na **mnohovidová (Multimode – MM)** a **jednovidová (Singlemode – SM)**. U mnohovidových je jádro široké (50 nebo 62,5 µm), takže jím letí spousta paprsků – vidů – pod různými úhly najednou. Jenže paprsek, co letí rovně středem, dorazí do cíle dřív než ten, co se pořád odráží od stěn. Tím se světelný pulz po cestě rozplizne a vzniká **vidová (modální) disperze**.",
+          "start": 130.99,
+          "end": 156.29,
+          "duration": 25.3
+        },
+        {
+          "index": 8,
+          "speaker": "Klára",
+          "question_id": "opt-1",
+          "display": "A proto se mnohovidová vlákna dělí ještě na dva podtypy: se **skokovou změnou indexu lomu (Step-Index)** a s **gradientní změnou (Graded-Index)**, že jo?",
+          "start": 156.48,
+          "end": 167.33,
+          "duration": 10.85
+        },
+        {
+          "index": 9,
+          "speaker": "Tomáš",
+          "question_id": "opt-1",
+          "display": "Přesně! U **skokového** je index lomu v celém jádře stejný a na kraji skokově klesne, takže paprsky létají ostře cik-cak a disperze je velká. Kdežto u **gradientního** index lomu od středu jádra k plášti plynule parabolicky klesá. Paprsek, který letí dál od osy, má sice delší dráhu, ale v místech s nižším indexem lomu letí světlo rychleji! Takže oba paprsky dorazí do cíle skoro nastejno.",
+          "start": 167.52,
+          "end": 192.1,
+          "duration": 24.58
+        },
+        {
+          "index": 10,
+          "speaker": "Klára",
+          "question_id": "opt-1",
+          "display": "A u **jednovidového (Singlemode)** vlákna s jádrem **9 µm** se vejde jen jeden jediný přímý vid, takže vidová disperze úplně odpadá a můžeme posílat data na desítky kilometrů. A co ty **vlnové délky**?",
+          "start": 192.29,
+          "end": 207.05,
+          "duration": 14.76
+        },
+        {
+          "index": 11,
+          "speaker": "Tomáš",
+          "question_id": "opt-1",
+          "display": "Zapamatuj si tři přenosová okna, kde má křemičité sklo nejmenší útlum: **1. okno je 850 nm** (pro multimode, útlum kolem $2{,}5\text{ až }3\text{ dB/km}$). **2. okno je 1300 nm** u multimode a **1310 nm** u singlemode (nulová chromatická disperze, útlum kolem $0{,}35\text{ až }0{,}5\text{ dB/km}$). A **3. okno je 1550 nm** u singlemode – tam je absolutně nejmenší útlum skla, jen asi **$0{,}2\text{ dB/km}$**! Jo a jak máte v zápiscích: frekvence světla v optice se udává v **terahertzích (THz)**.",
+          "start": 207.24,
+          "end": 243.29,
+          "duration": 36.05
+        },
+        {
+          "index": 12,
+          "speaker": "Klára",
+          "question_id": "opt-2",
+          "display": "Jedničku máme! Teď druhá otázka z optiky: **„Co je základní podmínkou pro přenos světla v optickém vlákně? Co je index lomu (i vzorec)? Co je numerická apertura (i vzorec), jakou ji požadujeme, souvisí s průměrem vlákna? Co je maximální úhel navázání? Co je vložný útlum, jak vzniká?“**",
+          "start": 243.48,
+          "end": 267.55,
+          "duration": 24.07
+        },
+        {
+          "index": 13,
+          "speaker": "Tomáš",
+          "question_id": "opt-2",
+          "display": "Takže popořadě: **Základní podmínkou přenosu světla** ve vlákně je **totální (úplný) vnitřní odraz** na rozhraní jádra a pláště. Aby nastal, musí platit dvě věci: zaprvé, **index lomu jádra musí být větší než index lomu pláště ($n_1 > n_2$)**, a zadruhé, **úhel dopadu paprsku $\\alpha$ musí být větší než mezní úhel $\\alpha_m$** (kde $\\sin \\alpha_m = n_2 / n_1$).",
+          "start": 267.74,
+          "end": 289.9,
+          "duration": 22.15
+        },
+        {
+          "index": 14,
+          "speaker": "Klára",
+          "question_id": "opt-2",
+          "display": "Jasně. A samotný **index lomu $n$**? To je poměr rychlosti světla ve vakuu ku rychlosti v daném prostředí, tedy **$n = c / v$**, že?",
+          "start": 290.09,
+          "end": 301.68,
+          "duration": 11.59
+        },
+        {
+          "index": 15,
+          "speaker": "Tomáš",
+          "question_id": "opt-2",
+          "display": "Přesně tak! Bezrozměrné číslo $n = c / v$, které udává, kolikrát pomaleji letí světlo v daném materiálu než ve vakuu ($c \\approx 3 \\cdot 10^8\\text{ m/s}$). Ve skle je $n \\approx 1{,}46$, takže tam světlo letí zhruba $200\\,000\\text{ km/s}$. A teď **maximální úhel navázání $\\theta_{\\max}$**: to je největší úhel vůči ose vlákna, pod kterým může paprsek ze vzduchu vstoupit do čela jádra, aby se uvnitř na plášti ještě totálně odrazil a neutekl ven.",
+          "start": 301.87,
+          "end": 329.74,
+          "duration": 27.86
+        },
+        {
+          "index": 16,
+          "speaker": "Klára",
+          "question_id": "opt-2",
+          "display": "A z něj rovnou plyne **numerická apertura $NA$**! Vzorec je **$NA = \\sin \\theta_{\\max} = \\sqrt{n_1^2 - n_2^2}$**. A teď ten slavný chyták: souvisí numerická apertura s průměrem vlákna?",
+          "start": 329.93,
+          "end": 347.18,
+          "duration": 17.26
+        },
+        {
+          "index": 17,
+          "speaker": "Tomáš",
+          "question_id": "opt-2",
+          "display": "**Vůbec nesouvisí!** Podívej se na ten vzorec $\\sqrt{n_1^2 - n_2^2}$ – žádný průměr v něm není! Numerická apertura závisí **výhradně na indexech lomu jádra a pláště**. A když se ptají, **jakou $NA$ požadujeme**, napiš, že je to **kompromis**: pro snadné navázání světla ze zdroje bychom chtěli $NA$ co největší, ale pro velkou šířku pásma a malou vidovou disperzi potřebujeme $NA$ co nejmenší (aby paprsky nelétaly pod velkými úhly).",
+          "start": 347.38,
+          "end": 375.12,
+          "duration": 27.74
+        },
+        {
+          "index": 18,
+          "speaker": "Klára",
+          "question_id": "opt-2",
+          "display": "A poslední podotázka u optiky: **co je vložný útlum a jak vzniká?**",
+          "start": 375.31,
+          "end": 380.78,
+          "duration": 5.47
+        },
+        {
+          "index": 19,
+          "speaker": "Tomáš",
+          "question_id": "opt-2",
+          "display": "**Vložný útlum** je ztráta optického výkonu v decibelech, která vznikne vložením konektoru, sváru nebo jiného prvku do optické trasy. A vzniká hlavně třemi způsoby: **1. Fresnelovým odrazem** na vzduchové mezeře mezi čely vláken, **2. geometrickou nepřesností spoje** (osovým přesazením jader, zešikmením os nebo mezerou) a **3. nečistotami na čele konektoru** nebo spojením vláken s různým průměrem jádra či různou $NA$.",
+          "start": 380.98,
+          "end": 406.34,
+          "duration": 25.37
+        },
+        {
+          "index": 20,
+          "speaker": "Klára",
+          "question_id": "sk-8",
+          "display": "Paráda, optiku máme kompletní! Jdeme na **Strukturovanou kabeláž** přesně podle našeho výpisu z hodin. Otázka 8: **„Podle jakých norem můžeme v ČR vytvořit strukturovanou kabeláž?“**",
+          "start": 406.54,
+          "end": 421.46,
+          "duration": 14.93
+        },
+        {
+          "index": 21,
+          "speaker": "Tomáš",
+          "question_id": "sk-8",
+          "display": "Přesně podle tvých zápisků: v ČR ji vytváříme podle norem **ČSN EN 50173 a ČSN EN 50174** – jde o české převzetí evropských norem EN (kde 50173 řeší samotný návrh univerzální kabeláže a 50174 její instalaci). A můžeš připsat i mezinárodní normu **ISO/IEC 11801**, ze které evropská norma vychází.",
+          "start": 421.66,
+          "end": 445.8,
+          "duration": 24.14
+        },
+        {
+          "index": 22,
+          "speaker": "Klára",
+          "question_id": "sk-9",
+          "display": "Jasně: **ČSN EN 50173 a 50174**! Devátá otázka: **„Popište kabel STP a UTP. Do které kategorie se mohou používat nestíněné kabely a komponenty?“** V hodinách jsme brali UTP, FTP, STP a taky ten plastový kříž!",
+          "start": 445.99,
+          "end": 469.27,
+          "duration": 23.28
+        },
+        {
+          "index": 23,
+          "speaker": "Tomáš",
+          "question_id": "sk-9",
+          "display": "Tak to řekneme přesně tak, jak to chce váš vyučující:\n- **UTP (Unshielded Twisted Pair)** je **nestíněná kroucená dvojlinka** – nemá žádné kovové stínění. Skládá se ze **4 párů (8 žil/vodičů)**, které jsou vzájemně zkrouceny, čímž se omezuje elektromagnetické rušení a přeslechy. Barvy vodičů vidíme rovnou vlastním okem, je levnější a jednodušší na instalaci. A podle vašich hodin: **nestíněné UTP se využívá do kategorie 6 (třída E)**!",
+          "start": 469.46,
+          "end": 498.48,
+          "duration": 29.02
+        },
+        {
+          "index": 24,
+          "speaker": "Klára",
+          "question_id": "sk-9",
+          "display": "Pak máme kompromis **FTP (Foiled Twisted Pair)** – ten má celkové stínění z hliníkové fólie kolem všech 4 párů dohromady, ale jednotlivé páry stíněné nejsou. A teď **STP**!",
+          "start": 498.67,
+          "end": 512.33,
+          "duration": 13.66
+        },
+        {
+          "index": 25,
+          "speaker": "Tomáš",
+          "question_id": "sk-9",
+          "display": "**STP (Shielded Twisted Pair)** je **stíněná kroucená dvojlinka** – má stejnou strukturu jako UTP, ale **každý pár je samostatně stíněný** kovovou fólií! Využívá se **v kategorii 6a a výš (třída Ea a výš)**. A nezapomeň na ten bonus z hodiny: u **kategorie 6** je uvnitř kabelu **plastový kříž (tzv. rybí kost)**, aby se jednotlivé páry k sobě moc nepřibližovaly.",
+          "start": 512.52,
+          "end": 534.82,
+          "duration": 22.3
+        },
+        {
+          "index": 26,
+          "speaker": "Klára",
+          "question_id": "sk-10",
+          "display": "Super! Desátá otázka: **„Proč používáme technologii kroucených párů?“**",
+          "start": 535.01,
+          "end": 541.63,
+          "duration": 6.62
+        },
+        {
+          "index": 27,
+          "speaker": "Tomáš",
+          "question_id": "sk-10",
+          "display": "Napiš tam přesně tyhle tři věci z vašeho sešitu:\n1. Abychom **omezili elektromagnetické rušení a přeslechy** mezi jednotlivými vodiči a páry a zajistili spolehlivější přenos dat.\n2. **Každý ze 4 párů má jinou hustotu zákrutů**, aby se sousední páry navzájem nerušily.\n3. V každém páru se přenáší signál pomocí dvou vodičů: **jeden vodič přenáší kladnou polaritu signálu ($+U$), druhý vodič opačnou polaritu ($-U$)** a **přijímač vyhodnocuje rozdíl napětí mezi vodiči**.",
+          "start": 541.82,
+          "end": 569.59,
+          "duration": 27.77
+        },
+        {
+          "index": 28,
+          "speaker": "Klára",
+          "question_id": "sk-11",
+          "display": "Jedenáctá otázka: **„Které normy definují třídy linek? Vyjmenujte třídy linek a uveďte frekvenční rozsahy.“**",
+          "start": 569.78,
+          "end": 578.62,
+          "duration": 8.83
+        },
+        {
+          "index": 29,
+          "speaker": "Tomáš",
+          "question_id": "sk-11",
+          "display": "Třídy linek definují normy **ČSN EN 50173** (evropská norma) a **ISO/IEC 11801** (mezinárodní norma, kde **ISO** je Mezinárodní organizace pro normalizaci a **IEC** je Mezinárodní elektrotechnická komise). A teď si projdeme frekvenční rozsahy jednotlivých tříd přesně podle vaší tabulky z hodiny!",
+          "start": 578.81,
+          "end": 599.09,
+          "duration": 20.28
+        },
+        {
+          "index": 30,
+          "speaker": "Klára",
+          "question_id": "sk-11",
+          "display": "Dobře, vezmu prvních pět:\n- **Třída A** (Cat 1): do **100 kHz** (analogový telefon),\n- **Třída B** (Cat 2): do **1 MHz** (ISDN, 10Base-T, Token Ring 4 MB),\n- **Třída C** (Cat 3): do **16 MHz** (10 Mbps, Token Ring 16 MB),\n- **Třída D** (Cat 5): do **100 MHz** (100 Mbps Fast Ethernet),\n- **Třída D 2002** (Cat 5e): **100 MHz (v závorce 350 MHz)** pro 1 Gbps Gigabit Ethernet!",
+          "start": 599.28,
+          "end": 634.37,
+          "duration": 35.09
+        },
+        {
+          "index": 31,
+          "speaker": "Tomáš",
+          "question_id": "sk-11",
+          "display": "Skvěle! A druhá polovina tabulky:\n- **Třída E** (Cat 6): do **250 MHz** (1 Gbps Gigabit Ethernet),\n- **Třída Ea** (Cat 6a): do **500 MHz** (10 Gbps – 10GBase-T),\n- **Třída F** (Cat 7): do **600 MHz** (10 Gbps),\n- **Třída Fa** (Cat 7a): do **1000 MHz** (10 Gbps),\n- **Třída I & II** (Cat 8): **1600 / 2000 MHz** (40 Gbps do 30 m),\n- a **optické třídy**: nad 10 MHz (přičemž frekvence světla u optiky se udává v **THz**).",
+          "start": 634.56,
+          "end": 670.42,
+          "duration": 35.86
+        },
+        {
+          "index": 32,
+          "speaker": "Klára",
+          "question_id": "sk-12",
+          "display": "Dvanáctá otázka: **„Co je to FEXT? Jaký útlum FEXT požadujeme?“**",
+          "start": 670.61,
+          "end": 676.92,
+          "duration": 6.31
+        },
+        {
+          "index": 33,
+          "speaker": "Tomáš",
+          "question_id": "sk-12",
+          "display": "**FEXT (Far-End Crosstalk)** je **přeslech na vzdáleném konci kabelu**. Jde o nežádoucí rušení, kdy signál z jednoho páru ovlivňuje jiný pár a rušení se měří na **opačném konci kabelu**, než kde signál vzniká. A teď pozor na to zvýrazněné pravidlo z vašeho sešitu: **U FEXT požadujeme co nejvyšší hodnotu útlumu v decibelech (dB)**, aby bylo vzájemné rušení mezi páry co nejmenší!",
+          "start": 677.11,
+          "end": 699.24,
+          "duration": 22.13
+        },
+        {
+          "index": 34,
+          "speaker": "Klára",
+          "question_id": "sk-13",
+          "display": "Třináctá otázka: **„Vyjmenujte tři základní subsystémy generické kabeláže. Jaké jsou maximální délky kabelů metalických a optických?“** Tady máme v sešitě přesná čísla 1500 m, 500 m, 90 m a přídavné šňůry A, B, E!",
+          "start": 699.43,
+          "end": 719.45,
+          "duration": 20.02
+        },
+        {
+          "index": 35,
+          "speaker": "Tomáš",
+          "question_id": "sk-13",
+          "display": "Přesně tahle čísla z hodin tam napiš:\n1. **Subsystém páteřní kabeláže areálu**: **optika, maximální délka 1500 m**, spojuje rozvaděč areálu **CD** (*Campus Distributor*) $\\rightarrow$ rozvaděč budovy **BD** (*Building Distributor*).\n2. **Subsystém páteřní kabeláže budovy**: **optika, maximální délka 500 m**, spojuje rozvaděč budovy **BD** $\\rightarrow$ patrový rozvaděč **FD** (*Floor Distributor*).\n3. **Subsystém horizontální kabeláže**: **metalické kabely, maximální délka 90 m**, spojuje patrový rozvaděč **FD** $\\rightarrow$ telekomunikační zásuvku **TO** (případně přes konsolidační bod **CP**).",
+          "start": 719.64,
+          "end": 752.59,
+          "duration": 32.95
+        },
+        {
+          "index": 36,
+          "speaker": "Klára",
+          "question_id": "sk-13",
+          "display": "A navíc k těm 90 metrům horizontální kabeláže existují **přídavné šňůry A, B a E**:\n- **Šňůra A** (na pracovní ploše, zásuvka TO $\\rightarrow$ PC): **max. 5 m**,\n- **Šňůra B** (v rozvaděči FD, panel $\\leftrightarrow$ panel): **max. 10 m** (jen když A a E jsou nulové),\n- **Šňůra E** (v rozvaděči FD, panel $\\rightarrow$ switch): **max. 5 m**.\nA součet přídavných šňůr **$A + B + E \\le 10\\text{ m}$**, takže celý kanál má **$90 + 10 = 100\\text{ m}$**!",
+          "start": 752.78,
+          "end": 788.81,
+          "duration": 36.02
+        },
+        {
+          "index": 37,
+          "speaker": "Tomáš",
+          "question_id": "sk-14",
+          "display": "Přesně tak! Teď čtrnáctka a patnáctka: **„14. Co je to pracovní plocha? Kolik portů se přiděluje na jednu pracovní plochu? Jejich vlastnosti.“** a **„15. Patří kabely pracovní plochy do generické strukturované kabeláže?“**",
+          "start": 789.0,
+          "end": 804.36,
+          "duration": 15.36
+        },
+        {
+          "index": 38,
+          "speaker": "Klára",
+          "question_id": "sk-14",
+          "display": "**Pracovní plocha** je prostor, kde uživatelé pracují s koncovými zařízeními (PC, tiskárna, IP kamera). **Začíná telekomunikační zásuvkou (TO)**, zahrnuje propojovací kabel k zařízení (**max. 5 m**) a samotné koncové zařízení. Na **1 pracovní plochu (10 $\\text{m}^2$)** se přidělují **2 zásuvky / porty (nebo 1 dvojzásuvka)** a ty musí odpovídat kategorii kabeláže (Cat 6, 6a atd.).",
+          "start": 804.55,
+          "end": 836.95,
+          "duration": 32.4
+        },
+        {
+          "index": 39,
+          "speaker": "Tomáš",
+          "question_id": "sk-15",
+          "display": "A u patnáctky napiš přesně: **Ne, kabeláž pracovní plochy (přídavné šňůry od zásuvky ke koncovému zařízení) není součástí generické strukturované kabeláže!** Generická SK končí na zásuvce TO, která do SK ještě patří.",
+          "start": 837.14,
+          "end": 852.38,
+          "duration": 15.24
+        },
+        {
+          "index": 40,
+          "speaker": "Klára",
+          "question_id": "sk-16",
+          "display": "A poslední, šestnáctá otázka: **„Popište zapojení konektorů pro zásuvku typu B.“** V Evropě používáme typ B (T568B), 1 pin = 1 vodič = 1 barva = 1 drátek, a máme skvělou pomůcku: **zelené piny jsou „rozházené“ na pozicích 3 a 6**!",
+          "start": 852.58,
+          "end": 870.82,
+          "duration": 18.24
+        },
+        {
+          "index": 41,
+          "speaker": "Tomáš",
+          "question_id": "sk-16",
+          "display": "Přesně! Ostatní barvy jsou pěkně vedle sebe: oranžová na 1 a 2, modrá na 4 a 5 (pozor, na čtyřce je plná modrá a na pětce bílo-modrá!) a hnědá na 7 a 8. Takže všech 8 pinů **T568B** popořadě:\n- **1 – Bílo-oranžová**\n- **2 – Oranžová**\n- **3 – Bílo-zelená**\n- **4 – Modrá**\n- **5 – Bílo-modrá**\n- **6 – Zelená**\n- **7 – Bílo-hnědá**\n- **8 – Hnědá**.\nA tím máš kompletně hotové všechny otázky na zítřejší test, Kláro! Držím palce!",
+          "start": 871.01,
+          "end": 909.02,
+          "duration": 38.02
+        }
+      ]
+    }
+  },
+  "total_duration": 924.67,
+  "segments": [
+    {
+      "index": 0,
+      "speaker": "Klára",
+      "question_id": "intro",
+      "display": "Ahoj Tome! Hele, zítra mě čeká ten velký test na optiku a strukturovanou kabeláž. Mám tu fotky loňského testu i přesný výpis z našich hodin – projdeme to spolu tak, abych tam zítra nechala plný počet bodů?",
+      "start": 0.0,
+      "end": 12.7,
+      "duration": 12.7
+    },
+    {
+      "index": 1,
+      "speaker": "Tomáš",
+      "question_id": "intro",
+      "display": "Jasně Kláro, jdeme na to! Vezmeme to úplně bez omáčky, přesně podle otázek z testu a tvých zápisků z hodin. Ukážeme si i všechny chytáky, na kterých lidi zbytečně ztrácejí body. Začneme optikou, jo?",
+      "start": 12.89,
+      "end": 28.42,
+      "duration": 15.53
+    },
+    {
+      "index": 2,
+      "speaker": "Klára",
+      "question_id": "opt-1",
+      "display": "Super! Takže první otázka z optiky: **„Základní typy optických vláken, vlnové délky. Nakreslete typickou strukturu optického vlákna.“** Jak mám nakreslit a popsat ten průřez vláknem?",
+      "start": 28.61,
+      "end": 41.81,
+      "duration": 13.2
+    },
+    {
+      "index": 3,
+      "speaker": "Tomáš",
+      "question_id": "opt-1",
+      "display": "Představ si, že ten optický kabel rozřízneš a koukáš na něj zepředu. Nakreslíš **čtyři soustředné kružnice** od středu ven. Úplně uprostřed je **jádro (Core)** z křemičitého skla s příměsemi, které zvyšují jeho index lomu $n_1$. A teď bacha na průměr jádra: u jednovidového vlákna je to **9 µm** (obecně 8 až 10 µm), a u mnohovidového **50 µm** nebo **62,5 µm**.",
+      "start": 42.0,
+      "end": 73.1,
+      "duration": 31.1
+    },
+    {
+      "index": 4,
+      "speaker": "Klára",
+      "question_id": "opt-1",
+      "display": "Dobře, to je jádro. Hned kolem něj je druhá vrstva – **plášť (Cladding)** s nižším indexem lomu $n_2$. Ten má prý průměr vždycky stejný?",
+      "start": 73.3,
+      "end": 83.74,
+      "duration": 10.44
+    },
+    {
+      "index": 5,
+      "speaker": "Tomáš",
+      "question_id": "opt-1",
+      "display": "Přesně tak! Plášť má vždycky průměr **125 µm**, ať je to singlemode nebo multimode – proto se vlákna značí třeba **9/125** nebo **50/125 µm**. Kolem pláště je pak třetí vrstva: **primární ochrana** z akrylátového laku o průměru **250 µm**, která chrání sklo před vlhkostí a mikroohyby. A čtvrtá vrstva je **sekundární ochrana**, plastová trubička o průměru **900 µm**.",
+      "start": 83.93,
+      "end": 116.04,
+      "duration": 32.11
+    },
+    {
+      "index": 6,
+      "speaker": "Klára",
+      "question_id": "opt-1",
+      "display": "Takže čtyři čísla od středu ven: **9 nebo 50/62,5 µm** jádro, **125 µm** plášť, **250 µm** primární ochrana a **900 µm** sekundární ochrana. A jak v testu popsat ty **základní typy vláken**?",
+      "start": 116.23,
+      "end": 132.7,
+      "duration": 16.46
+    },
+    {
+      "index": 7,
+      "speaker": "Tomáš",
+      "question_id": "opt-1",
+      "display": "Rozdělíš je na **mnohovidová (Multimode – MM)** a **jednovidová (Singlemode – SM)**. U mnohovidových je jádro široké (50 nebo 62,5 µm), takže jím letí spousta paprsků – vidů – pod různými úhly najednou. Jenže paprsek, co letí rovně středem, dorazí do cíle dřív než ten, co se pořád odráží od stěn. Tím se světelný pulz po cestě rozplizne a vzniká **vidová (modální) disperze**.",
+      "start": 132.89,
+      "end": 166.18,
+      "duration": 33.29
+    },
+    {
+      "index": 8,
+      "speaker": "Klára",
+      "question_id": "opt-1",
+      "display": "A proto se mnohovidová vlákna dělí ještě na dva podtypy: se **skokovou změnou indexu lomu (Step-Index)** a s **gradientní změnou (Graded-Index)**, že jo?",
+      "start": 166.37,
+      "end": 176.64,
+      "duration": 10.27
+    },
+    {
+      "index": 9,
+      "speaker": "Tomáš",
+      "question_id": "opt-1",
+      "display": "Přesně! U **skokového** je index lomu v celém jádře stejný a na kraji skokově klesne, takže paprsky létají ostře cik-cak a disperze je velká. Kdežto u **gradientního** index lomu od středu jádra k plášti plynule parabolicky klesá. Paprsek, který letí dál od osy, má sice delší dráhu, ale v místech s nižším indexem lomu letí světlo rychleji! Takže oba paprsky dorazí do cíle skoro nastejno.",
+      "start": 176.83,
+      "end": 206.28,
+      "duration": 29.45
+    },
+    {
+      "index": 10,
+      "speaker": "Klára",
+      "question_id": "opt-1",
+      "display": "A u **jednovidového (Singlemode)** vlákna s jádrem **9 µm** se vejde jen jeden jediný přímý vid, takže vidová disperze úplně odpadá a můžeme posílat data na desítky kilometrů. A co ty **vlnové délky**?",
+      "start": 206.47,
+      "end": 219.07,
+      "duration": 12.6
+    },
+    {
+      "index": 11,
+      "speaker": "Tomáš",
+      "question_id": "opt-1",
+      "display": "Zapamatuj si tři přenosová okna, kde má křemičité sklo nejmenší útlum: **1. okno je 850 nm** (pro multimode, útlum kolem $2{,}5\text{ až }3\text{ dB/km}$). **2. okno je 1300 nm** u multimode a **1310 nm** u singlemode (nulová chromatická disperze, útlum kolem $0{,}35\text{ až }0{,}5\text{ dB/km}$). A **3. okno je 1550 nm** u singlemode – tam je absolutně nejmenší útlum skla, jen asi **$0{,}2\text{ dB/km}$**! Jo a jak máte v zápiscích: frekvence světla v optice se udává v **terahertzích (THz)**.",
+      "start": 219.26,
+      "end": 264.07,
+      "duration": 44.81
+    },
+    {
+      "index": 12,
+      "speaker": "Klára",
+      "question_id": "opt-2",
+      "display": "Jedničku máme! Teď druhá otázka z optiky: **„Co je základní podmínkou pro přenos světla v optickém vlákně? Co je index lomu (i vzorec)? Co je numerická apertura (i vzorec), jakou ji požadujeme, souvisí s průměrem vlákna? Co je maximální úhel navázání? Co je vložný útlum, jak vzniká?“**",
+      "start": 264.26,
+      "end": 265.46,
+      "duration": 1.2
+    },
+    {
+      "index": 13,
+      "speaker": "Tomáš",
+      "question_id": "opt-2",
+      "display": "Takže popořadě: **Základní podmínkou přenosu světla** ve vlákně je **totální (úplný) vnitřní odraz** na rozhraní jádra a pláště. Aby nastal, musí platit dvě věci: zaprvé, **index lomu jádra musí být větší než index lomu pláště ($n_1 > n_2$)**, a zadruhé, **úhel dopadu paprsku $\\alpha$ musí být větší než mezní úhel $\\alpha_m$** (kde $\\sin \\alpha_m = n_2 / n_1$).",
+      "start": 265.66,
+      "end": 295.54,
+      "duration": 29.88
+    },
+    {
+      "index": 14,
+      "speaker": "Klára",
+      "question_id": "opt-2",
+      "display": "Jasně. A samotný **index lomu $n$**? To je poměr rychlosti světla ve vakuu ku rychlosti v daném prostředí, tedy **$n = c / v$**, že?",
+      "start": 295.73,
+      "end": 297.53,
+      "duration": 1.8
+    },
+    {
+      "index": 15,
+      "speaker": "Tomáš",
+      "question_id": "opt-2",
+      "display": "Přesně tak! Bezrozměrné číslo $n = c / v$, které udává, kolikrát pomaleji letí světlo v daném materiálu než ve vakuu ($c \\approx 3 \\cdot 10^8\\text{ m/s}$). Ve skle je $n \\approx 1{,}46$, takže tam světlo letí zhruba $200\\,000\\text{ km/s}$. A teď **maximální úhel navázání $\\theta_{\\max}$**: to je největší úhel vůči ose vlákna, pod kterým může paprsek ze vzduchu vstoupit do čela jádra, aby se uvnitř na plášti ještě totálně odrazil a neutekl ven.",
+      "start": 297.72,
+      "end": 331.22,
+      "duration": 33.5
+    },
+    {
+      "index": 16,
+      "speaker": "Klára",
+      "question_id": "opt-2",
+      "display": "A z něj rovnou plyne **numerická apertura $NA$**! Vzorec je **$NA = \\sin \\theta_{\\max} = \\sqrt{n_1^2 - n_2^2}$**. A teď ten slavný chyták: souvisí numerická apertura s průměrem vlákna?",
+      "start": 331.42,
+      "end": 331.9,
+      "duration": 0.48
+    },
+    {
+      "index": 17,
+      "speaker": "Tomáš",
+      "question_id": "opt-2",
+      "display": "**Vůbec nesouvisí!** Podívej se na ten vzorec $\\sqrt{n_1^2 - n_2^2}$ – žádný průměr v něm není! Numerická apertura závisí **výhradně na indexech lomu jádra a pláště**. A když se ptají, **jakou $NA$ požadujeme**, napiš, že je to **kompromis**: pro snadné navázání světla ze zdroje bychom chtěli $NA$ co největší, ale pro velkou šířku pásma a malou vidovou disperzi potřebujeme $NA$ co nejmenší (aby paprsky nelétaly pod velkými úhly).",
+      "start": 332.09,
+      "end": 366.29,
+      "duration": 34.2
+    },
+    {
+      "index": 18,
+      "speaker": "Klára",
+      "question_id": "opt-2",
+      "display": "A poslední podotázka u optiky: **co je vložný útlum a jak vzniká?**",
+      "start": 366.48,
+      "end": 371.09,
+      "duration": 4.61
+    },
+    {
+      "index": 19,
+      "speaker": "Tomáš",
+      "question_id": "opt-2",
+      "display": "**Vložný útlum** je ztráta optického výkonu v decibelech, která vznikne vložením konektoru, sváru nebo jiného prvku do optické trasy. A vzniká hlavně třemi způsoby: **1. Fresnelovým odrazem** na vzduchové mezeře mezi čely vláken, **2. geometrickou nepřesností spoje** (osovým přesazením jader, zešikmením os nebo mezerou) a **3. nečistotami na čele konektoru** nebo spojením vláken s různým průměrem jádra či různou $NA$.",
+      "start": 371.28,
+      "end": 404.26,
+      "duration": 32.98
+    },
+    {
+      "index": 20,
+      "speaker": "Klára",
+      "question_id": "sk-8",
+      "display": "Paráda, optiku máme kompletní! Jdeme na **Strukturovanou kabeláž** přesně podle našeho výpisu z hodin. Otázka 8: **„Podle jakých norem můžeme v ČR vytvořit strukturovanou kabeláž?“**",
+      "start": 404.45,
+      "end": 417.05,
+      "duration": 12.6
+    },
+    {
+      "index": 21,
+      "speaker": "Tomáš",
+      "question_id": "sk-8",
+      "display": "Přesně podle tvých zápisků: v ČR ji vytváříme podle norem **ČSN EN 50173 a ČSN EN 50174** – jde o české převzetí evropských norem EN (kde 50173 řeší samotný návrh univerzální kabeláže a 50174 její instalaci). A můžeš připsat i mezinárodní normu **ISO/IEC 11801**, ze které evropská norma vychází.",
+      "start": 417.24,
+      "end": 446.33,
+      "duration": 29.09
+    },
+    {
+      "index": 22,
+      "speaker": "Klára",
+      "question_id": "sk-9",
+      "display": "Jasně: **ČSN EN 50173 a 50174**! Devátá otázka: **„Popište kabel STP a UTP. Do které kategorie se mohou používat nestíněné kabely a komponenty?“** V hodinách jsme brali UTP, FTP, STP a taky ten plastový kříž!",
+      "start": 446.52,
+      "end": 466.34,
+      "duration": 19.82
+    },
+    {
+      "index": 23,
+      "speaker": "Tomáš",
+      "question_id": "sk-9",
+      "display": "Tak to řekneme přesně tak, jak to chce váš vyučující:\n- **UTP (Unshielded Twisted Pair)** je **nestíněná kroucená dvojlinka** – nemá žádné kovové stínění. Skládá se ze **4 párů (8 žil/vodičů)**, které jsou vzájemně zkrouceny, čímž se omezuje elektromagnetické rušení a přeslechy. Barvy vodičů vidíme rovnou vlastním okem, je levnější a jednodušší na instalaci. A podle vašich hodin: **nestíněné UTP se využívá do kategorie 6 (třída E)**!",
+      "start": 466.54,
+      "end": 503.23,
+      "duration": 36.7
+    },
+    {
+      "index": 24,
+      "speaker": "Klára",
+      "question_id": "sk-9",
+      "display": "Pak máme kompromis **FTP (Foiled Twisted Pair)** – ten má celkové stínění z hliníkové fólie kolem všech 4 párů dohromady, ale jednotlivé páry stíněné nejsou. A teď **STP**!",
+      "start": 503.42,
+      "end": 514.32,
+      "duration": 10.9
+    },
+    {
+      "index": 25,
+      "speaker": "Tomáš",
+      "question_id": "sk-9",
+      "display": "**STP (Shielded Twisted Pair)** je **stíněná kroucená dvojlinka** – má stejnou strukturu jako UTP, ale **každý pár je samostatně stíněný** kovovou fólií! Využívá se **v kategorii 6a a výš (třída Ea a výš)**. A nezapomeň na ten bonus z hodiny: u **kategorie 6** je uvnitř kabelu **plastový kříž (tzv. rybí kost)**, aby se jednotlivé páry k sobě moc nepřibližovaly.",
+      "start": 514.51,
+      "end": 525.07,
+      "duration": 10.56
+    },
+    {
+      "index": 26,
+      "speaker": "Klára",
+      "question_id": "sk-10",
+      "display": "Super! Desátá otázka: **„Proč používáme technologii kroucených párů?“**",
+      "start": 525.26,
+      "end": 530.62,
+      "duration": 5.35
+    },
+    {
+      "index": 27,
+      "speaker": "Tomáš",
+      "question_id": "sk-10",
+      "display": "Napiš tam přesně tyhle tři věci z vašeho sešitu:\n1. Abychom **omezili elektromagnetické rušení a přeslechy** mezi jednotlivými vodiči a páry a zajistili spolehlivější přenos dat.\n2. **Každý ze 4 párů má jinou hustotu zákrutů**, aby se sousední páry navzájem nerušily.\n3. V každém páru se přenáší signál pomocí dvou vodičů: **jeden vodič přenáší kladnou polaritu signálu ($+U$), druhý vodič opačnou polaritu ($-U$)** a **přijímač vyhodnocuje rozdíl napětí mezi vodiči**.",
+      "start": 530.81,
+      "end": 565.66,
+      "duration": 34.85
+    },
+    {
+      "index": 28,
+      "speaker": "Klára",
+      "question_id": "sk-11",
+      "display": "Jedenáctá otázka: **„Které normy definují třídy linek? Vyjmenujte třídy linek a uveďte frekvenční rozsahy.“**",
+      "start": 565.85,
+      "end": 573.19,
+      "duration": 7.34
+    },
+    {
+      "index": 29,
+      "speaker": "Tomáš",
+      "question_id": "sk-11",
+      "display": "Třídy linek definují normy **ČSN EN 50173** (evropská norma) a **ISO/IEC 11801** (mezinárodní norma, kde **ISO** je Mezinárodní organizace pro normalizaci a **IEC** je Mezinárodní elektrotechnická komise). A teď si projdeme frekvenční rozsahy jednotlivých tříd přesně podle vaší tabulky z hodiny!",
+      "start": 573.38,
+      "end": 597.31,
+      "duration": 23.93
+    },
+    {
+      "index": 30,
+      "speaker": "Klára",
+      "question_id": "sk-11",
+      "display": "Dobře, vezmu prvních pět:\n- **Třída A** (Cat 1): do **100 kHz** (analogový telefon),\n- **Třída B** (Cat 2): do **1 MHz** (ISDN, 10Base-T, Token Ring 4 MB),\n- **Třída C** (Cat 3): do **16 MHz** (10 Mbps, Token Ring 16 MB),\n- **Třída D** (Cat 5): do **100 MHz** (100 Mbps Fast Ethernet),\n- **Třída D 2002** (Cat 5e): **100 MHz (v závorce 350 MHz)** pro 1 Gbps Gigabit Ethernet!",
+      "start": 597.5,
+      "end": 630.67,
+      "duration": 33.17
+    },
+    {
+      "index": 31,
+      "speaker": "Tomáš",
+      "question_id": "sk-11",
+      "display": "Skvěle! A druhá polovina tabulky:\n- **Třída E** (Cat 6): do **250 MHz** (1 Gbps Gigabit Ethernet),\n- **Třída Ea** (Cat 6a): do **500 MHz** (10 Gbps – 10GBase-T),\n- **Třída F** (Cat 7): do **600 MHz** (10 Gbps),\n- **Třída Fa** (Cat 7a): do **1000 MHz** (10 Gbps),\n- **Třída I & II** (Cat 8): **1600 / 2000 MHz** (40 Gbps do 30 m),\n- a **optické třídy**: nad 10 MHz (přičemž frekvence světla u optiky se udává v **THz**).",
+      "start": 630.86,
+      "end": 676.51,
+      "duration": 45.65
+    },
+    {
+      "index": 32,
+      "speaker": "Klára",
+      "question_id": "sk-12",
+      "display": "Dvanáctá otázka: **„Co je to FEXT? Jaký útlum FEXT požadujeme?“**",
+      "start": 676.7,
+      "end": 681.91,
+      "duration": 5.21
+    },
+    {
+      "index": 33,
+      "speaker": "Tomáš",
+      "question_id": "sk-12",
+      "display": "**FEXT (Far-End Crosstalk)** je **přeslech na vzdáleném konci kabelu**. Jde o nežádoucí rušení, kdy signál z jednoho páru ovlivňuje jiný pár a rušení se měří na **opačném konci kabelu**, než kde signál vzniká. A teď pozor na to zvýrazněné pravidlo z vašeho sešitu: **U FEXT požadujeme co nejvyšší hodnotu útlumu v decibelech (dB)**, aby bylo vzájemné rušení mezi páry co nejmenší!",
+      "start": 682.1,
+      "end": 710.26,
+      "duration": 28.15
+    },
+    {
+      "index": 34,
+      "speaker": "Klára",
+      "question_id": "sk-13",
+      "display": "Třináctá otázka: **„Vyjmenujte tři základní subsystémy generické kabeláže. Jaké jsou maximální délky kabelů metalických a optických?“** Tady máme v sešitě přesná čísla 1500 m, 500 m, 90 m a přídavné šňůry A, B, E!",
+      "start": 710.45,
+      "end": 728.59,
+      "duration": 18.14
+    },
+    {
+      "index": 35,
+      "speaker": "Tomáš",
+      "question_id": "sk-13",
+      "display": "Přesně tahle čísla z hodin tam napiš:\n1. **Subsystém páteřní kabeláže areálu**: **optika, maximální délka 1500 m**, spojuje rozvaděč areálu **CD** (*Campus Distributor*) $\\rightarrow$ rozvaděč budovy **BD** (*Building Distributor*).\n2. **Subsystém páteřní kabeláže budovy**: **optika, maximální délka 500 m**, spojuje rozvaděč budovy **BD** $\\rightarrow$ patrový rozvaděč **FD** (*Floor Distributor*).\n3. **Subsystém horizontální kabeláže**: **metalické kabely, maximální délka 90 m**, spojuje patrový rozvaděč **FD** $\\rightarrow$ telekomunikační zásuvku **TO** (případně přes konsolidační bod **CP**).",
+      "start": 728.78,
+      "end": 768.86,
+      "duration": 40.08
+    },
+    {
+      "index": 36,
+      "speaker": "Klára",
+      "question_id": "sk-13",
+      "display": "A navíc k těm 90 metrům horizontální kabeláže existují **přídavné šňůry A, B a E**:\n- **Šňůra A** (na pracovní ploše, zásuvka TO $\\rightarrow$ PC): **max. 5 m**,\n- **Šňůra B** (v rozvaděči FD, panel $\\leftrightarrow$ panel): **max. 10 m** (jen když A a E jsou nulové),\n- **Šňůra E** (v rozvaděči FD, panel $\\rightarrow$ switch): **max. 5 m**.\nA součet přídavných šňůr **$A + B + E \\le 10\\text{ m}$**, takže celý kanál má **$90 + 10 = 100\\text{ m}$**!",
+      "start": 769.06,
+      "end": 801.43,
+      "duration": 32.38
+    },
+    {
+      "index": 37,
+      "speaker": "Tomáš",
+      "question_id": "sk-14",
+      "display": "Přesně tak! Teď čtrnáctka a patnáctka: **„14. Co je to pracovní plocha? Kolik portů se přiděluje na jednu pracovní plochu? Jejich vlastnosti.“** a **„15. Patří kabely pracovní plochy do generické strukturované kabeláže?“**",
+      "start": 801.62,
+      "end": 819.17,
+      "duration": 17.54
+    },
+    {
+      "index": 38,
+      "speaker": "Klára",
+      "question_id": "sk-14",
+      "display": "**Pracovní plocha** je prostor, kde uživatelé pracují s koncovými zařízeními (PC, tiskárna, IP kamera). **Začíná telekomunikační zásuvkou (TO)**, zahrnuje propojovací kabel k zařízení (**max. 5 m**) a samotné koncové zařízení. Na **1 pracovní plochu (10 $\\text{m}^2$)** se přidělují **2 zásuvky / porty (nebo 1 dvojzásuvka)** a ty musí odpovídat kategorii kabeláže (Cat 6, 6a atd.).",
+      "start": 819.36,
+      "end": 848.54,
+      "duration": 29.18
+    },
+    {
+      "index": 39,
+      "speaker": "Tomáš",
+      "question_id": "sk-15",
+      "display": "A u patnáctky napiš přesně: **Ne, kabeláž pracovní plochy (přídavné šňůry od zásuvky ke koncovému zařízení) není součástí generické strukturované kabeláže!** Generická SK končí na zásuvce TO, která do SK ještě patří.",
+      "start": 848.74,
+      "end": 867.62,
+      "duration": 18.89
+    },
+    {
+      "index": 40,
+      "speaker": "Klára",
+      "question_id": "sk-16",
+      "display": "A poslední, šestnáctá otázka: **„Popište zapojení konektorů pro zásuvku typu B.“** V Evropě používáme typ B (T568B), 1 pin = 1 vodič = 1 barva = 1 drátek, a máme skvělou pomůcku: **zelené piny jsou „rozházené“ na pozicích 3 a 6**!",
+      "start": 867.82,
+      "end": 885.12,
+      "duration": 17.3
+    },
+    {
+      "index": 41,
+      "speaker": "Tomáš",
+      "question_id": "sk-16",
+      "display": "Přesně! Ostatní barvy jsou pěkně vedle sebe: oranžová na 1 a 2, modrá na 4 a 5 (pozor, na čtyřce je plná modrá a na pětce bílo-modrá!) a hnědá na 7 a 8. Takže všech 8 pinů **T568B** popořadě:\n- **1 – Bílo-oranžová**\n- **2 – Oranžová**\n- **3 – Bílo-zelená**\n- **4 – Modrá**\n- **5 – Bílo-modrá**\n- **6 – Zelená**\n- **7 – Bílo-hnědá**\n- **8 – Hnědá**.\nA tím máš kompletně hotové všechny otázky na zítřejší test, Kláro! Držím palce!",
+      "start": 885.31,
+      "end": 924.48,
+      "duration": 39.17
+    }
+  ]
+}
