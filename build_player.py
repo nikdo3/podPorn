@@ -1483,11 +1483,11 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         </button>
 
         <div class="segmented-control" title="Výběr hlasového enginu">
-          <button id="eng-cz" class="seg-btn active" onclick="switchEngine('cz_studio')">
-            CZ Studio (Antonín &amp; Vlasta)
+          <button id="eng-eleven" class="seg-btn active" onclick="switchEngine('eleven_hd')">
+            ElevenLabs HD (Brian &amp; Sarah)
           </button>
-          <button id="eng-multi" class="seg-btn" onclick="switchEngine('multi_hd')">
-            Multi HD (Florian &amp; Seraphina)
+          <button id="eng-cz" class="seg-btn" onclick="switchEngine('cz_studio')">
+            CZ Studio (Antonín &amp; Vlasta)
           </button>
         </div>
 
@@ -1754,7 +1754,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     const RAW_QUIZ = __QUIZ_QUESTIONS_JSON__;
     const KEEP_DATA = __KEEP_DATA_JSON__;
 
-    let activeEngine = RAW_DATA.default_engine || "cz_studio";
+    let activeEngine = RAW_DATA.default_engine || "eleven_hd";
     let currentTrack = RAW_DATA.tracks ? RAW_DATA.tracks[activeEngine] : RAW_DATA;
     let appMode = "podcast";
 
@@ -2240,8 +2240,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       activeEngine = engineKey;
       currentTrack = RAW_DATA.tracks[engineKey];
 
+      document.getElementById("eng-eleven").classList.toggle("active", engineKey === "eleven_hd");
       document.getElementById("eng-cz").classList.toggle("active", engineKey === "cz_studio");
-      document.getElementById("eng-multi").classList.toggle("active", engineKey === "multi_hd");
 
       audio.src = currentTrack.filename;
       downloadLink.href = currentTrack.filename;
