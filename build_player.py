@@ -1652,7 +1652,11 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             <svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
             <span id="btn-filter-mistakes-lbl">Procvičit jen chyby (0)</span>
           </button>
-          <button class="action-btn primary-soft" onclick="shuffleActiveQuiz()">
+          <button class="action-btn primary-soft" onclick="openSyncModal()" title="Synchronizovat progress mezi zařízeními">
+            <svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>
+            <span>Sync</span>
+          </button>
+          <button class="action-btn" onclick="shuffleActiveQuiz()">
             <svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
             <span>Zamíchat</span>
           </button>
@@ -1666,6 +1670,42 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
     <div id="quiz-cards-container" style="display:flex; flex-direction:column; gap:18px;"></div>
   </section>
+
+  <!-- SYNC MODAL -->
+  <div id="sync-modal" class="modal-backdrop" onclick="if(event.target===this) closeSyncModal()">
+    <div class="modal-panel" style="max-width: 620px;">
+      <div class="card-head">
+        <div>
+          <div class="card-head-title">Synchronizace postupu mezi zařízeními</div>
+          <div class="card-head-sub">Přeneste si historii a skóre z mobilu na počítač nebo naopak</div>
+        </div>
+        <button class="action-btn" onclick="closeSyncModal()">
+          <svg class="svg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          <span>Zavřít</span>
+        </button>
+      </div>
+      <div class="modal-body" style="display:flex; flex-direction:column; gap:16px;">
+        <div>
+          <div style="font-weight:700; margin-bottom:6px; color:var(--text-main);">1. Sdílený odkaz (nejrychlejší)</div>
+          <div style="font-size:12.5px; color:var(--text-secondary); margin-bottom:8px;">Otevřete tento odkaz na druhém zařízení a váš progress se okamžitě načte.</div>
+          <div style="display:flex; gap:8px;">
+            <input id="sync-url-input" type="text" readonly style="flex:1; padding:8px 12px; border-radius:10px; border:1px solid var(--border-color); background:var(--bg-subtle); color:var(--text-main); font-family:monospace; font-size:12px;" />
+            <button class="next-q-cta" onclick="copySyncUrl()">Kopírovat odkaz</button>
+          </div>
+        </div>
+
+        <div style="border-top:1px dashed var(--border-color); padding-top:14px;">
+          <div style="font-weight:700; margin-bottom:6px; color:var(--text-main);">2. Export / Import zálohy</div>
+          <div style="font-size:12.5px; color:var(--text-secondary); margin-bottom:8px;">Zkopírujte kód níže a vložte jej na jiném zařízení:</div>
+          <textarea id="sync-data-textarea" rows="4" style="width:100%; box-sizing:border-box; padding:8px 12px; border-radius:10px; border:1px solid var(--border-color); background:var(--bg-subtle); color:var(--text-main); font-family:monospace; font-size:11px; resize:vertical;"></textarea>
+          <div style="display:flex; gap:8px; margin-top:8px;">
+            <button class="action-btn primary-soft" onclick="exportSyncCode()">Obnovit kód</button>
+            <button class="next-q-cta" onclick="importSyncCode()">Nahrát zadaný kód</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- GOOGLE KEEP MODAL -->
   <div id="keep-modal" class="modal-backdrop" onclick="if(event.target===this) closeKeepModal()">
@@ -2324,6 +2364,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     let currentStreak = 0;
 
     let quizState = {};
+    let questionHistory = {}; // qId -> { correctCount: 0, wrongCount: 0, totalAttempts: 0 }
     let activeQuestionList = [];
 
     function createShuffledOptions(qObj) {
@@ -2348,28 +2389,64 @@ HTML_TEMPLATE = """<!DOCTYPE html>
           isCorrect: false,
           shuffledOptions: createShuffledOptions(q)
         };
+        questionHistory[q.id] = {
+          correctCount: 0,
+          wrongCount: 0,
+          totalAttempts: 0
+        };
       });
 
-      try {
-        const saved = localStorage.getItem("satelity_quiz_v1");
-        if (saved) {
-          const parsed = JSON.parse(saved);
-          if (parsed && parsed.answers) {
-            Object.keys(parsed.answers).forEach(idStr => {
-              const qId = parseInt(idStr, 10);
-              if (quizState[qId] && parsed.answers[idStr].shuffledOptions) {
-                quizState[qId] = parsed.answers[idStr];
-              }
-            });
-          }
-          if (typeof parsed.streak === "number") {
-            currentStreak = parsed.streak;
-          }
+      // Check URL Hash sync first
+      let loadedFromHash = false;
+      if (window.location.hash && window.location.hash.startsWith("#sync=")) {
+        try {
+          const rawHash = window.location.hash.slice(6);
+          const decompressed = decodeURIComponent(escape(atob(rawHash)));
+          const payload = JSON.parse(decompressed);
+          applyLoadedQuizPayload(payload);
+          loadedFromHash = true;
+          // Clear hash quietly without reload
+          history.replaceState(null, "", window.location.pathname);
+        } catch (e) {
+          console.warn("Failed to load sync from hash", e);
         }
-      } catch (e) {}
+      }
+
+      if (!loadedFromHash) {
+        try {
+          const saved = localStorage.getItem("satelity_quiz_v1");
+          if (saved) {
+            const parsed = JSON.parse(saved);
+            applyLoadedQuizPayload(parsed);
+          }
+        } catch (e) {}
+      }
 
       rebuildActiveQuestionList();
       updateHeaderQuizBadge();
+    }
+
+    function applyLoadedQuizPayload(parsed) {
+      if (!parsed) return;
+      if (parsed.answers) {
+        Object.keys(parsed.answers).forEach(idStr => {
+          const qId = parseInt(idStr, 10);
+          if (quizState[qId] && parsed.answers[idStr].shuffledOptions) {
+            quizState[qId] = parsed.answers[idStr];
+          }
+        });
+      }
+      if (parsed.history) {
+        Object.keys(parsed.history).forEach(idStr => {
+          const qId = parseInt(idStr, 10);
+          if (questionHistory[qId]) {
+            questionHistory[qId] = parsed.history[idStr];
+          }
+        });
+      }
+      if (typeof parsed.streak === "number") {
+        currentStreak = parsed.streak;
+      }
     }
 
     function saveQuizToStorage() {
@@ -2380,9 +2457,64 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         });
         localStorage.setItem("satelity_quiz_v1", JSON.stringify({
           answers: answeredOnly,
+          history: questionHistory,
           streak: currentStreak
         }));
       } catch (e) {}
+    }
+
+    function openSyncModal() {
+      exportSyncCode();
+      document.getElementById("sync-modal").classList.add("active");
+    }
+
+    function closeSyncModal() {
+      document.getElementById("sync-modal").classList.remove("active");
+    }
+
+    function exportSyncCode() {
+      const answeredOnly = {};
+      Object.keys(quizState).forEach(k => {
+        if (quizState[k].answered) answeredOnly[k] = quizState[k];
+      });
+      const payload = {
+        answers: answeredOnly,
+        history: questionHistory,
+        streak: currentStreak,
+        ts: Date.now()
+      };
+      const jsonStr = JSON.stringify(payload);
+      const b64 = btoa(unescape(encodeURIComponent(jsonStr)));
+      document.getElementById("sync-data-textarea").value = b64;
+      const url = window.location.origin + window.location.pathname + "#sync=" + b64;
+      document.getElementById("sync-url-input").value = url;
+    }
+
+    function copySyncUrl() {
+      const inp = document.getElementById("sync-url-input");
+      inp.select();
+      navigator.clipboard.writeText(inp.value).then(() => {
+        alert("Odkaz zkopírován do schránky! Otevřete jej na jiném zařízení pro synchronizaci.");
+      });
+    }
+
+    function importSyncCode() {
+      const val = document.getElementById("sync-data-textarea").value.trim();
+      if (!val) return;
+      try {
+        const jsonStr = decodeURIComponent(escape(atob(val)));
+        const parsed = JSON.parse(jsonStr);
+        applyLoadedQuizPayload(parsed);
+        saveQuizToStorage();
+        rebuildActiveQuestionList();
+        updateHeaderQuizBadge();
+        renderQuizTopicBar();
+        renderQuizDashboardAndCards();
+        closeSyncModal();
+        alert("Úspěšně synchronizováno!");
+      } catch (e) {
+        alert("Neplatný kód zálohy: " + e.message);
+      }
     }
 
     function rebuildActiveQuestionList() {
@@ -2462,6 +2594,17 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       if (onlyUnansweredMode) {
         onlyMistakesMode = false;
         if (quizViewMode === "matrix") setQuizViewMode("single");
+
+        // Požadavek: když si v testu dám jen ty otázky co nevím, smažou se jim odpovědi pro okamžité procvičení
+        RAW_QUIZ.forEach(q => {
+          const st = quizState[q.id];
+          if (st && !st.answered) {
+            st.answered = false;
+            st.chosenIndex = -1;
+            st.isCorrect = false;
+            st.shuffledOptions = createShuffledOptions(q);
+          }
+        });
       }
       currentSingleIndex = 0;
       rebuildActiveQuestionList();
@@ -2562,6 +2705,17 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       st.chosenIndex = optIdx;
       st.isCorrect = chosen.isCorrect;
       currentStreak = st.isCorrect ? currentStreak + 1 : 0;
+
+      // Záznam do historie na pozadí (kolikrát odpovězeno dobře a špatně)
+      if (!questionHistory[qId]) {
+        questionHistory[qId] = { correctCount: 0, wrongCount: 0, totalAttempts: 0 };
+      }
+      questionHistory[qId].totalAttempts++;
+      if (st.isCorrect) {
+        questionHistory[qId].correctCount++;
+      } else {
+        questionHistory[qId].wrongCount++;
+      }
 
       saveQuizToStorage();
       updateHeaderQuizBadge();
@@ -2694,15 +2848,19 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       const letters = ["A", "B", "C", "D"];
       let cardStateClass = "";
       let qProbBadgeHTML = "";
+      const hist = questionHistory[qObj.id] || { correctCount: 0, wrongCount: 0, totalAttempts: 0 };
+      const histBadge = hist.totalAttempts > 0
+        ? `<span class="q-prob-pill" style="background:var(--bg-subtle); color:var(--text-secondary); border:1px solid var(--border-color); font-size:11px;">Historie: ${hist.correctCount}✓ / ${hist.wrongCount}✗</span>`
+        : "";
 
       if (!st.answered) {
-        qProbBadgeHTML = `<span class="q-prob-pill uncertain">Nejistota (tip 25 %)</span>`;
+        qProbBadgeHTML = `<span class="q-prob-pill uncertain">Nejistota (tip 25 %)</span> ${histBadge}`;
       } else if (st.isCorrect) {
         cardStateClass = "answered-correct";
-        qProbBadgeHTML = `<span class="q-prob-pill certain-ok">Potvrzeno (100 %)</span>`;
+        qProbBadgeHTML = `<span class="q-prob-pill certain-ok">Potvrzeno (100 %)</span> ${histBadge}`;
       } else {
         cardStateClass = "answered-wrong";
-        qProbBadgeHTML = `<span class="q-prob-pill certain-bad">Chyba (0 %)</span>`;
+        qProbBadgeHTML = `<span class="q-prob-pill certain-bad">Chyba (0 %)</span> ${histBadge}`;
       }
 
       const optionsHTML = st.shuffledOptions.map((opt, oIdx) => {

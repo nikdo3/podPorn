@@ -4,7 +4,7 @@
     "eleven_hd": {
       "engine": "eleven_hd",
       "filename": "podcast_satelity_eleven.mp3",
-      "total_duration": 895.66,
+      "total_duration": 990.85,
       "segments": [
         {
           "index": 0,
@@ -12,485 +12,485 @@
           "question_id": "intro",
           "display": "Ahoj Marku! Hele, čeká mě test na **satelitní komunikace a oběžné dráhy**. Je to pro mě spíš okrajové téma a nemám přesné otázky – projdeme spolu všechno podstatné ze skript i z prezentace **GiTySAT** tak, aby mi to v hlavě hned secvaklo?",
           "start": 0.0,
-          "end": 18.24,
-          "duration": 18.24
+          "end": 16.69,
+          "duration": 16.69
         },
         {
           "index": 1,
           "speaker": "Marek",
           "question_id": "intro",
           "display": "Jasně Terezo, dáme to úplně v klidu! Žádné zbytečné odvozování vzorců – půjdeme po logice věci, srovnáních a chytácích, na které se učitelé ptají nejčastěji. Rozdělili jsme si to do devíti přehledných kapitol. Jdeme na **orbitální mechaniku**?",
-          "start": 18.48,
-          "end": 36.74,
-          "duration": 18.26
+          "start": 16.89,
+          "end": 34.78,
+          "duration": 17.9
         },
         {
           "index": 2,
           "speaker": "Tereza",
           "question_id": "sat-1",
           "display": "Pojďme! Proč vlastně družice drží na oběžné dráze a nespadne na Zem, když nemá pořád zapnuté motory?",
-          "start": 37.27,
-          "end": 44.35,
-          "duration": 7.08
+          "start": 35.22,
+          "end": 43.6,
+          "duration": 8.39
         },
         {
           "index": 3,
           "speaker": "Marek",
           "question_id": "sat-1",
           "display": "Je to čistá rovnováha dvou věcí: **zemská gravitace** družici neustále přitahuje ke středu Země (a slábne se čtvercem vzdálenosti $r^2$), a tím zajišťuje potřebnou **dostředivou sílu**, která zakřivuje její let. Družice má totiž tak vysokou tečnou rychlost, že jakoby pořád padá k Zemi, ale Země se pod ní stejně rychle zakřivuje!",
-          "start": 44.59,
-          "end": 65.36,
-          "duration": 20.77
+          "start": 43.8,
+          "end": 66.81,
+          "duration": 23.02
         },
         {
           "index": 4,
           "speaker": "Tereza",
           "question_id": "sat-1",
           "display": "A co **odstředivá síla**? Někdy se říká, že ji vyrovnává.",
-          "start": 65.6,
-          "end": 69.1,
-          "duration": 3.5
+          "start": 67.0,
+          "end": 72.02,
+          "duration": 5.02
         },
         {
           "index": 5,
           "speaker": "Marek",
           "question_id": "sat-1",
           "display": "Pozor na terminologii ze skript: **odstředivá síla** není žádná nová skutečná síla – je to jen zdánlivá setrvačná síla v neinerciální soustavě, která rotuje s družicí. A ještě jedna intuice, co se plete: **čím výš je kruhová dráha, tím POMALEJI družice letí** a tím **DELŠÍ má oběžnou dobu**! Nízko letí přes 7,5 km/s, na geostacionární dráze jen asi 3,1 km/s.",
-          "start": 69.34,
-          "end": 100.48,
-          "duration": 31.14
+          "start": 72.21,
+          "end": 99.8,
+          "duration": 27.59
         },
         {
           "index": 6,
           "speaker": "Tereza",
           "question_id": "sat-1",
           "display": "Jasně, takže výš znamená pomaleji a delší oběh. A co **úniková rychlost** a **Keplerovy zákony**?",
-          "start": 100.72,
-          "end": 106.5,
-          "duration": 5.78
+          "start": 99.99,
+          "end": 108.54,
+          "duration": 8.54
         },
         {
           "index": 7,
           "speaker": "Marek",
           "question_id": "sat-1",
           "display": "**Úniková rychlost** je $\\sqrt{2}$-krát větší než kruhová – u povrchu Země asi **11,2 km/s**. Když ji dosáhneš, přejdeš na otevřenou parabolickou dráhu a Zemi opustíš. A **Keplerovy zákony** jsou tři: **První** říká, že dráha je **elipsa** se Zemí v jednom ohnisku (kruh je jen speciální případ s nulovou excentricitou). **Druhý** je zákon ploch – z něj plyne, že družice letí **nejrychleji v perigeu** (nejblíž Zemi) a **nejpomaleji v apogeu** (nejdál od Země). A **třetí** dává do poměru druhou mocninu oběžné doby se třetí mocninou hlavní poloosy.",
-          "start": 106.74,
-          "end": 140.46,
-          "duration": 33.73
+          "start": 108.73,
+          "end": 142.33,
+          "duration": 33.6
         },
         {
           "index": 8,
           "speaker": "Tereza",
           "question_id": "sat-1",
           "display": "A v realitě asi nejde o dokonalou Keplerovu elipsu, že? Co tu dráhu nejvíc ruší?",
-          "start": 140.7,
-          "end": 145.88,
-          "duration": 5.17
+          "start": 142.52,
+          "end": 148.66,
+          "duration": 6.14
         },
         {
           "index": 9,
           "speaker": "Marek",
           "question_id": "sat-1",
           "display": "Přesně tak. Hlavní poruchy jsou čtyři: **zploštění Země** (nesférické gravitační pole, známé přes koeficient $J_2$), **odpor zbytkové atmosféry** u nízkých drah, **gravitace Slunce a Měsíce** a **tlak slunečního záření**.",
-          "start": 146.12,
-          "end": 160.96,
-          "duration": 14.84
+          "start": 148.85,
+          "end": 162.99,
+          "duration": 14.13
         },
         {
           "index": 10,
           "speaker": "Tereza",
           "question_id": "sat-2",
           "display": "Super. V druhé kapitole jsou **orbitální elementy**. Potřebuju umět všech šest prvků, co popisují dráhu v prostoru?",
-          "start": 161.49,
-          "end": 169.04,
-          "duration": 7.55
+          "start": 163.42,
+          "end": 172.54,
+          "duration": 9.12
         },
         {
           "index": 11,
           "speaker": "Marek",
           "question_id": "sat-2",
           "display": "Stačí přesně vědět, co který dělá! Jsou to tři dvojice: První dvě určují **velikost a tvar** – tedy **hlavní poloosa $a$** (velikost) a **excentricita $e$** (tvar: $0$ je kružnice, $0 < e < 1$ je elipsa). Druhé dvě určují **natočení v prostoru** – **inklinace $i$** (sklon roviny dráhy vůči rovníku, od $0^\\circ$ do $180^\\circ$) a **RAAN $\\Omega$** (rektascenze vzestupného uzlu, která říká, jak je rovina dráhy pootočená kolem osy Země).",
-          "start": 169.28,
-          "end": 198.7,
-          "duration": 29.42
+          "start": 172.73,
+          "end": 202.8,
+          "duration": 30.07
         },
         {
           "index": 12,
           "speaker": "Tereza",
           "question_id": "sat-2",
           "display": "A ta třetí dvojice? To bude asi poloha perigea a samotné družice!",
-          "start": 198.94,
-          "end": 203.88,
-          "duration": 4.94
+          "start": 202.99,
+          "end": 208.43,
+          "duration": 5.44
         },
         {
           "index": 13,
           "speaker": "Marek",
           "question_id": "sat-2",
           "display": "Přesně! Pátý prvek je **argument perigea $\\omega$** – úhel uvnitř samotné roviny dráhy od vzestupného uzlu k perigeu. A šestý je **pravá anomálie $\nu$** (případně střední anomálie), která udává **okamžitou polohu družice** na dráze v čase. Drobný chyták: u přesně rovníkové dráhy není definován vzestupný uzel, a u přesně kruhové dráhy není definován argument perigea!",
-          "start": 204.12,
-          "end": 224.7,
-          "duration": 20.59
+          "start": 208.62,
+          "end": 231.17,
+          "duration": 22.55
         },
         {
           "index": 14,
           "speaker": "Tereza",
           "question_id": "sat-2",
           "display": "A jak se dráhy dělí podle **inklinace**? Rovníková, polární, nakloněná… a pak tam byla ještě ta **slunečně synchronní SSO**.",
-          "start": 224.94,
-          "end": 233.04,
-          "duration": 8.1
+          "start": 231.36,
+          "end": 241.84,
+          "duration": 10.48
         },
         {
           "index": 15,
           "speaker": "Marek",
           "question_id": "sat-2",
           "display": "Jo, je to přehledné: **$i = 0^\\circ$** je rovníková prográdní (po směru rotace Země). Když je **$0^\\circ < i < 90^\\circ$**, jde o šikmou **prográdní** dráhu (Země jí jakoby pomáhá při startu). **$i \u0007pprox 90^\\circ$** je **polární dráha** přes oba póly – ideální pro meteo, SAR radary a průzkum, protože Země se pod ní otáčí a družice postupně nasnímá celý svět. A **$90^\\circ < i \\le 180^\\circ$** je **retrográdní** dráha – tedy proti rotaci Země!",
-          "start": 233.28,
-          "end": 260.3,
-          "duration": 27.01
+          "start": 242.03,
+          "end": 270.5,
+          "duration": 28.48
         },
         {
           "index": 16,
           "speaker": "Tereza",
           "question_id": "sat-2",
           "display": "A právě ta **SSO – slunečně synchronní dráha** má sklon asi **97° až 99°**, takže je lehce retrográdní! Proč se to dělá?",
-          "start": 260.54,
-          "end": 269.29,
-          "duration": 8.75
+          "start": 270.7,
+          "end": 280.6,
+          "duration": 9.9
         },
         {
           "index": 17,
           "speaker": "Marek",
           "question_id": "sat-2",
           "display": "To je parádní trik: využije se **zploštění Země ($J_2$)**, aby se rovina dráhy pomalu stáčela tempem asi **1 stupeň za den** (přesně $+0{,}9856^\\circ/\text{den}$), což přesně kopíruje roční pohyb Slunce. Výsledek? Družice přelétá nad stejným místem vždy ve **stejný místní sluneční čas**, takže stíny na fotkách jsou srovnatelné! Používá se to pro optické snímkování Země ve výškách 500 až 900 km, třeba u konstelace PlanetScope.",
-          "start": 269.53,
-          "end": 298.01,
-          "duration": 28.48
+          "start": 280.79,
+          "end": 310.86,
+          "duration": 30.07
         },
         {
           "index": 18,
           "speaker": "Tereza",
           "question_id": "sat-3",
           "display": "Teď asi nejčastější zkoušková klasika: **rozdělení drah podle výšky – LEO, MEO a GEO**, plus speciální dráhy **GSO, Molnija a Tundra**!",
-          "start": 298.53,
-          "end": 307.99,
-          "duration": 9.46
+          "start": 311.29,
+          "end": 324.33,
+          "duration": 13.04
         },
         {
           "index": 19,
           "speaker": "Marek",
           "question_id": "sat-3",
           "display": "Jdeme na to! **LEO (Low Earth Orbit)** je nejníž, zhruba **160 až 2 000 km**. Družice tam letí asi 7,6 km/s, Zemi obletí za **90 až 130 minut** a má super nízkou latenci kolem **20 až 50 ms**. Nevýhoda? Z tak malé výšky vidí jen malý kousek Země (na 500 km asi 3,6 % povrchu) a rychle zmizí za horizontem, takže potřebuješ **stovky až tisíce družic** a neustálé předávání spojení.",
-          "start": 308.23,
-          "end": 335.85,
-          "duration": 27.61
+          "start": 324.52,
+          "end": 355.3,
+          "duration": 30.77
         },
         {
           "index": 20,
           "speaker": "Tereza",
           "question_id": "sat-3",
           "display": "Pak je **MEO (Medium Earth Orbit)** od **2 000 do 35 786 km**. Co je pro ni typické?",
-          "start": 336.09,
-          "end": 344.19,
-          "duration": 8.1
+          "start": 355.49,
+          "end": 365.47,
+          "duration": 9.98
         },
         {
           "index": 21,
           "speaker": "Marek",
           "question_id": "sat-3",
           "display": "MEO je zlatý střed: oběžná doba je **2 až 24 hodin**, latence kolem **50 až 150 ms** a na globální pokrytí stačí jen **desítky družic**. Je to království navigací **GNSS** – třeba GPS ve výšce 20 200 km nebo evropské Galileo – ale i komunikační sítě **O3b** kolem 8 000 km. Pozor jen na **Van Allenovy radiační pásy**, které v některých výškách MEO vyžadují vyšší radiační odolnost elektroniky.",
-          "start": 344.43,
-          "end": 370.21,
-          "duration": 25.79
+          "start": 365.66,
+          "end": 393.8,
+          "duration": 28.14
         },
         {
           "index": 22,
           "speaker": "Tereza",
           "question_id": "sat-3",
           "display": "A nahoře kraluje **GEO** ve výšce **35 786 km**! Jaké tři nebo čtyři podmínky musí splnit, aby na obloze stála jako přibitá?",
-          "start": 370.45,
-          "end": 380.12,
-          "duration": 9.67
+          "start": 393.99,
+          "end": 404.47,
+          "duration": 10.48
         },
         {
           "index": 23,
           "speaker": "Marek",
           "question_id": "sat-3",
           "display": "Tohle je jistá zkoušková otázka! Aby byla družice geostacionární (**GEO**), musí být: **1. kruhová** ($e = 0$), **2. rovníková** ($i = 0^\\circ$), **3. prográdní** (letět po směru otáčení Země) a **4. mít periodu rovnou siderickému dni**, tedy **23 hodin 56 minut a 4 sekundy**. Pak stačí **3 družice**, aby pokryly většinu Země (jedna vidí až ~42 % povrchu), a na Zemi ti stačí **pevná anténa** bez natáčení. Jenže v polárních oblastech má strašně nízkou elevaci a nepokryje póly.",
-          "start": 380.36,
-          "end": 410.48,
-          "duration": 30.12
+          "start": 404.66,
+          "end": 436.72,
+          "duration": 32.05
         },
         {
           "index": 24,
           "speaker": "Tereza",
           "question_id": "sat-3",
           "display": "A rozdíl mezi **GEO** a **GSO**? To je taky častý chyták!",
-          "start": 410.72,
-          "end": 414.28,
-          "duration": 3.56
+          "start": 436.91,
+          "end": 442.42,
+          "duration": 5.51
         },
         {
           "index": 25,
           "speaker": "Marek",
           "question_id": "sat-3",
           "display": "**GEO je jen speciální případ GSO.** **GSO (geosynchronní dráha)** má také periodu 23 h 56 min, ale může mít **nenulový sklon $i > 0^\\circ$ nebo excentricitu $e > 0$**. Z pohledu pozorovatele na Zemi pak družice nestojí v jednom bodě, ale každý den na obloze opisuje **osmičku neboli analemu**!",
-          "start": 414.52,
-          "end": 432.05,
-          "duration": 17.53
+          "start": 442.61,
+          "end": 463.57,
+          "duration": 20.95
         },
         {
           "index": 26,
           "speaker": "Tereza",
           "question_id": "sat-3",
           "display": "A jak vyřešili pokrytí Arktidy a severních oblastí? Těmi eliptickými drahami **Molnija** a **Tundra**, že?",
-          "start": 432.29,
-          "end": 438.48,
-          "duration": 6.19
+          "start": 463.76,
+          "end": 471.02,
+          "duration": 7.26
         },
         {
           "index": 27,
           "speaker": "Marek",
           "question_id": "sat-3",
           "display": "Přesně! Obě využívají **2. Keplerův zákon** – družice letí rychle nízko nad jižní polokoulí a pak se dlouhé hodiny „loudá“ vysoko v apogeu nad severní polokoulí. Obě mají magický sklon **$63{,}4^\\circ$** (aby se jim nestáčelo apogeum). Rozdíl je v periodě a tvaru: **Molnija** má **12hodinovou** dráhu a extrémní excentricitu (~0,7 až 0,75), visí nad severem přes 8 hodin. **Tundra** je **24hodinová** (geosynchronní) s mírnější excentricitou (~0,2 až 0,4) a pokrývá oblast 12 až 16 hodin.",
-          "start": 438.72,
-          "end": 464.2,
-          "duration": 25.47
+          "start": 471.22,
+          "end": 499.61,
+          "duration": 28.4
         },
         {
           "index": 28,
           "speaker": "Tereza",
           "question_id": "sat-4",
           "display": "Skvělé! Teď čtvrtá kapitola: **jak oběžná dráha ovlivňuje samotný rádiový spoj** – tedy footprint, latenci, Dopplerův jev a útlum.",
-          "start": 464.72,
-          "end": 477.37,
-          "duration": 12.65
+          "start": 500.05,
+          "end": 510.99,
+          "duration": 10.95
         },
         {
           "index": 29,
           "speaker": "Marek",
           "question_id": "sat-4",
           "display": "**Footprint** je stopa pokrytí na Zemi. Pozor na rozdíl: **geometrická viditelnost** znamená jen to, že družice není pod obzorem, kdežto **skutečný footprint** je vždy menší – omezuje ho minimální elevační úhel antény (jinak signál prochází moc dlouho atmosférou a stíní ho terén), tvar anténního svazku a výkonová bilance.",
-          "start": 477.61,
-          "end": 495.64,
-          "duration": 18.03
+          "start": 511.19,
+          "end": 529.34,
+          "duration": 18.16
         },
         {
           "index": 30,
           "speaker": "Tereza",
           "question_id": "sat-4",
           "display": "A u **latence** u GEO si lidi často pletou jeden skok a zpáteční cestu RTT, že?",
-          "start": 495.88,
-          "end": 500.82,
-          "duration": 4.94
+          "start": 529.54,
+          "end": 537.85,
+          "duration": 8.31
         },
         {
           "index": 31,
           "speaker": "Marek",
           "question_id": "sat-4",
           "display": "Jo! Jeden směr ze Země na GEO (35 786 km rychlostí světla) trvá asi **120 ms**. Spojení od uživatele přes družici k druhému uživateli (dva úseky) dá minimálně **239 ms**. A obousměrné **RTT (tam a zpět)** včetně zpracování a protokolů vychází v praxi na **500 až 650 ms**! Oproti tomu MEO (třeba O3b) má RTT kolem **150 ms** a nízké LEO jako Starlink jen **25 až 50 ms**.",
-          "start": 501.06,
-          "end": 525.51,
-          "duration": 24.45
+          "start": 538.04,
+          "end": 565.31,
+          "duration": 27.27
         },
         {
           "index": 32,
           "speaker": "Tereza",
           "question_id": "sat-4",
           "display": "A jak je to s **Dopplerovým jevem** a **útlumem volného prostoru FSPL**?",
-          "start": 525.75,
-          "end": 529.98,
-          "duration": 4.23
+          "start": 565.5,
+          "end": 571.33,
+          "duration": 5.83
         },
         {
           "index": 33,
           "speaker": "Marek",
           "question_id": "sat-4",
           "display": "**Dopplerův posuv** způsobuje radiální složka rychlosti: když se družice přibližuje, frekvence roste, když se vzdaluje, klesá. U pevné **GEO** družice je vůči pevnému terminálu v podstatě **nulový**, kdežto u rychlého **LEO** v pásmech Ku/Ka skáče o **desítky až stovky kHz**, takže ho terminál musí průběžně kompenzovat! A **FSPL (útlum volného prostoru)** roste se **čtvercem vzdálenosti $d^2$ a čtvercem frekvence $f^2$** – mezi LEO a GEO je na stejné frekvenci rozdíl kolem **36 dB**, což je přes čtyři tisíce krát víc výkonu!",
-          "start": 530.22,
-          "end": 558.15,
-          "duration": 27.93
+          "start": 571.52,
+          "end": 602.8,
+          "duration": 31.27
         },
         {
           "index": 34,
           "speaker": "Tereza",
           "question_id": "sat-5",
           "display": "Jasné! Pátá kapitola řeší **satelitní konstelace**. Jaký je rozdíl mezi **Walker Delta** a **Walker Star**?",
-          "start": 558.68,
-          "end": 565.53,
-          "duration": 6.85
+          "start": 603.23,
+          "end": 611.69,
+          "duration": 8.47
         },
         {
           "index": 35,
           "speaker": "Marek",
           "question_id": "sat-5",
           "display": "Tohle si zapamatuješ snadno podle čísel $360^\\circ$ a $180^\\circ$: **Walker Delta** má orbitální roviny rozprostřené rovnoměrně po celých **360 stupních** kolem rovníku – typicky šikmé dráhy pro navigace, třeba Galileo ($56^\\circ:24/6/1$, tedy 6 rovin po 4 družicích, po $60^\\circ$). Naproti tomu **Walker Star** používá téměř **polární dráhy**, jejichž roviny jsou rozloženy v rozsahu **180 stupňů** – pokrývá i póly (třeba **Iridium**: 66 družic v 6 rovinách ve výšce 780 km).",
-          "start": 565.77,
-          "end": 587.76,
-          "duration": 22.0
+          "start": 611.89,
+          "end": 634.67,
+          "duration": 22.78
         },
         {
           "index": 36,
           "speaker": "Tereza",
           "question_id": "sat-5",
           "display": "A pak tam jsou **mezisatelitní spoje ISL** – hlavně ty **laserové**!",
-          "start": 588.0,
-          "end": 591.79,
-          "duration": 3.79
+          "start": 634.86,
+          "end": 640.22,
+          "duration": 5.36
         },
         {
           "index": 37,
           "speaker": "Marek",
           "question_id": "sat-5",
           "display": "**ISL (Inter-Satellite Links)** dovolí družicím posílat si data přímo ve vesmíru (často laserem na vlnové délce **1550 nm** rychlostí jednotek až desítek Gb/s) bez nutnosti skákat na pozemní bránu v každé oblasti. Výhody jsou obrovská kapacita a úzký svazek bez rušení. Nevýhody? Extrémní nároky na přesné míření a stabilizaci proti vibracím. A chyták ze skript: úzký laserový svazek sice ztěžuje odposlech, ale **sám o sobě nezaručuje bezpečnost – data se musí pořád šifrovat!**",
-          "start": 592.03,
-          "end": 616.72,
-          "duration": 24.69
+          "start": 640.41,
+          "end": 668.96,
+          "duration": 28.55
         },
         {
           "index": 38,
           "speaker": "Tereza",
           "question_id": "sat-6",
           "display": "Teď se přesouváme do prezentace **GiTySAT**! V šesté kapitole máme **kosmický segment, transpondéry a kmitočtová pásma**. Jaký je rozdíl mezi standardní družicí a **HTS**?",
-          "start": 617.25,
-          "end": 627.31,
-          "duration": 10.06
+          "start": 669.4,
+          "end": 681.39,
+          "duration": 11.99
         },
         {
           "index": 39,
           "speaker": "Marek",
           "question_id": "sat-6",
           "display": "**Standardní družice** svítí širokým svazkem na celý kontinent. **HTS (High Throughput Satellite)** pokryje oblast mnoha úzkými bodovými svazky (spot-beamy) a díky tomu může stejné frekvence opakovaně využívat – má tak mnohonásobně vyšší kapacitu! A co se týče **transpondérů**, známe tři druhy: **Bend pipe** (jen hloupá „ohnutá trubka“, co signál přijme, posune frekvenci a zesílí), **Cross type** (křížové propojení mezi svazky/pásmy) a **On-board switching** (chytré přepínání přímo na palubě družice).",
-          "start": 627.55,
-          "end": 653.31,
-          "duration": 25.76
+          "start": 681.58,
+          "end": 707.73,
+          "duration": 26.15
         },
         {
           "index": 40,
           "speaker": "Tereza",
           "question_id": "sat-6",
           "display": "A teď ta tabulka **satelitních pásem** od C až po E band! Co z ní musím v testu bezpečně vědět?",
-          "start": 653.55,
-          "end": 659.25,
-          "duration": 5.7
+          "start": 707.92,
+          "end": 714.87,
+          "duration": 6.95
         },
         {
           "index": 41,
           "speaker": "Marek",
           "question_id": "sat-6",
           "display": "Drž se posloupnosti frekvencí: **C band (4–8 GHz)** – klasická sat. komunikace a meteo radary, odolný dešti. **X band (8–12 GHz)** – vojenské/vládní satelitní komunikace, radary, hluboký vesmír. **Ku band (11–18 GHz)** – satelitní TV vysílání a běžný VSAT. **K band (18–27 GHz)** – obří chyták: **silný útlum vodní párou při 22,23 GHz**! **Ka band (27–40 GHz)** – moderní rychlý internet (HTS, O3b, brány LEO) a 5G. A úplně nahoře **V band (40–75 GHz)** a **E band (60–90 GHz)** pro experimenty a ultraširokopásmové brány.",
-          "start": 659.49,
-          "end": 693.92,
-          "duration": 34.43
+          "start": 715.07,
+          "end": 752.58,
+          "duration": 37.51
         },
         {
           "index": 42,
           "speaker": "Tereza",
           "question_id": "sat-7",
           "display": "Pěkně! V sedmé kapitole jsou **GEO sítě, topologie a firma GiTy**. Co je důležité o **GiTy** a jaké jsou **čtyři topologie GEO sítí**?",
-          "start": 694.45,
-          "end": 704.59,
-          "duration": 10.14
+          "start": 753.01,
+          "end": 765.48,
+          "duration": 12.46
         },
         {
           "index": 43,
           "speaker": "Marek",
           "question_id": "sat-7",
           "display": "**GiTy, a.s.** má vlastní satelitní **teleport (HUB)** přímo v ČR, vlastní pozemní **MPLS síť** v ČR a na Slovensku, nepřetržitý dohled 24/7 s garancí SLA a bezpečnostní **certifikaci NBÚ – Tajné**. A ty **čtyři topologie GEO sítí** jsou: **1. Broadcast** (jednosměrná distribuce dat), **2. Bod–Bod** pomocí technologie **SCPC** (vyhrazený kanál pro dva modemy/routery), **3. Hvězdicová síť** ($1\times$ VSAT HUB a $n\times$ terminálů, asymetrický provoz přes **TDMA/FDMA**) a **4. MESH** (terminály spolu mluví přímo jedním skokem bez dvojího průchodu přes HUB).",
-          "start": 704.83,
-          "end": 734.11,
-          "duration": 29.29
+          "start": 765.67,
+          "end": 799.34,
+          "duration": 33.67
         },
         {
           "index": 44,
           "speaker": "Tereza",
           "question_id": "sat-7",
           "display": "A ještě srovnání **internetová konfigurace vs. privátní satelitní síť**!",
-          "start": 734.35,
-          "end": 739.16,
-          "duration": 4.81
+          "start": 799.53,
+          "end": 805.75,
+          "duration": 6.22
         },
         {
           "index": 45,
           "speaker": "Marek",
           "question_id": "sat-7",
           "display": "**Internetová konfigurace** je pro velké množství terminálů, unifikovaná služba do Internetu s agregací, **FUP** a jen omezeným dohledem. Naproti tomu **privátní satelitní síť** propojuje pobočky s centrálou přímo do firemní **MPLS WAN**, má garantovanou kvalitu **QoS**, přídavné šifrování a plný **End-to-End dohled** přes SNMP.",
-          "start": 739.4,
-          "end": 757.3,
-          "duration": 17.9
+          "start": 805.95,
+          "end": 827.06,
+          "duration": 21.11
         },
         {
           "index": 46,
           "speaker": "Tereza",
           "question_id": "sat-8",
           "display": "V osmé kapitole jsou konkrétní moderní konstelace z prezentace: **O3b, OneWeb, Starlink, Amazon LEO a Telesat Lightspeed**. Jak si je rychle odlišit?",
-          "start": 757.83,
-          "end": 766.71,
-          "duration": 8.88
+          "start": 827.49,
+          "end": 838.67,
+          "duration": 11.18
         },
         {
           "index": 47,
           "speaker": "Marek",
           "question_id": "sat-8",
           "display": "Dejme každé jasnou nálepku: **O3b / O3b mPOWER** od SES je jediná velká **MEO** konstelace v přehledu – výška **8 000 km**, Ka-band, RTT **150 ms**, pokrytí zhruba $\\pm 50^\\circ$ šířky (takže ne póly!), až 1,6 Gbps na svazek. Pak máme **OneWeb** (Eutelsat): **LEO ve 1 200 km**, **652 družic**, RTT kolem **100 ms**, k terminálům jde **Ku-band** a k branám Ka-band; nabízí firemní **MIR** (maximální) i garantovanou **CIR** rychlost.",
-          "start": 766.95,
-          "end": 789.13,
-          "duration": 22.18
+          "start": 838.86,
+          "end": 863.73,
+          "duration": 24.87
         },
         {
           "index": 48,
           "speaker": "Tereza",
           "question_id": "sat-8",
           "display": "A **Starlink** od SpaceX versus nováčci **Amazon LEO** a **Telesat Lightspeed**?",
-          "start": 789.37,
-          "end": 792.98,
-          "duration": 3.61
+          "start": 863.93,
+          "end": 870.07,
+          "duration": 6.14
         },
         {
           "index": 49,
           "speaker": "Marek",
           "question_id": "sat-8",
           "display": "**Starlink** je největší aktivní konstelace (přes 9 800 družic, typicky **550 km**, RTT jen **25–50 ms**), využívá **laserové spoje mezi družicemi**, 13km svazky a terminály Mini, Standard, Enterprise a Performance. **Amazon LEO** (dříve Kuiper, 590–630 km, komerční start 2026/2027) má mít 3 232 družic, lasery a terminály Nano, Pro a Ultra až do 1 Gbps. A **Telesat Lightspeed** (start 2028, 1 015 a 1 325 km, Ka-band + lasery) cílí čistě na B2B, letectví a **L2 služby** až do 3 Gbps s pokrytím včetně pólů.",
-          "start": 793.22,
-          "end": 822.63,
-          "duration": 29.42
+          "start": 870.26,
+          "end": 902.89,
+          "duration": 32.63
         },
         {
           "index": 50,
           "speaker": "Tereza",
           "question_id": "sat-9",
           "display": "A jsme u deváté, poslední kapitoly! **Terminály, zabezpečení, trendy DVB-S2X a hybridní síť GiTySAT**. Co tvoří klasický VSAT terminál?",
-          "start": 823.16,
-          "end": 834.42,
-          "duration": 11.26
+          "start": 903.32,
+          "end": 916.83,
+          "duration": 13.51
         },
         {
           "index": 51,
           "speaker": "Marek",
           "question_id": "sat-9",
           "display": "Dvě části: **venkovní** je **anténa** (pevná parabola 0,7–2,4 m, mobilní *Drive Away* na auto, *Quick Deploy* nebo přenosný *Manpack*) a **RF jednotka** (C, X, Ku nebo Ka). **Vnitřní část** je samotný **VSAT modem/router** (třeba iDirect 950mp, 9530 nebo Newtec MDM3315). A pro vysokou bezpečnost používá GiTy **iDirect TRANSEC** (skrytí aktivity kanálu, **AES-256 na L2**, certifikát **X.509**), **Spread spectrum**, moduly **FIPS 140-2 Level 3** a systém **CSIR** proti úmyslnému rušení (anti-jamming).",
-          "start": 834.66,
-          "end": 860.45,
-          "duration": 25.79
+          "start": 917.02,
+          "end": 946.93,
+          "duration": 29.91
         },
         {
           "index": 52,
           "speaker": "Tereza",
           "question_id": "sat-9",
           "display": "A co v trendech znamená **DVB-S2X s ACM** a jak funguje **hybridní síť** v posledním slidu?",
-          "start": 860.69,
-          "end": 866.05,
-          "duration": 5.36
+          "start": 947.13,
+          "end": 956.4,
+          "duration": 9.28
         },
         {
           "index": 53,
           "speaker": "Marek",
           "question_id": "sat-9",
           "display": "**ACM (Adaptive Coding and Modulation)** je geniální v tom, že když přijde bouřka a zhorší se signál, spoj nespadne – modem v reálném čase přepne z vysoké modulace (třeba 256APSK) na odolnější QPSK a zpátky, jakmile vysvitne slunce! A **hybridní síť GiTySAT** chytře kombinuje **GEO + LEO + Internet**: **kritický a citlivý provoz** jde zabezpečeným GEO VSATem do centrály, **standardní provoz** letí rychlým LEO terminálem přes privátní propoj NNI do MPLS sítě G-Net, a **nekritický internetový provoz** jde lokálně přes firewall rovnou do Internetu. Tím máš v kapse všechno!",
-          "start": 866.29,
-          "end": 895.42,
-          "duration": 29.13
+          "start": 956.59,
+          "end": 990.66,
+          "duration": 34.07
         }
       ]
     },
@@ -988,7 +988,7 @@
       ]
     }
   },
-  "total_duration": 895.66,
+  "total_duration": 990.85,
   "segments": [
     {
       "index": 0,
@@ -996,485 +996,485 @@
       "question_id": "intro",
       "display": "Ahoj Marku! Hele, čeká mě test na **satelitní komunikace a oběžné dráhy**. Je to pro mě spíš okrajové téma a nemám přesné otázky – projdeme spolu všechno podstatné ze skript i z prezentace **GiTySAT** tak, aby mi to v hlavě hned secvaklo?",
       "start": 0.0,
-      "end": 18.24,
-      "duration": 18.24
+      "end": 16.69,
+      "duration": 16.69
     },
     {
       "index": 1,
       "speaker": "Marek",
       "question_id": "intro",
       "display": "Jasně Terezo, dáme to úplně v klidu! Žádné zbytečné odvozování vzorců – půjdeme po logice věci, srovnáních a chytácích, na které se učitelé ptají nejčastěji. Rozdělili jsme si to do devíti přehledných kapitol. Jdeme na **orbitální mechaniku**?",
-      "start": 18.48,
-      "end": 36.74,
-      "duration": 18.26
+      "start": 16.89,
+      "end": 34.78,
+      "duration": 17.9
     },
     {
       "index": 2,
       "speaker": "Tereza",
       "question_id": "sat-1",
       "display": "Pojďme! Proč vlastně družice drží na oběžné dráze a nespadne na Zem, když nemá pořád zapnuté motory?",
-      "start": 37.27,
-      "end": 44.35,
-      "duration": 7.08
+      "start": 35.22,
+      "end": 43.6,
+      "duration": 8.39
     },
     {
       "index": 3,
       "speaker": "Marek",
       "question_id": "sat-1",
       "display": "Je to čistá rovnováha dvou věcí: **zemská gravitace** družici neustále přitahuje ke středu Země (a slábne se čtvercem vzdálenosti $r^2$), a tím zajišťuje potřebnou **dostředivou sílu**, která zakřivuje její let. Družice má totiž tak vysokou tečnou rychlost, že jakoby pořád padá k Zemi, ale Země se pod ní stejně rychle zakřivuje!",
-      "start": 44.59,
-      "end": 65.36,
-      "duration": 20.77
+      "start": 43.8,
+      "end": 66.81,
+      "duration": 23.02
     },
     {
       "index": 4,
       "speaker": "Tereza",
       "question_id": "sat-1",
       "display": "A co **odstředivá síla**? Někdy se říká, že ji vyrovnává.",
-      "start": 65.6,
-      "end": 69.1,
-      "duration": 3.5
+      "start": 67.0,
+      "end": 72.02,
+      "duration": 5.02
     },
     {
       "index": 5,
       "speaker": "Marek",
       "question_id": "sat-1",
       "display": "Pozor na terminologii ze skript: **odstředivá síla** není žádná nová skutečná síla – je to jen zdánlivá setrvačná síla v neinerciální soustavě, která rotuje s družicí. A ještě jedna intuice, co se plete: **čím výš je kruhová dráha, tím POMALEJI družice letí** a tím **DELŠÍ má oběžnou dobu**! Nízko letí přes 7,5 km/s, na geostacionární dráze jen asi 3,1 km/s.",
-      "start": 69.34,
-      "end": 100.48,
-      "duration": 31.14
+      "start": 72.21,
+      "end": 99.8,
+      "duration": 27.59
     },
     {
       "index": 6,
       "speaker": "Tereza",
       "question_id": "sat-1",
       "display": "Jasně, takže výš znamená pomaleji a delší oběh. A co **úniková rychlost** a **Keplerovy zákony**?",
-      "start": 100.72,
-      "end": 106.5,
-      "duration": 5.78
+      "start": 99.99,
+      "end": 108.54,
+      "duration": 8.54
     },
     {
       "index": 7,
       "speaker": "Marek",
       "question_id": "sat-1",
       "display": "**Úniková rychlost** je $\\sqrt{2}$-krát větší než kruhová – u povrchu Země asi **11,2 km/s**. Když ji dosáhneš, přejdeš na otevřenou parabolickou dráhu a Zemi opustíš. A **Keplerovy zákony** jsou tři: **První** říká, že dráha je **elipsa** se Zemí v jednom ohnisku (kruh je jen speciální případ s nulovou excentricitou). **Druhý** je zákon ploch – z něj plyne, že družice letí **nejrychleji v perigeu** (nejblíž Zemi) a **nejpomaleji v apogeu** (nejdál od Země). A **třetí** dává do poměru druhou mocninu oběžné doby se třetí mocninou hlavní poloosy.",
-      "start": 106.74,
-      "end": 140.46,
-      "duration": 33.73
+      "start": 108.73,
+      "end": 142.33,
+      "duration": 33.6
     },
     {
       "index": 8,
       "speaker": "Tereza",
       "question_id": "sat-1",
       "display": "A v realitě asi nejde o dokonalou Keplerovu elipsu, že? Co tu dráhu nejvíc ruší?",
-      "start": 140.7,
-      "end": 145.88,
-      "duration": 5.17
+      "start": 142.52,
+      "end": 148.66,
+      "duration": 6.14
     },
     {
       "index": 9,
       "speaker": "Marek",
       "question_id": "sat-1",
       "display": "Přesně tak. Hlavní poruchy jsou čtyři: **zploštění Země** (nesférické gravitační pole, známé přes koeficient $J_2$), **odpor zbytkové atmosféry** u nízkých drah, **gravitace Slunce a Měsíce** a **tlak slunečního záření**.",
-      "start": 146.12,
-      "end": 160.96,
-      "duration": 14.84
+      "start": 148.85,
+      "end": 162.99,
+      "duration": 14.13
     },
     {
       "index": 10,
       "speaker": "Tereza",
       "question_id": "sat-2",
       "display": "Super. V druhé kapitole jsou **orbitální elementy**. Potřebuju umět všech šest prvků, co popisují dráhu v prostoru?",
-      "start": 161.49,
-      "end": 169.04,
-      "duration": 7.55
+      "start": 163.42,
+      "end": 172.54,
+      "duration": 9.12
     },
     {
       "index": 11,
       "speaker": "Marek",
       "question_id": "sat-2",
       "display": "Stačí přesně vědět, co který dělá! Jsou to tři dvojice: První dvě určují **velikost a tvar** – tedy **hlavní poloosa $a$** (velikost) a **excentricita $e$** (tvar: $0$ je kružnice, $0 < e < 1$ je elipsa). Druhé dvě určují **natočení v prostoru** – **inklinace $i$** (sklon roviny dráhy vůči rovníku, od $0^\\circ$ do $180^\\circ$) a **RAAN $\\Omega$** (rektascenze vzestupného uzlu, která říká, jak je rovina dráhy pootočená kolem osy Země).",
-      "start": 169.28,
-      "end": 198.7,
-      "duration": 29.42
+      "start": 172.73,
+      "end": 202.8,
+      "duration": 30.07
     },
     {
       "index": 12,
       "speaker": "Tereza",
       "question_id": "sat-2",
       "display": "A ta třetí dvojice? To bude asi poloha perigea a samotné družice!",
-      "start": 198.94,
-      "end": 203.88,
-      "duration": 4.94
+      "start": 202.99,
+      "end": 208.43,
+      "duration": 5.44
     },
     {
       "index": 13,
       "speaker": "Marek",
       "question_id": "sat-2",
       "display": "Přesně! Pátý prvek je **argument perigea $\\omega$** – úhel uvnitř samotné roviny dráhy od vzestupného uzlu k perigeu. A šestý je **pravá anomálie $\nu$** (případně střední anomálie), která udává **okamžitou polohu družice** na dráze v čase. Drobný chyták: u přesně rovníkové dráhy není definován vzestupný uzel, a u přesně kruhové dráhy není definován argument perigea!",
-      "start": 204.12,
-      "end": 224.7,
-      "duration": 20.59
+      "start": 208.62,
+      "end": 231.17,
+      "duration": 22.55
     },
     {
       "index": 14,
       "speaker": "Tereza",
       "question_id": "sat-2",
       "display": "A jak se dráhy dělí podle **inklinace**? Rovníková, polární, nakloněná… a pak tam byla ještě ta **slunečně synchronní SSO**.",
-      "start": 224.94,
-      "end": 233.04,
-      "duration": 8.1
+      "start": 231.36,
+      "end": 241.84,
+      "duration": 10.48
     },
     {
       "index": 15,
       "speaker": "Marek",
       "question_id": "sat-2",
       "display": "Jo, je to přehledné: **$i = 0^\\circ$** je rovníková prográdní (po směru rotace Země). Když je **$0^\\circ < i < 90^\\circ$**, jde o šikmou **prográdní** dráhu (Země jí jakoby pomáhá při startu). **$i \u0007pprox 90^\\circ$** je **polární dráha** přes oba póly – ideální pro meteo, SAR radary a průzkum, protože Země se pod ní otáčí a družice postupně nasnímá celý svět. A **$90^\\circ < i \\le 180^\\circ$** je **retrográdní** dráha – tedy proti rotaci Země!",
-      "start": 233.28,
-      "end": 260.3,
-      "duration": 27.01
+      "start": 242.03,
+      "end": 270.5,
+      "duration": 28.48
     },
     {
       "index": 16,
       "speaker": "Tereza",
       "question_id": "sat-2",
       "display": "A právě ta **SSO – slunečně synchronní dráha** má sklon asi **97° až 99°**, takže je lehce retrográdní! Proč se to dělá?",
-      "start": 260.54,
-      "end": 269.29,
-      "duration": 8.75
+      "start": 270.7,
+      "end": 280.6,
+      "duration": 9.9
     },
     {
       "index": 17,
       "speaker": "Marek",
       "question_id": "sat-2",
       "display": "To je parádní trik: využije se **zploštění Země ($J_2$)**, aby se rovina dráhy pomalu stáčela tempem asi **1 stupeň za den** (přesně $+0{,}9856^\\circ/\text{den}$), což přesně kopíruje roční pohyb Slunce. Výsledek? Družice přelétá nad stejným místem vždy ve **stejný místní sluneční čas**, takže stíny na fotkách jsou srovnatelné! Používá se to pro optické snímkování Země ve výškách 500 až 900 km, třeba u konstelace PlanetScope.",
-      "start": 269.53,
-      "end": 298.01,
-      "duration": 28.48
+      "start": 280.79,
+      "end": 310.86,
+      "duration": 30.07
     },
     {
       "index": 18,
       "speaker": "Tereza",
       "question_id": "sat-3",
       "display": "Teď asi nejčastější zkoušková klasika: **rozdělení drah podle výšky – LEO, MEO a GEO**, plus speciální dráhy **GSO, Molnija a Tundra**!",
-      "start": 298.53,
-      "end": 307.99,
-      "duration": 9.46
+      "start": 311.29,
+      "end": 324.33,
+      "duration": 13.04
     },
     {
       "index": 19,
       "speaker": "Marek",
       "question_id": "sat-3",
       "display": "Jdeme na to! **LEO (Low Earth Orbit)** je nejníž, zhruba **160 až 2 000 km**. Družice tam letí asi 7,6 km/s, Zemi obletí za **90 až 130 minut** a má super nízkou latenci kolem **20 až 50 ms**. Nevýhoda? Z tak malé výšky vidí jen malý kousek Země (na 500 km asi 3,6 % povrchu) a rychle zmizí za horizontem, takže potřebuješ **stovky až tisíce družic** a neustálé předávání spojení.",
-      "start": 308.23,
-      "end": 335.85,
-      "duration": 27.61
+      "start": 324.52,
+      "end": 355.3,
+      "duration": 30.77
     },
     {
       "index": 20,
       "speaker": "Tereza",
       "question_id": "sat-3",
       "display": "Pak je **MEO (Medium Earth Orbit)** od **2 000 do 35 786 km**. Co je pro ni typické?",
-      "start": 336.09,
-      "end": 344.19,
-      "duration": 8.1
+      "start": 355.49,
+      "end": 365.47,
+      "duration": 9.98
     },
     {
       "index": 21,
       "speaker": "Marek",
       "question_id": "sat-3",
       "display": "MEO je zlatý střed: oběžná doba je **2 až 24 hodin**, latence kolem **50 až 150 ms** a na globální pokrytí stačí jen **desítky družic**. Je to království navigací **GNSS** – třeba GPS ve výšce 20 200 km nebo evropské Galileo – ale i komunikační sítě **O3b** kolem 8 000 km. Pozor jen na **Van Allenovy radiační pásy**, které v některých výškách MEO vyžadují vyšší radiační odolnost elektroniky.",
-      "start": 344.43,
-      "end": 370.21,
-      "duration": 25.79
+      "start": 365.66,
+      "end": 393.8,
+      "duration": 28.14
     },
     {
       "index": 22,
       "speaker": "Tereza",
       "question_id": "sat-3",
       "display": "A nahoře kraluje **GEO** ve výšce **35 786 km**! Jaké tři nebo čtyři podmínky musí splnit, aby na obloze stála jako přibitá?",
-      "start": 370.45,
-      "end": 380.12,
-      "duration": 9.67
+      "start": 393.99,
+      "end": 404.47,
+      "duration": 10.48
     },
     {
       "index": 23,
       "speaker": "Marek",
       "question_id": "sat-3",
       "display": "Tohle je jistá zkoušková otázka! Aby byla družice geostacionární (**GEO**), musí být: **1. kruhová** ($e = 0$), **2. rovníková** ($i = 0^\\circ$), **3. prográdní** (letět po směru otáčení Země) a **4. mít periodu rovnou siderickému dni**, tedy **23 hodin 56 minut a 4 sekundy**. Pak stačí **3 družice**, aby pokryly většinu Země (jedna vidí až ~42 % povrchu), a na Zemi ti stačí **pevná anténa** bez natáčení. Jenže v polárních oblastech má strašně nízkou elevaci a nepokryje póly.",
-      "start": 380.36,
-      "end": 410.48,
-      "duration": 30.12
+      "start": 404.66,
+      "end": 436.72,
+      "duration": 32.05
     },
     {
       "index": 24,
       "speaker": "Tereza",
       "question_id": "sat-3",
       "display": "A rozdíl mezi **GEO** a **GSO**? To je taky častý chyták!",
-      "start": 410.72,
-      "end": 414.28,
-      "duration": 3.56
+      "start": 436.91,
+      "end": 442.42,
+      "duration": 5.51
     },
     {
       "index": 25,
       "speaker": "Marek",
       "question_id": "sat-3",
       "display": "**GEO je jen speciální případ GSO.** **GSO (geosynchronní dráha)** má také periodu 23 h 56 min, ale může mít **nenulový sklon $i > 0^\\circ$ nebo excentricitu $e > 0$**. Z pohledu pozorovatele na Zemi pak družice nestojí v jednom bodě, ale každý den na obloze opisuje **osmičku neboli analemu**!",
-      "start": 414.52,
-      "end": 432.05,
-      "duration": 17.53
+      "start": 442.61,
+      "end": 463.57,
+      "duration": 20.95
     },
     {
       "index": 26,
       "speaker": "Tereza",
       "question_id": "sat-3",
       "display": "A jak vyřešili pokrytí Arktidy a severních oblastí? Těmi eliptickými drahami **Molnija** a **Tundra**, že?",
-      "start": 432.29,
-      "end": 438.48,
-      "duration": 6.19
+      "start": 463.76,
+      "end": 471.02,
+      "duration": 7.26
     },
     {
       "index": 27,
       "speaker": "Marek",
       "question_id": "sat-3",
       "display": "Přesně! Obě využívají **2. Keplerův zákon** – družice letí rychle nízko nad jižní polokoulí a pak se dlouhé hodiny „loudá“ vysoko v apogeu nad severní polokoulí. Obě mají magický sklon **$63{,}4^\\circ$** (aby se jim nestáčelo apogeum). Rozdíl je v periodě a tvaru: **Molnija** má **12hodinovou** dráhu a extrémní excentricitu (~0,7 až 0,75), visí nad severem přes 8 hodin. **Tundra** je **24hodinová** (geosynchronní) s mírnější excentricitou (~0,2 až 0,4) a pokrývá oblast 12 až 16 hodin.",
-      "start": 438.72,
-      "end": 464.2,
-      "duration": 25.47
+      "start": 471.22,
+      "end": 499.61,
+      "duration": 28.4
     },
     {
       "index": 28,
       "speaker": "Tereza",
       "question_id": "sat-4",
       "display": "Skvělé! Teď čtvrtá kapitola: **jak oběžná dráha ovlivňuje samotný rádiový spoj** – tedy footprint, latenci, Dopplerův jev a útlum.",
-      "start": 464.72,
-      "end": 477.37,
-      "duration": 12.65
+      "start": 500.05,
+      "end": 510.99,
+      "duration": 10.95
     },
     {
       "index": 29,
       "speaker": "Marek",
       "question_id": "sat-4",
       "display": "**Footprint** je stopa pokrytí na Zemi. Pozor na rozdíl: **geometrická viditelnost** znamená jen to, že družice není pod obzorem, kdežto **skutečný footprint** je vždy menší – omezuje ho minimální elevační úhel antény (jinak signál prochází moc dlouho atmosférou a stíní ho terén), tvar anténního svazku a výkonová bilance.",
-      "start": 477.61,
-      "end": 495.64,
-      "duration": 18.03
+      "start": 511.19,
+      "end": 529.34,
+      "duration": 18.16
     },
     {
       "index": 30,
       "speaker": "Tereza",
       "question_id": "sat-4",
       "display": "A u **latence** u GEO si lidi často pletou jeden skok a zpáteční cestu RTT, že?",
-      "start": 495.88,
-      "end": 500.82,
-      "duration": 4.94
+      "start": 529.54,
+      "end": 537.85,
+      "duration": 8.31
     },
     {
       "index": 31,
       "speaker": "Marek",
       "question_id": "sat-4",
       "display": "Jo! Jeden směr ze Země na GEO (35 786 km rychlostí světla) trvá asi **120 ms**. Spojení od uživatele přes družici k druhému uživateli (dva úseky) dá minimálně **239 ms**. A obousměrné **RTT (tam a zpět)** včetně zpracování a protokolů vychází v praxi na **500 až 650 ms**! Oproti tomu MEO (třeba O3b) má RTT kolem **150 ms** a nízké LEO jako Starlink jen **25 až 50 ms**.",
-      "start": 501.06,
-      "end": 525.51,
-      "duration": 24.45
+      "start": 538.04,
+      "end": 565.31,
+      "duration": 27.27
     },
     {
       "index": 32,
       "speaker": "Tereza",
       "question_id": "sat-4",
       "display": "A jak je to s **Dopplerovým jevem** a **útlumem volného prostoru FSPL**?",
-      "start": 525.75,
-      "end": 529.98,
-      "duration": 4.23
+      "start": 565.5,
+      "end": 571.33,
+      "duration": 5.83
     },
     {
       "index": 33,
       "speaker": "Marek",
       "question_id": "sat-4",
       "display": "**Dopplerův posuv** způsobuje radiální složka rychlosti: když se družice přibližuje, frekvence roste, když se vzdaluje, klesá. U pevné **GEO** družice je vůči pevnému terminálu v podstatě **nulový**, kdežto u rychlého **LEO** v pásmech Ku/Ka skáče o **desítky až stovky kHz**, takže ho terminál musí průběžně kompenzovat! A **FSPL (útlum volného prostoru)** roste se **čtvercem vzdálenosti $d^2$ a čtvercem frekvence $f^2$** – mezi LEO a GEO je na stejné frekvenci rozdíl kolem **36 dB**, což je přes čtyři tisíce krát víc výkonu!",
-      "start": 530.22,
-      "end": 558.15,
-      "duration": 27.93
+      "start": 571.52,
+      "end": 602.8,
+      "duration": 31.27
     },
     {
       "index": 34,
       "speaker": "Tereza",
       "question_id": "sat-5",
       "display": "Jasné! Pátá kapitola řeší **satelitní konstelace**. Jaký je rozdíl mezi **Walker Delta** a **Walker Star**?",
-      "start": 558.68,
-      "end": 565.53,
-      "duration": 6.85
+      "start": 603.23,
+      "end": 611.69,
+      "duration": 8.47
     },
     {
       "index": 35,
       "speaker": "Marek",
       "question_id": "sat-5",
       "display": "Tohle si zapamatuješ snadno podle čísel $360^\\circ$ a $180^\\circ$: **Walker Delta** má orbitální roviny rozprostřené rovnoměrně po celých **360 stupních** kolem rovníku – typicky šikmé dráhy pro navigace, třeba Galileo ($56^\\circ:24/6/1$, tedy 6 rovin po 4 družicích, po $60^\\circ$). Naproti tomu **Walker Star** používá téměř **polární dráhy**, jejichž roviny jsou rozloženy v rozsahu **180 stupňů** – pokrývá i póly (třeba **Iridium**: 66 družic v 6 rovinách ve výšce 780 km).",
-      "start": 565.77,
-      "end": 587.76,
-      "duration": 22.0
+      "start": 611.89,
+      "end": 634.67,
+      "duration": 22.78
     },
     {
       "index": 36,
       "speaker": "Tereza",
       "question_id": "sat-5",
       "display": "A pak tam jsou **mezisatelitní spoje ISL** – hlavně ty **laserové**!",
-      "start": 588.0,
-      "end": 591.79,
-      "duration": 3.79
+      "start": 634.86,
+      "end": 640.22,
+      "duration": 5.36
     },
     {
       "index": 37,
       "speaker": "Marek",
       "question_id": "sat-5",
       "display": "**ISL (Inter-Satellite Links)** dovolí družicím posílat si data přímo ve vesmíru (často laserem na vlnové délce **1550 nm** rychlostí jednotek až desítek Gb/s) bez nutnosti skákat na pozemní bránu v každé oblasti. Výhody jsou obrovská kapacita a úzký svazek bez rušení. Nevýhody? Extrémní nároky na přesné míření a stabilizaci proti vibracím. A chyták ze skript: úzký laserový svazek sice ztěžuje odposlech, ale **sám o sobě nezaručuje bezpečnost – data se musí pořád šifrovat!**",
-      "start": 592.03,
-      "end": 616.72,
-      "duration": 24.69
+      "start": 640.41,
+      "end": 668.96,
+      "duration": 28.55
     },
     {
       "index": 38,
       "speaker": "Tereza",
       "question_id": "sat-6",
       "display": "Teď se přesouváme do prezentace **GiTySAT**! V šesté kapitole máme **kosmický segment, transpondéry a kmitočtová pásma**. Jaký je rozdíl mezi standardní družicí a **HTS**?",
-      "start": 617.25,
-      "end": 627.31,
-      "duration": 10.06
+      "start": 669.4,
+      "end": 681.39,
+      "duration": 11.99
     },
     {
       "index": 39,
       "speaker": "Marek",
       "question_id": "sat-6",
       "display": "**Standardní družice** svítí širokým svazkem na celý kontinent. **HTS (High Throughput Satellite)** pokryje oblast mnoha úzkými bodovými svazky (spot-beamy) a díky tomu může stejné frekvence opakovaně využívat – má tak mnohonásobně vyšší kapacitu! A co se týče **transpondérů**, známe tři druhy: **Bend pipe** (jen hloupá „ohnutá trubka“, co signál přijme, posune frekvenci a zesílí), **Cross type** (křížové propojení mezi svazky/pásmy) a **On-board switching** (chytré přepínání přímo na palubě družice).",
-      "start": 627.55,
-      "end": 653.31,
-      "duration": 25.76
+      "start": 681.58,
+      "end": 707.73,
+      "duration": 26.15
     },
     {
       "index": 40,
       "speaker": "Tereza",
       "question_id": "sat-6",
       "display": "A teď ta tabulka **satelitních pásem** od C až po E band! Co z ní musím v testu bezpečně vědět?",
-      "start": 653.55,
-      "end": 659.25,
-      "duration": 5.7
+      "start": 707.92,
+      "end": 714.87,
+      "duration": 6.95
     },
     {
       "index": 41,
       "speaker": "Marek",
       "question_id": "sat-6",
       "display": "Drž se posloupnosti frekvencí: **C band (4–8 GHz)** – klasická sat. komunikace a meteo radary, odolný dešti. **X band (8–12 GHz)** – vojenské/vládní satelitní komunikace, radary, hluboký vesmír. **Ku band (11–18 GHz)** – satelitní TV vysílání a běžný VSAT. **K band (18–27 GHz)** – obří chyták: **silný útlum vodní párou při 22,23 GHz**! **Ka band (27–40 GHz)** – moderní rychlý internet (HTS, O3b, brány LEO) a 5G. A úplně nahoře **V band (40–75 GHz)** a **E band (60–90 GHz)** pro experimenty a ultraširokopásmové brány.",
-      "start": 659.49,
-      "end": 693.92,
-      "duration": 34.43
+      "start": 715.07,
+      "end": 752.58,
+      "duration": 37.51
     },
     {
       "index": 42,
       "speaker": "Tereza",
       "question_id": "sat-7",
       "display": "Pěkně! V sedmé kapitole jsou **GEO sítě, topologie a firma GiTy**. Co je důležité o **GiTy** a jaké jsou **čtyři topologie GEO sítí**?",
-      "start": 694.45,
-      "end": 704.59,
-      "duration": 10.14
+      "start": 753.01,
+      "end": 765.48,
+      "duration": 12.46
     },
     {
       "index": 43,
       "speaker": "Marek",
       "question_id": "sat-7",
       "display": "**GiTy, a.s.** má vlastní satelitní **teleport (HUB)** přímo v ČR, vlastní pozemní **MPLS síť** v ČR a na Slovensku, nepřetržitý dohled 24/7 s garancí SLA a bezpečnostní **certifikaci NBÚ – Tajné**. A ty **čtyři topologie GEO sítí** jsou: **1. Broadcast** (jednosměrná distribuce dat), **2. Bod–Bod** pomocí technologie **SCPC** (vyhrazený kanál pro dva modemy/routery), **3. Hvězdicová síť** ($1\times$ VSAT HUB a $n\times$ terminálů, asymetrický provoz přes **TDMA/FDMA**) a **4. MESH** (terminály spolu mluví přímo jedním skokem bez dvojího průchodu přes HUB).",
-      "start": 704.83,
-      "end": 734.11,
-      "duration": 29.29
+      "start": 765.67,
+      "end": 799.34,
+      "duration": 33.67
     },
     {
       "index": 44,
       "speaker": "Tereza",
       "question_id": "sat-7",
       "display": "A ještě srovnání **internetová konfigurace vs. privátní satelitní síť**!",
-      "start": 734.35,
-      "end": 739.16,
-      "duration": 4.81
+      "start": 799.53,
+      "end": 805.75,
+      "duration": 6.22
     },
     {
       "index": 45,
       "speaker": "Marek",
       "question_id": "sat-7",
       "display": "**Internetová konfigurace** je pro velké množství terminálů, unifikovaná služba do Internetu s agregací, **FUP** a jen omezeným dohledem. Naproti tomu **privátní satelitní síť** propojuje pobočky s centrálou přímo do firemní **MPLS WAN**, má garantovanou kvalitu **QoS**, přídavné šifrování a plný **End-to-End dohled** přes SNMP.",
-      "start": 739.4,
-      "end": 757.3,
-      "duration": 17.9
+      "start": 805.95,
+      "end": 827.06,
+      "duration": 21.11
     },
     {
       "index": 46,
       "speaker": "Tereza",
       "question_id": "sat-8",
       "display": "V osmé kapitole jsou konkrétní moderní konstelace z prezentace: **O3b, OneWeb, Starlink, Amazon LEO a Telesat Lightspeed**. Jak si je rychle odlišit?",
-      "start": 757.83,
-      "end": 766.71,
-      "duration": 8.88
+      "start": 827.49,
+      "end": 838.67,
+      "duration": 11.18
     },
     {
       "index": 47,
       "speaker": "Marek",
       "question_id": "sat-8",
       "display": "Dejme každé jasnou nálepku: **O3b / O3b mPOWER** od SES je jediná velká **MEO** konstelace v přehledu – výška **8 000 km**, Ka-band, RTT **150 ms**, pokrytí zhruba $\\pm 50^\\circ$ šířky (takže ne póly!), až 1,6 Gbps na svazek. Pak máme **OneWeb** (Eutelsat): **LEO ve 1 200 km**, **652 družic**, RTT kolem **100 ms**, k terminálům jde **Ku-band** a k branám Ka-band; nabízí firemní **MIR** (maximální) i garantovanou **CIR** rychlost.",
-      "start": 766.95,
-      "end": 789.13,
-      "duration": 22.18
+      "start": 838.86,
+      "end": 863.73,
+      "duration": 24.87
     },
     {
       "index": 48,
       "speaker": "Tereza",
       "question_id": "sat-8",
       "display": "A **Starlink** od SpaceX versus nováčci **Amazon LEO** a **Telesat Lightspeed**?",
-      "start": 789.37,
-      "end": 792.98,
-      "duration": 3.61
+      "start": 863.93,
+      "end": 870.07,
+      "duration": 6.14
     },
     {
       "index": 49,
       "speaker": "Marek",
       "question_id": "sat-8",
       "display": "**Starlink** je největší aktivní konstelace (přes 9 800 družic, typicky **550 km**, RTT jen **25–50 ms**), využívá **laserové spoje mezi družicemi**, 13km svazky a terminály Mini, Standard, Enterprise a Performance. **Amazon LEO** (dříve Kuiper, 590–630 km, komerční start 2026/2027) má mít 3 232 družic, lasery a terminály Nano, Pro a Ultra až do 1 Gbps. A **Telesat Lightspeed** (start 2028, 1 015 a 1 325 km, Ka-band + lasery) cílí čistě na B2B, letectví a **L2 služby** až do 3 Gbps s pokrytím včetně pólů.",
-      "start": 793.22,
-      "end": 822.63,
-      "duration": 29.42
+      "start": 870.26,
+      "end": 902.89,
+      "duration": 32.63
     },
     {
       "index": 50,
       "speaker": "Tereza",
       "question_id": "sat-9",
       "display": "A jsme u deváté, poslední kapitoly! **Terminály, zabezpečení, trendy DVB-S2X a hybridní síť GiTySAT**. Co tvoří klasický VSAT terminál?",
-      "start": 823.16,
-      "end": 834.42,
-      "duration": 11.26
+      "start": 903.32,
+      "end": 916.83,
+      "duration": 13.51
     },
     {
       "index": 51,
       "speaker": "Marek",
       "question_id": "sat-9",
       "display": "Dvě části: **venkovní** je **anténa** (pevná parabola 0,7–2,4 m, mobilní *Drive Away* na auto, *Quick Deploy* nebo přenosný *Manpack*) a **RF jednotka** (C, X, Ku nebo Ka). **Vnitřní část** je samotný **VSAT modem/router** (třeba iDirect 950mp, 9530 nebo Newtec MDM3315). A pro vysokou bezpečnost používá GiTy **iDirect TRANSEC** (skrytí aktivity kanálu, **AES-256 na L2**, certifikát **X.509**), **Spread spectrum**, moduly **FIPS 140-2 Level 3** a systém **CSIR** proti úmyslnému rušení (anti-jamming).",
-      "start": 834.66,
-      "end": 860.45,
-      "duration": 25.79
+      "start": 917.02,
+      "end": 946.93,
+      "duration": 29.91
     },
     {
       "index": 52,
       "speaker": "Tereza",
       "question_id": "sat-9",
       "display": "A co v trendech znamená **DVB-S2X s ACM** a jak funguje **hybridní síť** v posledním slidu?",
-      "start": 860.69,
-      "end": 866.05,
-      "duration": 5.36
+      "start": 947.13,
+      "end": 956.4,
+      "duration": 9.28
     },
     {
       "index": 53,
       "speaker": "Marek",
       "question_id": "sat-9",
       "display": "**ACM (Adaptive Coding and Modulation)** je geniální v tom, že když přijde bouřka a zhorší se signál, spoj nespadne – modem v reálném čase přepne z vysoké modulace (třeba 256APSK) na odolnější QPSK a zpátky, jakmile vysvitne slunce! A **hybridní síť GiTySAT** chytře kombinuje **GEO + LEO + Internet**: **kritický a citlivý provoz** jde zabezpečeným GEO VSATem do centrály, **standardní provoz** letí rychlým LEO terminálem přes privátní propoj NNI do MPLS sítě G-Net, a **nekritický internetový provoz** jde lokálně přes firewall rovnou do Internetu. Tím máš v kapse všechno!",
-      "start": 866.29,
-      "end": 895.42,
-      "duration": 29.13
+      "start": 956.59,
+      "end": 990.66,
+      "duration": 34.07
     }
   ]
 }
