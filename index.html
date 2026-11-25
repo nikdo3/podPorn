@@ -360,16 +360,110 @@
     }
 
     @media (max-width: 880px) {
+      body[data-mode="quiz"],
+      body[data-mode="matrix"] {
+        padding-bottom: 24px;
+      }
+      body[data-mode="quiz"] .player-bar-wrap,
+      body[data-mode="matrix"] .player-bar-wrap,
+      body[data-mode="quiz"] #voice-switcher-wrap,
+      body[data-mode="matrix"] #voice-switcher-wrap,
+      body[data-mode="quiz"] #download-link,
+      body[data-mode="matrix"] #download-link {
+        display: none !important;
+      }
+      .header-wrap {
+        position: static;
+      }
+      .header-top {
+        padding: 10px 14px 8px;
+        gap: 10px;
+      }
+      .app-subtitle {
+        display: none;
+      }
+      .main-mode-tabs {
+        width: 100%;
+      }
+      .mode-tab-btn {
+        flex: 1 1 auto;
+        justify-content: center;
+        padding: 8px 10px;
+        font-size: 12px;
+      }
       .studio-grid {
         grid-template-columns: 1fr;
         padding: 0 14px;
+        margin-top: 14px;
       }
       .header-top, .topic-bar, .quiz-workspace {
         padding-left: 14px !important;
         padding-right: 14px !important;
       }
+      .quiz-workspace {
+        margin-top: 14px;
+      }
       .dialogue-col {
         position: static !important;
+      }
+      .clean-table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      .player-bar-wrap {
+        bottom: 8px;
+        padding: 0 10px;
+      }
+      .player-pill {
+        padding: 9px 13px;
+        border-radius: 18px;
+      }
+      .now-playing-info {
+        min-width: 0;
+        width: 100%;
+      }
+      .main-transport {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .score-dashboard {
+        padding: 16px;
+        border-radius: 18px;
+        gap: 14px;
+      }
+      .stats-pills {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+      }
+      .stat-box {
+        min-width: 0;
+      }
+      .quiz-card {
+        padding: 16px 15px;
+        border-radius: 18px;
+        gap: 14px;
+      }
+      .quiz-question-text {
+        font-size: 16px;
+      }
+      .option-btn {
+        padding: 12px 13px;
+        font-size: 13.5px;
+        gap: 10px;
+      }
+      .kbd-hint {
+        display: none;
+      }
+      .study-content {
+        padding: 16px;
+      }
+      .card-head {
+        padding: 14px 16px;
       }
     }
 
@@ -826,7 +920,7 @@
     /* PER-CHAPTER PROBABILITY MATRIX */
     .exam-prob-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(345px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
       gap: 18px;
     }
 
@@ -1975,6 +2069,7 @@
        ========================================================================= */
     function setAppMode(mode) {
       appMode = mode;
+      document.body.dataset.mode = mode;
       const isPodcast = mode === "podcast";
       document.getElementById("tab-btn-podcast").classList.toggle("active", mode === "podcast");
       document.getElementById("tab-btn-quiz").classList.toggle("active", mode === "quiz");
