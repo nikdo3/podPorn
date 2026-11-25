@@ -1,0 +1,142 @@
+📌 SATELITNÍ KOMUNIKACE & OBĚŽNÉ DRÁHY – TAHÁK DO GOOGLE KEEP
+
+━━━━━━━━━━━━━━━━━━━━
+1️⃣ ORBITÁLNÍ MECHANIKA & KEPLEROVY ZÁKONY
+━━━━━━━━━━━━━━━━━━━━
+• Rovnováha dráhy: Gravitační síla (Fg = μ·m / r², klesá se čtvercem vzdálenosti r²) poskytuje potřebnou dostředivou sílu (Fd = m·v² / r).
+• Odstředivá síla = není skutečná síla, jen setrvačná síla v rotující neinerciální soustavě.
+• Čím VÝŠ je kruhová dráha → tím POMALEJI družice letí a tím DELŠÍ má oběžnou dobu!
+• Úniková rychlost: v_esc = √2 · v_c (u povrchu Země ~11,2 km/s → parabola e = 1; nad ní hyperbola e > 1).
+• 3 Keplerovy zákony:
+  1. Dráha je elipsa se Zemí v jednom ohnisku (kruh = elipsa s e = 0).
+  2. Zákon ploch → družice letí NEJRYCHLEJI v perigeu (nejblíž Zemi) a NEJPOMALEJI v apogeu (nejdál od Země).
+  3. T² ∝ a³ (druhá mocnina oběžné doby roste se třetí mocninou hlavní poloosy).
+• Reálné poruchy dráhy: zploštění Země (koeficient J₂), odpor zbytkové atmosféry (nízké LEO), gravitace Slunce/Měsíce, tlak slunečního záření.
+
+━━━━━━━━━━━━━━━━━━━━
+2️⃣ ORBITÁLNÍ ELEMENTY & ORIENTACE DRAH
+━━━━━━━━━━━━━━━━━━━━
+• 6 klasických Keplerových elementů:
+  1. Hlavní poloosa (a) → velikost dráhy
+  2. Excentricita (e) → tvar dráhy (0 = kružnice, 0 < e < 1 = elipsa)
+  3. Inklinace (i) → sklon roviny dráhy vůči rovníku (0° až 180°)
+  4. RAAN (Ω) → rektascenze vzestupného uzlu (natočení roviny dráhy kolem osy Země od jarního bodu; u i=0° nedefinováno)
+  5. Argument perigea (ω) → poloha perigea uvnitř roviny dráhy (u kružnice e=0 nedefinováno)
+  6. Pravá anomálie (ν) → okamžitá poloha družice na dráze v čase
+• Rozdělení podle inklinace (i):
+  ▸ Rovníková: i = 0° (prográdní) / 180° (retrográdní)
+  ▸ Šikmá prográdní: 0° < i < 90° (po směru rotace Země)
+  ▸ Polární: i ≈ 90° (přes oba póly, rotací Země snímá celý povrch – meteo, SAR, průzkum)
+  ▸ Šikmá retrográdní: 90° < i < 180° (proti rotaci Země)
+• Slunečně synchronní dráha (SSO): téměř polární a lehce retrográdní (i ≈ 97°–99°, výška 500–900 km). Využívá zploštění Země (J₂) k precesi ~+0,9856°/den → přelétá nad místem ve STEJNÝ místní sluneční čas (ideální pro srovnávání optických snímků).
+
+━━━━━━━━━━━━━━━━━━━━
+3️⃣ LEO, MEO, GEO & SPECIÁLNÍ DRÁHY (GSO, MOLNIJA, TUNDRA)
+━━━━━━━━━━━━━━━━━━━━
+• LEO (160–2 000 km): rychlost ~7,6 km/s, oběh 90–130 min, RTT 20–50 ms (Starlink), malé pokrytí (~3,6 % na 500 km) → potřeba stovky až tisíce družic + častý handover.
+• MEO (2 000–35 786 km): oběh 2–24 h, RTT 50–150 ms, desítky družic, pozor na Van Allenovy radiační pásy. Příklady: GNSS (GPS 20 200 km / 12 h, Galileo 23 222 km, GLONASS 19 100 km), komunikace O3b (~8 000 km).
+• GEO (35 786 km): rychlost ~3,1 km/s, oběh = siderický den (23 h 56 min 4 s = 86 164 s). 1 družice vidí ~42,4 % povrchu, 3 družice pokryjí většinu planety (mimo póly). Pevná pozemní anténa!
+• 4 podmínky GEO: kruhová (e=0) + rovníková (i=0°) + prográdní + siderická perioda 23 h 56 min 4 s.
+• GEO vs. GSO: GEO je speciální případ GSO. Obecná GSO má stejnou periodu (~24 h), ale i > 0° nebo e > 0 → na obloze opisuje osmičku (analemu).
+• Molnija vs. Tundra (pro severní šířky / Arktidu, sklon i ≈ 63,4°, pomalý let v apogeu):
+  ▸ Molnija: 12h vysoce eliptická (e ≈ 0,7–0,75, apogeum ~40 000 km), viditelnost > 8 h.
+  ▸ Tundra: 24h geosynchronní eliptická (e ≈ 0,2–0,4), viditelnost 12–16 h (quasi-geostacionární).
+
+━━━━━━━━━━━━━━━━━━━━
+4️⃣ VLIV DRÁHY NA RÁDIOVÝ SPOJ
+━━━━━━━━━━━━━━━━━━━━
+• Footprint: skutečné rádiové pokrytí je MENŠÍ než geometrická viditelnost (omezuje ho min. elevace ε_min, tvar svazku a výkonová bilance; nízká elevace = dlouhý průchod atmosférou + stínění).
+• Latence GEO: 1 skok Země→GEO ~119 ms; 2 skoky A→GEO→B ~239 ms; min. RTT ~478 ms; reálné RTT v síti 500–650 ms (MEO ~150 ms, LEO 25–100 ms).
+• Dopplerův jev: způsoben radiální složkou rychlosti (přibližování = f roste, vzdalování = f klesá). Vysoký a proměnný u LEO (desítky–stovky kHz v Ku/Ka → nutná kompenzace), nulový u ideální GEO s pevným terminálem.
+• Útlum volného prostoru (FSPL): roste s d² a f². Na 2 GHz je rozdíl LEO (550 km) vs. GEO ~36 dB (~4 200×). Vyšší frekvence má větší FSPL, ale stejná anténa na ní má větší zisk a širší pásmo (nevýhoda: větší citlivost na déšť).
+
+━━━━━━━━━━━━━━━━━━━━
+5️⃣ KONSTELACE (WALKER) & LASEROVÉ ISL
+━━━━━━━━━━━━━━━━━━━━
+• Pravděpodobnost dostupnosti z N nezávislých družic: P = 1 − (1 − p)ᴺ (5 družic s p=0,9 → 99,999 %).
+• Walker Delta (i : T/P/F): roviny rozloženy po 360° (např. Galileo 56°:24/6/1 → 4 družice v rovině, rozestup rovin 60°).
+• Walker Star: téměř polární dráhy, roviny po 180° (pokrytí pólů, sbližování drah u pólů; např. Iridium: 66 družic v 6 rovinách, 780 km).
+• Mezisatelitní spoje (ISL): přímý přenos družice–družice bez pozemní brány. Laserové ISL (λ = 1 550 nm, jednotky–desítky Gb/s): obří kapacita, úzký svazek bez rušení, ale extrémní nároky na míření a vibrace.
+• ⚠️ CHYTÁK: Úzký laserový svazek ztěžuje odposlech, ale SÁM O SOBĚ NEZARUČUJE BEZPEČNOST – data je nutné šifrovat!
+• 5G / 6G NTN (Non-Terrestrial Networks): standardizace integrace družic do mobilních sítí v 3GPP.
+
+━━━━━━━━━━━━━━━━━━━━
+6️⃣ KOSMICKÝ SEGMENT, TRANSPONDÉRY & PÁSMA (GiTySAT)
+━━━━━━━━━━━━━━━━━━━━
+• Standardní družice (široký svazek) vs. HTS (High Throughput Satellite – mnoho úzkých spot-beamů, frekvenční reuse, mnohonásobná kapacita).
+• 3 druhy transpondérů:
+  1. Bend pipe (transparentní zesílení a posun frekvence bez zpracování)
+  2. Cross type (křížové propojení mezi svazky/pásmy)
+  3. On-board switching (přepínání přímo na palubě)
+• Kmitočtová pásma (od nejnižší po nejvyšší):
+  ▸ C band (4–8 GHz): sat. komunikace, Wi-Fi, meteo radary (odolné dešti)
+  ▸ X band (8–12 GHz): radary, armádní/vládní sat. komunikace, hluboký vesmír
+  ▸ Ku band (11–18 GHz): satelitní TV (downlink), běžný VSAT, terminály OneWeb
+  ▸ K band (18–27 GHz): ⚠️ POZOR na silný útlum vodní párou při 22,23 GHz!
+  ▸ Ka band (27–40 GHz): moderní datové satelity (HTS, O3b, GW LEO), 5G
+  ▸ V band (40–75 GHz) & E band (60–90 GHz): experimentální sat. komunikace, auto-radary
+
+━━━━━━━━━━━━━━━━━━━━
+7️⃣ GEO SÍTĚ, TOPOLOGIE & SLUŽBY GiTySAT
+━━━━━━━━━━━━━━━━━━━━
+• GiTy, a.s.: vlastní satelitní teleport (HUB) v ČR, pozemní MPLS síť (G-Net) v ČR a SR, dohled 24/7/365 se SLA, certifikace NBÚ – Tajné.
+• 4 topologie GEO sítí:
+  1. Broadcast (jednosměrná distribuce dat)
+  2. Bod–Bod (technologie SCPC, vyhrazené modemy / IP routery)
+  3. Hvězdicová síť (1× VSAT HUB + n× terminál, asymetrický provoz, TDMA/FDMA)
+  4. MESH (přímé spojení terminálů jedním skokem bez dvojího průchodu přes HUB)
+• Internetová konfigurace (mnoho terminálů, FUP, agregace, omezený dohled) vs. Privátní satelitní síť (MPLS WAN, QoS, přídavné zabezpečení, End-to-End SNMP dohled).
+
+━━━━━━━━━━━━━━━━━━━━
+8️⃣ MODERNÍ KONSTELACE V PRAXI
+━━━━━━━━━━━━━━━━━━━━
+• SES O3b / O3b mPOWER (MEO): ~8 000 km, 20/13 družic, RTT 150 ms, Ka-band, pokrytí ±50° šířky, až 1,6 Gbps/beam.
+• Eutelsat OneWeb (LEO): ~1 200 km, 652 družic, RTT ~100 ms, >40 GW, Ka (GW) + Ku (terminál), firemní MIR (až 150/30 Mbps) i garantované CIR (až 40/8 Mbps). Technická vs. komerční dostupnost.
+• SpaceX Starlink (LEO): ~550 km (335–1 200 km), >9 800 družic, RTT 25–50 ms, Ku/Ka/E-band + lasery ISL, 13km beamy, terminály Mini/Standard/Enterprise/Performance.
+• Amazon LEO (Kuiper): 590–630 km, plán 3 232 družic, Ka/K-band + lasery, terminály Nano/Pro/Ultra (až 1 Gbps), start 2026/2027.
+• Telesat Lightspeed: 1 015/1 325 km, 198 družic vč. pólů, Ka-band + lasery, B2B/letectví/L2 služby až 3 Gbps, start 2028.
+
+━━━━━━━━━━━━━━━━━━━━
+9️⃣ TERMINÁLY, BEZPEČNOST, ACM & HYBRIDNÍ SÍŤ
+━━━━━━━━━━━━━━━━━━━━
+• Terminál: Venkovní (anténa: fixní parabola 0,7–2,4 m, Drive Away, Quick Deploy, Manpack + RF jednotka) + Vnitřní (VSAT modem iDirect 950mp/9530, Newtec MDM3315).
+• Zabezpečení GiTySAT: iDirect TRANSEC (skrytá aktivita kanálu, AES-256 na L2, certifikát X.509), Spread spectrum, FIPS 140-2 Level 3, CSIR (anti-jamming a potlačení rušení).
+• Trendy – DVB-S2X & ACM (Adaptive Coding and Modulation): dynamická změna modulace podle počasí (Rx QPSK až 256APSK, Tx BPSK až 16QAM), aby spoj v bouřce nespadl.
+• Hybridní síť GiTySAT (GEO + LEO + Internet):
+  ▸ Kritický a citlivý provoz → zabezpečený GEO VSAT do centrály
+  ▸ Standardní provoz → rychlý LEO terminál přes privátní NNI propoj do MPLS G-Net
+  ▸ Nekritický internetový provoz → lokálně přes firewall rovnou do Internetu
+
+
+====================================================================
+⚡ VARIANTA 2: KAPESNÍ RYCHLO-TAHÁK NA 1 OBRAZOVKU MOBILU
+====================================================================
+
+⚡ SATELITY & OBĚŽNÉ DRÁHY (RYCHLO-TAHÁK)
+
+1. MECHANIKA & KEPLER:
+• Gravitace (Fg ~ 1/r²) = dostředivá síla. Výš = pomalejší let + delší oběh! Úniková ~11,2 km/s (√2·v_c).
+• Kepler: 1. elipsa (Země v ohnisku), 2. nejrychleji v perigeu / nejpomaleji v apogeu, 3. T² ∝ a³.
+• 6 elementů: a (velikost), e (tvar), i (sklon 0–180°), Ω/RAAN (natočení roviny kolem Země), ω (poloha perigea v rovině), ν (poloha družice).
+• Inklinace: 0° rovníková | 0–90° prográdní | 90° polární | 90–180° retrográdní | SSO: 97–99°, precese J₂ ~1°/den = stejný sluneční čas.
+
+2. LEO / MEO / GEO / SPECIÁLNÍ:
+• LEO (160–2000 km): oběh ~95 min, RTT 20–50 ms, malý footprint (~3,6 %), stovky–tisíce družic, velký Doppler (desítky–stovky kHz), handover.
+• MEO (2000–35786 km): oběh 2–24 h, RTT 50–150 ms, Van Allenovy pásy; GNSS (GPS 20 200 km) & O3b (8 000 km, ±50°).
+• GEO (35 786 km): e=0, i=0°, prográdní, perioda 23 h 56 min 4 s. 1 družice ~42 % Země, 3 pokryjí většinu (ne póly). Pevná anténa, nulový Doppler, RTT 500–650 ms (1 skok ~119 ms).
+• GSO vs GEO: GSO má 24h periodu, ale i>0° nebo e>0 → na obloze osmička (analema).
+• Molnija (12 h, e~0,74, i=63,4°) & Tundra (24 h, e~0,2–0,4, i=63,4°) → pro Arktidu (pomalé v apogeu).
+
+3. SPOJ, KONSTELACE & PÁSMA:
+• FSPL roste s d² a f² (~36 dB rozdíl LEO vs GEO na 2 GHz). P = 1−(1−p)ᴺ.
+• Walker Delta (roviny po 360°, Galileo) vs Walker Star (téměř polární po 180°, Iridium 66/6).
+• Laser ISL (1550 nm): obří kapacita, bez rušení, náročné míření; úzký svazek NENAHRAZUJE šifrování!
+• Pásma: C (4–8) | X (8–12, armáda) | Ku (11–18, TV/VSAT) | K (18–27, ⚠️ 22,23 GHz vodní pára!) | Ka (27–40, HTS/O3b/5G) | V (40–75) | E (60–90 GHz).
+
+4. GiTySAT & PRAXE:
+• GiTy: vlastní teleport (HUB) v ČR, MPLS G-Net, dohled 24/7, NBÚ Tajné.
+• HTS (úzké spot-beamy + reuse) > standardní. Transpondéry: Bend pipe, Cross type, On-board switching.
+• Topologie GEO: Broadcast | Bod–Bod (SCPC) | Star (1×HUB, n×VSAT, TDMA/FDMA) | MESH (1 skok napřímo).
+• Konstelace: O3b (MEO, 150ms) | OneWeb (1200km, 652, ~100ms, Ku, MIR/CIR) | Starlink (550km, 9800+, 25–50ms, lasery) | Amazon LEO (2026/27) | Telesat Lightspeed (2028, B2B/L2).
+• Bezpečnost & Trendy: TRANSEC (AES-256 L2, X.509), FIPS 140-2 L3, CSIR (anti-jamming), DVB-S2X ACM (QPSK–256APSK podle deště).
+• Hybridní síť: kritický provoz = GEO VSAT | standardní = LEO + NNI do MPLS | nekritický = lokálně Firewall → Internet.

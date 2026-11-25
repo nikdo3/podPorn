@@ -1,1728 +1,1228 @@
-# 125+ ABCD questions covering every single detail from Optika (Q1-Q2) and Strukturovaná kabeláž (Q8-Q16)
-# Each fact is tested at least 3-4 times from different angles (direct, reverse, trap/chyták, scenario/formula).
+# 99 ABCD otázek pokrývajících všech 9 kapitol (11 otázek na každé téma)
+# Každý klíčový pojem, srovnání i zkouškový chyták je procvičen ~3x z různých úhlů.
 
 QUIZ_QUESTIONS = [
     # =========================================================================
-    # OKRUH: OPTIKA 1 – Struktura vlákna, typy vláken (MM/SM, SI/GI), vlnové délky
+    # SAT-1: Orbitální mechanika a Keplerovy zákony (11 otázek)
     # =========================================================================
     {
-        "id": 1, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "Jaké je správné pořadí vrstev typického optického vlákna směrem od středu ven?",
+        "id": 1, "topic": "sat-1", "topic_label": "1. Orbitální mechanika & Kepler",
+        "q": "Jaká fyzikální síla v inerciální vztažné soustavě poskytuje potřebnou dostředivou sílu pro udržení družice na kruhové oběžné dráze?",
         "options": [
-            "Jádro (Core) → Plášť (Cladding) → Primární ochrana (Coating) → Sekundární ochrana (Buffer)",
-            "Plášť (Cladding) → Jádro (Core) → Sekundární ochrana → Primární ochrana",
-            "Jádro (Core) → Primární ochrana → Plášť (Cladding) → Sekundární ochrana",
-            "Primární jádro → Sekundární jádro → Optický plášť → Akrylátový lak"
+            "Gravitační působení Země směrem ke středu Země",
+            "Odstředivá reakční síla vyvolaná tečnou rychlostí družice",
+            "Elektromagnetická interakce mezi ionosférou a tělesem družice",
+            "Aerodynamický vztlak zbytkové atmosféry v horní termosféře"
         ],
         "ans": 0,
-        "exp": "Od středu ven: 1. Jádro (Core, n₁), 2. Plášť (Cladding, n₂), 3. Primární ochrana (250 µm akrylát), 4. Sekundární ochrana (900 µm)."
+        "exp": "V inerciální soustavě poskytuje potřebnou dostředivou sílu výhradně gravitační síla Země."
     },
     {
-        "id": 2, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "Jaké jsou typické průměry jednotlivých vrstev jednovidového (SM) optického vlákna od středu ven?",
+        "id": 2, "topic": "sat-1", "topic_label": "1. Orbitální mechanika & Kepler",
+        "q": "Jak je správně chápaný pojem „odstředivá síla“ při popisu pohybu družice?",
         "options": [
-            "9 µm (jádro) → 125 µm (plášť) → 250 µm (primární ochrana) → 900 µm (sekundární ochrana)",
-            "50 µm (jádro) → 125 µm (plášť) → 500 µm (primární ochrana) → 900 µm (sekundární ochrana)",
-            "9 µm (jádro) → 62,5 µm (plášť) → 125 µm (primární ochrana) → 250 µm (sekundární ochrana)",
-            "8 µm (jádro) → 100 µm (plášť) → 200 µm (primární ochrana) → 1000 µm (sekundární ochrana)"
+            "Zdánlivá setrvačná síla zaváděná pouze v neinerciální soustavě rotující společně s družicí",
+            "Skutečná radiální síla vznikající v inerciální soustavě jako reakce na gravitační přitažlivost",
+            "Skutečná odpudivá síla vyvolaná magnetickým polem Země a rotací zemského jádra",
+            "Korekční síla korekčních trysek, která vyrovnává pokles dráhy vlivem odporu atmosféry"
         ],
         "ans": 0,
-        "exp": "Jednovidové vlákno má jádro 9 µm (8–10 µm), plášť vždy 125 µm, primární ochranu 250 µm a sekundární ochranu 900 µm."
+        "exp": "Odstředivá síla není další skutečnou mechanickou či gravitační silou – je to jen setrvačná síla v rotující neinerciální soustavě."
     },
     {
-        "id": 3, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "Jaký je průměr optického pláště (Cladding) u standardních telekomunikačních vláken (SM i MM)?",
+        "id": 3, "topic": "sat-1", "topic_label": "1. Orbitální mechanika & Kepler",
+        "q": "Jak se změní oběžná rychlost a oběžná doba družice, pokud ji přesuneme na vyšší kruhovou oběžnou dráhu?",
         "options": [
-            "125 µm",
-            "250 µm",
-            "50 µm nebo 62,5 µm",
-            "900 µm"
+            "Oběžná rychlost klesne a oběžná doba vzroste",
+            "Oběžná rychlost vzroste a oběžná doba klesne",
+            "Oběžná rychlost klesne, ale oběžná doba zůstane stejná",
+            "Oběžná rychlost vzroste a oběžná doba také vzroste"
         ],
         "ans": 0,
-        "exp": "Optický plášť (Cladding) z čistého křemičitého skla má vždy standardizovaný průměr 125 µm, aby šla vlákna snadno svařovat a konektorovat."
+        "exp": "Se zvyšujícím se poloměrem dráhy klesá gravitační přitažlivost, takže stačí nižší kruhová rychlost (např. LEO ~7,6 km/s vs. GEO ~3,1 km/s), zatímco dráha je delší a oběžná doba roste."
     },
     {
-        "id": 4, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "Která vrstva optického vlákna má typický vnější průměr 250 µm?",
+        "id": 4, "topic": "sat-1", "topic_label": "1. Orbitální mechanika & Kepler",
+        "q": "Jak klesá velikost gravitační síly působící na družici se vzdáleností r od středu Země?",
         "options": [
-            "Primární ochrana (Primary Coating – akrylátový lak)",
-            "Optický plášť (Cladding)",
-            "Sekundární ochrana (Tight Buffer)",
-            "Jádro mnohovidového vlákna (Core)"
+            "Se druhou mocninou vzdálenosti (1 / r²)",
+            "Lineárně se vzdáleností od středu (1 / r)",
+            "Se třetí mocninou vzdálenosti (1 / r³)",
+            "Exponenciálně s nadmořskou výškou nad rovníkem"
         ],
         "ans": 0,
-        "exp": "Primární ochrana z akrylátového laku obklopuje 125µm plášť a má vnější průměr 250 µm."
+        "exp": "Podle Newtonova gravitačního zákona Fg = μ·m / r² klesá gravitační síla se čtvercem vzdálenosti r."
     },
     {
-        "id": 5, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "Která vrstva optického vlákna má u těsné konstrukce (tight buffer) typický průměr 900 µm?",
+        "id": 5, "topic": "sat-1", "topic_label": "1. Orbitální mechanika & Kepler",
+        "q": "Jaký poměr platí mezi únikovou rychlostí v_esc a kruhovou oběžnou rychlostí v_c ve stejné vzdálenosti od středu Země?",
         "options": [
-            "Sekundární ochrana (Buffer)",
-            "Primární ochrana (Coating)",
-            "Optický plášť (Cladding)",
-            "Optické jádro (Core)"
+            "Úniková rychlost je √2-krát větší než kruhová (u povrchu Země cca 11,2 km/s)",
+            "Úniková rychlost je přesně 2krát větší než kruhová (u povrchu Země cca 15,8 km/s)",
+            "Úniková rychlost je √3-krát větší než kruhová podle třetího Keplerova zákona",
+            "Úniková rychlost je rovna kruhové rychlosti zvětšené o rotační rychlost rovníku"
         ],
         "ans": 0,
-        "exp": "Sekundární ochrana (plastová trubička / tight buffer) má průměr 900 µm (0,9 mm)."
+        "exp": "Platí v_esc = √2 · v_c. U zemského povrchu je úniková rychlost přibližně 11,2 km/s."
     },
     {
-        "id": 6, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "Jaké jsou standardní průměry jádra u mnohovidových (Multimode – MM) optických vláken?",
+        "id": 6, "topic": "sat-1", "topic_label": "1. Orbitální mechanika & Kepler",
+        "q": "Co říká První Keplerův zákon pro vázanou oběžnou dráhu družice kolem Země?",
         "options": [
-            "50 µm nebo 62,5 µm",
-            "8 µm nebo 9 µm",
-            "125 µm nebo 250 µm",
-            "10 µm nebo 125 µm"
+            "Družice opisuje elipsu, v jejímž jednom ohnisku se nachází střed Země (kružnice je speciální případ elipsy)",
+            "Družice opisuje elipsu, jejíž geometrický střed přesně splývá s hmotným středem Země",
+            "Družice opisuje vždy dokonalou kružnici, pokud není brzděna odporem zbytkové atmosféry",
+            "Družice se pohybuje po parabole se Zemí v ohnisku, dokud nepřekročí únikovou rychlost"
         ],
         "ans": 0,
-        "exp": "Mnohovidová vlákna mají průměr jádra 50 µm (50/125 µm) nebo 62,5 µm (62,5/125 µm)."
+        "exp": "1. Keplerův zákon: vázaná dráha má tvar elipsy (případně kružnice pro e = 0) se Zemí v jednom ohnisku."
     },
     {
-        "id": 7, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "Co znamená označení optického vlákna 50/125 µm?",
+        "id": 7, "topic": "sat-1", "topic_label": "1. Orbitální mechanika & Kepler",
+        "q": "Jaký je přímý důsledek Druhého Keplerova zákona (zákona ploch) pro rychlost družice na eliptické dráze?",
         "options": [
-            "Mnohovidové vlákno s průměrem jádra 50 µm a průměrem pláště 125 µm",
-            "Jednovidové vlákno s průměrem pláště 50 µm a primární ochranou 125 µm",
-            "Vlákno pro vlnovou délku 50 nm s délkou trasy 125 m",
-            "Mnohovidové vlákno s 50 vidy a numerickou aperturou 1,25"
+            "Družice se pohybuje nejrychleji v perigeu (nejblíže Zemi) a nejpomaleji v apogeu (nejdále od Země)",
+            "Družice se pohybuje konstantní úhlovou i obvodovou rychlostí v každém bodě své elipsy",
+            "Družice letí nejrychleji v apogeu (nejdále od Země) a nejpomaleji v perigeu (nejblíže Zemi)",
+            "Družice dosahuje maximální rychlosti přesně při průchodu vzestupným a sestupným uzlem"
         ],
         "ans": 0,
-        "exp": "Zápis X/Y µm vždy udává průměr jádra (50 µm) lomeno průměr pláště (125 µm)."
+        "exp": "Průvodič opíše za stejný čas stejnou plochu – blíže Zemi (perigeum) musí tedy družice letět rychleji, daleko od Země (apogeum) pomaleji."
     },
     {
-        "id": 8, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "Co znamená označení optického vlákna 9/125 µm?",
+        "id": 8, "topic": "sat-1", "topic_label": "1. Orbitální mechanika & Kepler",
+        "q": "Co vyjadřuje Třetí Keplerův zákon pro oběžnou dráhu družice?",
         "options": [
-            "Jednovidové (Singlemode) vlákno s průměrem jádra 9 µm a průměrem pláště 125 µm",
-            "Mnohovidové (Multimode) vlákno s 9 vidy a průměrem jádra 125 µm",
-            "Gradientní vlákno s 9 vrstvami pláště",
-            "Plastové vlákno s útlumem 9 dB na 125 km"
+            "Druhá mocnina oběžné doby T² je přímo úměrná třetí mocnině hlavní poloosy a³",
+            "Třetí mocnina oběžné doby T³ je přímo úměrná druhé mocnině hlavní poloosy a²",
+            "Druhá mocnina oběžné doby T² je nepřímo úměrná třetí mocnině výšky apogea",
+            "Oběžná doba T roste lineárně s hlavní poloosou a nezávisí na gravitačním parametru μ"
         ],
         "ans": 0,
-        "exp": "9/125 µm je standardní jednovidové (SM) vlákno: jádro má průměr 9 µm a plášť 125 µm."
+        "exp": "3. Keplerův zákon: T² = (4π² / μ) · a³, tedy čím větší hlavní poloosa, tím delší oběžná doba."
     },
     {
-        "id": 9, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "Proč mají příměsi (např. GeO₂) v křemičitém skle jádra optického vlákna zásadní význam?",
+        "id": 9, "topic": "sat-1", "topic_label": "1. Orbitální mechanika & Kepler",
+        "q": "Co se stane s družicí na kruhové dráze, pokud krátce snížíme její tečnou rychlost?",
         "options": [
-            "Zvyšují index lomu jádra n₁ tak, aby platilo n₁ > n₂ (podmínka pro totální vnitřní odraz)",
-            "Snižují index lomu jádra n₁ pod hodnotu pláště n₂",
-            "Slouží k elektrickému uzemnění statického náboje ve vlákně",
-            "Zabraňují šíření základního osového vidu"
+            "Přejde na eliptickou dráhu s nižším perigeem",
+            "Přejde na eliptickou dráhu s vyšším apogeem",
+            "Zůstane na stejné kruhové dráze s delší periodou",
+            "Okamžitě sestoupí na nižší kruhovou dráhu bez elipsy"
         ],
         "ans": 0,
-        "exp": "Jádro musí být opticky hustší než plášť (n₁ > n₂), čehož se dosahuje legováním čistého SiO₂ příměsemi (např. GeO₂)."
+        "exp": "Snížení tečné rychlosti z kruhové dráhy vede k přechodu na elipsu s nižším perigeem; zvýšení rychlosti pod únikovou naopak zvedá apogeum."
     },
     {
-        "id": 10, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "Jak se dělí optická vlákna podle počtu šířených vidů a profilu indexu lomu?",
+        "id": 10, "topic": "sat-1", "topic_label": "1. Orbitální mechanika & Kepler",
+        "q": "Který z následujících jevů NEPATŘÍ mezi hlavní reálné poruchy narušující ideální Keplerovu dráhu družice?",
         "options": [
-            "Mnohovidová (skoková Step-Index a gradientní Graded-Index) a Jednovidová (Singlemode)",
-            "Jednovidová (skoková a parabolická) a Bezvodičová (UTP a STP)",
-            "Pouze na skoková (9/125 µm) a gradientní (850 nm)",
-            "Symetrická, koaxiální a kroucená optická vlákna"
+            "Útlum rádiových vln vodní párou v pásmu 22,23 GHz",
+            "Nesférické gravitační pole (zploštění) Země (koeficient J₂)",
+            "Odpor zbytkové atmosféry na nízkých oběžných drahách",
+            "Gravitační působení Slunce, Měsíce a tlak slunečního záření"
         ],
         "ans": 0,
-        "exp": "Základní dělení: Mnohovidová (MM – Step-Index se skokovou změnou a Graded-Index s gradientní změnou indexu lomu) a Jednovidová (SM)."
+        "exp": "Útlum vodní párou ovlivňuje rádiový signál, nikoli mechanický pohyb družice. Pohyb narušují zploštění Země (J₂), odpor atmosféry, Slunce/Měsíc a tlak slunečního záření."
     },
     {
-        "id": 11, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "Jaký je hlavní rozdíl mezi mnohovidovým skokovým (Step-Index) a gradientním (Graded-Index) vláknem?",
+        "id": 11, "topic": "sat-1", "topic_label": "1. Orbitální mechanika & Kepler",
+        "q": "Kdy přejde těleso v idealizovaném dvoutělesovém modelu na parabolickou únikovou dráhu?",
         "options": [
-            "U gradientního vlákna index lomu v jádře plynule (parabolicky) klesá od osy k plášti, což vyrovnává časy průchodu paprsků a potlačuje vidovou disperzi",
-            "U skokového vlákna se šíří pouze jeden vid, zatímco u gradientního více vidů",
-            "U gradientního vlákna je index lomu v jádře konstantní a paprsky se odrážejí po lomených přímkách",
-            "Gradientní vlákno má jádro 9 µm, zatímco skokové má jádro 50 µm"
+            "Při dosažení únikové rychlosti (e = 1)",
+            "Při překročení únikové rychlosti (e > 1)",
+            "Při poklesu pod kruhovou rychlost (e < 1)",
+            "Při přechodu na polární dráhu (i = 90°)"
         ],
         "ans": 0,
-        "exp": "Graded-Index má parabolický profil indexu lomu v jádře – paprsky dále od osy mají delší dráhu, ale v oblasti s nižším indexem lomu letí rychleji, což minimalizuje vidovou disperzi."
-    },
-    {
-        "id": 12, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "Proč v gradientním (Graded-Index) vlákně dorazí paprsky šířící se po delší zvlněné dráze téměř současně s osovým paprskem?",
-        "options": [
-            "Protože směrem k okraji jádra klesá index lomu n₁, a podle v = c/n se tam světlo šíří vyšší fázovou rychlostí",
-            "Protože osový paprsek je v jádře úmyslně brzděn kovovou mřížkou",
-            "Protože v plášti je rychlost světla nulová",
-            "Protože paprsky na okraji mají kratší geometrickou dráhu než paprsek v ose"
-        ],
-        "ans": 0,
-        "exp": "Rychlost světla v prostředí je nepřímo úměrná indexu lomu (v = c/n). Nižší index lomu u okraje jádra znamená vyšší rychlost šíření, která vykompenzuje delší dráhu."
-    },
-    {
-        "id": 13, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "Který typ optického vlákna zcela eliminuje vidovou (modální) disperzi?",
-        "options": [
-            "Jednovidové vlákno (Singlemode – SM, 9/125 µm)",
-            "Mnohovidové vlákno se skokovou změnou indexu lomu (MM Step-Index)",
-            "Mnohovidové gradientní vlákno (MM Graded-Index 62,5/125 µm)",
-            "Plastové mnohovidové vlákno (POF)"
-        ],
-        "ans": 0,
-        "exp": "V jednovidovém (SM) vlákně se díky malému průměru jádra (9 µm) šíří pouze jediný (základní) vid, takže vidová disperze je nulová."
-    },
-    {
-        "id": 14, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "Jaké tři základní vlnové délky (přenosová okna) se standardně používají v optických sítích?",
-        "options": [
-            "850 nm, 1300/1310 nm a 1550 nm",
-            "400 nm, 550 nm a 700 nm",
-            "100 MHz, 250 MHz a 500 MHz",
-            "650 nm, 980 nm a 2400 nm"
-        ],
-        "ans": 0,
-        "exp": "Tři hlavní přenosová okna v infračervené oblasti jsou: 1. okno 850 nm (MM), 2. okno 1300 nm (MM) / 1310 nm (SM) a 3. okno 1550 nm (SM)."
-    },
-    {
-        "id": 15, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "Které přenosové okno vykazuje v křemičitém skle absolutně nejnižší měrný útlum (cca 0,2 dB/km) a používá se pro dálkové jednovidové (SM) trasy?",
-        "options": [
-            "1550 nm (3. přenosové okno)",
-            "850 nm (1. přenosové okno)",
-            "1300 nm (u mnohovidových vláken)",
-            "62,5 nm"
-        ],
-        "ans": 0,
-        "exp": "Ve 3. okně na vlnové délce 1550 nm má křemičité sklo absolutní minimum útlumu kolem 0,2 dB/km."
-    },
-    {
-        "id": 16, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "Které vlnové délky se typicky používají u mnohovidových (Multimode – MM) optických vláken?",
-        "options": [
-            "850 nm a 1300 nm",
-            "1310 nm a 1550 nm",
-            "1550 nm a 1625 nm",
-            "Pouze 1550 nm"
-        ],
-        "ans": 0,
-        "exp": "Mnohovidová (MM) vlákna pracují v 1. a 2. okně na vlnových délkách 850 nm a 1300 nm (jednovidová SM na 1310 nm a 1550 nm)."
-    },
-    {
-        "id": 17, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "V jakých jednotkách se podle zápisků z hodin běžně udává frekvence světla v optických vláknech?",
-        "options": [
-            "V terahertzích (THz)",
-            "V kilohertzích (kHz)",
-            "V megahertzích (MHz)",
-            "V decibelech (dB)"
-        ],
-        "ans": 0,
-        "exp": "Zatímco metalické kabely pracují v kHz až MHz (max. GHz), frekvence světla v optice leží v řádu stovek terahertzů (THz)."
+        "exp": "Při únikové rychlosti je excentricita e = 1 a dráha je parabolická; při vyšší rychlosti je hyperbolická (e > 1)."
     },
 
     # =========================================================================
-    # OKRUH: OPTIKA 2 – Podmínka přenosu, index lomu, NA, úhel navázání, vložný útlum
+    # SAT-2: Orbitální elementy a orientace drah (11 otázek)
     # =========================================================================
     {
-        "id": 18, "topic": "opt-2", "topic_label": "Optika 2: Totální odraz, NA a útlum",
-        "q": "Co je základní fyzikální podmínkou pro přenos světla v optickém vlákně?",
+        "id": 12, "topic": "sat-2", "topic_label": "2. Elementy & Orientace drah",
+        "q": "Kolik klasických Keplerových orbitálních elementů je potřeba k úplnému určení ideální dráhy a polohy družice na ní v daném čase?",
         "options": [
-            "Jev totálního (úplného) vnitřního odrazu na rozhraní jádra a pláště (n₁ > n₂ a úhel dopadu α > α_m)",
-            "Jev částečného lomu paprsku do primární ochrany (n₁ < n₂)",
-            "Supravodivost křemičitého skla při průchodu elektrického proudu",
-            "Odraz světla od vnějšího kovového stínění STP"
+            "Šest (a, e, i, Ω, ω, ν)",
+            "Pět (a, e, i, Ω, ω)",
+            "Čtyři (perigeum, apogeum, i, Ω)",
+            "Sedm (včetně koeficientu J₂)"
         ],
         "ans": 0,
-        "exp": "Světlo je ve vlákně vedeno díky totálnímu vnitřnímu odrazu na rozhraní jádro/plášť, což vyžaduje n₁ > n₂ a úhel dopadu větší než mezní úhel (α > α_m)."
+        "exp": "Klasická sada obsahuje 6 prvků: hlavní poloosu a, excentricitu e, inklinaci i, RAAN Ω, argument perigea ω a pravou (příp. střední) anomálii ν."
     },
     {
-        "id": 19, "topic": "opt-2", "topic_label": "Optika 2: Totální odraz, NA a útlum",
-        "q": "Jaký vztah musí platit mezi indexem lomu jádra (n₁) a indexem lomu pláště (n₂), aby mohlo v optickém vlákně dojít k totálnímu odrazu?",
+        "id": 13, "topic": "sat-2", "topic_label": "2. Elementy & Orientace drah",
+        "q": "Která dvojice Keplerových elementů určuje čistě VELIKOST a TVAR oběžné dráhy?",
         "options": [
-            "n₁ > n₂ (jádro musí mít vyšší index lomu než plášť)",
-            "n₁ < n₂ (plášť musí mít vyšší index lomu než jádro)",
-            "n₁ = n₂ (oba indexy lomu musí být shodné)",
-            "n₁ · n₂ = 0"
+            "Hlavní poloosa (a) a excentricita (e)",
+            "Inklinace (i) a rektascenze vzestupného uzlu (Ω)",
+            "Argument perigea (ω) a pravá anomálie (ν)",
+            "Hlavní poloosa (a) a argument perigea (ω)"
         ],
         "ans": 0,
-        "exp": "Totální odraz nastává pouze při přechodu světla z opticky hustšího prostředí (jádro n₁) do opticky řidšího prostředí (plášť n₂), tedy n₁ > n₂."
+        "exp": "Hlavní poloosa a udává velikost dráhy, excentricita e určuje její tvar (e = 0 kružnice, 0 < e < 1 elipsa)."
     },
     {
-        "id": 20, "topic": "opt-2", "topic_label": "Optika 2: Totální odraz, NA a útlum",
-        "q": "Co musí platit pro úhel dopadu paprsku α na rozhraní jádro–plášť, aby nastal totální vnitřní odraz?",
+        "id": 14, "topic": "sat-2", "topic_label": "2. Elementy & Orientace drah",
+        "q": "Co přesně vyjadřuje rektascenze vzestupného uzlu (RAAN, Ω)?",
         "options": [
-            "Úhel dopadu α musí být větší než mezní (kritický) úhel α_m (kde sin α_m = n₂ / n₁)",
-            "Úhel dopadu α musí být menší než mezní úhel α_m (α < α_m)",
-            "Úhel dopadu α musí být roven 0° (kolmý dopad na plášť)",
-            "Úhel dopadu α musí být přesně 45° bez ohledu na indexy lomu"
+            "Natočení celé roviny oběžné dráhy kolem rotační osy Země (úhel v rovníkové rovině od jarního bodu ke vzestupnému uzlu)",
+            "Úhel sklonu roviny oběžné dráhy vůči rovině zemského rovníku měřený ve vzestupném uzlu směrem na sever",
+            "Úhel v rovině oběžné dráhy měřený od směru vzestupného uzlu ke směru perigea ve směru pohybu družice",
+            "Okamžitou polohu družice na elipse měřenou v rovině dráhy od směru perigea k aktuálnímu průvodiči"
         ],
         "ans": 0,
-        "exp": "Při α > α_m se paprsek již neláme do pláště, ale 100% se odráží zpět do jádra."
+        "exp": "RAAN (Ω) popisuje prostorové natočení celé roviny dráhy kolem osy Země; vzestupný uzel je bod, kde družice přelétá rovník z jihu na sever."
     },
     {
-        "id": 21, "topic": "opt-2", "topic_label": "Optika 2: Totální odraz, NA a útlum",
-        "q": "Co je to index lomu (n) a jaký je jeho vzorec?",
+        "id": 15, "topic": "sat-2", "topic_label": "2. Elementy & Orientace drah",
+        "q": "Jaký je rozdíl mezi rektascenzí vzestupného uzlu (Ω) a argumentem perigea (ω)?",
         "options": [
-            "Poměr rychlosti světla ve vakuu (c) k fázové rychlosti světla v daném prostředí (v), tedy n = c / v",
-            "Poměr průměru pláště k průměru jádra, tedy n = d₂ / d₁",
-            "Součin rychlosti světla a vlnové délky, tedy n = c · λ",
-            "Rozdíl útlumu na vstupu a výstupu vlákna v decibelech"
+            "Ω určuje natočení celé roviny dráhy v prostoru, zatímco ω určuje orientaci elipsy (polohu perigea) uvnitř této roviny",
+            "Ω určuje sklon roviny dráhy vůči rovníku, zatímco ω udává okamžitou úhlovou vzdálenost družice od perigea",
+            "Ω definuje tvar a velikost eliptické dráhy, zatímco ω určuje natočení její roviny kolem zemské osy",
+            "Ω se používá pouze pro retrográdní dráhy s inklinací nad 90° a ω výhradně pro prográdní dráhy"
         ],
         "ans": 0,
-        "exp": "Index lomu n = c / v je bezrozměrná veličina udávající, kolikrát pomaleji se světlo šíří v daném prostředí než ve vakuu."
+        "exp": "Ω natáčí celou rovinu dráhy kolem Země; ω natáčí elipsu uvnitř již zadané roviny (od vzestupného uzlu k perigeu)."
     },
     {
-        "id": 22, "topic": "opt-2", "topic_label": "Optika 2: Totální odraz, NA a útlum",
-        "q": "Pokud je index lomu křemičitého skla v jádře přibližně n = 1,5 a rychlost světla ve vakuu c = 300 000 km/s, jakou rychlostí v se světlo šíří ve skle?",
+        "id": 16, "topic": "sat-2", "topic_label": "2. Elementy & Orientace drah",
+        "q": "Který orbitální element udává okamžitou polohu družice na její oběžné dráze v daném čase?",
         "options": [
-            "Přibližně 200 000 km/s (protože v = c / n)",
-            "Přibližně 450 000 km/s (protože v = c · n)",
-            "Stále 300 000 km/s",
-            "Přibližně 150 000 m/s"
+            "Pravá anomálie ν (případně střední anomálie M k referenční epoše)",
+            "Argument perigea ω (úhel mezi vzestupným uzlem a bodem perigea)",
+            "Rektascenze vzestupného uzlu Ω (orientace roviny dráhy vůči jarnímu bodu)",
+            "Excentricita e společně s hlavní poloosou a (parametry tvaru elipsy)"
         ],
         "ans": 0,
-        "exp": "Ze vzorce n = c / v plyne v = c / n = 300 000 / 1,5 = 200 000 km/s."
+        "exp": "Pravá anomálie ν je úhel mezi směrem perigea a aktuálním průvodičem družice."
     },
     {
-        "id": 23, "topic": "opt-2", "topic_label": "Optika 2: Totální odraz, NA a útlum",
-        "q": "Co vyjadřuje maximální úhel navázání (θ_max, akceptační úhel) u optického vlákna?",
+        "id": 17, "topic": "sat-2", "topic_label": "2. Elementy & Orientace drah",
+        "q": "CHYTÁK: U kterého typu dráhy NENÍ jednoznačně definován argument perigea (ω)?",
         "options": [
-            "Maximální úhel vůči podélné ose vlákna, pod kterým může paprsek vstoupit do čela jádra, aby uvnitř ještě nastal totální odraz",
-            "Maximální úhel, o který lze optický kabel ohnout v rozvaděči bez zlomení",
-            "Úhel, pod kterým se brousí čelo konektoru APC (8°)",
-            "Minimální úhel dopadu na rozhraní primární a sekundární ochrany"
+            "U přesně kruhové dráhy (e = 0), protože všechny body mají stejnou vzdálenost od středu Země",
+            "U rovníkové eliptické dráhy (i = 0°, e > 0), protože rovina dráhy splývá s rovníkem",
+            "U vysoce eliptické dráhy Molnija (i ≈ 63,4°), protože apogeum leží vysoko nad severní polokoulí",
+            "U slunečně synchronní dráhy SSO (i ≈ 98°), protože její rovina precesuje kolem osy Země"
         ],
         "ans": 0,
-        "exp": "Paprsky vstupující do čela vlákna pod úhlem menším nebo rovným θ_max (uvnitř akceptačního kužele) splní uvnitř vlákna podmínku totálního odrazu."
+        "exp": "Na přesně kruhové dráze (e = 0) neexistuje jediné perigeum, takže argument perigea ω není jednoznačně definován (podobně u rovníkové dráhy i = 0° není definován vzestupný uzel Ω)."
     },
     {
-        "id": 24, "topic": "opt-2", "topic_label": "Optika 2: Totální odraz, NA a útlum",
-        "q": "Který vzorec správně definuje numerickou aperturu (NA) optického vlákna ve vzduchu (n₀ = 1)?",
+        "id": 18, "topic": "sat-2", "topic_label": "2. Elementy & Orientace drah",
+        "q": "Jak dělíme šikmé oběžné dráhy podle inklinace i vzhledem k směru rotace Země?",
         "options": [
-            "NA = sin(θ_max) = √(n₁² − n₂²)",
-            "NA = cos(θ_max) = n₁ / n₂",
-            "NA = √(n₁² + n₂²) · d_jádra",
-            "NA = c / v"
+            "Prográdní (0° < i < 90°, po směru rotace Země) a retrográdní (90° < i < 180°, proti směru rotace Země)",
+            "Prográdní (90° < i < 180°, proti rotaci Země) a retrográdní (0° < i < 90°, po směru rotace Země)",
+            "Polární (0° < i < 45°, kolem rovníku) a rovníkové (45° < i < 90°, nad zemskými póly)",
+            "Geosynchronní (0° < i < 90°, s periodou 24 h) a heliosynchronní (90° < i < 180°, s periodou 12 h)"
         ],
         "ans": 0,
-        "exp": "Numerická apertura je rovna sinu maximálního úhlu navázání θ_max a vypočítá se jako odmocnina z rozdílu druhých mocnin indexů lomu jádra a pláště: √(n₁² − n₂²)."
+        "exp": "Prográdní dráhy mají i < 90° (letí ve smyslu rotace Země), retrográdní mají i > 90° (proti rotaci Země)."
     },
     {
-        "id": 25, "topic": "opt-2", "topic_label": "Optika 2: Totální odraz, NA a útlum",
-        "q": "CHYTÁK Z TESTU: Souvisí numerická apertura (NA) s průměrem optického vlákna?",
+        "id": 19, "topic": "sat-2", "topic_label": "2. Elementy & Orientace drah",
+        "q": "Která vlastnost je charakteristická pro polární oběžnou dráhu (i ≈ 90°)?",
         "options": [
-            "Ne, vůbec nesouvisí – závisí výhradně na indexech lomu jádra (n₁) a pláště (n₂)",
-            "Ano, čím větší je průměr jádra, tím větší je numerická apertura podle vzorce",
-            "Ano, numerická apertura je přímo úměrná průměru pláště 125 µm",
-            "Ano, u 9µm vlákna je NA vždy 9× menší než u 50µm vlákna se stejným sklem"
+            "Družice přelétá nad oblastmi severního a jižního pólu a díky rotaci Země postupně snímá téměř celý zemský povrch",
+            "Družice se pohybuje v rovině rovníku a z pohledu pozemního pozorovatele zůstává nad jedním poledníkem",
+            "Družice opisuje na obloze symetrickou osmičku (analemu) pouze nad severní polokoulí bez přeletu nad jižním pólem",
+            "Družice má nulovou radiální rychlost vůči všem pozemním stanicím, takže nedochází k Dopplerovu posuvu"
         ],
         "ans": 0,
-        "exp": "Ve vzorci NA = √(n₁² − n₂²) průměr vlákna vůbec nevystupuje! NA závisí pouze na materiálovém složení (indexech lomu n₁ a n₂)."
+        "exp": "Polární dráhy (i ≈ 90°) procházejí nad oběma póly a při rotaci Země pod nimi pokrývají postupně celou planetu (meteo, SAR, průzkum)."
     },
     {
-        "id": 26, "topic": "opt-2", "topic_label": "Optika 2: Totální odraz, NA a útlum",
-        "q": "Jakou hodnotu numerické apertury (NA) u optického vlákna požadujeme?",
+        "id": 20, "topic": "sat-2", "topic_label": "2. Elementy & Orientace drah",
+        "q": "Proč je slunečně synchronní dráha (SSO) tak ceněná pro optické snímkování Země?",
         "options": [
-            "Jde o kompromis: velkou NA chceme pro snadné navázání výkonu ze zdroje, ale malou NA pro malou vidovou disperzi (velkou šířku pásma)",
-            "Požadujeme vždy co největší NA (blízkou 1,0), protože tím klesá vidová disperze na nulu",
-            "Požadujeme vždy nulovou NA (NA = 0), aby do vlákna nevnikalo žádné světlo",
-            "Požadujeme NA v decibelech větší než 50 dB"
+            "Družice přelétá nad danou oblastí přibližně ve stejný místní sluneční čas, takže pořízené snímky z různých dnů mají srovnatelné světelné podmínky",
+            "Družice letí v rovníkové rovině přesně v zákrytu se Sluncem, takže může snímat stejný bod planety nepřetržitě 24 hodin denně",
+            "Družice se pohybuje ve výšce 35 786 km nad terminátorem, čímž zcela eliminuje atmosférický útlum i stíny oblačnosti",
+            "Družice mění svou výšku mezi 500 a 900 km tak, aby vždy letěla pouze nad neosvětlenou noční stranou zemského povrchu"
         ],
         "ans": 0,
-        "exp": "Velká NA sice naváže více světla (širší kužel), ale paprsky pod velkými úhly mají delší dráhu a zvyšují vidovou disperzi. Proto se volí kompromis."
+        "exp": "SSO udržuje přibližně konstantní úhel roviny dráhy vůči Slunci (precese ~+0,9856°/den), takže odpovídající přelety probíhají ve stejnou místní sluneční hodinu."
     },
     {
-        "id": 27, "topic": "opt-2", "topic_label": "Optika 2: Totální odraz, NA a útlum",
-        "q": "Co by způsobila příliš velká numerická apertura (NA) u mnohovidového vlákna?",
+        "id": 21, "topic": "sat-2", "topic_label": "2. Elementy & Orientace drah",
+        "q": "Jaký fyzikální jev využívá slunečně synchronní dráha (SSO) k tomu, aby se její rovina stáčela o cca +0,9856°/den, a jakou mívá inklinaci?",
         "options": [
-            "Snadnější navázání světla ze zdroje, ale zároveň velkou vidovou disperzi a menší šířku pásma",
-            "Úplné vymizení vidové disperze a neomezenou šířku pásma",
-            "Nemožnost navázat do vlákna světlo z LED diody",
-            "Zvětšení průměru pláště ze 125 µm na 900 µm"
+            "Zploštění Země (koeficient J₂) způsobující precesi uzlů; dráha je téměř polární a lehce retrográdní (i ≈ 97°–99°)",
+            "Odpor zbytkové atmosféry na LEO; dráha je téměř polární a lehce prográdní (i ≈ 81°–83°)",
+            "Gravitační poruchy Slunce a Měsíce; dráha má kritický sklon přesně i ≈ 63,4° bez precese perigea",
+            "Tlak slunečního záření na panely; dráha je rovníková s nulovou inklinací (i = 0°) ve výšce 500–900 km"
         ],
         "ans": 0,
-        "exp": "Velká NA znamená velký úhel θ_max, takže do vlákna vstupují i velmi šikmé paprsky, které urazí mnohem delší dráhu než osový paprsek → roste vidová disperze."
+        "exp": "Precesi orbitální roviny zajišťuje zploštění Země (J₂). Pro správný směr precese musí být SSO mírně retrográdní (typicky i ≈ 97°–99°, výška 500–900 km)."
     },
     {
-        "id": 28, "topic": "opt-2", "topic_label": "Optika 2: Totální odraz, NA a útlum",
-        "q": "Co je to vložný útlum (Insertion Loss – IL) u optických vláken?",
+        "id": 22, "topic": "sat-2", "topic_label": "2. Elementy & Orientace drah",
+        "q": "Pokud má družice inklinaci i = 55°, v jakém rozsahu zeměpisných šířek se pohybuje její poddružicový bod (subsatellite point)?",
         "options": [
-            "Ztráta optického výkonu (v dB) způsobená vložením spoje (konektoru, sváru) nebo pasivního prvku do optické trasy",
-            "Zesílení signálu v optickém zesilovači EDFA",
-            "Přeslech mezi dvěma kroucenými metalickými páry na vzdáleném konci",
-            "Poměr rychlosti světla ve vakuu k rychlosti světla v jádře"
+            "Přibližně mezi −55° a +55° zeměpisné šířky (ovšem rádiově může být viditelná i z vyšších šířek)",
+            "Pouze mezi 0° a +55° severní šířky, protože vzestupný uzel leží vždy na nultém poledníku",
+            "Od −90° do +90° zeměpisné šířky včetně obou pólů díky postupné rotaci Země pod dráhou",
+            "Pouze mezi +35° a +90° zeměpisné šířky (doplněk inklinace k pravému úhlu 90°)"
         ],
         "ans": 0,
-        "exp": "Vložný útlum udává v decibelech pokles optického výkonu při průchodu spojem (konektorem, svárem) nebo prvkem."
-    },
-    {
-        "id": 29, "topic": "opt-2", "topic_label": "Optika 2: Totální odraz, NA a útlum",
-        "q": "Jakými příčinami vzniká vložný útlum na optickém spoji?",
-        "options": [
-            "Fresnelovým odrazem na vzduchové mezeře, geometrickými nepřesnostmi (osové/úhlové přesazení jader, mezera) a nečistotami či rozdílným průměrem/NA vláken",
-            "Elektromagnetickou indukcí z okolních silových kabelů 230 V",
-            "Použitím příliš krátkého patch kabelu pracovní plochy",
-            "Nedodržením barevného schématu T568B na konektoru RJ-45"
-        ],
-        "ans": 0,
-        "exp": "Vložný útlum v optice vzniká na rozhraní čel konektorů/svárů kvůli Fresnelovu odrazu, geometrickým odchylkám (nesouosost, úhel, mezera) a nečistotám."
+        "exp": "Maximální absolutní šířka poddružicového bodu je min(i, 180° − i), zde tedy ±55°. Rádiová viditelnost však sahá i o něco dál podle výšky a elevace."
     },
 
     # =========================================================================
-    # OKRUH: KABELÁŽ 8 – Normy strukturované kabeláže v ČR
+    # SAT-3: LEO, MEO, GEO a speciální dráhy GSO, Molnija, Tundra (11 otázek)
     # =========================================================================
     {
-        "id": 30, "topic": "sk-8", "topic_label": "Otázka 8: Normy v ČR",
-        "q": "Podle jakých norem můžeme v ČR vytvořit strukturovanou kabeláž (dle tvého výpisu z hodin)?",
+        "id": 23, "topic": "sat-3", "topic_label": "3. LEO, MEO, GEO & Speciální dráhy",
+        "q": "Jaké přibližné výškové pásmo a oběžná doba jsou typické pro nízkou oběžnou dráhu LEO?",
         "options": [
-            "Podle norem ČSN EN 50173 a ČSN EN 50174 (české převzetí evropských norem EN)",
-            "Podle norem ČSN 73 0802 a IEEE 802.11ac",
-            "Výhradně podle japonské normy JIS X 5150",
-            "Podle norem ITU-T G.711 a G.729"
+            "Výška cca 160 až 2 000 km, oběžná doba cca 90 až 130 minut",
+            "Výška cca 2 000 až 10 000 km, oběžná doba cca 4 až 6 hodin",
+            "Výška cca 20 200 km, oběžná doba přesně 12 hodin",
+            "Výška 35 786 km, oběžná doba 23 hodin 56 minut"
         ],
         "ans": 0,
-        "exp": "V ČR se strukturovaná kabeláž buduje podle ČSN EN 50173 (návrh univerzální kabeláže) a ČSN EN 50174 (instalace), což je české převzetí evropských norem EN."
+        "exp": "LEO pokrývá přibližně 160–2 000 km nad Zemí, rychlost ~6,9–7,8 km/s a oběžná doba ~88–127 min."
     },
     {
-        "id": 31, "topic": "sk-8", "topic_label": "Otázka 8: Normy v ČR",
-        "q": "O jaký původ norem jde u označení ČSN EN 50173 a ČSN EN 50174?",
+        "id": 24, "topic": "sat-3", "topic_label": "3. LEO, MEO, GEO & Speciální dráhy",
+        "q": "Proč musí komunikační systémy na dráze LEO (jako Starlink nebo OneWeb) využívat stovky až tisíce družic?",
         "options": [
-            "Jde o české převzetí evropské normy EN (vycházející z mezinárodní ISO/IEC 11801)",
-            "Jde o ryze americkou normu bez platnosti v Evropské unii",
-            "Jde o normu pro bezdrátové sítě Wi-Fi a Bluetooth",
-            "Jde o normu pro komprimaci hlasu A-law v PCM systémech"
+            "Každá LEO družice má malý footprint (na 500 km jen ~3,6 % povrchu Země) a velmi rychle přelétá za horizont, takže pro nepřetržité pokrytí je nutné neustálé předávání spojení v husté konstelaci",
+            "Protože v pásmech Ku a Ka na dráze LEO dochází k tak silnému útlumu FSPL (přes 190 dB), že signál jedné družice nedosáhne dále než na vzdálenost 100 km od poddružicového bodu",
+            "Protože zbytková atmosféra na dráze LEO omezuje životnost každé družice na několik týdnů a většina družic v konstelaci slouží pouze jako pasivní záloha na oběžné dráze",
+            "Protože každá LEO družice má oběžnou dobu 24 hodin a z pohledu pozemního terminálu pokrývá vždy jen úzký pruh kolem rovníku o šířce několika kilometrů"
         ],
         "ans": 0,
-        "exp": "Zkratka ČSN EN znamená, že jde o českou technickou normu přebírající evropskou normu EN."
+        "exp": "Malá výška LEO znamená malé pokrytí jedné družice a krátkou dobu viditelnosti (~několik minut), proto je nutná rozsáhlá konstelace."
     },
     {
-        "id": 32, "topic": "sk-8", "topic_label": "Otázka 8: Normy v ČR",
-        "q": "Která dvojice norem tvoří v ČR základ pro návrh (50173) a instalaci (50174) strukturované kabeláže?",
+        "id": 25, "topic": "sat-3", "topic_label": "3. LEO, MEO, GEO & Speciální dráhy",
+        "q": "Která z následujících skupin systémů je typickým zástupcem střední oběžné dráhy MEO (2 000–35 786 km)?",
         "options": [
-            "ČSN EN 50173 a ČSN EN 50174",
-            "ČSN EN 10000 a ČSN EN 20000",
-            "RFC 3550 a RFC 2544",
-            "IEEE 802.3af a IEEE 802.1Q"
+            "Navigační systémy GNSS (GPS 20 200 km, Galileo 23 222 km, GLONASS 19 100 km) a komunikační síť O3b (~8 000 km)",
+            "Nízkoletící širokopásmové konstelace SpaceX Starlink (550 km), Eutelsat OneWeb (1 200 km) a Iridium (780 km)",
+            "Geostacionární televizní a datové družice Astra, Eutelsat Hot Bird a Inmarsat ve výšce 35 786 km",
+            "Vysoce eliptické dráhy Molnija (12h perioda) a slunečně synchronní meteorologické družice (500–900 km)"
         ],
         "ans": 0,
-        "exp": "ČSN EN 50173 definuje univerzální kabelážní systémy a ČSN EN 50174 pravidla pro jejich instalaci."
+        "exp": "MEO je doménou globálních navigací GNSS a středněorbitální datové sítě SES O3b."
+    },
+    {
+        "id": 26, "topic": "sat-3", "topic_label": "3. LEO, MEO, GEO & Speciální dráhy",
+        "q": "Které specifické kosmické riziko ovlivňuje družice na střední oběžné dráze MEO více než na nízkých drahách pod 1 000 km?",
+        "options": [
+            "Vyšší radiační zátěž ve Van Allenových radiačních pásech",
+            "Výrazně silnější aerodynamický odpor zbytkové atmosféry",
+            "Častější precese roviny dráhy vyvolaná koeficientem J₂",
+            "Extrémně vysoký Dopplerův posuv v řádu stovek kHz v Ka pásmu"
+        ],
+        "ans": 0,
+        "exp": "V oblastech MEO procházejí dráhy Van Allenovými radiačními pásy, což klade nároky na radiační odolnost elektroniky."
+    },
+    {
+        "id": 27, "topic": "sat-3", "topic_label": "3. LEO, MEO, GEO & Speciální dráhy",
+        "q": "Jaká sada podmínek musí platit současně, aby se družice nacházela na geostacionární dráze (GEO)?",
+        "options": [
+            "Kruhová dráha (e = 0), nulová inklinace (i = 0° nad rovníkem), prográdní směr a perioda rovna siderickému dni (23 h 56 min 4 s)",
+            "Eliptická dráha (e = 0,74), kritická inklinace (i = 63,4° nad rovníkem), prográdní směr a oběžná perioda přesně 12 hodin",
+            "Kruhová dráha (e = 0), polární inklinace (i = 90° přes oba póly), retrográdní směr a oběžná perioda rovna slunečnímu dni (24 h 00 min)",
+            "Jakákoli eliptická či kruhová dráha ve výšce 35 786 km se siderickou periodou 23 h 56 min 4 s bez ohledu na inklinaci i"
+        ],
+        "ans": 0,
+        "exp": "Všechny 4 podmínky jsou nutné: kruhová (e=0), rovníková (i=0°), prográdní a siderická perioda 23 h 56 min 4 s (~výška 35 786 km)."
+    },
+    {
+        "id": 28, "topic": "sat-3", "topic_label": "3. LEO, MEO, GEO & Speciální dráhy",
+        "q": "Jaký je hlavní rozdíl mezi geostacionární (GEO) a obecnou geosynchronní (GSO) dráhou?",
+        "options": [
+            "Obě mají periodu ~23 h 56 min, ale GSO může být skloněná (i > 0°) nebo eliptická (e > 0), takže družice na obloze opisuje osmičku (analemu), zatímco GEO stojí v jednom bodě",
+            "GEO má siderickou periodu 23 h 56 min nad rovníkem, zatímco GSO má přesně 12hodinovou periodu ve výšce 20 200 km a přelétá každé místo dvakrát denně",
+            "GSO je nízkoletící dráha ve výšce 500–900 km synchronizovaná se Sluncem (SSO), zatímco GEO leží výhradně ve výšce 35 786 km nad rovníkem",
+            "GEO umožňuje používat pouze úzké spot-beamy HTS družic, zatímco GSO označuje výhradně širokopásmové konstelace s laserovými spoji ISL"
+        ],
+        "ans": 0,
+        "exp": "GEO je speciální případ GSO pro i = 0° a e = 0. Jakmile má GSO nenulový sklon nebo excentricitu, na obloze se pohybuje po analemě (osmičce)."
+    },
+    {
+        "id": 29, "topic": "sat-3", "topic_label": "3. LEO, MEO, GEO & Speciální dráhy",
+        "q": "Kolik procent zemského povrchu může být v ideálním geometrickém modelu (elevace 0°) viditelné z jedné geostacionární družice GEO, a kolik GEO družic zhruba stačí pro většinu obydlené planety?",
+        "options": [
+            "Až ~42 % povrchu z jedné družice; 3 vhodně rozmístěné družice pokryjí většinu Země mimo polární oblasti",
+            "Asi 18 % povrchu z jedné družice; pro pokrytí planety mimo póly je potřeba minimálně 6 až 8 družic",
+            "Přesně 50 % povrchu z jedné družice; 2 protilehlé družice tak spolehlivě pokryjí 100 % povrchu včetně pólů",
+            "Asi 3,6 % povrchu z jedné družice; pro nepřetržité pokrytí planety je nutné nasadit stovky družic"
+        ],
+        "ans": 0,
+        "exp": "Z výšky 35 786 km je geometrická viditelnost ~42,4 % povrchu Země. Tři družice pokryjí většinu planety (kromě polárních oblastí)."
+    },
+    {
+        "id": 30, "topic": "sat-3", "topic_label": "3. LEO, MEO, GEO & Speciální dráhy",
+        "q": "Proč byly vyvinuty vysoce eliptické dráhy typu Molnija a Tundra?",
+        "options": [
+            "Pro kvalitní pokrytí vysokých zeměpisných šířek (Arktida, sever Ruska, Kanada, Skandinávie), kde mají GEO družice příliš nízký elevační úhel",
+            "Pro snížení obousměrné latence (RTT) pod 25 ms v rovníkových oblastech při zachování pevných nepřenosných parabolických antén",
+            "Pro optické snímkování zemského povrchu ve stejný místní sluneční čas pomocí precese roviny dráhy vyvolané koeficientem J₂",
+            "Pro minimalizaci radiační zátěže ve Van Allenových pásech u navigačních systémů GNSS typu GPS a Galileo"
+        ],
+        "ans": 0,
+        "exp": "GEO družice mají nad 60°–70° šířky velmi nízkou elevaci. Molnija a Tundra umístí apogeum vysoko nad severní polokouli, takže nad ní družice tráví většinu času."
+    },
+    {
+        "id": 31, "topic": "sat-3", "topic_label": "3. LEO, MEO, GEO & Speciální dráhy",
+        "q": "Jak se liší parametry dráhy Molnija od dráhy Tundra (obě mají typický sklon i ≈ 63,4°)?",
+        "options": [
+            "Molnija má oběžnou dobu ~12 h a vysokou excentricitu (~0,7–0,75), zatímco Tundra má 24hodinovou geosynchronní dobu (~23 h 56 min) a obvykle nižší excentricitu (~0,2–0,4)",
+            "Molnija je rovníková kruhová dráha (i = 0°, e = 0) ve výšce 35 786 km, zatímco Tundra je polární dráha (i = 90°) ve výšce 1 200 km s oběžnou dobou 110 minut",
+            "Molnija má 24hodinovou geosynchronní periodu s nižší excentricitou (~0,2–0,4), zatímco Tundra oběhne Zemi za ~12 hodin s vysokou excentricitou (~0,7–0,75)",
+            "Molnija i Tundra jsou obě dokonale kruhové dráhy (e = 0) na hranici MEO a liší se pouze tím, zda obíhají prográdně nebo retrográdně"
+        ],
+        "ans": 0,
+        "exp": "Molnija = 12h vysoce eliptická dráha (viditelnost > 8 h v apogeu); Tundra = 24h geosynchronní eliptická dráha (viditelnost 12–16 h, quasi-geostacionární)."
+    },
+    {
+        "id": 32, "topic": "sat-3", "topic_label": "3. LEO, MEO, GEO & Speciální dráhy",
+        "q": "Proč se družice na drahách Molnija a Tundra udrží tak dlouho nad sledovanou severní oblastí?",
+        "options": [
+            "V okolí apogea (nejdále od Země) se podle 2. Keplerova zákona pohybují nejpomaleji, takže tam tráví většinu své oběžné doby",
+            "V okolí perigea (nejblíže Zemi) se podle 2. Keplerova zákona pohybují nejpomaleji a apogeum proletí během několika minut",
+            "V okolí apogea dosahují únikové rychlosti 11,2 km/s a krátkodobě tak vyrovnávají rotační rychlost zemského povrchu",
+            "Protože jejich rovina dráhy precesuje vlivem zploštění Země přesně o 0,9856° za den proti směru rotace Země"
+        ],
+        "ans": 0,
+        "exp": "Z 2. Keplerova zákona plyne nejpomalejší pohyb v apogeu – nad severní polokoulí tak družice „visí“ 8+ hodin (Molnija) či 12–16 hodin (Tundra)."
+    },
+    {
+        "id": 33, "topic": "sat-3", "topic_label": "3. LEO, MEO, GEO & Speciální dráhy",
+        "q": "Co je největší uživatelská výhoda GEO družice pro pozemní terminál oproti LEO a MEO?",
+        "options": [
+            "Stálá poloha na obloze umožňuje použít jednoduchou pevně nasměrovanou anténu bez průběžného sledování pohybu družice",
+            "Výrazně nižší útlum volného prostoru (FSPL) umožňuje vysílat s mnohem nižším výkonem než u LEO terminálů",
+            "Minimální obousměrné zpoždění (RTT pod 50 ms) vhodné pro vysoce interaktivní hlasové a herní aplikace",
+            "Vysoký elevační úhel nad oběma zeměpisnými póly zaručující spolehlivé spojení i v arktických oblastech"
+        ],
+        "ans": 0,
+        "exp": "Díky zdánlivě nehybné poloze GEO družice stačí pevná anténa (např. satelitní parabola na domě či pevný VSAT)."
     },
 
     # =========================================================================
-    # OKRUH: KABELÁŽ 9 – Kabely UTP, FTP, STP, kategorie a plastový kříž („rybí kost“)
+    # SAT-4: Vliv dráhy na rádiový spoj (Footprint, Latence, Doppler, FSPL) (11 otázek)
     # =========================================================================
     {
-        "id": 33, "topic": "sk-9", "topic_label": "Otázka 9: UTP, FTP, STP a kategorie",
-        "q": "Co znamená zkratka UTP a jaká je jeho základní konstrukce?",
+        "id": 34, "topic": "sat-4", "topic_label": "4. Spoj: Footprint, Latence, Doppler, FSPL",
+        "q": "Jaký je rozdíl mezi geometrickou oblastí viditelnosti družice a skutečným footprintem (stopou pokrytí)?",
         "options": [
-            "Unshielded Twisted Pair – nestíněná kroucená dvojlinka bez kovového stínění, skládající se ze 4 párů (8 žil/vodičů)",
-            "Ultra Twisted Polymer – optický kabel se 4 skleněnými vlákny a hliníkovým pláštěm",
-            "Universal Twin Port – stíněný kabel se 2 páry vodičů pro kategorii 7",
-            "Unshielded Telephone Plug – 6pinový telefonní konektor"
+            "Geometrická viditelnost znamená jen přímý výhled nad obzor (0° elevace), kdežto skutečný footprint je menší a závisí na minimálním elevačním úhlu, směrovém diagramu antén a výkonové bilanci spoje",
+            "Skutečný footprint je vždy větší než geometrická viditelnost, protože refrakce v troposféře ohýbá rádiové vlny v pásmech Ku a Ka hluboko za geometrický horizont",
+            "Geometrická viditelnost platí pouze pro nízkoletící družice LEO a MEO, zatímco pojem footprint se používá výhradně pro celosvětové pokrytí tří geostacionárních družic",
+            "Oba pojmy vyjadřují totožnou kruhovou oblast na povrchu Země vymezenou čistě výškou družice nad rovníkem bez vlivu anténního svazku či elevace"
         ],
         "ans": 0,
-        "exp": "UTP = Unshielded Twisted Pair (nestíněná kroucená dvojlinka), nemá kovové stínění a obsahuje 4 páry = 8 vodičů."
+        "exp": "Praktická služba vyžaduje nenulovou minimální elevaci (aby se omezilo stínění a průchod atmosférou) a dostatečný výkon anténního svazku."
     },
     {
-        "id": 34, "topic": "sk-9", "topic_label": "Otázka 9: UTP, FTP, STP a kategorie",
-        "q": "Z kolika párů a kolika jednotlivých žil (vodičů) se skládá standardní kabel UTP / STP?",
+        "id": 35, "topic": "sat-4", "topic_label": "4. Spoj: Footprint, Latence, Doppler, FSPL",
+        "q": "Jaké je přibližné jednosměrné zpoždění šíření signálu pro jeden úsek Země → GEO družice (35 786 km) a jaká je reálná obousměrná síťová latence (RTT)?",
         "options": [
-            "Ze 4 párů (celkem 8 žil / vodičů)",
-            "Ze 2 párů (celkem 4 žíly / vodiče)",
-            "Z 8 párů (celkem 16 žil / vodičů)",
-            "Ze 6 párů (celkem 12 žil / vodičů)"
+            "Jeden úsek ~119 ms; spojení A→GEO→B ~239 ms; minimální fyzikální RTT ~478 ms a reálné síťové RTT typicky 500–650 ms",
+            "Jeden úsek ~25 ms; spojení A→GEO→B ~50 ms; minimální fyzikální RTT ~100 ms a reálné síťové RTT typicky 120–150 ms",
+            "Jeden úsek ~60 ms; spojení A→GEO→B ~120 ms; minimální fyzikální RTT ~240 ms a reálné síťové RTT typicky 250–300 ms",
+            "Jeden úsek ~239 ms; spojení A→GEO→B ~478 ms; minimální fyzikální RTT ~956 ms a reálné síťové RTT přes 1 100 ms"
         ],
         "ans": 0,
-        "exp": "Standardní datový kabel pro strukturovanou kabeláž obsahuje 4 kroucené páry, tedy 8 jednotlivých vodičů."
+        "exp": "Ze 35 786 km / c plyne ~119,4 ms na jeden skok, ~238,7 ms jednosměrně A→GEO→B, ~477,5 ms min. RTT a 500–650 ms v reálném provozu."
     },
     {
-        "id": 35, "topic": "sk-9", "topic_label": "Otázka 9: UTP, FTP, STP a kategorie",
-        "q": "V jaké kategorii (a třídě) se podle tvého výpisu z hodin typicky využívají nestíněné kabely UTP a od které kategorie se využívá STP?",
+        "id": 36, "topic": "sat-4", "topic_label": "4. Spoj: Footprint, Latence, Doppler, FSPL",
+        "q": "Seřaďte správně typy oběžných drah od NEJNIŽŠÍ po NEJVYŠŠÍ typickou obousměrnou latenci (RTT):",
         "options": [
-            "UTP má využití do kategorie 6 (třída E); STP se využívá v kategorii 6a a výš (třída Ea a výš)",
-            "UTP se využívá pouze v kategorii 1; STP se využívá pouze v kategorii 3",
-            "UTP se využívá v kategorii 7 a 8; STP pouze do kategorie 5e",
-            "UTP i STP lze bez omezení používat až do kategorie 8 (2000 MHz)"
+            "LEO (20–100 ms) < MEO (50–150 ms) < GEO (500–650 ms)",
+            "MEO (20–100 ms) < LEO (50–150 ms) < GEO (500–650 ms)",
+            "LEO (20–100 ms) < GEO (150–250 ms) < MEO (500–650 ms)",
+            "GEO (20–100 ms) < MEO (150–300 ms) < LEO (500–650 ms)"
         ],
         "ans": 0,
-        "exp": "Přesně dle zápisků z hodin: UTP má využití v kategorii 6 (třída E), zatímco STP (kde je každý pár samostatně stíněný) se využívá v kategorii 6a a výš (Ea a výš)."
+        "exp": "Latence roste se vzdáleností: Starlink (LEO) ~25–50 ms, OneWeb (LEO) ~100 ms, O3b (MEO) ~150 ms, GEO ~500–650 ms."
     },
     {
-        "id": 36, "topic": "sk-9", "topic_label": "Otázka 9: UTP, FTP, STP a kategorie",
-        "q": "Co je to kabel FTP (Foiled Twisted Pair) podle zápisků z hodin?",
+        "id": 37, "topic": "sat-4", "topic_label": "4. Spoj: Footprint, Latence, Doppler, FSPL",
+        "q": "Co způsobuje Dopplerův frekvenční posuv v družicové komunikaci a jak se projevuje při přibližování družice?",
         "options": [
-            "Kompromis mezi UTP a STP – kroucená dvojlinka s celkovým stíněním z hliníkové fólie kolem všech 4 párů dohromady (jednotlivé páry stíněné nejsou)",
-            "Kabel, kde je každý ze 4 párů samostatně stíněný, ale chybí vnější plastový plášť",
-            "Čistě optický kabel určený pro protokol File Transfer Protocol",
-            "Nestíněný kabel bez jakékoliv hliníkové fólie"
+            "Způsobuje ho radiální složka relativní rychlosti mezi družicí a terminálem; při přibližování přijímaná frekvence roste (kladný posuv)",
+            "Způsobuje ho radiální složka relativní rychlosti mezi družicí a terminálem; při přibližování přijímaná frekvence klesá (záporný posuv)",
+            "Způsobuje ho výhradně tečná rychlost družice kolmá na spojnici s terminálem; při přibližování se frekvence nemění",
+            "Způsobuje ho průchod signálu ionosférou a troposférou (zejména v dešti); posuv roste se snižující se frekvencí nosné"
         ],
         "ans": 0,
-        "exp": "FTP = Foiled Twisted Pair je kompromis mezi UTP a STP: má společnou hliníkovou fólii kolem všech 4 párů dohromady, ale jednotlivé páry samostatně stíněné nejsou."
+        "exp": "Dopplerův jev je dán časovou změnou vzdálenosti (radiální rychlostí v_r). Přibližování frekvenci zvyšuje, vzdalování snižuje."
     },
     {
-        "id": 37, "topic": "sk-9", "topic_label": "Otázka 9: UTP, FTP, STP a kategorie",
-        "q": "Jak je stíněný kabel STP (Shielded Twisted Pair) podle tvého výpisu z hodin a obrázku průřezu?",
+        "id": 38, "topic": "sat-4", "topic_label": "4. Spoj: Footprint, Latence, Doppler, FSPL",
+        "q": "U které oběžné dráhy je Dopplerův posuv pro pevný pozemní terminál NEJVÝRAZNĚJŠÍ (desítky až stovky kHz v pásmech Ku/Ka) a u které je ZANEDBATELNÝ?",
         "options": [
-            "Stejná struktura 4 párů jako UTP, ale každý pár je samostatně stíněný (pair shield)",
-            "Nemá vůbec žádné kovové stínění, pouze silnější PVC plášť",
-            "Má stíněný pouze jeden modrý pár a ostatní tři páry jsou nestíněné",
-            "Stínění je tvořeno pouze středovým plastovým křížem"
+            "Nejvýraznější u rychlých LEO družic (nutná průběžná kompenzace); zanedbatelný až nulový u ideální GEO družice",
+            "Nejvýraznější u vysokých GEO družic (vzdálenost 35 786 km); zanedbatelný u LEO družic díky krátké době přeletu",
+            "Nejvýraznější na střední dráze MEO ve Van Allenových pásech; zcela nulový u všech vysoce eliptických drah Molnija",
+            "Stejně výrazný u LEO, MEO i GEO drah, protože všechny družice se pohybují vůči Slunci podobnou úhlovou rychlostí"
         ],
         "ans": 0,
-        "exp": "U STP (dle obrázku a zápisků z hodin) má kabel stejnou strukturu jako UTP, ale každý pár je samostatně stíněný (pair shield)."
+        "exp": "LEO družice letí ~7–8 km/s a rychle mění úhel i radiální rychlost (v Ku/Ka až stovky kHz posuvu). Ideální GEO vůči pevnému terminálu stojí (nulová v_r)."
     },
     {
-        "id": 38, "topic": "sk-9", "topic_label": "Otázka 9: UTP, FTP, STP a kategorie",
-        "q": "K čemu slouží plastový kříž (tzv. „rybí kost“) uvnitř metalického kabelu a pro kterou kategorii je typický?",
+        "id": 39, "topic": "sat-4", "topic_label": "4. Spoj: Footprint, Latence, Doppler, FSPL",
+        "q": "Na čem závisí útlum ve volném prostoru FSPL (Free-Space Path Loss) v modelu volného prostoru?",
         "options": [
-            "Je typický pro kategorii 6 (Cat 6) a slouží k mechanickému oddělení jednotlivých párů, aby nešly moc k sobě",
-            "Je typický pro kategorii 3 a slouží k vedení elektrického napájení 230 V",
-            "Je typický pro optická vlákna 9/125 µm a slouží k odrážení světla",
-            "Slouží k uzemnění stínění u konektoru RJ-11"
+            "Roste se čtvercem vzdálenosti d² a se čtvercem pracovní frekvence f² (v dB roste s 20·log₁₀)",
+            "Roste lineárně se vzdáleností d a nepřímo úměrně s druhou mocninou pracovní frekvence f²",
+            "Roste se čtvercem vzdálenosti d², ale s rostoucí pracovní frekvencí f klesá díky užšímu svazku",
+            "Závisí výhradně na vzdálenosti d a obsahu vodní páry v atmosféře, nikoli na pracovní frekvenci"
         ],
         "ans": 0,
-        "exp": "Plastový středový kříž („rybí kost“) je typický pro kabely kategorie 6 – drží 4 páry od sebe, aby se minimalizovaly přeslechy."
+        "exp": "L_FS = (4πd / λ)² = (4πdf / c)², tedy útlum roste kvadraticky se vzdáleností d i frekvencí f."
     },
     {
-        "id": 39, "topic": "sk-9", "topic_label": "Otázka 9: UTP, FTP, STP a kategorie",
-        "q": "Jaké jsou hlavní praktické výhody kabelu UTP oproti stíněnému STP?",
+        "id": 40, "topic": "sat-4", "topic_label": "4. Spoj: Footprint, Latence, Doppler, FSPL",
+        "q": "Jaký je přibližný rozdíl v útlumu volného prostoru (FSPL) na stejné frekvenci 2 GHz mezi družicí LEO (550 km) a družicí GEO (35 786 km)?",
         "options": [
-            "Je levnější, jednodušší na instalaci a po sundání pláště rovnou vidíme barvy vodičů vlastním okem",
-            "Dosahuje vyšší odolnosti proti elektromagnetickému rušení a používá se v kategorii 7a",
-            "Má samostatné fóliové stínění kolem každého páru",
-            "Umožňuje přenos na vzdálenost 1500 metrů bez opakovače"
+            "Přibližně 36 dB ve prospěch LEO (cca 4 200násobný rozdíl lineárního činitele útlumu)",
+            "Přibližně 12 dB ve prospěch LEO (cca 16násobný rozdíl lineárního činitele útlumu)",
+            "Přibližně 36 dB ve prospěch GEO, protože signál na vyšší dráze méně rozptyluje atmosféra",
+            "Přibližně 6 dB ve prospěch LEO, protože vzdálenost GEO je zhruba dvojnásobkem MEO"
         ],
         "ans": 0,
-        "exp": "UTP nemá kovové stínění, proto je levnější, ohebnější, jednodušší na instalaci a barvy žil jsou ihned viditelné."
+        "exp": "Dle tabulky ze skript na 2 GHz: LEO (550 km) ~153,3 dB, MEO (20 200 km) ~184,6 dB, GEO (35 786 km) ~189,5 dB → rozdíl LEO vs. GEO ~36,3 dB."
+    },
+    {
+        "id": 41, "topic": "sat-4", "topic_label": "4. Spoj: Footprint, Latence, Doppler, FSPL",
+        "q": "Proč vysoká frekvence (např. pásmo Ka) nemusí v celkové výkonové bilanci vždy prohrát s nižší frekvencí, přestože má vyšší FSPL?",
+        "options": [
+            "Protože při stejných fyzických rozměrech antény dosahuje vyšší frekvence většího anténního zisku a navíc poskytuje širší dostupné přenosové pásmo",
+            "Protože v pásmu Ka (27–40 GHz) klesá útlum deštěm i atmosférickou vodní párou na zanedbatelnou hodnotu oproti pásmům C a Ku",
+            "Protože vyšší frekvence nevyžaduje u parabolických ani plošných antén přesné směrování a je imunní vůči Dopplerovu posuvu",
+            "Protože u vysokých frekvencí se uplatňuje ionosférický odraz, který v celkové výkonové bilanci snižuje efektivní vzdálenost k GEO"
+        ],
+        "ans": 0,
+        "exp": "Zisk parabolické antény roste s f², takže při stejné velikosti antény vyšší zisk kompenzuje vyšší FSPL; daň za Ka pásmo je ale větší citlivost na déšť."
+    },
+    {
+        "id": 42, "topic": "sat-4", "topic_label": "4. Spoj: Footprint, Latence, Doppler, FSPL",
+        "q": "Jaký praktický dopad má nižší útlum volného prostoru a kratší vzdálenost u LEO systémů na uživatelské terminály?",
+        "options": [
+            "Umožňuje použít menší, kompaktní antény (flat panely) a nižší vysílací výkony při dosažení vysokých datových rychlostí",
+            "Vyžaduje použití rozměrných pevných parabol o průměru nejméně 2,4 m bez možnosti elektronického směrování svazku",
+            "Umožňuje provozovat terminály zcela bez vysílače, pouze s pasivním odrazem signálu od centrálního VSAT HUBu",
+            "Zvyšuje obousměrnou latenci (RTT) nad 500 ms výměnou za nižší spotřebu energie v RF jednotce terminálu"
+        ],
+        "ans": 0,
+        "exp": "Příznivější výkonová bilance na LEO umožňuje kompaktní uživatelské terminály (např. Starlink Mini/Standard)."
+    },
+    {
+        "id": 43, "topic": "sat-4", "topic_label": "4. Spoj: Footprint, Latence, Doppler, FSPL",
+        "q": "Proč mají geostacionární družice horší kvalitu spojení ve vysokých zeměpisných šířkách (blízko polárních oblastí)?",
+        "options": [
+            "Družice je nízko nad obzorem (nízký elevační úhel), signál prochází delší vrstvou atmosféry a snadno jej stíní terén či budovy",
+            "Družice nad rovníkem má vůči polárním oblastem extrémní radiální rychlost, což vyvolává Dopplerův posuv v řádu stovek kHz",
+            "Vysoké zeměpisné šířky leží mimo gravitační dosah geostacionárních družic, takže antény musí mít trojnásobný průměr",
+            "Zemská ionosféra nad 60° šířky zcela pohlcuje pásma Ku a Ka a propouští výhradně laserové spoje na 1 550 nm"
+        ],
+        "ans": 0,
+        "exp": "Nízký elevační úhel znamená delší průchod atmosférou (vyšší útlum a scintilace) a vysoké riziko zastínění překážkami."
+    },
+    {
+        "id": 44, "topic": "sat-4", "topic_label": "4. Spoj: Footprint, Latence, Doppler, FSPL",
+        "q": "Jak ovlivňuje typ oběžné dráhy řízení spojení u pozemního terminálu při přechodu z GEO na LEO?",
+        "options": [
+            "Pevné nasměrování antény již nestačí – terminál musí elektronicky nebo mechanicky sledovat pohybující se družice a provádět časté předávání spojení (handover)",
+            "Terminál na LEO nepotřebuje sledovat pohyb družice, stačí jej nastavit pevně do zenitu a využít všesměrový svazek bez handoveru",
+            "Předávání spojení (handover) je nutné pouze u geostacionárních družic kvůli jejich dennímu pohybu po analemě na obloze",
+            "Při přechodu na LEO lze zachovat původní pevnou GEO parabolu bez úprav, pouze se sníží vysílací výkon modemu"
+        ],
+        "ans": 0,
+        "exp": "LEO družice rychle přelétají po obloze (~95 min oběh), proto je nutné sledování svazkem (phased array / flat panel) a handover mezi družicemi."
     },
 
     # =========================================================================
-    # OKRUH: KABELÁŽ 10 – Proč používáme technologii kroucených párů?
+    # SAT-5: Satelitní konstelace (Walker Delta & Star), Spolehlivost, ISL (11 otázek)
     # =========================================================================
     {
-        "id": 40, "topic": "sk-10", "topic_label": "Otázka 10: Kroucené páry",
-        "q": "Proč ve strukturované kabeláži používáme technologii kroucených párů?",
+        "id": 45, "topic": "sat-5", "topic_label": "5. Konstelace Walker & Laser ISL",
+        "q": "Co znamená zápis konstelace Walker Delta ve tvaru i : T / P / F (např. Galileo 56° : 24 / 6 / 1)?",
         "options": [
-            "Abychom omezili elektromagnetické rušení (EMI) a přeslechy mezi jednotlivými vodiči a páry, a zajistili tak spolehlivější přenos dat",
-            "Aby se do kabelu vešlo více mědi a zvýšila se elektrická kapacita vedení",
-            "Aby v kabelu vznikal totální vnitřní odraz světla",
-            "Protože rovné vodiče nelze nacvaknout do konektoru RJ-45"
+            "i = inklinace (56°), T = celkový počet družic (24), P = počet orbitálních rovin (6), F = fázový index (1)",
+            "i = inklinace (56°), T = oběžná doba v hodinách (24), P = počet družic v rovině (6), F = frekvenční pásmo (1)",
+            "i = index precese (56°), T = celkový počet rovin (24), P = počet pozemních bran (6), F = faktor útlumu (1)",
+            "i = inklinace (56°), T = celkový počet družic (24), P = perigeum v tisících km (6), F = počet spot-beamů (1)"
         ],
         "ans": 0,
-        "exp": "Vzájemné zkroucení vodičů v kombinaci s diferenciálním přenosem omezuje elektromagnetické rušení z okolí i přeslechy mezi páry."
+        "exp": "U zápisu i : T/P/F znamená T celkový počet družic, P počet orbitálních rovin (v každé je pak T/P družic) a F fázový posun mezi rovinami."
     },
     {
-        "id": 41, "topic": "sk-10", "topic_label": "Otázka 10: Kroucené páry",
-        "q": "Proč má každý ze 4 párů v kabelu UTP/STP jinou hustotu zákrutů (různý krok zkrutu)?",
+        "id": 46, "topic": "sat-5", "topic_label": "5. Konstelace Walker & Laser ISL",
+        "q": "Kolik družic je v jedné orbitální rovině a jaký je úhlový rozestup rovin u konstelace Walker Delta 56° : 24 / 6 / 1?",
         "options": [
-            "Aby se omezily vzájemné přeslechy a rušení mezi sousedními páry uvnitř kabelu",
-            "Aby šlo podle hmatu poznat barvu vodiče ve tmě",
-            "Kvůli úspoře mědi u hnědého a modrého páru",
-            "Aby měl každý pár jinou maximální délku (90 m až 1500 m)"
+            "4 družice v každé rovině (24 / 6) a rozestup rovin 60° (360° / 6)",
+            "6 družic v každé rovině (24 / 4) a rozestup rovin 30° (180° / 6)",
+            "4 družice v každé rovině (24 / 6) a rozestup rovin 30° (180° / 6)",
+            "6 družic v každé rovině a rozestup rovin 90° kolem rovníku"
         ],
         "ans": 0,
-        "exp": "Kdyby měly sousední páry shodnou hustotu zákrutů, jejich smyčky by ležely souběžně proti sobě a docházelo by k silným přeslechům."
+        "exp": "S = T / P = 24 / 6 = 4 družice v rovině. U Walker Delta jsou roviny rozmístěny po 360°, takže ΔΩ = 360° / 6 = 60°."
     },
     {
-        "id": 42, "topic": "sk-10", "topic_label": "Otázka 10: Kroucené páry",
-        "q": "Jak probíhá přenos signálu v jednom krouceném páru a jak jej vyhodnocuje přijímač?",
+        "id": 47, "topic": "sat-5", "topic_label": "5. Konstelace Walker & Laser ISL",
+        "q": "Jaký je hlavní geometrický rozdíl mezi konstelací Walker Delta a konstelací Walker Star?",
         "options": [
-            "Jeden vodič přenáší kladnou polaritu signálu (+U), druhý opačnou polaritu (−U) a přijímač vyhodnocuje rozdíl napětí mezi vodiči",
-            "Jeden vodič přenáší data tam, druhý slouží pouze jako nulový zemnící drát a přijímač měří proud",
-            "Oba vodiče přenášejí stejnou kladnou polaritu a přijímač napětí sčítá",
-            "Jeden vodič přenáší optický signál a druhý elektrické napájení"
+            "Walker Delta rozmisťuje roviny po 360° (typicky šikmé dráhy např. pro GNSS), kdežto Walker Star používá téměř polární dráhy rozložené v rozsahu 180° pro pokrytí včetně pólů",
+            "Walker Star rozmisťuje šikmé roviny po 360° nad rovníkem, kdežto Walker Delta používá výhradně polární dráhy rozložené v rozsahu 180° bez pokrytí rovníku",
+            "Walker Delta umisťuje všechny družice na jedinou geostacionární kružnici ve výšce 35 786 km, zatímco Walker Star využívá eliptické dráhy Molnija",
+            "Walker Star označuje konstelace bez mezisatelitních spojů ISL, zatímco Walker Delta je název výhradně pro sítě s laserovými spoji na 1 550 nm"
         ],
         "ans": 0,
-        "exp": "Při diferenciálním (symetrickém) přenosu nese jeden vodič +U, druhý −U a přijímač vyhodnocuje rozdíl napětí mezi nimi – soufázové rušení naindukované do obou vodičů se tím odečte."
+        "exp": "Walker Delta = roviny po 360° (Galileo); Walker Star = téměř polární roviny rozložené po 180° (např. Iridium)."
     },
     {
-        "id": 43, "topic": "sk-10", "topic_label": "Otázka 10: Kroucené páry",
-        "q": "Co se stane s vnějším elektromagnetickým rušením, které se naindukuje do obou zkroucených vodičů páru?",
+        "id": 48, "topic": "sat-5", "topic_label": "5. Konstelace Walker & Laser ISL",
+        "q": "Který známý komunikační systém využívá téměř polární konstelaci typu Walker Star se 66 provozními družicemi v 6 orbitálních rovinách (780 km)?",
         "options": [
-            "Protože přijímač vyhodnocuje rozdíl napětí mezi oběma vodiči, naindukované soufázové rušení se v přijímači odečte (vyruší)",
-            "Rušení se v přijímači zdvojnásobí, a proto je nutné vždy použít optiku",
-            "Rušení se přemění na světlo o vlnové délce 850 nm",
-            "Rušení zvýší přenosovou rychlost z 1 Gbps na 10 Gbps"
+            "Iridium (globální mobilní komunikace včetně polárních oblastí)",
+            "SES O3b mPOWER (středněorbitální MEO datová síť v ±50° šířky)",
+            "Eutelsat OneWeb (1200km konstelace se 652 družicemi v Ku/Ka)",
+            "Galileo (evropský navigační systém na MEO v konstelaci Delta)"
         ],
         "ans": 0,
-        "exp": "Díky zkroucení jsou oba vodiče vystaveny stejnému vnějšímu rušivému poli; při odečtení obou signálů v diferenciálním přijímači se rušivá složka vyruší."
+        "exp": "Iridium má 66 družic (6 rovin × 11 družic) ve výšce ~780 km a inklinaci ~86,4° (Walker Star)."
+    },
+    {
+        "id": 49, "topic": "sat-5", "topic_label": "5. Konstelace Walker & Laser ISL",
+        "q": "Jakou provozní zvláštnost musí řešit konstelace Walker Star v blízkosti severního a jižního pólu?",
+        "options": [
+            "Téměř polární orbitální roviny se u pólů geometricky sbližují a kříží, což komplikuje řízení některých mezisatelitních spojů a předávání provozu",
+            "U pólů dochází ke změně směru gravitace a družice musí provádět korekční zážehy proti přitažlivosti Měsíce",
+            "Nad 80° zeměpisné šířky klesá hustota pokrytí natolik, že signál nedosáhne na zem a musí se přepínat na GEO",
+            "Roviny dráhy se u pólů od sebe maximálně vzdalují, čímž se prodlužuje vzdálenost pro ISL nad dosah laseru"
+        ],
+        "ans": 0,
+        "exp": "Poledníkové (téměř polární) dráhy se sbíhají u pólů, což mění vzájemné úhlové rychlosti pro ISL."
+    },
+    {
+        "id": 50, "topic": "sat-5", "topic_label": "5. Konstelace Walker & Laser ISL",
+        "q": "Pokud má jedna družice pravděpodobnost provozuschopnosti p = 0,9 a v daném místě je nezávisle dostupných N = 5 redundantních družic, jak se vypočítá pravděpodobnost, že alespoň jedna funguje?",
+        "options": [
+            "P = 1 − (1 − p)ᴺ = 1 − (0,1)⁵ = 0,99999 (99,999 %)",
+            "P = pᴺ = (0,9)⁵ = 0,59049 (59,049 %)",
+            "P = 1 − pᴺ = 1 − (0,9)⁵ = 0,40951 (40,951 %)",
+            "P = (1 − p)ᴺ = (0,1)⁵ = 0,00001 (0,001 %)"
+        ],
+        "ans": 0,
+        "exp": "Aby systém selhal, musí selhat všechny N nezávislé družice najednou s pravděpodobností (1 − p)ᴺ. Funkčnost alespoň jedné je 1 − (1 − p)ᴺ."
+    },
+    {
+        "id": 51, "topic": "sat-5", "topic_label": "5. Konstelace Walker & Laser ISL",
+        "q": "Co jsou to mezisatelitní spoje (ISL – Inter-Satellite Links) a jakou hlavní výhodu přinášejí?",
+        "options": [
+            "Přímý přenos dat mezi družicemi ve vesmíru (rádiově nebo laserem) bez nutnosti okamžitě směrovat provoz přes pozemní bránu v každém úseku",
+            "Přímé bezdrátové propojení dvou sousedních pozemních VSAT terminálů bez účasti družice na oběžné dráze v režimu MESH",
+            "Vyhrazený záložní kanál mezi centrálním teleportem (HUB) a pozemní páteřní MPLS sítí pro případ výpadku optické trasy",
+            "Automatické řízení handoveru na úrovni koncového uživatelského modemu při přepínání mezi GEO a LEO sítí"
+        ],
+        "ans": 0,
+        "exp": "ISL vytváří páteřní síť přímo v kosmickém segmentu – snižuje závislost na hustotě pozemních bran (např. nad oceány)."
+    },
+    {
+        "id": 52, "topic": "sat-5", "topic_label": "5. Konstelace Walker & Laser ISL",
+        "q": "Jaká typická vlnová délka se používá u optických (laserových) mezisatelitních spojů ISL?",
+        "options": [
+            "Blízká infračervená oblast, typicky λ = 1 550 nm",
+            "Ultrafialová oblast kolem λ = 250 nm",
+            "Milimetrové rádiové vlny v pásmu Ka (λ ≈ 10 mm)",
+            "Viditelné červené světlo kolem λ = 650 nm"
+        ],
+        "ans": 0,
+        "exp": "Laserové ISL běžně pracují v blízké IR oblasti kolem λ = 1550 nm a dosahují rychlostí jednotek až desítek Gb/s."
+    },
+    {
+        "id": 53, "topic": "sat-5", "topic_label": "5. Konstelace Walker & Laser ISL",
+        "q": "Co je hlavní technickou nevýhodou laserových mezisatelitních spojů oproti rádiovým ISL?",
+        "options": [
+            "Extrémně úzký svazek klade vysoké nároky na přesnost zaměření, sledování a potlačení mechanických vibrací družice",
+            "Výrazně nižší přenosová kapacita omezená na jednotky Mbps a silné vzájemné rušení s okolními spoji",
+            "Vysoký útlum volného prostoru ve vakuu způsobený absorpcí infračerveného záření vodní párou ve vesmíru",
+            "Nemožnost použití u polárních a šikmých LEO konstelací kvůli silnému Dopplerovu posuvu v optickém pásmu"
+        ],
+        "ans": 0,
+        "exp": "Úzký laserový svazek nabízí obří kapacitu a minimální rušení, ale vyžaduje extrémně přesný systém akvizice, sledování a stabilizace (PAT)."
+    },
+    {
+        "id": 54, "topic": "sat-5", "topic_label": "5. Konstelace Walker & Laser ISL",
+        "q": "CHYTÁK ZE SKRIPT: Zaručuje velmi úzký paprsek laserového mezisatelitního spoje sám o sobě dostatečnou bezpečnost přenášených dat?",
+        "options": [
+            "Ne – úzký svazek sice ztěžuje nežádoucí zachycení signálu, ale nezajišťuje kryptografickou důvěrnost ani integritu; data je nutné šifrovat",
+            "Ano – vzhledem k úzkému svazku na vlnové délce 1 550 nm nelze paprsek v kosmu zachytit bez zničení přenosu, takže šifrování není nutné",
+            "Ano – fyzikální vlastnosti laserového přenosu ve vakuu splňují samy o sobě požadavky standardu FIPS 140-2 Level 3 bez L2 kryptování",
+            "Ne – protože laserový paprsek se ve vakuu rozptyluje všesměrově jako rádiový signál a pokrývá celou polokouli Země"
+        ],
+        "ans": 0,
+        "exp": "Fyzikální směrovost snižuje riziko odposlechu, ale nikdy nenahrazuje kryptografické zabezpečení (šifrování a autentizaci)."
+    },
+    {
+        "id": 55, "topic": "sat-5", "topic_label": "5. Konstelace Walker & Laser ISL",
+        "q": "Jakou roli hrají moderní LEO konstelace v perspektivních mobilních sítích 5G a 6G podle standardizace 3GPP?",
+        "options": [
+            "Jsou integrovány jako nepozemní sítě NTN (Non-Terrestrial Networks) pro rozšíření pokrytí a přímou komunikaci",
+            "Slouží výhradně jako pasivní záloha páteřních optických tras mezi pozemními ústřednami mimo standard 3GPP",
+            "Jsou využívány pouze pro jednosměrné televizní vysílání (Broadcast) v pásmu C bez zpětného datového kanálu",
+            "Nahrazují pozemní základnové stanice ve městech díky nulové latenci a absenci útlumu v budovách"
+        ],
+        "ans": 0,
+        "exp": "Koncept NTN (Non-Terrestrial Networks) v rámci 3GPP propojuje satelitní konstelace se sítěmi 5G a budoucími 6G."
     },
 
     # =========================================================================
-    # OKRUH: KABELÁŽ 11 – Normy definující třídy linek + tabulka tříd a frekvencí
+    # SAT-6: Kosmický segment, Transpondéry a Kmitočtová pásma (GiTySAT) (11 otázek)
     # =========================================================================
     {
-        "id": 44, "topic": "sk-11", "topic_label": "Otázka 11: Třídy linek a frekvence",
-        "q": "Které dvě normy definují třídy linek (A, B, C, D, E, Ea, F, Fa, I & II)?",
+        "id": 56, "topic": "sat-6", "topic_label": "6. Kosmický segment & Pásma",
+        "q": "Jaký je hlavní rozdíl mezi standardní telekomunikační družicí a družicí typu HTS (High Throughput Satellite)?",
         "options": [
-            "ČSN EN 50173 (evropská norma) a ISO/IEC 11801 (mezinárodní norma)",
-            "TIA/EIA-568A a TIA/EIA-568B",
-            "IEEE 802.3 a IEEE 802.11",
-            "ITU-T G.732 a G.703"
+            "HTS využívá mnoho úzkých bodových svazků (spot-beamů) s opakovaným využitím frekvencí, čímž dosahuje řádově vyšší celkové kapacity než široký svazek standardní družice",
+            "HTS vysílá jedním širokým kontinentálním svazkem s mnohem vyšším výkonem v pásmu C, čímž nahrazuje potřebu frekvenčního reuse a úzkých buněk",
+            "Standardní družice používají digitální palubní přepínání (On-board switching), kdežto HTS je omezena výhradně na jednoduché analogové transpondéry Bend pipe",
+            "Označení HTS se vztahuje výhradně na nízkoletící družice LEO ve výšce 550 km, zatímco standardní telekomunikační družice operují jen na GEO"
         ],
         "ans": 0,
-        "exp": "Písmenné třídy linek (Classes) definují evropská norma ČSN EN 50173 a mezinárodní norma ISO/IEC 11801."
+        "exp": "HTS (High Throughput Satellite) násobí přenosovou kapacitu pomocí desítek až stovek úzkých spot-beamů a frekvenčního reuse."
     },
     {
-        "id": 45, "topic": "sk-11", "topic_label": "Otázka 11: Třídy linek a frekvence",
-        "q": "Co znamenají zkratky ISO a IEC u mezinárodní normy ISO/IEC 11801?",
+        "id": 57, "topic": "sat-6", "topic_label": "6. Kosmický segment & Pásma",
+        "q": "Jak funguje nejjednodušší typ satelitního transpondéru označovaný jako „Bend pipe“?",
         "options": [
-            "ISO = International Organization for Standardization (Mezinárodní organizace pro normalizaci), IEC = International Electrotechnical Commission (Mezinárodní elektrotechnická komise)",
-            "ISO = Internal System Optics, IEC = Internet Ethernet Cabling",
-            "ISO = Institute of Shielded Optics, IEC = International European Cabling",
-            "ISO = Integrated Signal Output, IEC = Insertion Error Control"
+            "Transparentně přijme signál z uplinku, posune jeho frekvenci do downlinku, zesílí ho a vyšle zpět na Zemi bez digitálního zpracování obsahu",
+            "Demoduluje přijatý signál do základního pásma, vyhodnotí IP hlavičky a digitálně je přepne do jiného bodového svazku na palubě",
+            "Přepíná signál mezi různými frekvenčními pásmy (např. z Ku do Ka) pomocí interní křížové matice bez změny jeho polarizace",
+            "Ukládá přijaté datové pakety do vyrovnávací paměti družice a postupně je předává laserovým ISL spojem až nad cílovou oblastí"
         ],
         "ans": 0,
-        "exp": "Přesně dle výpisu z hodin: ISO = International Organization for Standardization, IEC = International Electrotechnical Commission."
+        "exp": "Bend pipe („ohnutá trubka“) je transparentní analogový/RF opakovač – bez demodulace a palubního přepínání."
     },
     {
-        "id": 46, "topic": "sk-11", "topic_label": "Otázka 11: Třídy linek a frekvence",
-        "q": "Jaký je frekvenční rozsah a odpovídající kategorie pro Třídu A?",
+        "id": 58, "topic": "sat-6", "topic_label": "6. Kosmický segment & Pásma",
+        "q": "Který typ transpondéru z prezentace GiTySAT umožňuje přímé přepínání či směrování signálu přímo na palubě družice?",
         "options": [
-            "Specifikováno do 100 kHz, Kategorie 1 (analogový telefon)",
-            "Specifikováno do 1 MHz, Kategorie 2 (ISDN)",
-            "Specifikováno do 16 MHz, Kategorie 3",
-            "Specifikováno do 100 MHz, Kategorie 5"
+            "On-board switching",
+            "Bend pipe transpondér",
+            "Cross type transpondér",
+            "Transparent RF repeater"
         ],
         "ans": 0,
-        "exp": "Třída A je specifikována do 100 kHz (odpovídá Kategorii 1 pro analogový telefon)."
+        "exp": "Prezentace uvádí 3 druhy transpondérů: Bend pipe, Cross type (křížové propojení) a On-board switching (palubní přepínání)."
     },
     {
-        "id": 47, "topic": "sk-11", "topic_label": "Otázka 11: Třídy linek a frekvence",
-        "q": "Jaký je frekvenční rozsah a odpovídající kategorie pro Třídu B?",
+        "id": 59, "topic": "sat-6", "topic_label": "6. Kosmický segment & Pásma",
+        "q": "Jaký je orientační frekvenční rozsah pásma C (C band) podle tabulky z prezentace GiTySAT?",
         "options": [
-            "Specifikováno do 1 MHz, Kategorie 2 (ISDN, 10Base-T, Token Ring 4 MB)",
-            "Specifikováno do 100 kHz, Kategorie 1",
-            "Specifikováno do 16 MHz, Kategorie 3",
-            "Specifikováno do 250 MHz, Kategorie 6"
+            "4 – 8 GHz (satelitní komunikace, Wi-Fi, meteorologické radary)",
+            "8 – 12 GHz (radary, armádní komunikace, hluboký vesmír)",
+            "11 – 18 GHz (satelitní TV vysílání a běžné sítě VSAT)",
+            "18 – 27 GHz (radary a satelitní spoje u útlumu vodní párou)"
         ],
         "ans": 0,
-        "exp": "Třída B je specifikována do 1 MHz (odpovídá Kategorii 2)."
+        "exp": "C band pokrývá 4–8 GHz; díky nízké frekvenci je vysoce odolný proti dešti."
     },
     {
-        "id": 48, "topic": "sk-11", "topic_label": "Otázka 11: Třídy linek a frekvence",
-        "q": "Jaký je frekvenční rozsah a odpovídající kategorie pro Třídu C?",
+        "id": 60, "topic": "sat-6", "topic_label": "6. Kosmický segment & Pásma",
+        "q": "Které satelitní pásmo (8 – 12 GHz) je typické pro armádní/vládní fixní a mobilní satelitní komunikace, radary a komunikaci s hlubokým vesmírem?",
         "options": [
-            "Specifikováno do 16 MHz, Kategorie 3 (10 Mbps, Token Ring 16 MB)",
-            "Specifikováno do 1 MHz, Kategorie 2",
-            "Specifikováno do 100 MHz, Kategorie 5",
-            "Specifikováno do 500 MHz, Kategorie 6a"
+            "X band (8 – 12 GHz)",
+            "C band (4 – 8 GHz)",
+            "Ku band (11 – 18 GHz)",
+            "K band (18 – 27 GHz)"
         ],
         "ans": 0,
-        "exp": "Třída C je specifikována do 16 MHz a odpovídá Kategorii 3."
+        "exp": "X band (8–12 GHz) je klasické pásmo pro radary, vládní/vojenské satelitní spoje a hluboký vesmír."
     },
     {
-        "id": 49, "topic": "sk-11", "topic_label": "Otázka 11: Třídy linek a frekvence",
-        "q": "Jaký je frekvenční rozsah pro Třídu D (Kategorie 5) a Třídu D 2002 (Kategorie 5e) dle tabulky z hodin?",
+        "id": 61, "topic": "sat-6", "topic_label": "6. Kosmický segment & Pásma",
+        "q": "Jaký rozsah má pásmo Ku (Ku band) a kde se s ním nejčastěji setkáme v praxi?",
         "options": [
-            "Třída D (Cat 5): do 100 MHz (100 Mbps Fast Ethernet); Třída D 2002 (Cat 5e): 100 MHz (350 MHz) pro 1 Gbps Gigabit Ethernet",
-            "Třída D: do 16 MHz; Třída D 2002: do 250 MHz",
-            "Třída D: do 250 MHz; Třída D 2002: do 500 MHz",
-            "Třída D: do 600 MHz; Třída D 2002: do 1000 MHz"
+            "11 – 18 GHz; satelitní TV vysílání (downlink), běžné VSAT sítě a terminály OneWeb",
+            "4 – 8 GHz; vysoce odolné spoje v tropických deštích, Wi-Fi a meteorologické radary",
+            "18 – 27 GHz; širokopásmové spoje citlivé na rezonanční útlum vodní párou při 22,23 GHz",
+            "27 – 40 GHz; moderní HTS družice, brány systémů O3b/Starlink a mobilní sítě 5G"
         ],
         "ans": 0,
-        "exp": "Třída D je specifikována do 100 MHz (Cat 5, 100 Mbps); u D 2002 (Cat 5e, 1 Gbps) uvádí tabulka z hodin 100 MHz (350 MHz)."
+        "exp": "Ku band (11–18 GHz) je nejrozšířenější pásmo pro satelitní televizi i komerční VSAT spoje."
     },
     {
-        "id": 50, "topic": "sk-11", "topic_label": "Otázka 11: Třídy linek a frekvence",
-        "q": "Jaký je frekvenční rozsah, kategorie a přenosová rychlost pro Třídu E?",
+        "id": 62, "topic": "sat-6", "topic_label": "6. Kosmický segment & Pásma",
+        "q": "CHYTÁK Z PREZENTACE: Proč je v pásmu K (18 – 27 GHz) nutné dávat pozor právě na frekvenci 22,23 GHz?",
         "options": [
-            "Do 250 MHz, Kategorie 6, 1 Gbps – Gigabit Ethernet (1000Base-T)",
-            "Do 100 MHz, Kategorie 5, 100 Mbps",
-            "Do 500 MHz, Kategorie 6a, 10 Gbps",
-            "Do 600 MHz, Kategorie 7, 10 Gbps"
+            "Dochází tam k výraznému rezonančnímu útlumu signálu vodní párou v atmosféře",
+            "Dochází tam k maximálnímu rušení od pozemních automobilových radarů a 5G sítí",
+            "Na této frekvenci nastává úplný odraz signálu od spodní vrstvy zemské ionosféry",
+            "Tato frekvence je mezinárodně vyhrazena výhradně pro navigační signály GNSS"
         ],
         "ans": 0,
-        "exp": "Třída E odpovídá Kategorii 6 a je specifikována do 250 MHz (1 Gbps Gigabit Ethernet)."
+        "exp": "Tabulka satelitních pásem GiTySAT výslovně upozorňuje: K band (18–27 GHz) – pozor na útlum vodní párou při 22,23 GHz!"
     },
     {
-        "id": 51, "topic": "sk-11", "topic_label": "Otázka 11: Třídy linek a frekvence",
-        "q": "Jaký je frekvenční rozsah, kategorie a přenosová rychlost pro Třídu Ea?",
+        "id": 63, "topic": "sat-6", "topic_label": "6. Kosmický segment & Pásma",
+        "q": "Které frekvenční pásmo (27 – 40 GHz) používají moderní vysokokapacitní systémy jako O3b mPOWER, brány OneWeb/Starlink a také sítě 5G?",
         "options": [
-            "Do 500 MHz, Kategorie 6a, 10 Gbps (10GBase-T)",
-            "Do 250 MHz, Kategorie 6, 1 Gbps",
-            "Do 600 MHz, Kategorie 7, 10 Gbps",
-            "Do 1000 MHz, Kategorie 7a, 40 Gbps"
+            "Ka band (27 – 40 GHz)",
+            "K band (18 – 27 GHz)",
+            "V band (40 – 75 GHz)",
+            "Ku band (11 – 18 GHz)"
         ],
         "ans": 0,
-        "exp": "Třída Ea odpovídá Kategorii 6a, pracuje do 500 MHz a přenáší 10 Gbps (10GBase-T)."
+        "exp": "Ka band (27–40 GHz) nabízí velkou šířku pásma pro moderní datové satelity (uplink/downlink) i 5G."
     },
     {
-        "id": 52, "topic": "sk-11", "topic_label": "Otázka 11: Třídy linek a frekvence",
-        "q": "Jaké jsou frekvenční rozsahy pro Třídu F (Kategorie 7) a Třídu Fa (Kategorie 7a)?",
+        "id": 64, "topic": "sat-6", "topic_label": "6. Kosmický segment & Pásma",
+        "q": "Jaké orientační frekvenční rozsahy mají nejvyšší experimentální satelitní pásma V band a E band?",
         "options": [
-            "Třída F (Cat 7): do 600 MHz; Třída Fa (Cat 7a): do 1000 MHz (oboje 10 Gbps)",
-            "Třída F (Cat 7): do 250 MHz; Třída Fa (Cat 7a): do 500 MHz",
-            "Třída F (Cat 7): do 500 MHz; Třída Fa (Cat 7a): do 2000 MHz",
-            "Třída F (Cat 7): do 100 MHz; Třída Fa (Cat 7a): do 350 MHz"
+            "V band: 40 – 75 GHz; E band: 60 – 90 GHz",
+            "V band: 18 – 27 GHz; E band: 27 – 40 GHz",
+            "V band: 27 – 40 GHz; E band: 40 – 75 GHz",
+            "V band: 60 – 90 GHz; E band: 90 – 120 GHz"
         ],
         "ans": 0,
-        "exp": "Třída F (Cat 7) je specifikována do 600 MHz a Třída Fa (Cat 7a) do 1000 MHz (1 GHz)."
+        "exp": "Dle tabulky z prezentace: V band = 40–75 GHz (experimentální sat. komunikace, auto radary) a E band = 60–90 GHz (experimentální sat. komunikace, využívaná i v bránách moderních LEO)."
     },
     {
-        "id": 53, "topic": "sk-11", "topic_label": "Otázka 11: Třídy linek a frekvence",
-        "q": "Jaký je frekvenční rozsah, kategorie a rychlost pro Třídy I & II podle tabulky z hodin?",
+        "id": 65, "topic": "sat-6", "topic_label": "6. Kosmický segment & Pásma",
+        "q": "Seřaďte správně satelitní pásma od NEJNIŽŠÍ po NEJVYŠŠÍ frekvenci:",
         "options": [
-            "1600 / 2000 MHz, Kategorie 8, 40 Gbps (40GBase-T) do 30 m",
-            "500 MHz, Kategorie 6a, 10 Gbps do 100 m",
-            "1000 MHz, Kategorie 7a, 100 Gbps do 1500 m",
-            "16 MHz, Kategorie 3, 10 Mbps"
+            "C band → X band → Ku band → K band → Ka band → V band → E band",
+            "C band → X band → K band → Ku band → Ka band → E band → V band",
+            "X band → C band → Ku band → Ka band → K band → V band → E band",
+            "C band → Ku band → X band → K band → Ka band → V band → E band"
         ],
         "ans": 0,
-        "exp": "Třída I & II odpovídá Kategorii 8 se šířkou pásma 1600/2000 MHz (2 GHz) pro přenos 40 Gbps (40GBase-T) na vzdálenost do 30 m."
+        "exp": "Správné pořadí: C (4–8), X (8–12), Ku (11–18), K (18–27), Ka (27–40), V (40–75), E (60–90 GHz)."
     },
     {
-        "id": 54, "topic": "sk-11", "topic_label": "Otázka 11: Třídy linek a frekvence",
-        "q": "Která třída linky má horní frekvenční mez 250 MHz?",
+        "id": 66, "topic": "sat-6", "topic_label": "6. Kosmický segment & Pásma",
+        "q": "Jaký je typický kompromis při přechodu z nižšího pásma (např. C) na vyšší pásmo (např. Ka)?",
         "options": [
-            "Třída E (Kategorie 6)",
-            "Třída D (Kategorie 5)",
-            "Třída Ea (Kategorie 6a)",
-            "Třída F (Kategorie 7)"
+            "Získáme mnohem větší šířku pásma a menší antény, ale signál je citlivější na atmosférický útlum a déšť (rain fade)",
+            "Získáme vyšší odolnost proti dešti a menší antény, ale za cenu výrazně užšího přenosového kanálu a nižší rychlosti",
+            "Sníží se útlum ve volném prostoru (FSPL), ale pro příjem na Zemi musíme použít rozměrnější parabolické antény",
+            "Získáme nižší obousměrnou latenci (RTT), ale musíme družici přesunout z geostacionární dráhy na střední dráhu MEO"
         ],
         "ans": 0,
-        "exp": "250 MHz = Třída E (Cat 6). (100 MHz = D, 500 MHz = Ea, 600 MHz = F, 1000 MHz = Fa)."
-    },
-    {
-        "id": 55, "topic": "sk-11", "topic_label": "Otázka 11: Třídy linek a frekvence",
-        "q": "Která třída linky má horní frekvenční mez 500 MHz?",
-        "options": [
-            "Třída Ea (Kategorie 6a)",
-            "Třída E (Kategorie 6)",
-            "Třída F (Kategorie 7)",
-            "Třída Fa (Kategorie 7a)"
-        ],
-        "ans": 0,
-        "exp": "500 MHz = Třída Ea (Kategorie 6a, 10GBase-T)."
-    },
-    {
-        "id": 56, "topic": "sk-11", "topic_label": "Otázka 11: Třídy linek a frekvence",
-        "q": "Která třída linky má horní frekvenční mez 600 MHz?",
-        "options": [
-            "Třída F (Kategorie 7)",
-            "Třída Ea (Kategorie 6a)",
-            "Třída Fa (Kategorie 7a)",
-            "Třída E (Kategorie 6)"
-        ],
-        "ans": 0,
-        "exp": "600 MHz = Třída F (Kategorie 7)."
-    },
-    {
-        "id": 57, "topic": "sk-11", "topic_label": "Otázka 11: Třídy linek a frekvence",
-        "q": "Která třída linky má horní frekvenční mez 1000 MHz (1 GHz)?",
-        "options": [
-            "Třída Fa (Kategorie 7a)",
-            "Třída F (Kategorie 7)",
-            "Třída I & II (Kategorie 8)",
-            "Třída Ea (Kategorie 6a)"
-        ],
-        "ans": 0,
-        "exp": "1000 MHz = Třída Fa (Kategorie 7a)."
+        "exp": "Vyšší pásma (Ku/Ka) přinášejí široké kanály a kompaktní antény, ale vyžadují řešení útlumu deštěm (např. pomocí ACM)."
     },
 
     # =========================================================================
-    # OKRUH: KABELÁŽ 12 – Co je to FEXT a jaký útlum FEXT požadujeme?
+    # SAT-7: GEO sítě a služby GiTySAT (Topologie, VSAT, Internet vs Privátní) (11 otázek)
     # =========================================================================
     {
-        "id": 58, "topic": "sk-12", "topic_label": "Otázka 12: Přeslech FEXT",
-        "q": "Co znamená zkratka FEXT a o jaký jev se jedná?",
+        "id": 67, "topic": "sat-7", "topic_label": "7. GEO sítě, Topologie & GiTy",
+        "q": "Která fakta o infrastruktuře a certifikaci společnosti GiTy, a.s. uvádí prezentace GiTySAT?",
         "options": [
-            "Far-End Crosstalk – přeslech na vzdáleném konci kabelu (rušení z jednoho páru do druhého měřené na opačném konci kabelu, než kde signál vzniká)",
-            "Fast Ethernet Extended Transmission – protokol pro prodloužení dosahu UTP kabelu na 500 m",
-            "Fiber External Termination – optická zásuvka na pracovní ploše",
-            "Near-End Crosstalk – přeslech měřený na stejném konci kabelu, kde je vysílač"
+            "Vlastní satelitní teleport (HUB) v ČR, pozemní MPLS síť v ČR a SR, dohled 24/7 se SLA a certifikace NBÚ – Tajné",
+            "Vlastní konstelace 20 MEO družic, pronajatý teleport v zahraničí, dohled v pracovní dny a certifikace pouze pro veřejný Internet",
+            "Pronajaté kapacity bez vlastního HUBu, propojení přes veřejné Wi-Fi uzly a dohledové centrum se SLA bez bezpečnostní prověrky",
+            "Vlastní LEO gateway stanice na každém kontinentu bez pozemní MPLS páteře a bez integrace s dohledovým centrem 24/7"
         ],
         "ans": 0,
-        "exp": "FEXT (Far-End Crosstalk) je přeslech na vzdáleném konci – nežádoucí rušení indukované z jednoho páru do jiného, měřené na opačném konci kabelu."
+        "exp": "GiTy disponuje vlastním satelitním HUBem v ČR, pozemní MPLS sítí v ČR/SR, dohledovým centrem 24/7/365 a certifikací NBÚ na stupeň Tajné."
     },
     {
-        "id": 59, "topic": "sk-12", "topic_label": "Otázka 12: Přeslech FEXT",
-        "q": "CHYTÁK Z TESTU: Jaký útlum přeslechu FEXT (v dB) u strukturované kabeláže požadujeme?",
+        "id": 68, "topic": "sat-7", "topic_label": "7. GEO sítě, Topologie & GiTy",
+        "q": "Jaké 4 topologické typy GEO satelitních spojů a sítí rozlišuje prezentace GiTySAT?",
         "options": [
-            "Požadujeme co nejvyšší (největší) hodnotu útlumu FEXT v decibelech (dB), aby vzájemné rušení mezi páry bylo co nejmenší",
-            "Požadujeme co nejnižší (nulový) útlum FEXT v dB, aby přeslech prošel kabelem bez ztrát",
-            "Požadujeme záporný útlum FEXT, aby se rušení mezi páry zesilovalo",
-            "Útlum FEXT požadujeme přesně 0 dB"
+            "Broadcast (jednosměrná distribuce), Bod–Bod (SCPC), Hvězdicová síť (1× VSAT HUB, n× terminál) a MESH struktura",
+            "Broadcast (jednosměrná distribuce), Kruhová síť (Token Ring), Sběrnice (Bus) a Stromová síť bez VSAT HUBu",
+            "Bod–Bod (SCPC), Walker Delta, Walker Star a laserová mezisatelitní páteř ISL v pásmu 1 550 nm",
+            "Hvězdicová síť (1× HUB), Hybridní NNI propoj, Privátní MPLS WAN a Veřejná internetová konfigurace s FUP"
         ],
         "ans": 0,
-        "exp": "Zásadní pravidlo z hodin: Útlum přeslechu v dB udává míru potlačení nežádoucího rušení. Čím vyšší je útlum přeslechu FEXT v dB, tím menší je rušení a tím kvalitnější je kabeláž!"
+        "exp": "Čtyři GEO topologie ze slidu 7: Broadcast, Bod–Bod (SCPC), Hvězdicová (Star s VSAT HUBem) a MESH."
     },
     {
-        "id": 60, "topic": "sk-12", "topic_label": "Otázka 12: Přeslech FEXT",
-        "q": "Na kterém konci kabelu se měří přeslech FEXT?",
+        "id": 69, "topic": "sat-7", "topic_label": "7. GEO sítě, Topologie & GiTy",
+        "q": "Která technologie se typicky používá pro vyhrazené GEO satelitní spoje typu „Bod – Bod“ mezi dvěma modemy / IP routery?",
         "options": [
-            "Na opačném (vzdáleném) konci kabelu, než kde rušící signál vzniká (kde je vysílač)",
-            "Na stejném (bližším) konci kabelu, kde je umístěn vysílač",
-            "Uprostřed kabelu v místě plastového kříže",
-            "Pouze na optickém rozvaděči CD"
+            "SCPC (Single Channel Per Carrier)",
+            "TDMA se sdíleným kanálem přes HUB",
+            "Asymetrické FDMA s jednosměrným Broadcastem",
+            "Dynamické přepínání On-board switching v LEO"
         ],
         "ans": 0,
-        "exp": "Far-End = vzdálený konec, tedy opačný konec kabelu oproti zdroji signálu."
+        "exp": "Spoje Bod–Bod využívají technologii SCPC (každý směr má svou vyhrazenou nosnou) se satelitními modemy či IP routery."
     },
     {
-        "id": 61, "topic": "sk-12", "topic_label": "Otázka 12: Přeslech FEXT",
-        "q": "Pokud má kabel A útlum přeslechu FEXT 45 dB a kabel B útlum přeslechu FEXT 25 dB, který kabel je kvalitnější a má menší vzájemné rušení párů?",
+        "id": 70, "topic": "sat-7", "topic_label": "7. GEO sítě, Topologie & GiTy",
+        "q": "Jaká je typická konfigurace a komunikační schéma satelitní sítě s HVĚZDICOVOU (Star) strukturou?",
         "options": [
-            "Kabel A (45 dB), protože vyšší útlum přeslechu v dB znamená silnější potlačení nežádoucího rušení",
-            "Kabel B (25 dB), protože nižší číslo v dB vždy znamená lepší kabel",
-            "Oba kabely mají shodné rušení",
-            "Nelze určit, protože FEXT se měří v megahertzích"
+            "1× centrální VSAT HUB a n× VSAT terminálů; asymetrické schéma (distribuční kanál z HUBu a zpětný kanál od terminálů přes TDMA/FDMA)",
+            "Vzájemné přímé propojení všech n terminálů jedním skokem bez centrálního VSAT HUBu se symetrickým provozem přes vyhrazené SCPC nosné",
+            "Jednosměrný distribuční kanál z centrálního teleportu ke všem n přijímacím parabolám bez jakéhokoli zpětného satelitního kanálu",
+            "Dva rovnocenné IP routery propojené symetrickým vyhrazeným kanálem SCPC mimo centrální dohledové centrum a VSAT HUB"
         ],
         "ans": 0,
-        "exp": "Čím vyšší je hodnota útlumu přeslechu FEXT v dB (45 dB > 25 dB), tím více je nežádoucí přeslech utlumen a tím méně se páry ruší."
+        "exp": "Hvězdicová síť má 1 centrální VSAT HUB a n koncových VSAT terminálů; využívá sdílené nebo vyhrazené kanály s přístupem TDMA/FDMA."
+    },
+    {
+        "id": 71, "topic": "sat-7", "topic_label": "7. GEO sítě, Topologie & GiTy",
+        "q": "V čem spočívá hlavní výhoda satelitní sítě s MESH strukturou oproti hvězdicové síti při komunikaci dvou poboček?",
+        "options": [
+            "Terminály mohou komunikovat napřímo jedním satelitním skokem (bez nutnosti dvojitého skoku přes centrální VSAT HUB), čímž se snižuje zpoždění na polovinu",
+            "Veškerý provoz poboček prochází dvojitým skokem přes centrální VSAT HUB, což umožňuje centrálně aplikovat silnější QoS a hlubší inspekci paketů",
+            "Pobočky jsou propojeny výhradně jednosměrným Broadcast kanálem, takže nepotřebují žádný zpětný kanál ani satelitní modem v terénu",
+            "MESH struktura nevyužívá geostacionární družici, ale automaticky směruje pakety mezi pozemními terminály přes pozemní MPLS síť G-Net"
+        ],
+        "ans": 0,
+        "exp": "Ve hvězdicové síti musí provoz pobočka→pobočka přes HUB (dva skoky přes GEO = ~1 s), zatímco v MESH jde přímo jedním skokem."
+    },
+    {
+        "id": 72, "topic": "sat-7", "topic_label": "7. GEO sítě, Topologie & GiTy",
+        "q": "Které vlastnosti jsou typické pro INTERNETOVOU konfiguraci GEO satelitních služeb?",
+        "options": [
+            "Velké množství terminálů, unifikované služby, přístup do Internetu, FUP, agregace a omezené možnosti dohledu",
+            "Malé specifické sítě, privátní služby dle požadavku, přídavné zabezpečení, QoS a End-to-End SNMP dohled",
+            "Garantovaná nesdílená kapacita CIR bez agregace a bez FUP limitů propojená přímo do firemní MPLS WAN",
+            "Přímé propojení poboček s firemní centrálou přes privátní NNI uzel bez jakéhokoli přístupu do veřejného Internetu"
+        ],
+        "ans": 0,
+        "exp": "Internetová konfigurace cílí na masové/unifikované připojení do Internetu s agregací, FUP a omezeným dohledem."
+    },
+    {
+        "id": 73, "topic": "sat-7", "topic_label": "7. GEO sítě, Topologie & GiTy",
+        "q": "Čím se odlišuje PRIVÁTNÍ satelitní síť GiTySAT od běžné internetové konfigurace?",
+        "options": [
+            "Propojuje pobočky s centrálou (např. do MPLS WAN), nabízí privátní služby dle požadavku, přídavné zabezpečení, QoS, End-to-End dohled (SNMP) a integraci s dalšími službami",
+            "Cílí na velké množství terminálů v mezinárodním prostředí s unifikovanými tarify, uplatňuje FUP, vysokou agregaci a poskytuje pouze omezené možnosti dohledu",
+            "Připojuje pobočky výhradně do veřejného Internetu přes sdílený rezidenční tarif bez garance SLA, bez QoS a bez napojení na dohledové centrum",
+            "Obejde se zcela bez pozemního VSAT HUBu a teleportu, protože pobočky komunikují s centrálou pouze přes veřejnou mobilní síť LTE"
+        ],
+        "ans": 0,
+        "exp": "Privátní síť je šitá na míru podnikovým/vládním zákazníkům: vlastní MPLS WAN integrace, QoS, extra šifrování a End-to-End SNMP dohled."
+    },
+    {
+        "id": 74, "topic": "sat-7", "topic_label": "7. GEO sítě, Topologie & GiTy",
+        "q": "Co znamená v kontextu VSAT sítí zkratka HUB (Teleport)?",
+        "options": [
+            "Centrální pozemní stanice provozovatele sítě, přes kterou prochází provoz terminálů ve hvězdicové síti a která řídí přístup ke kanálům",
+            "Venkovní RF jednotka umístěná přímo na ozařovači parabolické antény koncového uživatele pro převod frekvence do L-pásma",
+            "Palubní přepínací jednotka na geostacionární družici, která směruje spot-beamy bez účasti jakékoli pozemní infrastruktury",
+            "Vnitřní pasivní síťový rozbočovač u zákazníka, který spojuje satelitní modem iDirect s lokálními počítači"
+        ],
+        "ans": 0,
+        "exp": "Teleport (VSAT HUB) je hlavní pozemní brána a řídicí uzel hvězdicové satelitní sítě napojený na páteřní síť operátora (u GiTy na G-Net MPLS)."
+    },
+    {
+        "id": 75, "topic": "sat-7", "topic_label": "7. GEO sítě, Topologie & GiTy",
+        "q": "Které typy služeb podle prezentace GiTySAT nabízí společnost GiTy svým zákazníkům?",
+        "options": [
+            "Internetové, intranetové, hlasové, videokonferenční, telemetrické a telematické služby (vč. systémové integrace a ICT bezpečnosti)",
+            "Výhradně hromadné satelitní televizní vysílání (Broadcast) v pásmu Ku pro domácnosti bez zpětného datového kanálu",
+            "Pouze pronájem surové transpondérové kapacity na oběžné dráze bez pozemního teleportu, koncových terminálů a dohledu",
+            "Výhradně veřejný mobilní přístup pro spotřebitele s FUP limitem bez firemních MPLS sítí a bez bezpečnostních služeb"
+        ],
+        "ans": 0,
+        "exp": "Slide 3 uvádí internetové, intranetové, hlasové, videokonferenční, telemetrické a telematické služby + systémovou integraci a bezpečnost."
+    },
+    {
+        "id": 76, "topic": "sat-7", "topic_label": "7. GEO sítě, Topologie & GiTy",
+        "q": "K čemu slouží v satelitní síti metody vícenásobného přístupu TDMA a FDMA?",
+        "options": [
+            "Umožňují více VSAT terminálům sdílet satelitní kapacitu (časové sloty u TDMA, frekvenční kanály u FDMA) ve zpětném či distribučním směru",
+            "Slouží k dynamické změně modulace a kódování podle aktuálního počasí (od QPSK po 256APSK), aby spojení v silném dešti nespadlo",
+            "Zajišťují kryptografické utajení aktivity kanálu pomocí AES-256 na 2. vrstvě a autentizaci terminálů certifikátem X.509",
+            "Určují způsob prostorového rozmístění orbitálních rovin v konstelacích Walker Delta a Walker Star po 360°, resp. 180°"
+        ],
+        "ans": 0,
+        "exp": "FDMA dělí sdílené pásmo na frekvenční podkanály, TDMA dělí čas na sloty pro jednotlivé terminály."
+    },
+    {
+        "id": 77, "topic": "sat-7", "topic_label": "7. GEO sítě, Topologie & GiTy",
+        "q": "Jaká síťová technologie tvoří pozemní páteř společnosti GiTy v ČR a SR, do které ústí satelitní teleport?",
+        "options": [
+            "Pozemní MPLS síť (G-Net)",
+            "Kruhová síť Token Ring",
+            "Veřejná mobilní síť LTE",
+            "Bezdrátová síť Wi-Fi v pásmu C"
+        ],
+        "ans": 0,
+        "exp": "GiTy provozuje vlastní pozemní MPLS síť G-Net v ČR a na Slovensku propojenou s jejím satelitním teleportem."
     },
 
     # =========================================================================
-    # OKRUH: KABELÁŽ 13 – 3 subsystémy generické kabeláže, délky a přídavné šňůry A, B, E
+    # SAT-8: Praxe: MEO (O3b) a LEO konstelace (OneWeb, Starlink, Amazon, Telesat) (11 otázek)
     # =========================================================================
     {
-        "id": 62, "topic": "sk-13", "topic_label": "Otázka 13: Subsystémy a délky",
-        "q": "Které jsou 3 základní subsystémy generické strukturované kabeláže?",
+        "id": 78, "topic": "sat-8", "topic_label": "8. O3b, OneWeb, Starlink, Amazon, Telesat",
+        "q": "Který z moderních datových systémů z prezentace GiTySAT operuje na střední oběžné dráze MEO (~8 000 km) s RTT kolem 150 ms?",
         "options": [
-            "1. Subsystém páteřní kabeláže areálu, 2. Subsystém páteřní kabeláže budovy, 3. Subsystém horizontální kabeláže",
-            "1. Subsystém pracovní plochy, 2. Subsystém přídavných šňůr, 3. Subsystém konektorů RJ-45",
-            "1. Jádro, 2. Plášť, 3. Primární ochrana",
-            "1. Subsystém UTP, 2. Subsystém FTP, 3. Subsystém STP"
+            "SES O3b / O3b mPOWER",
+            "SpaceX Starlink",
+            "Eutelsat OneWeb",
+            "Telesat Lightspeed"
         ],
         "ans": 0,
-        "exp": "Tři základní subsystémy generické SK jsou: páteřní kabeláž areálu (CD→BD), páteřní kabeláž budovy (BD→FD) a horizontální kabeláž (FD→TO)."
+        "exp": "O3b / O3b mPOWER je MEO konstelace (~8 000 km, RTT 150 ms, Ka-band, pokrytí ±50° šířky, až 1,6 Gbps/beam)."
     },
     {
-        "id": 63, "topic": "sk-13", "topic_label": "Otázka 13: Subsystémy a délky",
-        "q": "Jaké jsou přesné maximální délky a typy kabelů pro jednotlivé 3 subsystémy podle tvého výpisu z hodin?",
+        "id": 79, "topic": "sat-8", "topic_label": "8. O3b, OneWeb, Starlink, Amazon, Telesat",
+        "q": "Jaké geografické omezení má základní pokrytí sítě O3b / O3b mPOWER (MEO na rovníkové/nízkosklonné dráze)?",
         "options": [
-            "Páteř areálu (CD→BD): optika max. 1500 m; Páteř budovy (BD→FD): optika max. 500 m; Horizontální kabeláž (FD→TO): metalika max. 90 m",
-            "Páteř areálu: metalika max. 90 m; Páteř budovy: metalika max. 100 m; Horizontální kabeláž: optika max. 1500 m",
-            "Všechny tři subsystémy mají shodnou maximální délku 100 m",
-            "Páteř areálu: 500 m; Páteř budovy: 1500 m; Horizontální kabeláž: 5 m"
+            "Pokrytí je omezeno přibližně na ±50° zeměpisné šířky (nepokrývá polární oblasti)",
+            "Pokrývá pouze oblasti nad ±60° zeměpisné šířky (Arktidu a Antarktidu)",
+            "Pokrývá výhradně střední Evropu a Blízký východ pomocí pevných GEO svazků",
+            "Poskytuje plné globální pokrytí včetně obou pólů díky polárním drahám (i = 90°)"
         ],
         "ans": 0,
-        "exp": "Přesně dle výpisu z hodin: 1. Páteř areálu = optika max. 1500 m (CD→BD), 2. Páteř budovy = optika max. 500 m (BD→FD), 3. Horizontální kabeláž = metalické kabely max. 90 m (FD→TO)."
+        "exp": "Standardní O3b/mPOWER pokrývá pás ±50° zeměpisné šířky (limitované služby až ±62°), s velmi vysokou propustností až 1,6 Gbps/beam."
     },
     {
-        "id": 64, "topic": "sk-13", "topic_label": "Otázka 13: Subsystémy a délky",
-        "q": "Které rozvaděče spojuje Subsystém páteřní kabeláže areálu a jaká je jeho maximální délka (dle zápisků z hodin)?",
+        "id": 80, "topic": "sat-8", "topic_label": "8. O3b, OneWeb, Starlink, Amazon, Telesat",
+        "q": "Jaké jsou klíčové parametry LEO konstelace Eutelsat OneWeb?",
         "options": [
-            "Spojuje CD (Campus Distributor – rozvaděč areálu) → BD (Building Distributor – rozvaděč budovy), optika, max. délka 1500 m",
-            "Spojuje BD → FD (Floor Distributor), optika, max. délka 500 m",
-            "Spojuje FD → TO (telekomunikační zásuvka), metalika, max. délka 90 m",
-            "Spojuje TO → PC na pracovní ploše, max. délka 5 m"
+            "Výška ~1 200 km, 652 družic, RTT ~100 ms, globální pokrytí, Ka-band k GW stanicím a Ku-band k terminálům",
+            "Výška ~550 km, přes 9 800 družic, RTT 25–50 ms, globální pokrytí, Ku/Ka/E-band a laserové ISL spoje",
+            "Výška ~8 000 km, 20 družic, RTT 150 ms, pokrytí ±50° zeměpisné šířky a přenos výhradně v pásmu Ka",
+            "Výška ~610 km, plánováno 3 232 družic, uplink v Ka-bandu, downlink v K-bandu a laserové ISL spoje"
         ],
         "ans": 0,
-        "exp": "Subsystém páteřní kabeláže areálu propojuje CD → BD optickým kabelem o maximální délce 1500 m."
+        "exp": "OneWeb: LEO ~1 200 km, 652 družic, RTT ~100 ms, >40 GW stanic, Ka-band (GW) + Ku-band (terminál)."
     },
     {
-        "id": 65, "topic": "sk-13", "topic_label": "Otázka 13: Subsystémy a délky",
-        "q": "Které rozvaděče spojuje Subsystém páteřní kabeláže budovy a jaká je jeho maximální délka (dle zápisků z hodin)?",
+        "id": 81, "topic": "sat-8", "topic_label": "8. O3b, OneWeb, Starlink, Amazon, Telesat",
+        "q": "Jakou důležitou obchodně-technickou výhodu nabízí OneWeb pro firemní a privátní zákazníky oproti běžným rezidenčním tarifům?",
         "options": [
-            "Spojuje BD (Building Distributor) → FD (Floor Distributor – patrový rozvaděč), optika, max. délka 500 m",
-            "Spojuje CD → BD, optika, max. délka 1500 m",
-            "Spojuje FD → TO, metalika, max. délka 90 m",
-            "Spojuje panel a switch v rozvaděči, max. délka 5 m"
+            "Kromě maximální rychlosti MIR (až 150/30 Mbps) nabízí i garantovanou rychlost CIR (až 40/8 Mbps)",
+            "Nabízí garantovanou latenci pod 15 ms díky laserovým mezisatelitním spojům mezi všemi 652 družicemi",
+            "Umožňuje přímou komunikaci terminálů bez jakýchkoli pozemních GW stanic i bez dohledu operátora",
+            "Poskytuje symetrickou rychlost 3 Gbps / 2 Gbps na malých plochých anténách bez jakékoli agregace"
         ],
         "ans": 0,
-        "exp": "Subsystém páteřní kabeláže budovy propojuje BD → FD optickým kabelem o maximální délce 500 m."
+        "exp": "OneWeb umožňuje firemní služby s garantovanou rychlostí CIR (Committed Information Rate) až 40/8 Mbps i MIR až 150/30 Mbps."
     },
     {
-        "id": 66, "topic": "sk-13", "topic_label": "Otázka 13: Subsystémy a délky",
-        "q": "Co spojuje Subsystém horizontální kabeláže a jaká je jeho maximální délka bez přídavných šňůr?",
+        "id": 82, "topic": "sat-8", "topic_label": "8. O3b, OneWeb, Starlink, Amazon, Telesat",
+        "q": "Jaký je rozdíl mezi „technickou dostupností“ a „komerční dostupností“ u map OneWeb v prezentaci GiTySAT?",
         "options": [
-            "Spojuje patrový rozvaděč FD → telekomunikační zásuvku TO (případně přes konsolidační bod CP), metalické kabely, max. délka 90 m",
-            "Spojuje zásuvku TO → PC, max. délka 100 m",
-            "Spojuje rozvaděč budovy BD → patrový rozvaděč FD, max. délka 500 m",
-            "Spojuje CD → TO, max. délka 1500 m"
+            "Technická dostupnost znamená, že oblast pokrývá signál družic, ale komerční dostupnost vyžaduje navíc platné regulatorní/licenční povolení a smluvní otevření v dané zemi",
+            "Komerční dostupnost znamená pouze pokrytí rádiovým signálem na mapě, zatímco technická dostupnost vyžaduje fyzickou instalaci místní GW stanice přímo v daném státě",
+            "Technická dostupnost platí výhradně pro námořní a letecké terminály na oceánech, kdežto komerční dostupnost označuje pevnou pozemní síť MPLS",
+            "Oba pojmy označují totéž – jakmile družice OneWeb přelétají nad státem, je služba automaticky legálně i komerčně dostupná pro všechny zákazníky"
         ],
         "ans": 0,
-        "exp": "Horizontální kabeláž vede od patrového rozvaděče FD k telekomunikační zásuvce TO a měří maximálně 90 m (nezahrnuje přídavné šňůry)."
+        "exp": "Družice může technicky pokrývat téměř celý svět, ale v některých státech (např. Rusko, Čína aj.) není služba komerčně ani regulatorně povolena."
     },
     {
-        "id": 67, "topic": "sk-13", "topic_label": "Otázka 13: Subsystémy a délky",
-        "q": "Jaké tři typy přídavných šňůr (A, B, E) existují v horizontálním kanálu a jaké jsou jejich maximální délky podle tabulky z hodin?",
+        "id": 83, "topic": "sat-8", "topic_label": "8. O3b, OneWeb, Starlink, Amazon, Telesat",
+        "q": "Jaké parametry jsou charakteristické pro síť SpaceX Starlink?",
         "options": [
-            "Šňůra A (pracovní plocha, TO → PC): max. 5 m; Šňůra B (rozvaděč FD, panel ↔ panel): max. 10 m (při A,E≈0); Šňůra E (rozvaděč FD, panel → switch): max. 5 m",
-            "Šňůra A: max. 90 m; Šňůra B: max. 500 m; Šňůra E: max. 1500 m",
-            "Šňůra A: max. 10 m; Šňůra B: max. 5 m; Šňůra E: max. 20 m",
-            "Šňůra A, B i E mají každá maximální délku 50 m"
+            "LEO (typicky 550 km, 12 slupek 335–1 200 km), přes 9 800 aktivních družic, RTT 25–50 ms, Ku/Ka/E-band + laserové spoje mezi družicemi",
+            "LEO (cca 1 200 km, jedna slupka), 652 aktivních družic, RTT ~100 ms, Ka-band ke GW a Ku-band k terminálu bez laserů",
+            "MEO (cca 8 000 km), 13 družic mPOWER s formovatelnými 250km beamy, RTT 150 ms a pokrytí v pásmu ±50° zeměpisné šířky",
+            "LEO (1 015 a 1 325 km), úvodní fáze 198 družic, Ka-band + lasery ISL, zaměření na B2B/L2 služby a komerční start 2028"
         ],
         "ans": 0,
-        "exp": "Dle souhrnné tabulky z hodin: A (TO→PC) max. 5 m, B (panel↔panel) max. 10 m (jen při A,E≈0), E (panel→switch) max. 5 m, přičemž součet A + B + E ≤ 10 m."
+        "exp": "Starlink má nejnižší latenci (25–50 ms), nejvíce družic (>9 800, plán 12 000), 13km beamy a laserové ISL."
     },
     {
-        "id": 68, "topic": "sk-13", "topic_label": "Otázka 13: Subsystémy a délky",
-        "q": "Jaká podmínka musí platit pro součet délek přídavných šňůr A + B + E a jaká je celková maximální délka kanálu?",
+        "id": 84, "topic": "sat-8", "topic_label": "8. O3b, OneWeb, Starlink, Amazon, Telesat",
+        "q": "Jak jsou rozděleny polomobilní a mobilní internetové služby u Starlinku?",
         "options": [
-            "Musí platit A + B + E ≤ 10 m, takže celý kanál včetně přídavných šňůr má 90 + 10 = 100 m",
-            "Musí platit A + B + E ≤ 20 m, takže celý kanál má 90 + 20 = 110 m",
-            "Musí platit A + B + E ≤ 5 m, takže celý kanál má 95 m",
-            "Přídavné šňůry se do délky kanálu vůbec nezapočítávají"
+            "Buď datově neomezené (ale geograficky omezené), nebo datově omezené (ale geograficky neomezené)",
+            "Buď rychlostně garantované (CIR), nebo s pevnou latencí pod 10 ms pro námořní a letecký provoz",
+            "Všechny mobilní tarify jsou zároveň datově neomezené i geograficky zcela neomezené po celém světě",
+            "Polomobilní tarify fungují pouze v pásmu C přes GEO teleport a mobilní pouze v pásmu K přes OneWeb"
         ],
         "ans": 0,
-        "exp": "Pevná horizontální kabeláž má max. 90 m a všechny přídavné šňůry dohromady A + B + E ≤ 10 m, což dává celkový kanál 90 + 10 = 100 m."
+        "exp": "Slide 11 jasně dělí mobilní/polomobilní tarify na: 1) Datově neomezené, geograficky omezené a 2) Datově omezené, geograficky neomezené."
     },
     {
-        "id": 69, "topic": "sk-13", "topic_label": "Otázka 13: Subsystémy a délky",
-        "q": "Co v rozvaděči FD spojuje přídavná šňůra typu E a jaká je její maximální délka?",
+        "id": 85, "topic": "sat-8", "topic_label": "8. O3b, OneWeb, Starlink, Amazon, Telesat",
+        "q": "Co platí pro připravovanou konstelaci Amazon LEO (Project Kuiper)?",
         "options": [
-            "Spojuje patch panel → aktivní zařízení (switch), jde o šňůru k zařízení o max. délce 5 m",
-            "Spojuje zásuvku TO → PC na pracovní ploše, max. délka 5 m",
-            "Spojuje panel ↔ panel, max. délka 90 m",
-            "Spojuje rozvaděč CD → BD, max. délka 1500 m"
+            "3 orbitální slupky (590, 610, 630 km), plánováno 3 232 družic, lasery ISL, terminály Nano/Pro/Ultra až do 1 Gbps, komerční start cca konec 2026 / 2Q 2027",
+            "2 orbitální slupky (1 015 a 1 325 km), úvodní fáze 198 družic, terminály Performance/Ultimate/Aviation až do 3 Gbps a komerční start v roce 2028",
+            "12 orbitálních slupek (335–1 200 km), přes 9 800 družic na oběžné dráze, terminály Mini/Standard/Enterprise/Performance a E-band brány",
+            "MEO dráha ve výšce 8 000 km s 13 družicemi mPOWER, tisíce formovatelných 250km beamů v Ka-bandu a pokrytí ±50° zeměpisné šířky"
         ],
         "ans": 0,
-        "exp": "Šňůra E (Equipment cord) je v rozvaděči FD, spojuje panel → switch a má maximální délku 5 m."
+        "exp": "Amazon LEO cílí na 3 232 družic (590–630 km), uplink Ka / downlink K-band, 10km beamy, lasery a terminály až 1 Gbps (reálný start 2Q 2027)."
     },
     {
-        "id": 70, "topic": "sk-13", "topic_label": "Otázka 13: Subsystémy a délky",
-        "q": "Co spojuje přídavná šňůra typu A a kde se nachází?",
+        "id": 86, "topic": "sat-8", "topic_label": "8. O3b, OneWeb, Starlink, Amazon, Telesat",
+        "q": "Na jaký segment a jaké technologie se zaměřuje budoucí LEO konstelace Telesat Lightspeed (start 2028)?",
         "options": [
-            "Nachází se na pracovní ploše, spojuje telekomunikační zásuvku (TO) → PC a má maximální délku 5 m",
-            "Nachází se v rozvaděči FD, spojuje panel ↔ panel a má max. délku 10 m",
-            "Nachází se mezi budovami a spojuje CD → BD",
-            "Nachází se ve zdi mezi FD a TO a měří 90 m"
+            "B2B, L2 služby a letectví/námořnictví; 198 družic (1 015 a 1 325 km), globální pokrytí včetně pólů, Ka-band + lasery, terminály až 3 Gbps",
+            "Masový rezidenční trh pro domácnosti; 3 232 družic ve výšce 590–630 km, downlink v K-bandu, 10km beamy a terminály Nano/Pro/Ultra",
+            "Výhradně státní a vojenské spoje v pásmu X na dráze MEO (20 200 km) s latencí 150 ms a bez mezisatelitních laserových spojů",
+            "Pouze střední Evropa a Blízký východ přes geostacionární HTS družice s terminály iDirect 9530 a modulací DVB-S2X"
         ],
         "ans": 0,
-        "exp": "Šňůra A je šňůra pracovní plochy (zásuvka TO → PC) s maximální délkou 5 m."
+        "exp": "Telesat Lightspeed (2028) staví na kombinaci polárních a inklinovaných drah, L2 službách, Ka-bandu, laserech a vysokokapacitních terminálech (1 až 3 Gbps)."
+    },
+    {
+        "id": 87, "topic": "sat-8", "topic_label": "8. O3b, OneWeb, Starlink, Amazon, Telesat",
+        "q": "Které z následujících konstelací využívají nebo plánují využívat laserové mezisatelitní spoje (družice ↔ družice)?",
+        "options": [
+            "Starlink, Amazon LEO i Telesat Lightspeed",
+            "Pouze Eutelsat OneWeb a SES O3b mPOWER",
+            "Pouze Starlink; Amazon LEO i Telesat používají výhradně pásmo C",
+            "Žádná LEO konstelace nepoužívá laserové ISL"
+        ],
+        "ans": 0,
+        "exp": "Laserové ISL (družice ↔ družice) jsou společným prvkem moderních konstelací Starlink, Amazon LEO i Telesat Lightspeed."
+    },
+    {
+        "id": 88, "topic": "sat-8", "topic_label": "8. O3b, OneWeb, Starlink, Amazon, Telesat",
+        "q": "Seřaďte správně uvedené systémy od NEJNIŽŠÍ po NEJVYŠŠÍ typickou obousměrnou latenci (RTT):",
+        "options": [
+            "Starlink (25–50 ms) < OneWeb (~100 ms) < O3b MEO (150 ms) < GEO GiTySAT (500–650 ms)",
+            "OneWeb (~100 ms) < Starlink (25–50 ms) < O3b MEO (150 ms) < GEO GiTySAT (500–650 ms)",
+            "Starlink (25–50 ms) < O3b MEO (150 ms) < OneWeb (~100 ms) < GEO GiTySAT (500–650 ms)",
+            "O3b MEO (150 ms) < OneWeb (~100 ms) < Starlink (25–50 ms) < GEO GiTySAT (500–650 ms)"
+        ],
+        "ans": 0,
+        "exp": "Starlink (550 km) má 25–50 ms, OneWeb (1 200 km) ~100 ms, O3b MEO (8 000 km) ~150 ms a GEO (35 786 km) ~500–650 ms."
     },
 
     # =========================================================================
-    # OKRUH: KABELÁŽ 14 & 15 – Pracovní plocha, počet portů, vlastnosti, patří do SK?
+    # SAT-9: Terminály, Zabezpečení (TRANSEC, CSIR), DVB-S2X ACM a Hybridní sítě (11 otázek)
     # =========================================================================
     {
-        "id": 71, "topic": "sk-14", "topic_label": "Otázky 14 & 15: Pracovní plocha",
-        "q": "Co je to pracovní plocha a čím začíná podle tvého výpisu z hodin?",
+        "id": 89, "topic": "sat-9", "topic_label": "9. Terminály, Bezpečnost, ACM & Hybrid",
+        "q": "Z jakých dvou hlavních částí se skládá klasický GEO satelitní terminál (např. technologie ST Engineering / iDirect u GiTySAT)?",
         "options": [
-            "Prostor, kde uživatelé pracují s koncovými zařízeními (PC, tiskárna, IP kamera); začíná telekomunikační zásuvkou (TO), zahrnuje propojovací kabel (max. 5 m) a koncové zařízení",
-            "Místnost s patrovým rozvaděčem FD a klimatizací",
-            "Trasa mezi rozvaděčem areálu CD a rozvaděčem budovy BD",
-            "Vnitřní část optického vlákna o průměru 125 µm"
+            "Venkovní část (anténa + RF jednotka Ku/X/Ka/C) a vnitřní část (VSAT terminál / modem, např. iDirect 950mp, 9530, Newtec MDM3315)",
+            "Vysílací část (parabola na budově + laserový modul) a přijímací část (samostatný pozemní VSAT HUB umístěný v centrále operátora)",
+            "Kosmická část (transpondér Bend pipe na družici) a pozemní páteřní část (MPLS síť G-Net včetně dohledového centra 24/7)",
+            "Anténní část (pouze pasivní reflektor bez RF jednotky) a síťová část (běžný domácí Wi-Fi router připojený přes NNI rozhraní)"
         ],
         "ans": 0,
-        "exp": "Pracovní plocha začíná telekomunikační zásuvkou TO, zahrnuje přídavnou šňůru A (max. 5 m) a samotné koncové zařízení."
+        "exp": "Terminál má venkovní část (parabola 0,7–2,4 m / Drive Away / Quick Deploy / Manpack + RF jednotka) a vnitřní část (VSAT modem)."
     },
     {
-        "id": 72, "topic": "sk-14", "topic_label": "Otázky 14 & 15: Pracovní plocha",
-        "q": "Jaká je standardní výměra 1 pracovní plochy a kolik zásuvek (portů) se na ni přiděluje?",
+        "id": 90, "topic": "sat-9", "topic_label": "9. Terminály, Bezpečnost, ACM & Hybrid",
+        "q": "Co znamená typ mobilní satelitní antény „Manpack“ oproti „Drive Away“ a fixní parabole?",
         "options": [
-            "Na 1 pracovní plochu (10 m²) se zpravidla přidělují 2 zásuvky / porty (nebo 1 dvojzásuvka)",
-            "Na 1 pracovní plochu (100 m²) se přiděluje 1 zásuvka",
-            "Na 1 pracovní plochu (2 m²) se přiděluje 8 zásuvek",
-            "Na 1 pracovní plochu (50 m²) se přidělují 4 optické rozvaděče"
+            "Manpack je kompaktní přenosný terminál v kufru/batohu pro jednotlivce v terénu; Drive Away je anténa namontovaná na vozidle",
+            "Manpack je pevná parabolická anténa (0,7–2,4 m) kotvená na střeše budovy; Drive Away je ruční rozložitelná anténa v batohu",
+            "Manpack je automatická anténa pevně instalovaná na střeše zásahového vozidla; Drive Away je označení pro pevný teleport HUB",
+            "Manpack označuje rychle rozložitelnou anténu na trojnožce (Quick Deploy) bez RF jednotky; Drive Away je vnitřní VSAT modem"
         ],
         "ans": 0,
-        "exp": "Na 1 pracovní plochu o rozloze 10 m² se přidělují minimálně 2 zásuvky/porty (nebo 1 dvojzásuvka)."
+        "exp": "Fixní parabola = na budově; Drive Away = na střeše vozidla; Quick Deploy = rychle rozložitelná na trojnožce; Manpack = přenosná v batohu/kufru."
     },
     {
-        "id": 73, "topic": "sk-14", "topic_label": "Otázky 14 & 15: Pracovní plocha",
-        "q": "Jakou vlastnost musí splňovat zásuvky (porty) na pracovní ploše?",
+        "id": 91, "topic": "sat-9", "topic_label": "9. Terminály, Bezpečnost, ACM & Hybrid",
+        "q": "Jaké bezpečnostní prvky zajišťuje technologie iDirect TRANSEC (Transmission Security) u GEO služeb GiTySAT?",
         "options": [
-            "Musí odpovídat kategorii použité kabeláže (např. Cat 6, Cat 6a atd.)",
-            "Musí být vždy nižší kategorie než kabel ve zdi (např. Cat 3 pro kabel Cat 6a)",
-            "Nesmí být součástí generické strukturované kabeláže",
-            "Musí mít zapojené pouze 2 vodiče z 8"
+            "Skrytou aktivitu komunikačního kanálu, šifrování AES-256 na 2. vrstvě (L2) a autentizaci certifikátem X.509",
+            "Automatické potlačení záměrného rušení (anti-jamming) na fyzické vrstvě bez kryptografického šifrování a bez certifikátů",
+            "Šifrování přenosu výhradně na aplikační vrstvě (L7) pomocí TLS bez utajení aktivity satelitního kanálu a bez L2 ochrany",
+            "Dynamickou změnu modulace podle počasí (ACM z 256APSK na QPSK), která nahrazuje potřebu certifikátů a šifrovacích klíčů"
         ],
         "ans": 0,
-        "exp": "Zásuvky TO musí odpovídat kategorii použité kabeláže (Cat 6, Cat 6a atd.), aby nedegradovaly přenosovou třídu celé linky."
+        "exp": "TRANSEC chrání samotný přenosový kanál: skrývá aktivitu kanálu, šifruje pomocí AES-256 na L2 a ověřuje stanice certifikátem X.509."
     },
     {
-        "id": 74, "topic": "sk-15", "topic_label": "Otázky 14 & 15: Pracovní plocha",
-        "q": "OTÁZKA 15: Patří kabely pracovní plochy (přídavné šňůry od zásuvky ke koncovému zařízení) do generické strukturované kabeláže?",
+        "id": 92, "topic": "sat-9", "topic_label": "9. Terminály, Bezpečnost, ACM & Hybrid",
+        "q": "K čemu slouží technologie CSIR u zabezpečených satelitních služeb GiTySAT?",
         "options": [
-            "Ne, kabeláž pracovní plochy není součástí generické SK – generická SK končí na zásuvce (TO), která do SK ještě patří",
-            "Ano, kabely pracovní plochy i samotný počítač jsou pevnou součástí generické SK",
-            "Ano, ale pouze pokud jsou delší než 90 metrů",
-            "Ne, a do generické SK nepatří ani telekomunikační zásuvka TO, ani horizontální kabeláž"
+            "Anti-jamming a potlačení nežádoucího rušení (interference removal system)",
+            "Šifrování datového provozu pomocí AES-256 na L2 a autentizace X.509",
+            "Certifikace odolnosti kryptovacího modulu dle normy FIPS 140-2 Level 3",
+            "Adaptivní změna modulace (ACM) v normě DVB-S2X při útlumu deštěm"
         ],
         "ans": 0,
-        "exp": "Přesně dle výpisu z hodin: Ne! Kabeláž pracovní plochy není součástí generické SK. Generická SK končí na zásuvce TO, která do SK ještě patří!"
+        "exp": "Prezentace uvádí: CSIR = Anti jamming a interference removal system, vedle Spread spectrum a FIPS 140-2 Level 3 kryptomodulů."
     },
     {
-        "id": 75, "topic": "sk-15", "topic_label": "Otázky 14 & 15: Pracovní plocha",
-        "q": "Kde přesně končí generická strukturovaná kabeláž a patří ještě telekomunikační zásuvka (TO) do generické SK?",
+        "id": 93, "topic": "sat-9", "topic_label": "9. Terminály, Bezpečnost, ACM & Hybrid",
+        "q": "Co v přehledu zabezpečení GEO služeb GiTySAT vyjadřuje norma FIPS 140-2 Level 3?",
         "options": [
-            "Generická SK končí na telekomunikační zásuvce (TO) a samotná zásuvka TO do generické SK ještě patří",
-            "Generická SK končí v patrovém rozvaděči FD; zásuvka TO do ní již nepatří",
-            "Generická SK končí až na síťové kartě počítače",
-            "Generická SK končí v rozvaděči budovy BD"
+            "Přísné bezpečnostní požadavky na hardwarový kryptovací modul (ochrana proti fyzické manipulaci a neoprávněnému vyčtení klíčů)",
+            "Specifikaci pro systém potlačení úmyslného rušení (anti-jamming) a eliminaci cizího signálu v satelitním pásmu Ka",
+            "Mezinárodní standard pro adaptivní kódování a modulaci DVB-S2X zajišťující zachování spoje při silné bouřce",
+            "Telekomunikační směrnici definující maximální přípustnou obousměrnou latenci (RTT) pro vládní a armádní sítě"
         ],
         "ans": 0,
-        "exp": "Zásuvka TO je posledním prvkem pevné generické strukturované kabeláže (do SK ještě patří). Šňůra od zásuvky k PC už do generické SK nepatří."
+        "exp": "FIPS 140-2 Level 3 je standard definující vysoké bezpečnostní požadavky na kryptografické moduly."
     },
-
-    # =========================================================================
-    # OKRUH: KABELÁŽ 16 – Zapojení konektoru RJ-45 pro zásuvku typu B (T568B)
-    # =========================================================================
     {
-        "id": 76, "topic": "sk-16", "topic_label": "Otázka 16: Konektor RJ-45 Typ B",
-        "q": "Jaké je přesné pořadí všech 8 barev vodičů na pinech 1 až 8 pro zásuvku typu B (standard T568B)?",
+        "id": 94, "topic": "sat-9", "topic_label": "9. Terminály, Bezpečnost, ACM & Hybrid",
+        "q": "Jak funguje moderní funkce ACM (Adaptive Coding and Modulation) ve standardu DVB-S2X při zhoršení počasí (déšť, bouřka)?",
         "options": [
-            "1: Bílo-oranžová, 2: Oranžová, 3: Bílo-zelená, 4: Modrá, 5: Bílo-modrá, 6: Zelená, 7: Bílo-hnědá, 8: Hnědá",
-            "1: Bílo-zelená, 2: Zelená, 3: Bílo-oranžová, 4: Modrá, 5: Bílo-modrá, 6: Oranžová, 7: Bílo-hnědá, 8: Hnědá",
-            "1: Bílo-oranžová, 2: Oranžová, 3: Bílo-zelená, 4: Zelená, 5: Bílo-modrá, 6: Modrá, 7: Bílo-hnědá, 8: Hnědá",
-            "1: Oranžová, 2: Bílo-oranžová, 3: Zelená, 4: Bílo-modrá, 5: Modrá, 6: Bílo-zelená, 7: Hnědá, 8: Bílo-hnědá"
+            "Modem dynamicky přepne na nižší, odolnější modulaci a silnější kódování (např. z 256APSK na QPSK), aby spoj nespadl; po vyjasnění se vrátí k vyšší rychlosti",
+            "Modem okamžitě přepne na vyšší řád modulace (z QPSK na 256APSK), aby zvýšil vysílací rychlost a protlačil data skrze dešťovou clonu před výpadkem",
+            "Modem zcela přeruší satelitní spojení v pásmech Ku/Ka a automaticky přesměruje kritický provoz do veřejné internetové sítě bez zapojení HUBu",
+            "Modem přeladí anténu z geostacionární družice na nejbližší průlet LEO družice Starlink, kde je útlum deštěm nižší díky menší vzdálenosti"
         ],
         "ans": 0,
-        "exp": "Zapojení T568B (Evropa): 1 Bílo-oranžová, 2 Oranžová, 3 Bílo-zelená, 4 Modrá, 5 Bílo-modrá, 6 Zelená, 7 Bílo-hnědá, 8 Hnědá."
+        "exp": "ACM (Adaptive Coding and Modulation) přizpůsobuje modulaci (Rx až 256APSK, Tx až 16QAM) a kódování aktuálnímu odstupu signál/šum – spoj tak zůstane živý i v dešti."
     },
     {
-        "id": 77, "topic": "sk-16", "topic_label": "Otázka 16: Konektor RJ-45 Typ B",
-        "q": "Která barva páru má u zapojení typu B (T568B) piny „rozházené“ (nejsou vedle sebe) a na kterých pozicích leží?",
+        "id": 95, "topic": "sat-9", "topic_label": "9. Terminály, Bezpečnost, ACM & Hybrid",
+        "q": "Jakých modulací může podle prezentace trendů GiTySAT dosahovat standard DVB-S2X v příjmu (Rx) a vysílání (Tx)?",
         "options": [
-            "Zelený pár – leží na pinech 3 (bílo-zelená) a 6 (zelená)",
-            "Oranžový pár – leží na pinech 1 a 8",
-            "Modrý pár – leží na pinech 2 a 7",
-            "Hnědý pár – leží na pinech 3 a 6"
+            "Rx: QPSK až 256APSK; Tx: BPSK až 16QAM",
+            "Rx: BPSK až 16QAM; Tx: QPSK až 256APSK",
+            "Rx: QPSK až 64QAM; Tx: výhradně BPSK",
+            "Rx: 16APSK až 1024QAM; Tx: 8PSK až 64APSK"
         ],
         "ans": 0,
-        "exp": "Pomůcka z hodin: Zelené piny jsou „rozházené“ na pozicích 3 a 6! Ostatní páry jsou u sebe: oranžová 1–2, modrá 4–5, hnědá 7–8."
+        "exp": "Dle slidu 22 (Trendy GiTySAT): DVB-S2X pracuje v příjmu s QPSK až 256APSK a ve zpětném vysílání s BPSK až 16QAM s podporou ACM."
     },
     {
-        "id": 78, "topic": "sk-16", "topic_label": "Otázka 16: Konektor RJ-45 Typ B",
-        "q": "Jaké barvy vodičů jsou zapojeny na prostředních pinech 4 a 5 u konektoru typu B (T568B)?",
+        "id": 96, "topic": "sat-9", "topic_label": "9. Terminály, Bezpečnost, ACM & Hybrid",
+        "q": "Jak v hybridní síti GiTySAT (kombinující GEO a LEO) probíhá směrování KRITICKÉHO a citlivého provozu pobočky?",
         "options": [
-            "Pin 4: Modrá (plná barva), Pin 5: Bílo-modrá",
-            "Pin 4: Bílo-modrá, Pin 5: Modrá",
-            "Pin 4: Bílo-zelená, Pin 5: Zelená",
-            "Pin 4: Modrá, Pin 5: Zelená"
+            "Přes zabezpečený GEO VSAT terminál a GEO družici do VSAT HUBu a MPLS sítě G-Net až na centrálu",
+            "Přes LEO terminál a LEO gateway dále přes privátní NNI propoj do MPLS sítě G-Net až na centrálu",
+            "Lokálně přes firewall pobočky přímo do veřejného Internetu a následně přes druhý firewall do centrály",
+            "Výhradně přes záložní mobilní síť LTE mimo dohledové centrum GiTy a bez zapojení MPLS páteře"
         ],
         "ans": 0,
-        "exp": "Pozor na pořadí u modrého páru uprostřed: na pinu 4 je plná Modrá a na pinu 5 je Bílo-modrá!"
+        "exp": "Podle schématu hybridní sítě (slide 25) jde kritický/citlivý provoz (červená trasa) vysoce spolehlivou a zabezpečenou cestou přes GEO VSAT."
     },
     {
-        "id": 79, "topic": "sk-16", "topic_label": "Otázka 16: Konektor RJ-45 Typ B",
-        "q": "Jaké barvy vodičů jsou u zapojení typu B (T568B) na pinech 1 a 2?",
+        "id": 97, "topic": "sat-9", "topic_label": "9. Terminály, Bezpečnost, ACM & Hybrid",
+        "q": "Kudy je v hybridní síti GiTySAT směrován STANDARDNÍ firemní provoz mezi pobočkou a centrálou?",
         "options": [
-            "Pin 1: Bílo-oranžová, Pin 2: Oranžová",
-            "Pin 1: Bílo-zelená, Pin 2: Zelená",
-            "Pin 1: Oranžová, Pin 2: Bílo-oranžová",
-            "Pin 1: Bílo-hnědá, Pin 2: Hnědá"
+            "Přes LEO terminál a LEO družici na LEO gateway, odtud přes privátní NNI propoj do G-Net MPLS sítě až na centrálu",
+            "Přes zabezpečený GEO VSAT terminál a GEO družici do centrálního VSAT HUBu a následně do MPLS sítě G-Net",
+            "Lokálně přes firewall pobočky rovnou do veřejného Internetu bez využití privátního NNI propoje do sítě G-Net",
+            "Přímým MESH skokem mezi LEO terminálem pobočky a centrálou bez účasti pozemní LEO gateway stanice"
         ],
         "ans": 0,
-        "exp": "U typu B začínáme oranžovým párem: 1 = Bílo-oranžová, 2 = Oranžová."
+        "exp": "Standardní provoz (modrá trasa) využívá nízkou latenci a vysokou rychlost LEO a privátní propojení LEO GW – G-Net (NNI) do centrály."
     },
     {
-        "id": 80, "topic": "sk-16", "topic_label": "Otázka 16: Konektor RJ-45 Typ B",
-        "q": "Jaké barvy vodičů jsou u zapojení typu B (T568B) na pinech 7 a 8?",
+        "id": 98, "topic": "sat-9", "topic_label": "9. Terminály, Bezpečnost, ACM & Hybrid",
+        "q": "Jak je v hybridní síti GiTySAT řešen NEKRITICKÝ a internetový provoz pobočky?",
         "options": [
-            "Pin 7: Bílo-hnědá, Pin 8: Hnědá",
-            "Pin 7: Hnědá, Pin 8: Bílo-hnědá",
-            "Pin 7: Bílo-zelená, Pin 8: Zelená",
-            "Pin 7: Bílo-modrá, Pin 8: Modrá"
+            "Odchází lokálně přes firewall do veřejného Internetu (a přes další firewall případně do G-Netu), aby nezatěžoval drahocennou vyhrazenou GEO/privátní kapacitu",
+            "Směruje se výhradně přes zabezpečený GEO VSAT terminál s aktivovaným TRANSEC AES-256 přes centrální teleport do G-Netu",
+            "Směruje se přes LEO terminál na LEO gateway a odtud vždy přes vyhrazený privátní NNI propoj přímo na centrálu zákazníka",
+            "Prochází dvojitým satelitním skokem přes GEO družici v režimu MESH tak, aby byl centrálně filtrován v dohledovém centru GiTy"
         ],
         "ans": 0,
-        "exp": "Na konci konektoru (piny 7 a 8) je vždy hnědý pár: 7 = Bílo-hnědá, 8 = Hnědá."
+        "exp": "Nekritický internetový provoz (zelená trasa) odtéká mimo prioritní satelitní tunely přes firewall do Internetu."
     },
     {
-        "id": 81, "topic": "sk-16", "topic_label": "Otázka 16: Konektor RJ-45 Typ B",
-        "q": "Jaká barva vodiče je u zapojení T568B na pinu 3 a jaká na pinu 6?",
+        "id": 99, "topic": "sat-9", "topic_label": "9. Terminály, Bezpečnost, ACM & Hybrid",
+        "q": "Jaký je hlavní přínos mobilního řešení „GiTySAT MS usecase“ pro zásahové složky (např. hasiči, IZS v terénu)?",
         "options": [
-            "Pin 3: Bílo-zelená, Pin 6: Zelená",
-            "Pin 3: Zelená, Pin 6: Bílo-zelená",
-            "Pin 3: Bílo-oranžová, Pin 6: Oranžová",
-            "Pin 3: Bílo-modrá, Pin 6: Modrá"
+            "Zásahové vozidlo se v krizové oblasti bez pozemní infrastruktury spojí přes družici a VSAT HUB (příp. záložně přes mobilní síť) s dispečinkem, videoserverem a dohledem GiTy",
+            "Zásahové vozidlo funguje jako lokální veřejný Wi-Fi hotspot s FUP limitem bez jakéhokoli napojení na videoserver, tracking a dispečink",
+            "Systém slouží výhradně pro jednosměrný příjem meteorologického vysílání (Broadcast) v kabině vozidla bez možnosti odesílat video z místa zásahu",
+            "Řešení vyžaduje pevnou 2,4m betonovanou parabolu na místě zásahu a není možné jej provozovat při výpadku pozemních elektrických sítí"
         ],
         "ans": 0,
-        "exp": "Zelený pár obkročuje středový modrý pár: na pinu 3 je Bílo-zelená a na pinu 6 je plná Zelená."
-    },
-    {
-        "id": 82, "topic": "sk-16", "topic_label": "Otázka 16: Konektor RJ-45 Typ B",
-        "q": "Čím se liší zapojení T568A od evropského zapojení T568B?",
-        "options": [
-            "Prohozením oranžového a zeleného páru (u A je zelený pár na 1–2 a oranžový rozkročený na 3 a 6; modrý 4–5 a hnědý 7–8 zůstávají stejné)",
-            "Prohozením modrého a hnědého páru na pinech 4–5 a 7–8",
-            "Otočením všech 8 pinů pozpátku od 8 do 1",
-            "T568A používá pouze 4 vodiče, zatímco T568B používá 8 vodičů"
-        ],
-        "ans": 0,
-        "exp": "Mezi T568A a T568B si pouze vymění místo zelený a oranžový pár. Modrý (4–5) a hnědý (7–8) jsou v obou normách na stejném místě."
-    },
-
-    # =========================================================================
-    # DALŠÍ KOLO KŘÍŽOVÉHO OVĚŘENÍ (OTÁZKY 83–125) – KAŽDÝ DETAIL 3x JINAK!
-    # =========================================================================
-    {
-        "id": 83, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "Z jakého materiálu je vyrobeno jádro a plášť standardního telekomunikačního optického vlákna?",
-        "options": [
-            "Z křemičitého skla (SiO₂), přičemž jádro obsahuje příměsi zvyšující index lomu n₁",
-            "Jádro je z mědi a plášť z hliníkové fólie",
-            "Jádro je z akrylátového laku a plášť z PVC",
-            "Jádro je ze vzduchu a plášť z křemičitého skla s nižším indexem lomu"
-        ],
-        "ans": 0,
-        "exp": "Jádro i plášť jsou z křemičitého skla (SiO₂), přičemž jádro je dotováno příměsemi (např. GeO₂), aby mělo vyšší index lomu n₁ než čistý plášť n₂."
-    },
-    {
-        "id": 84, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "K čemu slouží primární ochrana (Primary Coating, Ø 250 µm) na optickém vlákně?",
-        "options": [
-            "Chrání křehké skleněné vlákno před mechanickým poškozením, otěrem, vlhkostí a mikroohyby",
-            "Zajišťuje totální vnitřní odraz světla zpět do jádra",
-            "Slouží jako elektrický vodič pro napájení PoE",
-            "Určuje vlnovou délku 1550 nm"
-        ],
-        "ans": 0,
-        "exp": "Totální odraz probíhá už na rozhraní jádra (9/50/62,5 µm) a pláště (125 µm). Primární ochrana (250 µm akrylát) chrání sklo mechanicky a před vlhkostí."
-    },
-    {
-        "id": 85, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "Jak se nazývá nežádoucí jev u mnohovidových vláken, při kterém různé vidy urazí různě dlouhou dráhu a dorazí do cíle v různý čas, čímž se rozšíří optický impulz?",
-        "options": [
-            "Vidová (modální) disperze",
-            "Přeslech na vzdáleném konci (FEXT)",
-            "Fresnelův odraz",
-            "Kvantizační zkreslení A-law"
-        ],
-        "ans": 0,
-        "exp": "Různá doba šíření jednotlivých vidů v mnohovidovém vlákně způsobuje vidovou (modální) disperzi."
-    },
-    {
-        "id": 86, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "Po jaké trajektorii se šíří paprsky v mnohovidovém vlákně se skokovou změnou indexu lomu (Step-Index) a po jaké v gradientním (Graded-Index)?",
-        "options": [
-            "Ve skokovém po lomených přímkách (cik-cak), v gradientním po plynulých zvlněných křivkách (sinusoidách)",
-            "Ve skokovém po kružnicích, v gradientním po lomených přímkách",
-            "V obou typech výhradně v jediné přímce v ose vlákna",
-            "Ve skokovém se světlo šíří pláštěm, v gradientním sekundární ochranou"
-        ],
-        "ans": 0,
-        "exp": "Konstantní index lomu u Step-Index vede k přímým úsekům mezi odrazy (cik-cak), zatímco plynulá změna indexu lomu u Graded-Index plynule zakřivuje dráhu paprsku do tvaru sinusoidy."
-    },
-    {
-        "id": 87, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "Proč má křemičité sklo vybraná přenosová okna právě na vlnových délkách 850 nm, 1300/1310 nm a 1550 nm?",
-        "options": [
-            "Protože v těchto oblastech infračerveného spektra má křemičité sklo lokální minima měrného útlumu",
-            "Protože jde o viditelné barvy světla (modrá, zelená a červená), které vidíme okem",
-            "Protože na jiných vlnových délkách neplatí vzorec n = c / v",
-            "Protože tyto vlnové délky odpovídají průměru pláště 125 µm"
-        ],
-        "ans": 0,
-        "exp": "Přenosová okna jsou pásma vlnových délek v infračervené oblasti, kde je útlum v křemičitém skle nejnižší (mezi absorpčními píky OH⁻ iontů)."
-    },
-    {
-        "id": 88, "topic": "opt-2", "topic_label": "Optika 2: Totální odraz, NA a útlum",
-        "q": "Co se stane s paprskem, který vstoupí do čela optického vlákna pod úhlem VĚTŠÍM, než je maximální úhel navázání θ_max?",
-        "options": [
-            "Na rozhraní jádra a pláště dopadne pod úhlem menším než mezní úhel α_m, takže nenastane totální odraz a paprsek unikne (vyzáří se) do pláště",
-            "Paprsek se v jádře urychlí nad rychlost světla ve vakuu",
-            "Paprsek se změní na jednovidový signál o vlnové délce 1550 nm",
-            "Paprsek se odrazí zpět do vysílače pod úhlem 180°"
-        ],
-        "ans": 0,
-        "exp": "Mimo akceptační kužel (θ > θ_max) již uvnitř vlákna není splněna podmínka α > α_m, takže světlo projde do pláště a je pohlceno."
-    },
-    {
-        "id": 89, "topic": "opt-2", "topic_label": "Optika 2: Totální odraz, NA a útlum",
-        "q": "Vypočtěte hodnotu indexu lomu prostředí, ve kterém se světlo šíří přesně dvakrát pomaleji než ve vakuu:",
-        "options": [
-            "n = 2,0 (protože n = c / v = c / (0,5·c) = 2)",
-            "n = 0,5",
-            "n = 1,0",
-            "n = 4,0"
-        ],
-        "ans": 0,
-        "exp": "Ze vzorce n = c / v platí: pokud je rychlost v poloviční oproti c, je index lomu n = 2."
-    },
-    {
-        "id": 90, "topic": "opt-2", "topic_label": "Optika 2: Totální odraz, NA a útlum",
-        "q": "Jaká je hodnota numerické apertury (NA), pokud je maximální úhel navázání θ_max = 30° (sin 30° = 0,5)?",
-        "options": [
-            "NA = 0,5",
-            "NA = 30",
-            "NA = 1,5",
-            "NA = 0,25"
-        ],
-        "ans": 0,
-        "exp": "Platí NA = sin(θ_max) = sin(30°) = 0,5."
-    },
-    {
-        "id": 91, "topic": "opt-2", "topic_label": "Optika 2: Totální odraz, NA a útlum",
-        "q": "Který fyzikální jev způsobuje odraz části světla (cca 4 %) na vzduchové mezeře mezi dvěma rovnými čely optických konektorů a přispívá tak k vložnému útlumu?",
-        "options": [
-            "Fresnelův odraz (na přechodu prostředí s různým indexem lomu sklo–vzduch–sklo)",
-            "Totální vnitřní odraz na primární ochraně",
-            "Přeslech FEXT",
-            "Diferenciální vyrušení polarity"
-        ],
-        "ans": 0,
-        "exp": "Na kolmém rozhraní dvou prostředí s odlišným indexem lomu (sklo n≈1,46 a vzduch n=1) vzniká Fresnelův odraz."
-    },
-    {
-        "id": 92, "topic": "sk-8", "topic_label": "Otázka 8: Normy v ČR",
-        "q": "Čím se zabývá evropská norma přejatá v ČR jako ČSN EN 50173?",
-        "options": [
-            "Informační technologie – Univerzální kabelážní systémy (strukturovaná kabeláž)",
-            "Bezpečnost elektrických spotřebičů v domácnosti",
-            "Kódování zvuku v telefonních ústřednách PCM",
-            "Rádiové kmitočty pro mobilní sítě 5G"
-        ],
-        "ans": 0,
-        "exp": "ČSN EN 50173 (spolu s instalační ČSN EN 50174) je základní normou pro strukturovanou kabeláž v ČR."
-    },
-    {
-        "id": 93, "topic": "sk-9", "topic_label": "Otázka 9: UTP, FTP, STP a kategorie",
-        "q": "Který kabel má na průřezu kolem každého ze 4 párů samostatný kovový obal (pair shield)?",
-        "options": [
-            "STP (Shielded Twisted Pair)",
-            "UTP (Unshielded Twisted Pair)",
-            "Optický kabel 9/125 µm",
-            "Kabel kategorie 3 třídy C"
-        ],
-        "ans": 0,
-        "exp": "Podle nákresu a výpisu z hodin má STP samostatné stínění každého jednotlivého páru (pair shield)."
-    },
-    {
-        "id": 94, "topic": "sk-9", "topic_label": "Otázka 9: UTP, FTP, STP a kategorie",
-        "q": "Proč se do kabelů kategorie 6 vkládá podélný plastový kříž („rybí kost“)?",
-        "options": [
-            "Aby se 4 kroucené páry uvnitř kabelu k sobě příliš nepřibližovaly a omezily se tak přeslechy mezi páry",
-            "Aby kabel nešel ohnout pod úhlem větším než θ_max",
-            "Aby plastový kříž vedl optický signál o vlnové délce 850 nm",
-            "Aby nahradil měděné vodiče u kategorie 1"
-        ],
-        "ans": 0,
-        "exp": "Plastový separátor („rybí kost“) udržuje konstantní odstup mezi páry, což potlačuje přeslechy na vyšších frekvencích (250 MHz u Cat 6)."
-    },
-    {
-        "id": 95, "topic": "sk-9", "topic_label": "Otázka 9: UTP, FTP, STP a kategorie",
-        "q": "Které tvrzení o kabelech UTP, FTP a STP je podle tvých zápisků z hodin PRAVDIVÉ?",
-        "options": [
-            "UTP nemá kovové stínění (kategorie 6 / třída E), FTP má společnou hliníkovou fólii kolem všech 4 párů a STP má samostatně stíněný každý pár (kategorie 6a / třída Ea a výš)",
-            "FTP má samostatně stíněný každý pár a STP nemá žádné stínění",
-            "UTP obsahuje 2 páry vodičů, FTP 4 páry a STP 8 párů vodičů",
-            "Všechny kabely kategorie 7 a 8 jsou typu UTP"
-        ],
-        "ans": 0,
-        "exp": "Shrnutí celé otázky 9 z hodin: UTP = bez stínění (Cat 6 / E), FTP = celková hliníková fólie kolem všech 4 párů, STP = každý pár samostatně stíněný (Cat 6a / Ea a výš)."
-    },
-    {
-        "id": 96, "topic": "sk-10", "topic_label": "Otázka 10: Kroucené páry",
-        "q": "Pokud jeden vodič v krouceném páru přenáší signál +U a druhý vodič −U, co na konci linky vyhodnocuje přijímač?",
-        "options": [
-            "Rozdíl napětí mezi oběma vodiči v páru",
-            "Součet odporů všech 8 vodičů v kabelu",
-            "Frekvenci světla v terahertzích",
-            "Index lomu plastové izolace"
-        ],
-        "ans": 0,
-        "exp": "Přijímač u kroucené dvojlinky vyhodnocuje rozdíl napětí mezi oběma vodiči páru."
-    },
-    {
-        "id": 97, "topic": "sk-11", "topic_label": "Otázka 11: Třídy linek a frekvence",
-        "q": "Přiřaďte správně frekvenční rozsahy ke třídám A, B, C a D:",
-        "options": [
-            "A = 100 kHz, B = 1 MHz, C = 16 MHz, D = 100 MHz",
-            "A = 1 MHz, B = 10 MHz, C = 100 MHz, D = 1000 MHz",
-            "A = 16 MHz, B = 100 MHz, C = 250 MHz, D = 500 MHz",
-            "A = 100 Hz, B = 1 kHz, C = 16 kHz, D = 100 kHz"
-        ],
-        "ans": 0,
-        "exp": "První čtyři třídy z tabulky: A = 100 kHz (Cat 1), B = 1 MHz (Cat 2), C = 16 MHz (Cat 3), D = 100 MHz (Cat 5)."
-    },
-    {
-        "id": 98, "topic": "sk-11", "topic_label": "Otázka 11: Třídy linek a frekvence",
-        "q": "Přiřaďte správně frekvenční rozsahy ke třídám E, Ea, F a Fa:",
-        "options": [
-            "E = 250 MHz, Ea = 500 MHz, F = 600 MHz, Fa = 1000 MHz",
-            "E = 100 MHz, Ea = 250 MHz, F = 500 MHz, Fa = 600 MHz",
-            "E = 350 MHz, Ea = 600 MHz, F = 1000 MHz, Fa = 2000 MHz",
-            "E = 500 MHz, Ea = 250 MHz, F = 1000 MHz, Fa = 600 MHz"
-        ],
-        "ans": 0,
-        "exp": "Vyšší třídy z tabulky: E (Cat 6) = 250 MHz, Ea (Cat 6a) = 500 MHz, F (Cat 7) = 600 MHz, Fa (Cat 7a) = 1000 MHz."
-    },
-    {
-        "id": 99, "topic": "sk-11", "topic_label": "Otázka 11: Třídy linek a frekvence",
-        "q": "Která kategorie a třída odpovídá v tabulce z hodin řádku „100 MHz (350 MHz) – 1 Gbps Gigabit Ethernet (1000Base-T)“?",
-        "options": [
-            "Třída D 2002, Kategorie 5e",
-            "Třída C, Kategorie 3",
-            "Třída Ea, Kategorie 6a",
-            "Třída A, Kategorie 1"
-        ],
-        "ans": 0,
-        "exp": "V tabulce z hodin je Cat 5e označena jako Třída D 2002 se specifikací 100 MHz (350 MHz) pro 1 Gbps Gigabit Ethernet."
-    },
-    {
-        "id": 100, "topic": "sk-11", "topic_label": "Otázka 11: Třídy linek a frekvence",
-        "q": "Od které třídy a kategorie podporuje strukturovaná kabeláž přenosovou rychlost 10 Gbps (10GBase-T) na plnou vzdálenost?",
-        "options": [
-            "Od Třídy Ea (Kategorie 6a, 500 MHz) – a dále také ve Třídě F (Cat 7) a Třídě Fa (Cat 7a)",
-            "Už od Třídy B (Kategorie 2, 1 MHz)",
-            "Teprve až od Třídy I & II (Kategorie 8, 2000 MHz)",
-            "10 Gbps nelze po metalické kabeláži vůbec přenášet"
-        ],
-        "ans": 0,
-        "exp": "Dle tabulky z hodin je 10 Gbps (10GBase-T) uvedeno u Třídy Ea (Cat 6a, 500 MHz), Třídy F (Cat 7, 600 MHz) a Třídy Fa (Cat 7a, 1000 MHz)."
-    },
-    {
-        "id": 101, "topic": "sk-12", "topic_label": "Otázka 12: Přeslech FEXT",
-        "q": "Jak se projevuje útlum signálu v metalickém a optickém kabelu podle poznámky z hodin?",
-        "options": [
-            "V metalice prochází signál elektrickým proudem ve vodičích a postupně slábne (útlum v dB); v optice prochází jako světlo vláknem a také postupně slábne (útlum v dB)",
-            "V metalice signál slábne v dB, zatímco v optice světlo vůbec žádný útlum nemá",
-            "V optice prochází signál elektrickým proudem a v metalice světlem",
-            "Útlum přeslechu FEXT chceme co nejmenší v dB, zatímco útlum přímého signálu v kabelu chceme co největší v dB"
-        ],
-        "ans": 0,
-        "exp": "V obou médiích (metalika = elektrický proud, optika = světlo) užitečný signál po trase postupně slábne (útlum v dB). Naopak u přeslechu FEXT (což je nežádoucí rušení mezi páry) chceme útlum tohoto rušení v dB co nejvyšší!"
-    },
-    {
-        "id": 102, "topic": "sk-13", "topic_label": "Otázka 13: Subsystémy a délky",
-        "q": "Co znamenají zkratky CD, BD, FD, CP a TO ve schématu generické strukturované kabeláže?",
-        "options": [
-            "CD = Campus Distributor (rozvaděč areálu), BD = Building Distributor (rozvaděč budovy), FD = Floor Distributor (patrový rozvaděč), CP = Consolidation Point, TO = Telekomunikační zásuvka",
-            "CD = Compact Disc, BD = Blu-ray Disc, FD = Floppy Disc, CP = Computer Port, TO = Terminal Output",
-            "CD = Core Diameter, BD = Buffer Diameter, FD = Fiber Dispersion, CP = Cladding Protection, TO = Total Optics",
-            "CD = Cat D, BD = Base D, FD = Fast D, CP = Cross Pair, TO = Twisted Outlet"
-        ],
-        "ans": 0,
-        "exp": "Hierarchie prvků generické SK: CD (rozvaděč areálu) → BD (rozvaděč budovy) → FD (patrový rozvaděč) → CP (konsolidační bod) → TO (telekomunikační zásuvka)."
-    },
-    {
-        "id": 103, "topic": "sk-13", "topic_label": "Otázka 13: Subsystémy a délky",
-        "q": "Jaká je celková maximální délka optické páteřní trasy od rozvaděče areálu (CD) přes rozvaděč budovy (BD) až do patrového rozvaděče (FD) podle součtu délek z hodin?",
-        "options": [
-            "2000 m (1500 m páteř areálu CD→BD + 500 m páteř budovy BD→FD)",
-            "590 m (500 m + 90 m)",
-            "100 m (90 m + 10 m)",
-            "1500 m celkem včetně horizontální kabeláže"
-        ],
-        "ans": 0,
-        "exp": "Páteř areálu (CD→BD) má max. 1500 m a páteř budovy (BD→FD) max. 500 m, dohromady tedy 2000 m."
-    },
-    {
-        "id": 104, "topic": "sk-13", "topic_label": "Otázka 13: Subsystémy a délky",
-        "q": "Pokud má přídavná šňůra A na pracovní ploše délku 4 m a šňůra E v rozvaděči délku 3 m, jaká může být maximální délka propojovací šňůry B (panel ↔ panel), aby byla dodržena norma?",
-        "options": [
-            "Maximálně 3 m (protože musí platit A + B + E ≤ 10 m, tedy 4 + B + 3 ≤ 10)",
-            "Maximálně 10 m bez ohledu na délku šňůr A a E",
-            "Maximálně 90 m",
-            "Maximálně 5 m"
-        ],
-        "ans": 0,
-        "exp": "Protože součet všech přídavných šňůr musí splňovat A + B + E ≤ 10 m, zbývá pro šňůru B nejvýše 10 − 4 − 3 = 3 m."
-    },
-    {
-        "id": 105, "topic": "sk-13", "topic_label": "Otázka 13: Subsystémy a délky",
-        "q": "Kdy smí mít propojovací šňůra B (panel ↔ panel v rozvaděči FD) délku až 10 metrů?",
-        "options": [
-            "Pouze v případě, že délky šňůr A a E jsou prakticky nulové (A, E ≈ 0), protože součet A + B + E nesmí překročit 10 m",
-            "Vždy, i když mají šňůry A a E každá 5 metrů",
-            "Pouze tehdy, když je pevná horizontální kabeláž delší než 90 metrů",
-            "Nikdy, šňůra B smí mít maximálně 1 metr"
-        ],
-        "ans": 0,
-        "exp": "V tabulce z hodin je u šňůry B výslovně uvedeno: max. délka 10 m (jen při A, E ≈ 0), aby platilo A + B + E ≤ 10 m."
-    },
-    {
-        "id": 106, "topic": "sk-14", "topic_label": "Otázky 14 & 15: Pracovní plocha",
-        "q": "Kolik dvojzásuvek (nebo jednotlivých zásuvek/portů) byste navrhli pro kancelář o rozloze 40 m² podle pravidla z hodin?",
-        "options": [
-            "4 pracovní plochy (po 10 m²), tedy celkem 8 portů / zásuvek (nebo 4 dvojzásuvky)",
-            "1 pracovní plochu, tedy 1 port",
-            "40 pracovních ploch, tedy 80 dvojzásuvek",
-            "2 porty na celou budovu"
-        ],
-        "ans": 0,
-        "exp": "Na každých 10 m² připadá 1 pracovní plocha se 2 zásuvkami (nebo 1 dvojzásuvkou). Pro 40 m² to jsou 4 pracovní plochy = 8 zásuvek (4 dvojzásuvky)."
-    },
-    {
-        "id": 107, "topic": "sk-15", "topic_label": "Otázky 14 & 15: Pracovní plocha",
-        "q": "Který z následujících prvků UŽ NEPATŘÍ do generické strukturované kabeláže?",
-        "options": [
-            "Přídavná šňůra A na pracovní ploše (od zásuvky TO k počítači)",
-            "Telekomunikační zásuvka (TO) ve zdi",
-            "Horizontální kabeláž mezi FD a TO",
-            "Patrový rozvaděč (FD)"
-        ],
-        "ans": 0,
-        "exp": "Generická strukturovaná kabeláž končí na telekomunikační zásuvce (TO), která do SK ještě patří. Přídavná šňůra od TO k PC již do generické SK nepatří."
-    },
-    {
-        "id": 108, "topic": "sk-16", "topic_label": "Otázka 16: Konektor RJ-45 Typ B",
-        "q": "Na kterém pinu konektoru RJ-45 je u standardu T568B zapojen Oranžový (celobarevný) vodič?",
-        "options": [
-            "Na pinu 2 (na pinu 1 je bílo-oranžová)",
-            "Na pinu 1 (na pinu 2 je bílo-oranžová)",
-            "Na pinu 6",
-            "Na pinu 3"
-        ],
-        "ans": 0,
-        "exp": "Pár 2 (oranžový) je u T568B na pinech 1 a 2: Pin 1 = Bílo-oranžová, Pin 2 = Oranžová."
-    },
-    {
-        "id": 109, "topic": "sk-16", "topic_label": "Otázka 16: Konektor RJ-45 Typ B",
-        "q": "Na kterém pinu konektoru RJ-45 je u standardu T568B zapojen Bílo-zelený vodič a na kterém plný Zelený vodič?",
-        "options": [
-            "Bílo-zelená je na pinu 3, Zelená je na pinu 6",
-            "Bílo-zelená je na pinu 1, Zelená je na pinu 2",
-            "Bílo-zelená je na pinu 4, Zelená je na pinu 5",
-            "Bílo-zelená je na pinu 6, Zelená je na pinu 3"
-        ],
-        "ans": 0,
-        "exp": "Zelené piny jsou u T568B „rozházené“ na pozicích 3 (Bílo-zelená) a 6 (Zelená)."
-    },
-    {
-        "id": 110, "topic": "sk-16", "topic_label": "Otázka 16: Konektor RJ-45 Typ B",
-        "q": "CHYTÁK U PINŮ 4 A 5: Který z párů má u konektoru RJ-45 (T568B) otočené pořadí, takže na sudém pinu 4 začíná plnou barvou a na lichém pinu 5 má bílo-barevný vodič?",
-        "options": [
-            "Modrý pár (Pin 4 = Modrá, Pin 5 = Bílo-modrá)",
-            "Oranžový pár (Pin 1 = Oranžová, Pin 2 = Bílo-oranžová)",
-            "Hnědý pár (Pin 7 = Hnědá, Pin 8 = Bílo-hnědá)",
-            "Zelený pár (Pin 3 = Zelená, Pin 6 = Bílo-zelená)"
-        ],
-        "ans": 0,
-        "exp": "U všech párů kromě modrého začíná bílo-barevný vodič (1 bílo-oranžová, 3 bílo-zelená, 7 bílo-hnědá), ale u středového modrého páru je na pinu 4 plná Modrá a na pinu 5 Bílo-modrá!"
-    },
-    {
-        "id": 111, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "Jaký je přibližný měrný útlum mnohovidového vlákna v 1. přenosovém okně (850 nm) a jaký u jednovidového vlákna ve 3. okně (1550 nm)?",
-        "options": [
-            "Na 850 nm (MM) cca 2,5 až 3 dB/km; na 1550 nm (SM) cca 0,2 dB/km",
-            "Na 850 nm cca 0,2 dB/km; na 1550 nm cca 30 dB/km",
-            "V obou oknech je útlum přesně 100 dB/km",
-            "Na 850 nm je útlum nulový a na 1550 nm je nekonečný"
-        ],
-        "ans": 0,
-        "exp": "S rostoucí vlnovou délkou klesá Rayleighův rozptyl ve skle: na 850 nm je útlum ~2,5–3 dB/km, na 1310 nm ~0,35–0,5 dB/km a na 1550 nm jen ~0,2 dB/km."
-    },
-    {
-        "id": 112, "topic": "opt-2", "topic_label": "Optika 2: Totální odraz, NA a útlum",
-        "q": "Které z následujících tvrzení o indexu lomu n je PRAVDIVÉ?",
-        "options": [
-            "Index lomu n je bezrozměrná veličina a pro optická skla je vždy větší než 1 (typicky ~1,46 až 1,48), protože světlo se ve skle šíří pomaleji než ve vakuu",
-            "Index lomu n se měří v mikrometrech (µm) a je vždy menší než 0",
-            "Index lomu pláště n₂ musí být vždy větší než index lomu jádra n₁",
-            "Index lomu závisí na délce patch kabelu pracovní plochy"
-        ],
-        "ans": 0,
-        "exp": "Protože v < c, je poměr n = c / v vždy bezrozměrné číslo větší než 1."
-    },
-    {
-        "id": 113, "topic": "opt-2", "topic_label": "Optika 2: Totální odraz, NA a útlum",
-        "q": "Pokud spojíme dvě optická vlákna, jejichž podélné osy jsou vůči sobě mírně posunuté (osové přesazení jader), jaký parametr spoje se tím zhorší (zvýší)?",
-        "options": [
-            "Zvýší se vložný útlum (Insertion Loss) spoje",
-            "Zvýší se numerická apertura vlákna",
-            "Zvýší se rychlost světla ve vakuu",
-            "Sníží se vlnová délka z 1550 nm na 850 nm"
-        ],
-        "ans": 0,
-        "exp": "Osové přesazení jader je jednou z hlavních geometrických příčin vzniku vložného útlumu na konektoru nebo sváru."
-    },
-    {
-        "id": 114, "topic": "sk-8", "topic_label": "Otázka 8: Normy v ČR",
-        "q": "Která z následujících norem je americkou normou pro strukturovanou kabeláž (vedle evropské ČSN EN 50173 a mezinárodní ISO/IEC 11801)?",
-        "options": [
-            "TIA/EIA-568 (resp. ANSI/TIA-568)",
-            "ČSN EN 50174",
-            "ITU-T G.711",
-            "ISO 9001"
-        ],
-        "ans": 0,
-        "exp": "TIA/EIA-568 je severoamerický standard strukturované kabeláže (definuje mj. zapojení T568A a T568B)."
-    },
-    {
-        "id": 115, "topic": "sk-9", "topic_label": "Otázka 9: UTP, FTP, STP a kategorie",
-        "q": "Co znamená v mezinárodním značení kabelů zkratka FTP vs. UTP?",
-        "options": [
-            "FTP = Foiled Twisted Pair (společné stínění všech 4 párů hliníkovou fólií), UTP = Unshielded Twisted Pair (bez kovového stínění)",
-            "FTP = Fiber Twisted Pair, UTP = Ultra Thick Pair",
-            "FTP = Fast Transfer Protocol, UTP = User Transfer Protocol",
-            "FTP je nestíněný kabel a UTP je dvojitě stíněný kabel"
-        ],
-        "ans": 0,
-        "exp": "FTP má hliníkovou fólii kolem celého svazku 4 párů, zatímco UTP nemá žádné kovové stínění."
-    },
-    {
-        "id": 116, "topic": "sk-10", "topic_label": "Otázka 10: Kroucené páry",
-        "q": "Kolik vodičů tvoří jeden kroucený pár a jaká je polarita signálu v nich?",
-        "options": [
-            "2 vodiče – jeden přenáší kladnou polaritu signálu (+U) a druhý opačnou polaritu signálu (−U)",
-            "4 vodiče – všechny přenášejí kladnou polaritu",
-            "1 vodič – přenáší střídavě světlo a elektrický proud",
-            "8 vodičů v každém páru"
-        ],
-        "ans": 0,
-        "exp": "V každém páru jsou 2 vodiče s opačnou polaritou (+U a −U) a přijímač vyhodnocuje rozdíl napětí mezi nimi."
-    },
-    {
-        "id": 117, "topic": "sk-11", "topic_label": "Otázka 11: Třídy linek a frekvence",
-        "q": "Jaká přenosová rychlost a maximální dosah jsou v tabulce z hodin uvedeny u Třídy I & II (Kategorie 8, 1600/2000 MHz)?",
-        "options": [
-            "40 Gbps (40GBase-T) do 30 m",
-            "10 Gbps (10GBase-T) do 100 m",
-            "1 Gbps (1000Base-T) do 90 m",
-            "100 Mbps do 1500 m"
-        ],
-        "ans": 0,
-        "exp": "Kategorie 8 (Třída I & II, 1600/2000 MHz) je určena pro 40 Gbps (40GBase-T) na zkrácenou vzdálenost do 30 m (typicky v datových centrech)."
-    },
-    {
-        "id": 118, "topic": "sk-12", "topic_label": "Otázka 12: Přeslech FEXT",
-        "q": "Proč u přeslechu FEXT požadujeme co nejvyšší hodnotu útlumu v decibelech (dB)?",
-        "options": [
-            "Protože útlum přeslechu vyjadřuje míru potlačení nežádoucího rušivého signálu mezi páry – čím vyšší útlum v dB, tím menší je rušení",
-            "Protože vyšší útlum FEXT zvyšuje přeslech mezi páry",
-            "Protože FEXT vyjadřuje délku optického vlákna v kilometrech",
-            "Protože při nízkém útlumu FEXT nefunguje plastový kříž"
-        ],
-        "ans": 0,
-        "exp": "Útlum přeslechu = potlačení rušení. Chceme, aby rušení bylo potlačeno co nejvíce, tedy požadujeme co nejvyšší útlum FEXT v dB."
-    },
-    {
-        "id": 119, "topic": "sk-13", "topic_label": "Otázka 13: Subsystémy a délky",
-        "q": "Jaká je maximální délka pevného horizontálního spoje (FD → TO) a jaká je maximální délka celého horizontálního kanálu (včetně šňůr A, B, E)?",
-        "options": [
-            "Pevný horizontální spoj max. 90 m; celý kanál včetně přídavných šňůr max. 100 m (90 + 10 = 100 m)",
-            "Pevný spoj max. 100 m; celý kanál max. 150 m",
-            "Pevný spoj max. 500 m; celý kanál max. 1500 m",
-            "Pevný spoj max. 80 m; celý kanál max. 90 m"
-        ],
-        "ans": 0,
-        "exp": "Horizontální kabeláž (FD → TO) má max. 90 m a přídavné šňůry A + B + E dohromady max. 10 m → celkem 90 + 10 = 100 m."
-    },
-    {
-        "id": 120, "topic": "sk-16", "topic_label": "Otázka 16: Konektor RJ-45 Typ B",
-        "q": "Které tvrzení o zapojení zásuvky typu B (T568B) podle tvého výpisu z hodin je PRAVDIVÉ?",
-        "options": [
-            "Typ B se používá v Evropě, platí 1 pin = 1 vodič = 1 barva = 1 drátek, zelené piny jsou rozházené na 3 a 6 a ostatní páry jsou u sebe (oranžová 1–2, modrá 4–5, hnědá 7–8)",
-            "Typ B se používá pouze v Japonsku a má rozházený hnědý pár na pinech 1 a 8",
-            "U typu B jsou do každého pinu zapojeny 2 vodiče najednou",
-            "U typu B jsou zelené piny u sebe na pozicích 1 a 2"
-        ],
-        "ans": 0,
-        "exp": "Přesné shrnutí otázky 16 z hodin: Typ B je v Evropě, 1 pin = 1 vodič = 1 barva = 1 drátek, zelená je rozházená na 3 a 6, ostatní jsou u sebe (oranžová 1,2 – modrá 4,5 – hnědá 7,8)."
-    },
-    {
-        "id": 121, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "Jaký je průměr sekundární ochrany (Buffer – plastová trubička) u standardního optického vlákna?",
-        "options": [
-            "900 µm (0,9 mm)",
-            "125 µm",
-            "250 µm",
-            "9 µm"
-        ],
-        "ans": 0,
-        "exp": "4. vrstva optického vlákna (sekundární ochrana / Buffer) má typický průměr 900 µm (0,9 mm)."
-    },
-    {
-        "id": 122, "topic": "opt-1", "topic_label": "Optika 1: Struktura a typy vláken",
-        "q": "Které přenosové okno má nulovou chromatickou disperzi u standardního křemičitého vlákna a jaký má přibližný útlum?",
-        "options": [
-            "2. okno (1300 nm u MM / 1310 nm u SM), útlum cca 0,35 až 0,5 dB/km",
-            "1. okno (850 nm), útlum cca 2,5 až 3 dB/km",
-            "3. okno (1550 nm), útlum cca 10 dB/km",
-            "Žádné okno, chromatická disperze je vždy nekonečná"
-        ],
-        "ans": 0,
-        "exp": "Ve 2. přenosovém okně (1300 nm MM / 1310 nm SM) prochází chromatická disperze nulou a měrný útlum činí ~0,35–0,5 dB/km."
-    },
-    {
-        "id": 123, "topic": "opt-2", "topic_label": "Optika 2: Totální odraz, NA a útlum",
-        "q": "Jak zní vzorec pro výpočet mezního úhlu α_m (ze Snellova zákona lomu), při jehož překročení nastává totální vnitřní odraz?",
-        "options": [
-            "sin(α_m) = n₂ / n₁ (kde n₁ > n₂)",
-            "sin(α_m) = n₁ · n₂",
-            "sin(α_m) = c / v",
-            "sin(α_m) = n₁ + n₂"
-        ],
-        "ans": 0,
-        "exp": "Při mezním úhlu α_m se lomený paprsek šíří podél rozhraní (úhel lomu je 90°, sin 90° = 1), takže z n₁·sin(α_m) = n₂·sin(90°) plyne sin(α_m) = n₂ / n₁."
-    },
-    {
-        "id": 124, "topic": "opt-2", "topic_label": "Optika 2: Totální odraz, NA a útlum",
-        "q": "Jak souvisí numerická apertura (NA) s maximálním úhlem navázání (θ_max) optického vlákna ve vzduchu (n₀ ≈ 1)?",
-        "options": [
-            "Numerická apertura je přímo rovna sinu maximálního úhlu navázání: NA = sin(θ_max) = √(n₁² − n₂²)",
-            "Numerická apertura je rovna podílu průměru jádra a pláště",
-            "Numerická apertura je převrácená hodnota vložného útlumu",
-            "Mezi NA a θ_max neexistuje žádný vztah"
-        ],
-        "ans": 0,
-        "exp": "Platí přímý vztah NA = sin(θ_max) = √(n₁² − n₂²), odkud θ_max = arcsin(NA)."
-    },
-    {
-        "id": 125, "topic": "opt-2", "topic_label": "Optika 2: Totální odraz, NA a útlum",
-        "q": "Jak se nazývá kužel vymezený maximálním úhlem navázání θ_max před čelem optického vlákna?",
-        "options": [
-            "Akceptační kužel vlákna (světlo vstupující uvnitř tohoto kužele se ve vlákně šíří totálním odrazem)",
-            "Rozptylový kužel FEXT",
-            "Stínící kužel STP",
-            "Fresnelův kužel"
-        ],
-        "ans": 0,
-        "exp": "Maximální úhel navázání θ_max definuje tzv. akceptační kužel optického vlákna."
-    },
-    {
-        "id": 126, "topic": "sk-8", "topic_label": "Otázka 8: Normy v ČR",
-        "q": "Jaký je rozdíl v zaměření mezi normou ČSN EN 50173 a normou ČSN EN 50174?",
-        "options": [
-            "ČSN EN 50173 řeší návrh a přenosové parametry strukturované kabeláže, zatímco ČSN EN 50174 řeší instalaci, plánování a provoz informačních kabeláží",
-            "ČSN EN 50173 platí pouze v USA a ČSN EN 50174 pouze v Japonsku",
-            "ČSN EN 50173 řeší audio kodeky a ČSN EN 50174 řeší SDH kontejnery",
-            "Obě normy zakazují používání optických vláken v budovách"
-        ],
-        "ans": 0,
-        "exp": "ČSN EN 50173 specifikuje strukturu a parametry univerzální kabeláže; ČSN EN 50174 specifikuje pravidla pro její praktickou instalaci."
-    },
-    {
-        "id": 127, "topic": "sk-9", "topic_label": "Otázka 9: UTP, FTP, STP a kategorie",
-        "q": "Kolik vodičů (žil) a kolik kroucených párů celkem obsahuje standardní metalický kabel UTP, FTP nebo STP?",
-        "options": [
-            "4 kroucené páry, tedy celkem 8 jednotlivých vodičů (žil)",
-            "2 kroucené páry, tedy 4 vodiče",
-            "8 kroucených párů, tedy 16 vodičů",
-            "1 kroucený pár, tedy 2 vodiče"
-        ],
-        "ans": 0,
-        "exp": "Standardní kabel strukturované kabeláže (UTP/FTP/STP) se skládá ze 4 párů = 8 vodičů."
-    },
-    {
-        "id": 128, "topic": "sk-9", "topic_label": "Otázka 9: UTP, FTP, STP a kategorie",
-        "q": "Do které kategorie a třídy vedení se dle výpisu z hodin používají nestíněné kabely UTP a od které kategorie/třídy se používají stíněné kabely STP?",
-        "options": [
-            "UTP se používá v kategorii 6 (třída E); STP se používá v kategorii 6a a výš (třída Ea a výš)",
-            "UTP se používá v kategorii 8 (třída I & II); STP pouze v kategorii 1 (třída A)",
-            "UTP se používá do kategorie 7a; STP až od kategorie 9",
-            "UTP i STP jsou povoleny výhradně v kategorii 3"
-        ],
-        "ans": 0,
-        "exp": "Dle tvých zápisků z hodin: UTP = v kategorii 6 (třída E), STP = v kategorii 6a a výš (třída Ea a výš)."
-    },
-    {
-        "id": 129, "topic": "sk-10", "topic_label": "Otázka 10: Kroucené páry",
-        "q": "Které tři hlavní principy u technologie kroucených párů zajišťují odolnost proti rušení a přeslechům (podle otázky 10 z hodin)?",
-        "options": [
-            "1) Vzájemné zkroucení vodičů v páru, 2) Různá hustota zákrutů jednotlivých 4 párů, 3) Opačná polarita signálu (+U a −U) ve vodičích páru a vyhodnocení rozdílu napětí v přijímači",
-            "1) Použití křemičitého skla, 2) Totální vnitřní odraz, 3) Vlnová délka 1550 nm",
-            "1) Stejná hustota zákrutů všech párů, 2) Stejná kladná polarita v obou vodičích, 3) Měření součtu proudů",
-            "1) Zkrácení kabelu na 5 m, 2) Rozházení zeleného páru, 3) Nulový útlum FEXT"
-        ],
-        "ans": 0,
-        "exp": "Přesné shrnutí otázky 10 z výpisu z hodin: zkroucení vodičů, různá hustota zákrutů mezi 4 páry a symetrický přenos (+U / −U) s vyhodnocením rozdílu napětí."
-    },
-    {
-        "id": 130, "topic": "sk-11", "topic_label": "Otázka 11: Třídy linek a frekvence",
-        "q": "Jak se v mezinárodních normách ČSN EN 50173 a ISO/IEC 11801 označují „Třídy vedení“ (Classes) na rozdíl od „Kategorií komponent“ (Categories)?",
-        "options": [
-            "Třídy vedení se označují písmeny (A, B, C, D, D 2002, E, Ea, F, Fa, I & II), zatímco kategorie komponent čísly (Cat 1, 2, 3, 5, 5e, 6, 6a, 7, 7a, 8)",
-            "Třídy vedení se označují čísly 1 až 8 a kategorie písmeny A až F",
-            "Třídy vedení se označují vlnovými délkami v nanometrech",
-            "Mezi značením tříd a kategorií není žádný rozdíl"
-        ],
-        "ans": 0,
-        "exp": "Třídy linek (Classes) jsou písmenné (A až Fa, příp. I & II), zatímco kategorie (Categories) jsou číselné (Cat 1 až Cat 8)."
-    },
-    {
-        "id": 131, "topic": "sk-11", "topic_label": "Otázka 11: Třídy linek a frekvence",
-        "q": "Která třída a kategorie je v tabulce z hodin popsána jako: „Specifikováno do 16 MHz – 10 Mbps, Token Ring 16 MB“?",
-        "options": [
-            "Třída C, Kategorie 3",
-            "Třída A, Kategorie 1 (do 100 kHz)",
-            "Třída B, Kategorie 2 (do 1 MHz)",
-            "Třída D, Kategorie 5 (do 100 MHz)"
-        ],
-        "ans": 0,
-        "exp": "Do 16 MHz je specifikována Třída C (Kategorie 3)."
-    },
-    {
-        "id": 132, "topic": "sk-11", "topic_label": "Otázka 11: Třídy linek a frekvence",
-        "q": "V jakých jednotkách se podle poznámky u otázky 11 ve výpisu z hodin běžně udává frekvence světla v optických vláknech?",
-        "options": [
-            "V terahertzích (THz)",
-            "V kilohertzích (kHz)",
-            "V megahertzích (MHz)",
-            "V decibelech (dB)"
-        ],
-        "ans": 0,
-        "exp": "U metalických kabelů udáváme šířku pásma v kHz/MHz, zatímco u optiky se frekvence světla udává v THz (terahertzích)."
-    },
-    {
-        "id": 133, "topic": "sk-12", "topic_label": "Otázka 12: Přeslech FEXT",
-        "q": "Která z následujících definic přesně vystihuje pojem FEXT a požadavek na jeho útlum (otázka 12)?",
-        "options": [
-            "FEXT (Far-End Crosstalk) je přeslech na vzdáleném konci kabelu (rušení z jednoho páru do jiného měřené na opačném konci kabelu); požadujeme co nejvyšší útlum FEXT v dB",
-            "FEXT je přeslech na bližším konci kabelu; požadujeme co nejnižší útlum FEXT v dB",
-            "FEXT je vložný útlum optického konektoru; požadujeme přesně 100 dB",
-            "FEXT je zesílení signálu na pracovní ploše; požadujeme 0 dB"
-        ],
-        "ans": 0,
-        "exp": "Kompletní odpověď na otázku 12: FEXT = Far-End Crosstalk (přeslech na vzdáleném konci kabelu) a požadujeme co nejvyšší hodnotu útlumu FEXT v dB, aby rušení mezi páry bylo co nejmenší."
-    },
-    {
-        "id": 134, "topic": "sk-13", "topic_label": "Otázka 13: Subsystémy a délky",
-        "q": "Které ze tří základních subsystémů generické kabeláže jsou podle tvého výpisu z hodin tvořeny optickými kabely a který metalickými kabely?",
-        "options": [
-            "Páteřní kabeláž areálu (max. 1500 m) a páteřní kabeláž budovy (max. 500 m) jsou optické; horizontální kabeláž (max. 90 m) je metalická",
-            "Páteřní kabeláž areálu je metalická a horizontální kabeláž je výhradně optická",
-            "Všechny tři subsystémy jsou výhradně metalické o délce 90 m",
-            "Páteř budovy je metalická (max. 1500 m) a páteř areálu optická (max. 90 m)"
-        ],
-        "ans": 0,
-        "exp": "Dle výpisu z hodin: 1. Páteř areálu = optika (max. 1500 m), 2. Páteř budovy = optika (max. 500 m), 3. Horizontální kabeláž = metalické kabely (max. 90 m)."
-    },
-    {
-        "id": 135, "topic": "sk-13", "topic_label": "Otázka 13: Subsystémy a délky",
-        "q": "Co ve schématu horizontální kabeláže znamená zkratka CP (mezi FD a TO)?",
-        "options": [
-            "Consolidation Point – konsolidační (přípojný) bod na trase horizontální kabeláže",
-            "Campus Panel – hlavní rozvaděč celého areálu",
-            "Cladding Protection – primární ochrana optického vlákna",
-            "Crosstalk Pair – přeslechový pár"
-        ],
-        "ans": 0,
-        "exp": "Ve schématu z hodin (CD → BD → FD → CP → TO) označuje CP konsolidační bod (Consolidation Point) v horizontální kabeláži."
-    },
-    {
-        "id": 136, "topic": "sk-14", "topic_label": "Otázky 14 & 15: Pracovní plocha",
-        "q": "Jaká je maximální délka propojovacího kabelu (přídavné šňůry A) na pracovní ploše mezi telekomunikační zásuvkou TO a koncovým zařízením?",
-        "options": [
-            "Max. 5 m",
-            "Max. 90 m",
-            "Max. 100 m",
-            "Max. 500 m"
-        ],
-        "ans": 0,
-        "exp": "U otázky 14 i v tabulce šňůr u otázky 13 je uvedeno: propojovací kabel k zařízení na pracovní ploše (šňůra A, TO → PC) má max. délku 5 m."
-    },
-    {
-        "id": 137, "topic": "sk-15", "topic_label": "Otázky 14 & 15: Pracovní plocha",
-        "q": "Proč kabely pracovní plochy (patch kabely od zásuvky TO k počítači) NEPATŘÍ do generické strukturované kabeláže?",
-        "options": [
-            "Protože generická strukturovaná kabeláž zahrnuje pouze pevnou instalaci budovy a končí na telekomunikační zásuvce (TO), která do SK ještě patří",
-            "Protože kabely pracovní plochy jsou vždy optické o délce 1500 m",
-            "Protože na pracovní ploše se nepoužívá konektor RJ-45",
-            "Protože kabely pracovní plochy nemají kroucené páry"
-        ],
-        "ans": 0,
-        "exp": "Generická SK končí na telekomunikační zásuvce TO (ta do SK ještě patří). Pohyblivé přídavné šňůry na pracovní ploše již součástí generické SK nejsou."
-    },
-    {
-        "id": 138, "topic": "sk-16", "topic_label": "Otázka 16: Konektor RJ-45 Typ B",
-        "q": "Jaké barvy vodičů jsou na lichých pinech (1, 3, 5, 7) u konektoru RJ-45 zapojeného podle normy T568B?",
-        "options": [
-            "Všechny liché piny mají bílo-barevné (žíhané) vodiče: 1 Bílo-oranžová, 3 Bílo-zelená, 5 Bílo-modrá, 7 Bílo-hnědá",
-            "Všechny liché piny mají plné barvy: 1 Oranžová, 3 Zelená, 5 Modrá, 7 Hnědá",
-            "1 Bílo-zelená, 3 Bílo-oranžová, 5 Modrá, 7 Hnědá",
-            "Liché piny nejsou v konektoru RJ-45 vůbec zapojeny"
-        ],
-        "ans": 0,
-        "exp": "Skvělá pomůcka pro kontrolu u zkoušky: u T568B (i T568A) jsou na všech lichých pinech 1, 3, 5, 7 vždy bílo-barevné vodiče a na všech sudých pinech 2, 4, 6, 8 vždy plné barvy!"
-    },
-    {
-        "id": 139, "topic": "sk-16", "topic_label": "Otázka 16: Konektor RJ-45 Typ B",
-        "q": "Jaké barvy vodičů jsou na sudých pinech (2, 4, 6, 8) u konektoru RJ-45 zapojeného podle normy T568B?",
-        "options": [
-            "Všechny sudé piny mají plné barvy: 2 Oranžová, 4 Modrá, 6 Zelená, 8 Hnědá",
-            "Všechny sudé piny mají bílo-barevné vodiče: 2 Bílo-oranžová, 4 Bílo-modrá, 6 Bílo-zelená, 8 Bílo-hnědá",
-            "2 Zelená, 4 Modrá, 6 Oranžová, 8 Hnědá",
-            "2 Oranžová, 4 Zelená, 6 Modrá, 8 Hnědá"
-        ],
-        "ans": 0,
-        "exp": "Na sudých pinech 2, 4, 6, 8 jsou u T568B vždy celobarevné vodiče v pořadí: 2 Oranžová, 4 Modrá, 6 Zelená, 8 Hnědá."
-    },
-    {
-        "id": 140, "topic": "sk-16", "topic_label": "Otázka 16: Konektor RJ-45 Typ B",
-        "q": "Kterým třem číslům párů podle schématu T568B odpovídají piny 1–2, 3–6, 4–5 a 7–8?",
-        "options": [
-            "Piny 4–5 = Pár 1 (modrý), Piny 1–2 = Pár 2 (oranžový), Piny 3–6 = Pár 3 (zelený), Piny 7–8 = Pár 4 (hnědý)",
-            "Piny 1–2 = Pár 1, Piny 3–4 = Pár 2, Piny 5–6 = Pár 3, Piny 7–8 = Pár 4",
-            "Všechny piny patří do Páru 1",
-            "Piny 1–8 jsou zapojeny náhodně"
-        ],
-        "ans": 0,
-        "exp": "Podle obrázku T568B z hodin: Pár 1 (modrý) je uprostřed na pinech 4–5, Pár 2 (oranžový) na pinech 1–2, Pár 3 (zelený) je rozkročený na pinech 3 a 6 a Pár 4 (hnědý) je na pinech 7–8."
+        "exp": "Zásahové vozidlo (MS usecase, slide 23) zajišťuje přenos videa, trackingu a dat ze zásahové oblasti přes satelit i při výpadku pozemních sítí."
     }
 ]
